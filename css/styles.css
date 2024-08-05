@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Noto+Sans+TC:wght@100..900&display=swap');
+
 * {
 	margin: 0;
 	padding: 0;
@@ -7,8 +8,17 @@
 }
 
 :root {
-    	/* 漸層 */
-	--gradient-sky-purple: rgb(91, 97, 149, 1), rgb(157, 134, 159, 1);
+	/* 灰階 */
+	--black-600: rgb(144, 144, 144);
+	--black-700: rgb(111, 111, 111);
+	--purple-100: rgb(236, 235, 252);
+	--purple-400: rgb(167, 151, 231);
+	--white: rgba(255, 255, 255);
+	/* 透明 */
+	--shadow: rgb(51, 51, 51, .25);
+	/* 漸層 */
+	--gradient-card: rgb(255, 255, 255), rgb(255, 255, 255, .5);
+	--gradient-sky-purple: rgb(91, 97, 149), rgb(157, 134, 159);
 }
 
 body {
@@ -19,8 +29,8 @@ body {
 		"蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
 	font-size: 100%;
 	line-height: 1.5;
-	display: block;
-	background-color: var(--gradient-sky-purple);
+	background-image:  linear-gradient(var(--gradient-sky-purple));
+
 }
 
 h1,
@@ -35,4 +45,184 @@ h6 {
 ul,
 ol {
 	list-style: none;
+}
+
+img {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	display: block;
+	/* 將預設 inline 改為 block */
+	text-decoration: none;
+}
+
+main {
+	display: flex;
+}
+
+section {
+	display: flex;
+	padding: 100px;
+	margin: 100px 400px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 1px 2px var(--shadow);
+	background-image: linear-gradient(var(--gradient-card));
+	border-radius: 40px;
+}
+
+.title {
+	text-align: center;
+}
+
+.title h2 {
+	font-family: "Noto Sans TC", sans-serif;
+	font-weight: bold;
+	font-size: 1.75rem;
+	letter-spacing: .12rem;
+	line-height: 150%;
+	color: var(--black-700);
+	width: 100%;
+	margin: 32px 0;
+}
+
+/* li {
+	max-width: 984px;
+} */
+
+button {
+	width: 248px;
+	background-color: var(--white);
+	color: var(--purple-400);
+	height: 52px;
+	line-height: 30px;
+	padding: 8px 40px;
+	border-radius: 99px;
+	border: none;
+	box-shadow: 0 0 3px rgba(0,0,0,0.1);
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin: 8px;
+}
+
+button:hover{
+background-color: var(--purple-100);
+cursor: pointer;
+}
+
+.progress-bar {
+	margin: 20px;
+	width: 432px;
+	height: 28px;
+	background-color: var(--purple-100);
+	border-radius: 99px;
+}
+.progress {
+	width: 50%;
+	height: 28px;
+	background-color: var(--purple-400);
+	border-radius: 99px;
+}
+
+small{
+	font-family: K2D;
+	color: var(--white);
+	font-size: 14px;
+	font-weight: 100;
+	letter-spacing: .1rem;
+	display: flex;
+	float: right;
+	padding: 4px 8px;
+}
+
+#btn__next {
+	color: var(--white);
+	background-color: var(--purple-400);
+	font-size: 1.5rem;
+	font-weight: bold;
+	padding: 12px 120px;
+	border-radius: 99px;
+	border: none;
+	margin: 60px 0 0;
+	cursor: pointer;
+}
+
+/* #option {
+	border-radius: 16px;
+	font-family: "Noto Sans TC", sans-serif;
+	font-weight: bold;
+	font-size: 1.2rem;
+	letter-spacing: .1rem;
+	line-height: 150%;
+	padding: 12px 80px;
+	color: var(--black-600);
+} */
+.select-menu{
+    width: 380px;
+    margin: 40px auto;
+}
+.select-menu .select-btn{
+    display: flex;
+    height: 55px;
+    background: var(--white);
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 8px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.select-btn i{
+    font-size: 25px;
+    transition: 0.3s;
+	color: var(--black-600);
+}
+.select-menu.active .select-btn i{
+    transform: rotate(-180deg);
+}
+.select-menu .options{
+	z-index: 10;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    display: none;
+}
+.select-menu.active .options{
+    display: flex;
+	flex-direction: column;
+	border-radius: 8px;
+}
+.options .option{
+    display: flex;
+    height: 55px;
+    cursor: pointer;
+    padding: 0 40px;
+    border-radius: 8px;
+    align-items: center;
+    background: var(--white);
+}
+.options .option:hover{
+    background: var(--purple-100);
+	color: var(--white);
+}
+
+.option .option-text{
+	display: flex;
+    font-size: 18px;
+	color: var(--black-600);
+}
+
+.sBtn-text {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: var(--black-600);
 }
