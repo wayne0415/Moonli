@@ -67,7 +67,7 @@ main {
 section {
 	display: flex;
 	padding: 100px;
-	margin: 100px 400px;
+	margin: 100px 200px;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
@@ -91,12 +91,9 @@ section {
 	margin: 32px 0;
 }
 
-/* li {
-	max-width: 984px;
-} */
 
 button {
-	width: 248px;
+	width: 200px;
 	background-color: var(--white);
 	color: var(--purple-400);
 	height: 52px;
@@ -162,6 +159,7 @@ small{
 	padding: 12px 80px;
 	color: var(--black-600);
 } */
+
 .select-menu{
     width: 380px;
     margin: 40px auto;
