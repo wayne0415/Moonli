@@ -1,12 +1,193 @@
 <!DOCTYPE html>
-<html lang="zh-Hant-TW">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-    </head>
+<html lang="en">
 
-    <body>
-        ldskfjghsdkgjhilughjbhl;aalfkklvjfdhljkhla
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moonli 心理諮商媒合平台</title>
+    <link rel="icon" href="#">
+    <link rel="reset" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/8af2d852a0.js" crossorigin="anonymous"></script>
+</head>
+
+<!-- 首頁 -->
+<body>
+    <!-- 導覽列區 -->
+    <header>
+        <h1 class="logo">
+            <a href="#"><img src="./images/logo_NavBar.svg" alt="Moonli-logo"></a>
+        </h1>
+        <!-- 選單列表 -->
+        <div class="menu-container ">
+            <nav>
+                <ul>
+                    <li><a href="#services">服務項目</a></li>
+                    <li><a href="#find-psychologist">找心理師</a></li>
+                    <li><a href="#faq">常見問題</a></li>
+                    <li><a href="#self-assessment">自我檢測</a></li>
+                </ul>
+            </nav>
+            <nav class="auth-button">
+                <button onclick="window.location.href='login.html'">登入/註冊<i class="fa-solid fa-ellipsis"></i></button>
+            </nav>
+        </div>
+    </header>
+    <!-- 頁面A：大LOGO+找心理師按鈕 -->
+    <section id="home">
+        <!-- <div class="images-moon-container">
+        </div> -->
+        <div class="home-container">
+            <figure class="home-images-logo">
+                <img src="./images/logo_Home.jpg">
+            </figure>
+            <div class="search-btn">
+                <button>找心理師<i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+        <div class="home-images-moon-container">
+            <div class="home-images-moon">
+                <img src="./images/photo_home_moon.jpg">
+            </div>
+        </div>
+    </section>
+    <!-- 頁面B：痛點 -->
+    <section id="problems">
+        <div class="problems-title">
+            <h2>在生活中，您是否有遇過這些煩惱？</h2>
+        </div>
+        <div class="problems-container">
+            <div class="icon-anny">
+                <img src="./images/icon_annoy.jpg">
+            </div>
+            <div class="icon-annoymoon">
+                <img src="./images/icon_annoymoon.png">
+            </div>
+            <div>
+                <div class="item-6q">
+                    <img src="./images/photo_home_6q.jpg">
+            </div>
+            <div class="item-wave">
+                <img src="./images/photo_Union.png">
+            </div>
+            <div class="item-wave">
+                <img src="./images/photo_home_wave1.png">
+            </div>
+            <div class="item-wave2">
+                <img src="./images/photo_home_wave2.png">
+            </div>
+            <div class="item-wave3">
+                <img src="./images/photo_home_wave3.svg">
+            </div>
+        </div>
+    </section>
+    <!-- 服務特色區 -->
+    <section id="services">
+        <div class="title-container">
+            <img src="./images/icon_vector.png" alt="黃冠造型的icon">
+            <h2>服務特色</h2>
+            <img src="./images/icon_vector.png" alt="黃冠造型的icon">
+        </div>
+        <div class="services-container">
+            <div class="service-item">
+                <img src="#" >
+                <h3>全台首創語音簡介</h3>
+                <p>30秒心理師的自我介紹<br>快速拉近與心理師的距離</p>
+            </div>
+            <div class="service-item">
+                <img src="#" >
+                <h3>預約系統</h3>
+                <p>便利的預約系統<br>隨時隨地輕鬆預約</p>
+            </div>
+            <div class="service-item">
+                <img src="#">
+                <h3>篩選系統</h3>
+                <p>個性化篩選<br>幫助用戶找到最合適的心理師</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 數據證明區 -->
+    <section id="statistics">
+        <div class="stas-container">
+            <div class="stas-item">
+                <h3>66666+<br> 註冊使用者</h3>
+            </div>
+            <div class="stas-item">
+                <h3>666+<br>合作心理諮商所</h3>
+            </div>
+            <div class="stas-item">
+                <h3>66666+<br> 預約成立次數者</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Q&A區 -->
+    <section id="faq">
+        <h2>我需要心理諮商嗎？</h2>
+        <div class="faq-container"></div>
+        <div class="question">
+            <h3>什麼是心理諮商？</h3>
+            <p>心理諮商是一種專業的心理健康服務，旨在幫助個人解決心理問題和情感困擾。</p>
+        </div>
+        <div class="question">
+            <h3>長期心理諮商與一般心理諮商的差異？</h3>
+            <p>長期心理諮商通常涉及更深入的心理治療，而一般心理諮商則可能集中於解決具體問題。</p>
+        </div>
+        <div class="question">
+            <h3>心理諮商前我可先做哪些準備？</h3>
+            <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+        </div>
+        </div>
+    </section>
+
+    <!-- 服務流程區 -->
+    <section id="step-section">
+        <h2>開始我的心路歷程</h2>
+        <div class="step-container">
+            <div class="step">
+                <h2>1</h2>
+                <h3>找到適合的心理師</h3>
+                <p>根據個人需求<br>選擇相關專業的心理師</p>
+            </div>
+            <div class="step">
+                <h2>2</h2>
+                <h3>預約心理師時間</h3>
+                <p>進入預約系統<br>查看心理師與您有空的時段</p>
+            </div>
+            <div class="step">
+                <h2>3</h2>
+                <h3>完成預約</h3>
+                <p>完成預約後<br>請再次確認您所預約的時間地點</p>
+            </div>
+        </div>
+    </section>
+    <!-- 用戶經驗分享區 -->
+    <section id="experience_sharing">
+        <h2>心路燈塔經驗分享</h2>
+        <div class="experience_sharing_list">
+            <div class="experience_sharing_list">在Mooni的幫助下，我找到了適合的心理師，讓我的生活變得更好了。</div>
+            <div class="experience_sharing_list">在Mooni的幫助下，我找到了適合的心理師，讓我的生活變得更好了。</div>
+            <div class="experience_sharing_list">在Mooni的幫助下，我找到了適合的心理師，讓我的生活變得更好了。</div>
+            <div class="experience_sharing_list">在Mooni的幫助下，我找到了適合的心理師，讓我的生活變得更好了。</div>
+        </div>
+    </section>
+</body>
+<!-- 頁尾區 -->
+<footer>
+    <div class="logo">
+        <a href="#"><img src="./images/logo_NavBar.svg" alt="Moonli-logo"></a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">服務項目</a></li>
+            <li><a href="#">找心理師</a></li>
+            <li><a href="#">常見問題</a></li>
+            <li><a href="#">相關資訊</a></li>
+            <li><a href="#">自我檢測</a></li>
+        </ul>
+    </nav>
+    <small> 2024 Mooni. All Rights Reserved.</small>
+</footer>
+
 </html>
