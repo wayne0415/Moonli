@@ -62,12 +62,15 @@ a {
 
 main {
 	display: flex;
+	width: 100%;
+	justify-content: center;
 }
 
 section {
 	display: flex;
 	padding: 100px;
-	margin: 100px 200px;
+	margin: 60px;
+	width: 80%;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
@@ -148,17 +151,6 @@ small{
 	margin: 60px 0 0;
 	cursor: pointer;
 }
-
-/* #option {
-	border-radius: 16px;
-	font-family: "Noto Sans TC", sans-serif;
-	font-weight: bold;
-	font-size: 1.2rem;
-	letter-spacing: .1rem;
-	line-height: 150%;
-	padding: 12px 80px;
-	color: var(--black-600);
-} */
 
 .select-menu{
     width: 380px;
