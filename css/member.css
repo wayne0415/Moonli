@@ -1,0 +1,92 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 字體設定 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header 和導航欄樣式 */
+header {
+    padding: 50px 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* 使用 gap 控制間距 */
+}
+.menu-container-item {
+    padding: 0 24px;
+}
+
+.nav-menu {
+    font-size: 20px;
+    line-height: 60px;
+    letter-spacing: 0.08em;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.nav-menu:hover {
+    color: #7fc179;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 192px;
+    line-height: 60px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.13rem;
+    color: #fff;
+    background-color: #a797e7;
+    border-radius: 999px;
+    transition: background-color 0.3s ease;
+}
+
+.login img {
+    width: 28px;
+    height: 28px;
+    margin-left: 10px;
+}
+
+.login:hover {
+    background-color: #7fc179;
+}
