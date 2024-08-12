@@ -4,13 +4,15 @@
     box-sizing: border-box;
 }
 
-/* html{
-    
-} */
-
 body {
     font-family: Arial, sans-serif;
     color: #FFFFFF;
+}
+
+a {
+	display: block;
+	/* 將預設 inline 改為 block */
+	text-decoration: none;
 }
 
 /* 導覽列 */
@@ -111,6 +113,7 @@ header nav ul li a {
 .search-btn button:hover {
     background-color: #A797E7;
     color: #FFFFFF;
+    cursor: pointer;
 }
 
 button i {
