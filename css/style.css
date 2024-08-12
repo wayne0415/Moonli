@@ -5,13 +5,15 @@
     text-decoration: none;
 }
 
-/* html{
-    
-} */
-
 body {
     font-family: 'Noto Sans', sans-serif;
     color: #FFFFFF;
+}
+
+a {
+	display: block;
+	/* 將預設 inline 改為 block */
+	text-decoration: none;
 }
 
 /* 導覽列 */
@@ -112,6 +114,7 @@ header nav ul li a {
 .search-btn button:hover {
     background-color: #A797E7;
     color: #FFFFFF;
+    cursor: pointer;
 }
 
 button i {
@@ -183,6 +186,7 @@ button i {
     top: 270px; /* 調整這個值來改變圖片的垂直位置 */
     left: 50%;
     transform: translateX(-50%);
+    /* 將元素在水平方向平移，使它的水平位置相對於其自身寬度的 50% 進行移動。 */
     width: 100%;
     display: flex;
     justify-content: center;
