@@ -82,6 +82,16 @@
             input[type="text"],
             input[type="email"],
             input[type="tel"],
+            input[type="date"],
+            input[type="radio"],
+            .radio-group {
+                width: 100%;
+                height: 40px; /* 統一所有輸入框的高度 */
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
             input[type="date"] {
                 padding: 10px;
                 font-size: 16px;
@@ -101,11 +111,15 @@
 
             .radio-group {
                 display: flex;
+                align-items: center;
                 gap: 20px;
             }
 
-            .radio-group input[type="radio"] {
-                margin-right: 6px;
+            .radio-group label {
+                margin-right: 10px;
+                height: auto;
+                display: flex;
+                align-items: center;
             }
 
             .submit-button {
