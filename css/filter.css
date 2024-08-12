@@ -29,8 +29,8 @@ body {
 		"蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
 	font-size: 100%;
 	line-height: 1.5;
-	background-image:  linear-gradient(var(--gradient-sky-purple));
-
+	background-image: linear-gradient(var(--gradient-sky-purple));
+	position: relative;
 }
 
 h1,
@@ -60,6 +60,8 @@ a {
 	text-decoration: none;
 }
 
+
+
 main {
 	display: flex;
 	width: 100%;
@@ -77,6 +79,7 @@ section {
 	box-shadow: 0 1px 2px var(--shadow);
 	background-image: linear-gradient(var(--gradient-card));
 	border-radius: 40px;
+z-index: 10;
 }
 
 .title {
@@ -104,21 +107,21 @@ button {
 	padding: 8px 40px;
 	border-radius: 99px;
 	border: none;
-	box-shadow: 0 0 3px rgba(0,0,0,0.1);
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 	font-size: 1.5rem;
 	font-weight: bold;
 	margin: 8px;
 }
 
-button:hover{
-background-color: var(--purple-100);
-cursor: pointer;
+button:hover {
+	background-color: var(--purple-100);
+	cursor: pointer;
 }
 
-button:active{
-background-color: var(--purple-400);
-color: var(--white);
-cursor: pointer;
+button:active {
+	background-color: var(--purple-400);
+	color: var(--white);
+	cursor: pointer;
 }
 
 .progress-bar {
@@ -128,6 +131,7 @@ cursor: pointer;
 	background-color: var(--purple-100);
 	border-radius: 99px;
 }
+
 .progress {
 	width: 50%;
 	height: 28px;
@@ -135,7 +139,7 @@ cursor: pointer;
 	border-radius: 99px;
 }
 
-small{
+small {
 	font-family: K2D;
 	color: var(--white);
 	font-size: 14px;
@@ -158,66 +162,71 @@ small{
 	cursor: pointer;
 }
 
-.select-menu{
-    width: 380px;
-    margin: 40px auto;
+.select-menu {
+	width: 380px;
+	margin: 40px auto;
 }
-.select-menu .select-btn{
-    display: flex;
-    height: 55px;
-    background: var(--white);
-    padding: 20px;
-    font-size: 18px;
-    font-weight: 400;
-    border-radius: 8px;
-    align-items: center;
-    cursor: pointer;
-    justify-content: space-between;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+
+.select-menu .select-btn {
+	display: flex;
+	height: 55px;
+	background: var(--white);
+	padding: 20px;
+	font-size: 18px;
+	font-weight: 400;
+	border-radius: 8px;
+	align-items: center;
+	cursor: pointer;
+	justify-content: space-between;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
-.select-btn i{
-    font-size: 25px;
-    transition: 0.3s;
+
+.select-btn i {
+	font-size: 25px;
+	transition: 0.3s;
 	color: var(--black-600);
 }
-.select-menu.active .select-btn i{
-    transform: rotate(-180deg);
+
+.select-menu.active .select-btn i {
+	transform: rotate(-180deg);
 	/* color: white;
 	background-color: var(--purple-400); */
 }
-.select-menu .options{
+
+.select-menu .options {
 	z-index: 10;
-    padding: 20px;
-    margin-top: 10px;
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: 0 0 3px rgba(0,0,0,0.1);
-    display: none;
+	padding: 20px;
+	margin-top: 10px;
+	border-radius: 8px;
+	background: #fff;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+	display: none;
 }
-.select-menu.active .options{
-    display: flex;
+
+.select-menu.active .options {
+	display: flex;
 	flex-direction: column;
 	border-radius: 8px;
 }
 
-.options .option{
-    display: flex;
-    height: 55px;
-    cursor: pointer;
-    padding: 0 40px;
-    border-radius: 8px;
-    align-items: center;
-    background: var(--white);
+.options .option {
+	display: flex;
+	height: 55px;
+	cursor: pointer;
+	padding: 0 40px;
+	border-radius: 8px;
+	align-items: center;
+	background: var(--white);
 }
 
-.options .option:hover{
-    background: var(--purple-100);
+.options .option:hover {
+	background: var(--purple-100);
 	color: var(--white);
 }
 
-.option .option-text{
+.option .option-text {
 	display: flex;
-    font-size: 18px;
+	font-size: 18px;
 	color: var(--black-600);
 }
 
@@ -226,3 +235,13 @@ small{
 	font-weight: bold;
 	color: var(--black-600);
 }
+
+.cloud {
+    position: absolute;
+    width: 150%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+	z-index: 1;
+	bottom: 0;
+	}

@@ -182,6 +182,7 @@ button i {
     top: 270px; /* 調整這個值來改變圖片的垂直位置 */
     left: 50%;
     transform: translateX(-50%);
+    /* 將元素在水平方向平移，使它的水平位置相對於其自身寬度的 50% 進行移動。 */
     width: 100%;
     display: flex;
     justify-content: center;
