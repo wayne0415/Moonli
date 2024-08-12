@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>會員中心表單</title>
+        <style>
+            /* 基本樣式重置 */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: "Noto Sans TC", Arial, sans-serif;
+                font-size: 16px;
+                color: #333;
+                background-color: #f9f9f9;
+                line-height: 1.5;
+            }
+
+            .member-container {
+                max-width: 600px;
+                margin: 40px auto;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 12px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .title {
+                font-size: 24px;
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .tabs {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 20px;
+                border-bottom: 2px solid #ccc;
+            }
+
+            .tab {
+                padding: 10px 20px;
+                font-size: 16px;
+                color: #999;
+                text-align: center;
+                text-decoration: none;
+            }
+
+            .tab.active {
+                color: #333;
+                font-weight: bold;
+                border-bottom: 2px solid #333;
+            }
+
+            .member-form {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .form-group {
+                display: flex;
+                flex-direction: column;
+            }
+
+            label {
+                font-size: 14px;
+                margin-bottom: 8px;
+                color: #333;
+            }
+
+            .required {
+                color: red;
+                margin-left: 4px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            input[type="date"] {
+                padding: 10px;
+                font-size: 16px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                background-color: #f9f9f9;
+                outline: none;
+                transition: border-color 0.3s;
+            }
+
+            input[type="text"]:focus,
+            input[type="email"]:focus,
+            input[type="tel"]:focus,
+            input[type="date"]:focus {
+                border-color: #666;
+            }
+
+            .radio-group {
+                display: flex;
+                gap: 20px;
+            }
+
+            .radio-group input[type="radio"] {
+                margin-right: 6px;
+            }
+
+            .submit-button {
+                padding: 12px 0;
+                font-size: 18px;
+                font-weight: bold;
+                color: #fff;
+                background-color: #a797e7;
+                border: none;
+                border-radius: 8px;
+                text-align: center;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+            .submit-button:hover {
+                background-color: #7fc179;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="member-container">
+            <h1 class="title">會員管理</h1>
+            <nav class="tabs">
+                <a href="#" class="tab">帳號管理</a>
+                <a href="#" class="tab active">會員資料</a>
+            </nav>
+            <form class="member-form">
+                <div class="form-group">
+                    <label for="name">本名 <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" value="黃小雞" />
+                </div>
+                <div class="form-group">
+                    <label for="nickname">暱稱 <span class="required">*</span></label>
+                    <input type="text" id="nickname" name="nickname" value="littlechicken" />
+                </div>
+                <div class="form-group">
+                    <label for="email">聯絡信箱 <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" value="chichichicken@gmail.com" />
+                </div>
+                <div class="form-group">
+                    <label for="phone">聯絡電話 <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" value="0988888888" />
+                </div>
+                <div class="form-group">
+                    <label for="address">地址</label>
+                    <input type="text" id="address" name="address" value="littlechicken" />
+                </div>
+                <div class="form-group">
+                    <label>性別 <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <input type="radio" id="male" name="gender" value="male" checked />
+                        <label for="male">男性</label>
+                        <input type="radio" id="female" name="gender" value="female" />
+                        <label for="female">女性</label>
+                        <input type="radio" id="other" name="gender" value="other" />
+                        <label for="other">其他</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="birthday">生日 <span class="required">*</span></label>
+                    <input type="date" id="birthday" name="birthday" />
+                </div>
+                <div class="form-group">
+                    <label for="id">身分證字號 <span class="required">*</span></label>
+                    <input type="text" id="id" name="id" value="**********" />
+                </div>
+                <div class="form-group">
+                    <label for="emergency_contact">緊急聯絡人 <span class="required">*</span></label>
+                    <input type="text" id="emergency_contact" name="emergency_contact" value="黃母雞" />
+                </div>
+                <div class="form-group">
+                    <label for="relationship">與緊急聯絡人的關係 <span class="required">*</span></label>
+                    <input type="text" id="relationship" name="relationship" value="母子" />
+                </div>
+                <div class="form-group">
+                    <label for="emergency_phone">緊急聯絡人電話 <span class="required">*</span></label>
+                    <input type="tel" id="emergency_phone" name="emergency_phone" value="0977777777" />
+                </div>
+                <div class="form-group">
+                    <label for="occupation">工作</label>
+                    <input type="text" id="occupation" name="occupation" value="吃蟲" />
+                </div>
+                <div class="form-group">
+                    <label for="emotional_status">感情狀況</label>
+                    <input type="text" id="emotional_status" name="emotional_status" value="**********" />
+                </div>
+                <div class="form-group">
+                    <label for="education">學歷</label>
+                    <input type="text" id="education" name="education" value="小學" />
+                </div>
+                <button type="submit" class="submit-button">儲存</button>
+            </form>
+        </div>
+    </body>
+</html>
