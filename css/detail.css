@@ -263,7 +263,7 @@ section {
 /* -------------諮商風格end------------- */
 
 /* -------------地圖start------------- */
-/* .map{
+.map{
     display: flex;
     flex-direction: column;
     justify-content: center;
