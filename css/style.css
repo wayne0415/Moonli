@@ -165,10 +165,10 @@ button i {
     /* 根據需要設置容器的高度 */
 }
 .problems-title{
-    padding-bottom: 30px;
+    padding-bottom: 35px;
 }
 .problems-title h2 {
-    font-size: 30px;
+    font-size: 4rem;
 }
 
 .problems-container {
@@ -306,7 +306,7 @@ button i {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 32px;
+    gap: 24px;
     max-width: 1200px; /* 限制最大寬度 */
     width: 100%;
 }
@@ -317,11 +317,15 @@ button i {
     align-items: center;
     padding: 40px;
     border: 1px solid #fff;
-    border-radius: 10px;
+    border-radius: 30px;
     width: 100%;
     max-width: 300px; /* 每個項目的最大寬度 */
     /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
     /* background-color: rgba(255, 255, 255, 0.1); */
+}
+
+.service-item img {
+    width:30%;
 }
 
 .title-container h2 {
@@ -332,13 +336,13 @@ button i {
 }
 
 .service-item h3 {
-    font-size: 24px;
+    font-size: 2.5rem;
     padding-top: 20px;
     padding-bottom: 15px;
 }
 
-.service p {
-    font-size: 16px;
+.service-item p {
+    font-size: 1.5rem;
     line-height: 1.5;
 }
 
@@ -371,11 +375,12 @@ button i {
 .stas-item h3 {
     font-size: 48px;
     margin-bottom: 10px;
-    font-weight: lighter;
+    font-weight:400;
 }
 
 .stas-item p {
     font-size: 20px;
+    font-weight: bold;
 }
 
 /* Q&A區 */
@@ -398,7 +403,7 @@ button i {
 }
 
 #faq h2 {
-    font-size: 32px;
+    font-size: 3rem;
     margin-bottom: 20px;
     padding-top: 100px;
     
@@ -418,16 +423,15 @@ button i {
     margin: 16px;
     padding: 20px;
     width: 100%; /* 預設全寬 */
-    max-width: 250px; /* 最大寬度 */
+    max-width: 320px; /* 最大寬度 */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+        /* justify-content: center; */
 }
 
-
 .question h3 {
-    /* font-size: 20px; */
+    font-size: 1.8rem;
     margin-bottom: 10px;
-    /* justify-content: center; */
 }
 
 .question p {
@@ -458,7 +462,7 @@ button i {
     display: block; /* 去除圖片下方的空隙 */
 }
 #step-section h2 {
-    font-size: 32px;
+    font-size: 3rem;
     margin: 40px;
 }
 
