@@ -78,7 +78,7 @@ header nav ul li a {
     font-weight: bold;
     color: #FFFFFF;
     border: none;
-    padding: 0px 25px;
+    padding: 10px 25px;
     border-radius: 90px;
     margin-right: auto; /*將登入/註冊按鈕推到最右邊*/
     cursor: pointer;
@@ -89,6 +89,8 @@ header nav ul li a {
 }
 
 .auth-button i {
+    padding-bottom: 0px;
+    padding-top: 0px;
     padding-left: 10px;
 }
 
@@ -306,8 +308,14 @@ button i {
     border-radius: 30px;
     width: 100%;
     max-width: 300px; /* 每個項目的最大寬度 */
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-    /* background-color: rgba(255, 255, 255, 0.1); */
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 滑鼠懸停時上升效果 */
+.service-item:hover {
+    transform: translateY(-10px); 
 }
 
 .service-item img {
@@ -398,10 +406,10 @@ button i {
     height: auto; 
     display: block; /* 去除圖片下方的空隙 */
 }
+
 #faq h2 {
     font-size: 3.5rem;
-    margin-bottom: 20px;
-    padding-top: 100px;
+    padding: 20px; 
     
 }
 
@@ -454,7 +462,7 @@ button i {
 
 #step-section h2 {
     font-size: 3.5rem;
-    margin-top: 24px;
+    margin-top: 40px;
 }
 
 .step-container {
@@ -465,7 +473,7 @@ button i {
     width: 100%;
     max-width: 1200px; /* 最大寬度 */
     gap: 40px; 
-    margin: 48px;
+    margin: 80px;
 }
 
 .step {
@@ -475,16 +483,10 @@ button i {
     /* text-align: center; */
     width: 480px; /* 每個步驟項目的最大寬度 */
     flex-grow: 1; /* 使項目根據可用空間進行調整 */
-    padding: 20px;
-    /* background: rgba(255, 255, 255, 0.1); 
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.1); 
     border-radius: 10px;
-    transition: transform 0.3s ease; */
 }
-
-/* 滑鼠懸停時上升效果 */
-/* .step:hover {
-    transform: translateY(-10px); 
-} */
 
 .step-image-box{
     display: flex;
@@ -507,16 +509,15 @@ button i {
     font-size: 2.5rem;
     text-align: left;
     margin-bottom: 10px;
+    color: #F2CE98;
 }
-.readmore-btn{
-    padding-top: 45px;
-}
+
 .readmore-btn button {
     background-color: #74A695;
     color: #FFFFFF;
     border:2px #FFFFFF solid;
-    padding: 8px 30px;
-    font-size: 2rem;
+    padding: 20px 40px;
+    font-size: 1.5rem;
     font-weight: bold;
     border-radius: 50px;
     cursor: pointer;
@@ -531,23 +532,49 @@ button i {
 #experience_sharing {
     background: linear-gradient(to bottom, #86C89E, #D3D7C4);
     text-align: center;
-}
-#experience_sharing img{
+    overflow: hidden; /* 防止内容溢出 */
     display: flex;
-    align-items: flex-start;
-    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.wave-background {
+    width: 100%; /* 確保圖片寬度自適應父容器 */
+    height: auto; 
+    display: block; /* 去除圖片下方的空隙 */
+}
+
+.icon_annoymoon_Happy  {
+    position: absolute; 
+    transform: scale(1.6);
+    top: 108px; /* 靠近上方 */
+    left: 180px; 
+    z-index: 10; /* 確保圖片顯示在其他元素之上 */
+}
+
+.icon_annoymoon_Happy img {
+    width: 100%; 
+    height: auto; 
+    display: block; /* 去除圖片下方的空隙 */
+}
+
+.icon_annoymoon_Happy {
+    width: 15%;
     height: auto;
 }
 
 #experience_sharing h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 3.5rem;
+    margin: 48px;
 }
 
 .experience_sharing_list {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    padding: 90px;
 }
 
 .experience_sharing_list div {
@@ -558,6 +585,7 @@ button i {
     width: 200px;
     font-size: 16px;
 }
+
 
 /* 頁尾區 */
 footer {
