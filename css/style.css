@@ -398,10 +398,17 @@ button i {
     width: 100%; /* 確保圖片寬度自適應父容器 */
     height: auto; 
     display: block; /* 去除圖片下方的空隙 */
-
     /* margin: 0 auto;  */
 }
 
+.home-images-icon_annoymoonQQ  {
+    
+    }
+
+.home-images-icon_annoymoonQQ img {
+    width: 28%; /* 確保圖片寬度自適應父容器 */
+    height: auto; 
+}
 #faq h2 {
     font-size: 3rem;
     margin-bottom: 20px;
@@ -453,27 +460,29 @@ button i {
     align-items: center;
     background: #74A695;
     padding: 50px 20px;
-    text-align: center;
+    text-align: center;   
 }
-.home_images_step-arrow img{
-    display: flex;
-    width: 100%; /* 確保圖片寬度自適應父容器 */
-    height: auto; 
+
+#step-section img{
+    width: 30%;
     display: block; /* 去除圖片下方的空隙 */
 }
+
 #step-section h2 {
-    font-size: 3rem;
-    margin: 40px;
+    font-size: 4rem;
+    margin-top: 24px;
 }
 
 .step-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* 確保在小螢幕上項目能夠換行 */
-    width: 100%;
+    justify-content: space-between;
+    
+    /* flex-wrap: wrap;  */
+    /* 確保在小螢幕上項目能夠換行 */
+    /* width: 100%; */
     max-width: 1200px; /* 最大寬度 */
     gap: 40px; /* 項目之間的間距 */
-    margin: 40px;
+    margin: 48px;
 }
 
 .step {
@@ -481,10 +490,10 @@ button i {
     /* flex-direction: column;  */
     align-items: center;
     /* text-align: center; */
-    max-width: 450px; /* 每個步驟項目的最大寬度 */
+    width: 480px; /* 每個步驟項目的最大寬度 */
     flex-grow: 1; /* 使項目根據可用空間進行調整 */
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1); /* 背景透明 */
+    background: rgba(255, 255, 255, 0.1); /* 背景透明*/
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
@@ -494,26 +503,25 @@ button i {
 }
 
 .step img {
-    width:70%; /* 調整圖標大小 */
-    height: auto;
+    width:10%; 
+    /* height: auto; */
 }
 
 .context{
     margin-left: 16px;
     width: 100%;
-    max-width: 1390px;
+    max-width: 300px;
 }
 .context p{
     text-align: left;
 }
 .step h3 {
+    font-size: 2.5rem;
     text-align: left;
-    font-size: 24px;
-    margin-bottom: 15px;
 }
 
 .step p {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.5;
 }
 
