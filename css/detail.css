@@ -25,10 +25,14 @@
     --black-500-border: #D9D9D9;
     --black-800-main-text:#4B4B4B;
     --black-700:#6F6F6F;
+    --white:#fff;
 
+    --primary-400:#A797E7;
 
     --secondary-100: #E7F0CE;
     --secondary-400: #7FC179;
+
+    --yellow:#FFEE92;
 
 
 }
@@ -41,15 +45,85 @@ html {
     letter-spacing: 0.12em;
 }
 
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
 body{
+    
     background-image: url(./images/backgroung\ image.svg);
     background-position: bottom center;
     background-repeat: no-repeat;
 }
 
-section {
-    padding-top: 5.5rem;
+
+/* Header 和導航欄樣式 */
+header {
+    padding: 30px 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    gap: 24px; /* 使用 gap 控制間距 */
+}
+
+.nav-menu {
+    font-size: 2rem;
+    line-height: 150%;
+    color: var(--black-800-main-text);
+}
+
+.nav-menu:hover {
+    color: var(--black-800-main-text);
+    font-weight: 800;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 24px;
+    line-height: 140%;
+    font-size: 2rem;
+    font-weight: 800;
+    background-color: var(--primary-400);
+    color: var(--white);
+    border-radius: 999px;
+    gap: 8px;
+}
+
+.login img {
+    width: 28px;
+    height: 28px;
+    margin-left: 10px;
+}
+
+.login:hover {
+    color: var(--primary-400);
+    background-color: var(--white);
+}
+
+/* Header ends */
+
 
 .container {
     margin: 0 auto;
