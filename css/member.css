@@ -1,14 +1,51 @@
-@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
-/* CSS Reset */
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 * {
+    font-family: 'Noto Sans', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all .2s linear;
+}
+
+/* 字體顏色樣式設定 */
+:root {
+    --small-cpation: 1.2rem;
+    --K2D-body: 1.6rem;
+    --body-text:1.6rem;
+    --body-semibold:2rem;
+    --body-title:2.4rem;
+    --subtitle:1.4rem;
+    --heading-h1:2.8rem;
+
+    --black-500-border: #D9D9D9;
+    --black-800-main-text:#4B4B4B;
+    --black-700:#6F6F6F;
+    --white:#fff;
+
+    --primary-400:#A797E7;
+
+    --secondary-100: #E7F0CE;
+    --secondary-400: #7FC179;
+
+    --yellow:#FFEE92;
+
+
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+    letter-spacing: 0.12em;
 }
 
 /* 字體設定 */
 body {
-    font-family: "Noto Sans", sans-serif;
     font-size: 100%;
     line-height: 1.5;
 }
@@ -22,10 +59,6 @@ h6 {
     font-weight: normal;
 }
 
-ul,
-ol {
-    list-style: none;
-}
 
 img {
     display: block;
@@ -40,46 +73,49 @@ a {
 
 /* Header 和導航欄樣式 */
 header {
-    padding: 50px 120px;
+    padding: 30px 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+
 .menu-container {
     display: flex;
     align-items: center;
-    gap: 20px; /* 使用 gap 控制間距 */
-}
-.menu-container-item {
-    padding: 0 24px;
+    gap: 24px; /* 使用 gap 控制間距 */
 }
 
 .nav-menu {
-    font-size: 20px;
-    line-height: 60px;
-    letter-spacing: 0.08em;
-    color: black;
-    transition: color 0.3s ease;
+    font-size: 2rem;
+    line-height: 150%;
+    color: var(--black-800-main-text);
 }
 
 .nav-menu:hover {
-    color: #7fc179;
+    color: var(--yellow);
+    font-weight: 800;
 }
 
 .login {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 192px;
-    line-height: 60px;
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 0.13rem;
-    color: #fff;
-    background-color: #a797e7;
+    padding: 12px 24px;
+    line-height: 140%;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-400);
+    background-color: var(--white);
     border-radius: 999px;
-    transition: background-color 0.3s ease;
+    gap: 8px;
 }
 
 .login img {
@@ -89,5 +125,6 @@ header {
 }
 
 .login:hover {
-    background-color: #7fc179;
+    background-color: var(--primary-400);
+    color: var(--white);
 }
