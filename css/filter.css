@@ -1,13 +1,25 @@
-@charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Noto+Sans+TC:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all .2s linear;
 }
 
 :root {
+	/* 字型 */
+	--small-cpation: 1.2rem;
+    --K2D-body: 1.6rem;
+    --body-text:1.6rem;
+    --body-semibold:2rem;
+    --body-title:2.4rem;
+    --subtitle:1.4rem;
+    --heading-h1:2.8rem;
 	/* 灰階 */
 	--black-600: rgb(144, 144, 144);
 	--black-700: rgb(111, 111, 111);
@@ -21,18 +33,19 @@
 	--gradient-sky-purple: rgb(91, 97, 149), rgb(157, 134, 159);
 }
 
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+    letter-spacing: 0.12em;
+}
+
 body {
-	font-family:
-		/*西文*/
-		-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
-		/*中文*/
-		"蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
 	font-size: 100%;
 	line-height: 1.5;
 	background-image: linear-gradient(var(--gradient-sky-purple));
 	position: relative;
-
-
 }
 
 h1,
@@ -52,9 +65,7 @@ ol {
 img {
 	display: block;
 	width: 100%;
-	max-width: 100%;
-	height: auto;
-	overflow: hidden;
+	height: 100%;
 }
 
 a {
@@ -74,9 +85,9 @@ main {
 
 section {
 	display: flex;
-	padding: 100px;
-	margin: 60px;
-	width: 80%;
+	padding: 60px;
+	margin: 30px;
+	width: 60%;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
@@ -84,6 +95,13 @@ section {
 	background-image: linear-gradient(var(--gradient-card));
 	border-radius: 40px;
 	z-index: 10;
+	row-gap: 60px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+row-gap: 20px;
 }
 
 .title {
@@ -93,26 +111,25 @@ section {
 .title h2 {
 	font-family: "Noto Sans TC", sans-serif;
 	font-weight: bold;
-	font-size: 1.75rem;
+	font-size: 2rem;
 	letter-spacing: .12rem;
 	line-height: 150%;
 	color: var(--black-700);
 	width: 100%;
-	margin: 32px 0;
+	margin: 8px 0;
 }
 
 
 button {
-	width: 200px;
+	width: 160px;
 	background-color: var(--white);
 	color: var(--purple-400);
-	height: 52px;
+	height: 40px;
 	line-height: 30px;
-	padding: 8px 40px;
 	border-radius: 99px;
 	border: none;
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-	font-size: 1.5rem;
+	font-size: 1.6rem;
 	font-weight: bold;
 	margin: 8px;
 }
@@ -122,23 +139,17 @@ button:hover {
 	cursor: pointer;
 }
 
-button.is-active {
-	background-color: var(--purple-400);
-	color: var(--white);
-	cursor: pointer;
-}
-
 .progress-bar {
 	margin: 20px;
 	width: 50%;
-	height: 28px;
+	height: 16px;
 	background-color: var(--purple-100);
 	border-radius: 99px;
 }
 
 .progress {
 	width: 50%;
-	height: 28px;
+	height: 16px;
 	background-color: var(--purple-400);
 	border-radius: 99px;
 }
@@ -146,12 +157,12 @@ button.is-active {
 small {
 	font-family: K2D;
 	color: var(--white);
-	font-size: 14px;
+	font-size: 1.2rem;
 	font-weight: 100;
 	letter-spacing: .1rem;
 	display: flex;
 	float: right;
-	padding: 4px 8px;
+	padding-right: 8px;
 }
 
 #btn__next {
@@ -167,13 +178,13 @@ small {
 }
 
 .select-menu {
-	width: 380px;
-	margin: 40px auto;
+	width: 50%;
+	margin: 10px auto;
 }
 
 .select-menu .select-btn {
 	display: flex;
-	height: 55px;
+	height: 40px;
 	background: var(--white);
 	padding: 20px;
 	font-size: 18px;
@@ -186,7 +197,7 @@ small {
 }
 
 .select-btn i {
-	font-size: 25px;
+	font-size: 1.6rem;
 	transition: 0.3s;
 	color: var(--black-600);
 }
@@ -215,9 +226,9 @@ small {
 
 .options .option {
 	display: flex;
-	height: 55px;
+	height: 40px;
 	cursor: pointer;
-	padding: 0 40px;
+	padding: 0 20px;
 	border-radius: 8px;
 	align-items: center;
 	background: var(--white);
@@ -230,7 +241,7 @@ small {
 
 .option .option-text {
 	display: flex;
-	font-size: 18px;
+	font-size: 1.6rem;
 	color: var(--black-600);
 }
 
@@ -242,11 +253,9 @@ small {
 
 .cloud {
 	position: absolute;
-	width: 100%;
 	justify-content: center;
 	align-items: flex-end;
 	z-index: 1;
 	bottom: 0;
-	transform: translateX(-100px) scale(1.5);
-
+	object-fit: cover;
 }
