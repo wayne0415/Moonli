@@ -402,12 +402,18 @@ button i {
 }
 
 .home-images-icon_annoymoonQQ  {
-    
-    }
+    position: absolute; /* 絕對定位 */
+    top: 0; /* 靠近上方 */
+    right: 0; /* 靠近右側 */
+    width: 20%; /* 設定圖片的寬度 */
+    transform: translate(-40%, -0%); /* 根據需要微調位置 */
+    z-index: 10; /* 確保圖片顯示在其他元素之上 */
+}
 
 .home-images-icon_annoymoonQQ img {
-    width: 28%; /* 確保圖片寬度自適應父容器 */
+    /* width: 70%;  */
     height: auto; 
+    display: block; /* 去除圖片下方的空隙 */
 }
 #faq h2 {
     font-size: 3rem;
@@ -464,7 +470,7 @@ button i {
 }
 
 #step-section img{
-    width: 30%;
+    width: 26%;
     display: block; /* 去除圖片下方的空隙 */
 }
 
@@ -502,10 +508,11 @@ button i {
     transform: translateY(-10px); /* 滑鼠懸停時上升效果 */
 }
 
-.step img {
-    width:10%; 
-    /* height: auto; */
+.step-image-box{
+    display: flex;
+    align-items: center;
 }
+
 
 .context{
     margin-left: 16px;
