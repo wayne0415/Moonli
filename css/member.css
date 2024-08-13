@@ -64,7 +64,7 @@ h6 {
 
 img {
     display: block;
-    width: 100%;
+    width: 60%;
     max-width: 100%;
     height: auto;
 }
@@ -96,7 +96,7 @@ header {
 }
 
 .nav-menu {
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 150%;
     color: var(--black-700);
 }
@@ -112,7 +112,7 @@ header {
     align-items: center;
     padding: 8px 24px;
     line-height: 140%;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 800;
     color: var(--primary-400);
     background-color: var(--white);

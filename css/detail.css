@@ -47,7 +47,7 @@ html {
 
 img {
     display: block;
-    width: 100%;
+    width: 60%;
     max-width: 100%;
     height: auto;
 }
@@ -87,7 +87,7 @@ header {
 }
 
 .nav-menu {
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 150%;
     color: var(--black-800-main-text);
 }
@@ -103,10 +103,11 @@ header {
     align-items: center;
     padding: 8px 24px;
     line-height: 140%;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 800;
-    background-color: var(--primary-400);
-    color: var(--white);
+    color: var(--primary-400);
+    background-color: var(--white);
+    outline: var(--primary-400) solid 3px;
     border-radius: 999px;
     gap: 8px;
 }
@@ -118,8 +119,8 @@ header {
 }
 
 .login:hover {
-    color: var(--primary-400);
-    background-color: var(--white);
+    background-color: var(--primary-400);
+    color: var(--white);
 }
 
 /* Header ends */
@@ -152,8 +153,8 @@ header {
 }
 
 .profile__photo img {
-    width: 400px;
-    height: 320px;
+    width: 320px;
+    height: 240px;
     object-fit: cover;
     border-radius: 1.2rem;
 }
@@ -161,15 +162,16 @@ header {
 .profile__photo .clinic {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    gap: 20px;
-    border-radius: .8rem;
+    gap: 12px;
+    overflow: hidden;
 }
 
+
 .profile__photo .clinic img {
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
+    border-radius: .8rem;
 }
 
 
@@ -178,7 +180,7 @@ header {
 .block__content{
     display: flex;
     flex-direction: column;
-    padding: 4rem;
+    padding: 3.2rem;
     gap: 2rem;
     border: solid 1px var(--black-500-border);
     border-radius: 1.2rem;
@@ -236,7 +238,7 @@ header {
 .time {
     display: flex;
     height: 58px;
-    padding: .8rem 3.2rem;
+    padding: .8rem 2.4rem;
     border-radius: 1.2rem;
     border: solid 1px var(--black-500-border);
     text-align: center;
