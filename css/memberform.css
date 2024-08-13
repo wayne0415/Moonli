@@ -9,7 +9,7 @@ body {
     font-family: "Noto Sans TC", Arial, sans-serif;
     font-size: 16px;
     color: #333;
-    background-color: #ca9292;
+    background-color: #d7d7d7;
     line-height: 1.5;
 }
 
@@ -84,7 +84,7 @@ input[type="date"] {
     border-radius: 8px;
     background-color: #f9f9f9;
     outline: none;
-    transition: border-color 0.3s;
+    transition: border-color 0.2s;
 }
 
 input[type="text"]:focus,
@@ -102,7 +102,13 @@ input[type="date"]:focus {
 .radio-group input[type="radio"] {
     margin-right: 6px;
 }
-
+.radio-item {
+    display: flex;
+    align-items: center;
+}
+.radio-item label {
+    margin-bottom: 0;
+}
 .submit-button {
     width: 50%;
     margin: 0 auto;
