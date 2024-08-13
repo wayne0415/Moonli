@@ -79,9 +79,9 @@ header nav ul li a {
     color: #FFFFFF;
     border: none;
     padding: 0px 25px;
-    /* cursor: pointer; */
     border-radius: 90px;
     margin-right: auto; /*將登入/註冊按鈕推到最右邊*/
+    cursor: pointer;
 }
 
 .auth-button button:hover {
@@ -98,23 +98,19 @@ header nav ul li a {
     text-align: center;
     height: 800px;
 }
-
 .home-container{
     padding: 120px 165px 100px 165px;
 }
-
 .home-images-logo{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .home-images-logo img {
     width: auto;
     height: 100%;
     transform: scale(0.75);
 }
-
 .search-btn{
     padding-top: 45px;
 }
@@ -123,27 +119,24 @@ header nav ul li a {
     color: #A797E7;
     border: none;
     padding: 8px 120px;
-    font-size: 24px;
+    font-size: 2.8rem;
     font-weight: bold;
     border-radius: 50px;
-    /* cursor: pointer; */
+    cursor: pointer;
 }
 .search-btn button:hover {
     background-color: #A797E7;
     color: #FFFFFF;
 }
-
 button i {
     padding: 16px 0px 16px 14px;
 }
-
 .home-images-moon-container {
     display: flex;
     justify-content: flex-end; /* 將圖片靠右對齊 */
     align-items: flex-start; /* 將圖片靠上對齊 */
     padding-top: 20px; /* 確保圖片在 header 下方 */
 }
-
 .home-images-moon img {
     width: auto;
     height: 200px; /* 根據需要調整圖片高度 */
@@ -170,7 +163,6 @@ button i {
 .problems-title h2 {
     font-size: 4rem;
 }
-
 .problems-container {
     display: flex;
     justify-content: center;
@@ -229,7 +221,6 @@ button i {
     max-width: 100%;
     height: auto;
 }
-
 .item-wave {
     position: absolute;
     bottom: 0;
@@ -240,12 +231,10 @@ button i {
     justify-content: center;
     align-items: flex-end;
 }
-
 .item-wave img {
     max-width: 100%;
     height: auto;
 }
-
 .item-wave2{
     position: absolute;
     bottom: 0;
@@ -256,13 +245,11 @@ button i {
     justify-content: center;
     align-items: flex-end;
 }
-
 .item-wave2 img {
     opacity: 0.6;
     max-width: 100%;
     height: auto;
 }
-
 .item-wave3{
     position: absolute;
     bottom: 0;
@@ -273,7 +260,6 @@ button i {
     justify-content: center;
     align-items: flex-end;
 }
-
 .item-wave3 img {
     opacity: 0.999;
     max-width: 100%;
@@ -329,10 +315,9 @@ button i {
 }
 
 .title-container h2 {
-    font-size: 32px;
+    font-size: 3.5rem;
     padding: 32px;
     align-items: center;
-    /* 水平置中 */
 }
 
 .service-item h3 {
@@ -350,9 +335,7 @@ button i {
 #statistics {
     display: flex;
     flex-direction: column;
-    /* 垂直排列 */
     align-items: center;
-    /* 水平置中 */
     background: #42514E;
     padding: 45px 88px 93px 88px;
     text-align: center;
@@ -373,13 +356,13 @@ button i {
 }
 
 .stas-item h3 {
-    font-size: 48px;
+    font-size: 4.5rem;
     margin-bottom: 10px;
     font-weight:400;
 }
 
 .stas-item p {
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: bold;
 }
 
@@ -416,7 +399,7 @@ button i {
     display: block; /* 去除圖片下方的空隙 */
 }
 #faq h2 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 20px;
     padding-top: 100px;
     
@@ -447,11 +430,6 @@ button i {
     margin-bottom: 10px;
 }
 
-.question p {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
 .home-images-wave-lightgreen img{
     width: 100%; /* 確保圖片寬度自適應父容器 */
     height: auto; 
@@ -470,24 +448,23 @@ button i {
 }
 
 #step-section img{
-    width: 26%;
+    width: 20%;
     display: block; /* 去除圖片下方的空隙 */
 }
 
 #step-section h2 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin-top: 24px;
 }
 
 .step-container {
     display: flex;
     justify-content: space-between;
-    
     /* flex-wrap: wrap;  */
     /* 確保在小螢幕上項目能夠換行 */
-    /* width: 100%; */
+    width: 100%;
     max-width: 1200px; /* 最大寬度 */
-    gap: 40px; /* 項目之間的間距 */
+    gap: 40px; 
     margin: 48px;
 }
 
@@ -499,20 +476,22 @@ button i {
     width: 480px; /* 每個步驟項目的最大寬度 */
     flex-grow: 1; /* 使項目根據可用空間進行調整 */
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1); /* 背景透明*/
+    /* background: rgba(255, 255, 255, 0.1); 
     border-radius: 10px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; */
 }
 
-.step:hover {
-    transform: translateY(-10px); /* 滑鼠懸停時上升效果 */
-}
+/* 滑鼠懸停時上升效果 */
+/* .step:hover {
+    transform: translateY(-10px); 
+} */
 
 .step-image-box{
     display: flex;
     align-items: center;
+    justify-content: center;
+    transform: scale(4.5); /*控制icon大小*/
 }
-
 
 .context{
     margin-left: 16px;
@@ -521,23 +500,43 @@ button i {
 }
 .context p{
     text-align: left;
+    font-size: 1.5rem;
+
 }
-.step h3 {
+.context h3 {
     font-size: 2.5rem;
     text-align: left;
+    margin-bottom: 10px;
 }
-
-.step p {
-    font-size: 1rem;
-    line-height: 1.5;
+.readmore-btn{
+    padding-top: 45px;
 }
-
+.readmore-btn button {
+    background-color: #74A695;
+    color: #FFFFFF;
+    border:2px #FFFFFF solid;
+    padding: 8px 30px;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.readmore-btn button:hover {
+    color:#74A695;
+    background-color:#fff;
+    border:2px #74A695 solid;
+}
 
 /* 用戶經驗分享區 */
 #experience_sharing {
     background: linear-gradient(to bottom, #86C89E, #D3D7C4);
-    padding: 50px 20px;
     text-align: center;
+}
+#experience_sharing img{
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
 }
 
 #experience_sharing h2 {
