@@ -80,6 +80,10 @@ header {
 }
 
 
+.navigation a{
+    padding: 16px 12px;
+}
+
 .menu-container {
     display: flex;
     align-items: center;

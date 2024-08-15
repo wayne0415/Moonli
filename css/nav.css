@@ -102,6 +102,7 @@ header {
 }
 
 .navigation a{
+    padding: 16px 12px;
     display: block;
     font-size: 1.6rem;
     line-height: 150%;
