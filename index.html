@@ -60,7 +60,7 @@
         </div>
         <div class="item-wave3">
             <img src="./images/photo_home_wave3.svg">
-        </div> 
+        </div>
         <div class="icon-anny">
             <img src="./images/icon_annoy.jpg">
         </div>
@@ -202,8 +202,6 @@
         <div class="icon_annoymoon_Happy">
             <img src="./images/icon_annoymoon_Happy.svg" alt="一隻發光的小可愛">
         </div>
-
-
         <div class="experience_sharing_title">
             <div class="line"></div>
             <h2>心路燈塔經驗分享</h2>
@@ -230,14 +228,34 @@
                 <div class=icon_box><img src="#"></div>
                 <p>在Mooni的幫助下，我找到了適合的心理師，讓我的生活變得更好了。</p>
             </div>
-            
-
         </div>
+
+        <button id="goTopBtn" class="go-top-btn">
+            <img src="./images/icon_gotop.svg" alt="Go to Top">
+        </button>
+
     </section>
+
+    <!-- gotop按鈕 -->
+    <script>
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            var goTopBtn = document.getElementById("goTopBtn");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                goTopBtn.style.display = "block";
+            } else {
+                goTopBtn.style.display = "none";
+            }
+        }
+        document.getElementById("goTopBtn").addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
 </body>
-
-
-
 
 <!-- 頁尾區 -->
 <footer>
