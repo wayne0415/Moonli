@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/member.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- 導覽列區 -->
+        <header>
+            <h1 class="logo">
+                <a href="#"><img src="./images/logo_NavBar.svg" alt="Moonli-logo" /></a>
+            </h1>
+            <!-- 選單列表 -->
+            <nav class="menu-container">
+                <div class="navigation">
+                    <a href="#" class="nav-menu">服務項目</a>
+                    <a href="#" class="nav-menu">心理師列表</a>
+                    <a href="#" class="nav-menu">常見問題</a>
+                    <a href="#" class="nav-menu">相關資訊</a>
+                    <a href="#" class="nav-menu">自我檢測</a>
+                </div>
+                <a href="#" class="login">登入註冊<i class="fa-solid fa-bars"></i></a>
+            </nav>
+        </header>
+        <main>
+            <!-- 會員中心左側選單 -->
+            <ul class="member-left">
+                <li class="member-management">
+                    <a href="#" class="big-item" id="color1">會員管理</a>
+                    <a href="#" class="small-item">帳號管理</a>
+                    <a href="#" class="small-item" id="color2">會員資料</a>
+                </li>
+                <li class="appointment-management">
+                    <a href="#" class="big-item">預約管理</a>
+                    <a href="#" class="small-item">進行中</a>
+                    <a href="#" class="small-item">歷史紀錄</a>
+                </li>
+                <li><a href="#" class="big-item">已收藏的心理師</a></li>
+                <li><a href="#" class="big-item">隱私政策</a></li>
+                <li><a href="#" class="big-item">常見問題</a></li>
+            </ul>
+
+            <div class="member-container">
+                <h1 class="title">會員管理</h1>
+                <div class="tabs">
+                    <a href="#" class="tab">帳號管理</a>
+                    <a href="#" class="tab active">會員資料</a>
+                </div>
+                <form class="member-form">
+                    <div class="form-group">
+                        <label for="name">本名 <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="nickname">暱稱 <span class="required">*</span></label>
+                        <input type="text" id="nickname" name="nickname" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">聯絡信箱 <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" />
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">聯絡電話 <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" />
+                    </div>
+                    <div class="form-group">
+                        <label for="address">地址</label>
+                        <input type="text" id="address" name="address" />
+                    </div>
+                    <div class="form-group">
+                        <label>性別 <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <input type="radio" id="male" name="gender" checked />
+                            <label for="male">男性</label>
+                            <input type="radio" id="female" name="gender" />
+                            <label for="female">女性</label>
+                            <input type="radio" id="other" name="gender" />
+                            <label for="other">其他</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="birthday">生日 <span class="required">*</span></label>
+                        <input type="date" id="birthday" name="birthday" />
+                    </div>
+                    <div class="form-group">
+                        <label for="id">身分證字號 <span class="required">*</span></label>
+                        <input type="text" id="id" name="id" />
+                    </div>
+                    <div class="form-group">
+                        <label for="emergency_contact">緊急聯絡人 <span class="required">*</span></label>
+                        <input type="text" id="emergency_contact" name="emergency_contact" />
+                    </div>
+                    <div class="form-group">
+                        <label for="relationship">與緊急聯絡人的關係 <span class="required">*</span></label>
+                        <input type="text" id="relationship" name="relationship" />
+                    </div>
+                    <div class="form-group">
+                        <label for="emergency_phone">緊急聯絡人電話 <span class="required">*</span></label>
+                        <input type="tel" id="emergency_phone" name="emergency_phone" />
+                    </div>
+                    <div class="form-group">
+                        <label for="occupation">工作</label>
+                        <input type="text" id="occupation" name="occupation" />
+                    </div>
+                    <div class="form-group">
+                        <label for="emotional_status">感情狀況</label>
+                        <input type="text" id="emotional_status" name="emotional_status" />
+                    </div>
+                    <div class="form-group">
+                        <label for="education">學歷</label>
+                        <input type="text" id="education" name="education" />
+                    </div>
+                    <button type="submit" class="submit-button">儲存</button>
+                </form>
+            </div>
+        </main>
+        <footer><small>© 2024 Moonli. All Rights Reserved.</small></footer>
+
+        <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>
+    </body>
+</html>
