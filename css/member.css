@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+/* CSS Reset */
+* {
+    font-family: "Noto Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all 0.1s linear;
+}
+
+/* 字體顏色樣式設定 */
+:root {
+    --small-cpation: 1.2rem;
+    --K2D-body: 1.6rem;
+    --body-text: 1.6rem;
+    --body-semibold: 2rem;
+    --body-title: 2.4rem;
+    --subtitle: 1.4rem;
+    --heading-h1: 2.8rem;
+
+    --black-500-border: #d9d9d9;
+    --black-800-main-text: #4b4b4b;
+    --black-700: #6f6f6f;
+    --white: #fff;
+
+    --primary-200: #dddafa;
+    --primary-400: #a797e7;
+    --primary-500: #856be7;
+    --secondary-100: #e7f0ce;
+    --secondary-400: #7fc179;
+
+    --yellow: #ffee92;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+    letter-spacing: 0.12em;
+}
+
+/* 字體設定 */
+body {
+    font-size: 100%;
+    line-height: 1.5;
+    background-image: linear-gradient(to bottom, #fff 0%, #f7f3ff 25%, #a0bce5 100%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+img {
+    display: block;
+    width: 60%;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+ol,
+ul {
+    list-style: none;
+}
+
+/* Header 和導航欄樣式 */
+header {
+    padding: 30px 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    gap: 24px; /* 使用 gap 控制間距 */
+}
+
+.menu-container a {
+    display: block;
+    box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 4px 4px 20px rgba(214, 213, 221, 0.6);
+}
+
+.navigation a {
+    display: block;
+    font-size: 1.6rem;
+    line-height: 150%;
+    color: var(--black-700);
+    box-shadow: none;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 24px;
+    line-height: 140%;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--primary-400);
+    background-color: var(--white);
+    border-radius: 999px;
+    gap: 8px;
+}
+
+.login img {
+    width: 28px;
+    height: 28px;
+    margin-left: 10px;
+}
+
+.menu-container a:hover {
+    display: block;
+    background: linear-gradient(to bottom, rgb(123, 104, 199, 0.8), rgb(167, 151, 231, 0.8));
+    box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 4px 4px 20px rgba(214, 213, 221, 0.6);
+    color: var(--white);
+}
+
+.navigation a:hover {
+    display: block;
+    font-size: 1.6rem;
+    color: var(--yellow);
+    background: none;
+    font-weight: 800;
+    box-shadow: none;
+}
+main {
+    display: flex;
+}
+/* 會員中心左側選單 */
+.member-left {
+    width: 27.2rem;
+    margin: 101px 0 0 355px;
+}
+.member-management {
+    flex-direction: column;
+}
+.member-left li {
+    display: flex;
+}
+.member-left li a {
+    color: var(--black-700);
+    margin-bottom: 8px;
+    line-height: 60px;
+    width: 100%;
+    border-radius: 12px;
+    padding-left: 20px;
+}
+.appointment-management {
+    flex-direction: column;
+}
+.big-item {
+    font-size: var(--heading-h1);
+}
+.small-item {
+    font-size: var(--body-semibold);
+}
+#color1 {
+    color: var(--white);
+    background-color: var(--primary-400);
+}
+#color2 {
+    color: var(--primary-500);
+    background-color: var(--primary-200);
+}
+/* 表單 */
+.member-container {
+    width: 686px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: -4px -4px 20px rgba(255, 255, 255, 0.5), 4px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #999;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+.tab.no-active {
+    border-bottom: 2px solid #ccc;
+}
+.tab.active {
+    color: #333;
+    font-weight: bold;
+    border-bottom: 2px solid #333;
+}
+
+.member-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.required {
+    color: red;
+    margin-left: 4px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus {
+    border-color: #666;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 6px;
+}
+.radio-item {
+    display: flex;
+    align-items: center;
+}
+.radio-item label {
+    margin-bottom: 0;
+}
+.submit-button {
+    width: 50%;
+    margin: 0 auto;
+    padding: 12px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #a797e7;
+    border: none;
+    border-radius: 999px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #7fc179;
+}
+
+/* 頁尾 */
+footer small {
+    line-height: 160px;
+    margin-left: 120px;
+    font-size: 14px;
+}
