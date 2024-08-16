@@ -96,12 +96,8 @@ header {
     box-shadow: 4px 4px 20px rgba(214, 213, 221, 0.6);
 }
 
-<<<<<<< HEAD
 .navigation a{
     padding: 16px 12px;
-=======
-.navigation a {
->>>>>>> 9af4226e0ac910ebf3fd4209f291d63580fbb61c
     display: block;
     font-size: 1.6rem;
     line-height: 150%;
