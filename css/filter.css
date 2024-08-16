@@ -80,21 +80,13 @@ a {
 	text-decoration: none;
 }
 
-/* 導覽列 */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 120px;
-    /* background-color: rgb(51, 42, 84); */
-    /* max-width: 1920px; */
-}
 
-.navigation {
+/* Header 和導航欄樣式 */
+header {
+    padding: 30px 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
 }
 
 .navigation {
@@ -112,62 +104,28 @@ header {
 
 .menu-container a {
     display: block;
-    font-size: 1.6rem;
-    /* font-weight: 800; */
-    /* box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.5);
-    box-shadow: 4px 4px 20px rgba(214, 213, 221, 0.3); */
-    line-height: 150%;
-}
-
-.menu-container a:hover {
-    display: block;
-    font-size: 1.6rem;
-    font-weight: 800;
-    background: linear-gradient(to bottom, rgb(123, 104, 199, 0.8), rgb(167, 151, 231, 0.8));
     box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.5);
     box-shadow: 4px 4px 20px rgba(214, 213, 221, 0.6);
-    color: var(--white);
-    line-height: 140%;
 }
 
-/* 導覽列清單 */
 .navigation a {
     display: block;
     font-size: 1.6rem;
     line-height: 150%;
-    font-weight: 800;
-    color: var(--white);
-    box-shadow: none;
-    padding: 20px;
-}
-
-.navigation a:hover {
-    display: block;
-    font-size: 1.6rem;
-    font-weight: 800;
-    line-height: 150%;
-    color: var(--yellow);
-    background: none;
+    color: var(--black-700);
     box-shadow: none;
 }
 
-.logo img{
-    width: 90%;
-}
-
-/* 導覽列按鈕 */
 .login {
-    /* display: flex; */
-    /* justify-content: center;
-    align-items: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 8px 24px;
     line-height: 140%;
     font-size: 1.6rem;
     font-weight: 800;
     color: var(--primary-400);
     background-color: var(--white);
-    box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.5);
-    box-shadow: 4px 4px 20px rgba(214, 213, 221, 0.3);
     border-radius: 999px;
     gap: 8px;
 }
@@ -176,12 +134,24 @@ header {
     width: 28px;
     height: 28px;
     margin-left: 10px;
-}  /*有疑問*/
-
-.login i{
-    padding-left: 10px;
 }
 
+.menu-container a:hover {
+    display: block;
+    background: linear-gradient(to bottom, rgb(123, 104, 199, 0.8), rgb(167, 151, 231, 0.8));
+    box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 4px 4px 20px rgba(214, 213, 221, 0.6);
+    color: var(--white);
+}
+
+.navigation a:hover {
+    display: block;
+    font-size: 1.6rem;
+    color: var(--yellow);
+    background: none;
+    font-weight: 800;
+    box-shadow: none;
+}
 
 
 main {
@@ -301,7 +271,7 @@ small {
 	cursor: pointer;
 	justify-content: space-between;
 	background-image: linear-gradient( rgba(203, 194, 212, 0.2),  rgba(224, 219, 230, 0.049)) ;
-	box-shadow: var(--btn-shadow);
+	box-shadow: inset var(--btn-shadow);
 }
 
 .select-btn i {
@@ -368,7 +338,7 @@ small {
 
 .options .option:hover {
 	background-color: var(--purple-200);
-	background-image: linear-gradient( rgba(203, 194, 212, 0.2),  rgba(224, 219, 230, 0.049)) ;
+	/* background-image: linear-gradient( rgba(203, 194, 212, 0.2),  rgba(224, 219, 230, 0.049)) ; */
 	box-shadow: var(--btn-shadow);
 }
 
