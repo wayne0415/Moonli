@@ -168,10 +168,7 @@ main {
     border-radius: 12px;
     padding-left: 20px;
 }
-.member-left li a:hover {
-    color: ;
-    background-color: ;
-}
+
 .appointment-management {
     flex-direction: column;
 }
