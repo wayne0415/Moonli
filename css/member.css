@@ -168,6 +168,10 @@ main {
     border-radius: 12px;
     padding-left: 20px;
 }
+.member-left li a:hover {
+    color: ;
+    background-color: ;
+}
 .appointment-management {
     flex-direction: column;
 }
@@ -177,14 +181,15 @@ main {
 .small-item {
     font-size: var(--body-semibold);
 }
-#color1 {
-    color: var(--white);
-    background-color: var(--primary-400);
-}
-#color2 {
+.small-item:hover {
     color: var(--primary-500);
     background-color: var(--primary-200);
 }
+.big-item:hover {
+    color: var(--white);
+    background-color: var(--primary-400);
+}
+
 /* 表單 */
 .member-container {
     width: 686px;
