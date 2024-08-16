@@ -18,7 +18,7 @@
     --K2D-body: 1.6rem;
     --body-text:1.6rem;
     --body-semibold:2rem;
-    --body-title:2.4rem;
+    --body-title:1.8rem;
     --subtitle:1.4rem;
     --heading-h1:2.8rem;
 
@@ -79,6 +79,10 @@ header {
     gap: 20px;
 }
 
+
+.navigation a{
+    padding: 16px 12px;
+}
 
 .menu-container {
     display: flex;
@@ -357,6 +361,7 @@ header {
     font-size: var(--subtitle);
     line-height: 150%;
     color: var(--black-700);
+    list-style-position: inside;
 }
 
 /* -------------info ends------------- */

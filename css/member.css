@@ -18,9 +18,9 @@
     --K2D-body: 1.6rem;
     --body-text: 1.6rem;
     --body-semibold: 2rem;
-    --body-title: 2.4rem;
+    --body-title: 1.8rem;
     --subtitle: 1.4rem;
-    --heading-h1: 2.8rem;
+    --heading-h1: 2.4rem;
 
     --black-500-border: #d9d9d9;
     --black-800-main-text: #4b4b4b;
@@ -168,23 +168,26 @@ main {
     border-radius: 12px;
     padding-left: 20px;
 }
+
 .appointment-management {
     flex-direction: column;
 }
 .big-item {
     font-size: var(--heading-h1);
+    font-weight: 800;
 }
 .small-item {
     font-size: var(--body-semibold);
 }
-#color1 {
-    color: var(--white);
-    background-color: var(--primary-400);
-}
-#color2 {
+.small-item:hover {
     color: var(--primary-500);
     background-color: var(--primary-200);
 }
+.big-item:hover {
+    color: var(--white);
+    background-color: var(--primary-400);
+}
+
 /* 表單 */
 .member-container {
     width: 686px;
