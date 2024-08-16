@@ -361,6 +361,7 @@ header {
     font-size: var(--subtitle);
     line-height: 150%;
     color: var(--black-700);
+    list-style-position: inside;
 }
 
 /* -------------info ends------------- */
