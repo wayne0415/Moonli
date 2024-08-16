@@ -367,7 +367,7 @@ small {
 }
 
 .options .option:hover {
-	/* background-color: var(--purple-200); */
+	background-color: var(--purple-200);
 	background-image: linear-gradient( rgba(203, 194, 212, 0.2),  rgba(224, 219, 230, 0.049)) ;
 	box-shadow: var(--btn-shadow);
 }
