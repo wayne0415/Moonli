@@ -96,16 +96,14 @@ header {
 .menu-container {
     display: flex;
     align-items: center;
-    gap: 24px; /* 使用 gap 控制間距 */
+    gap: 24px; 
 }
 
 .menu-container a {
     display: block;
     font-size: 1.6rem;
-    /* font-weight: 800; */
-    /* box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.5);
-    box-shadow: 4px 4px 20px rgba(214, 213, 221, 0.3); */
     line-height: 150%;
+    font-weight: 800;
 }
 
 .menu-container a:hover {
@@ -113,10 +111,7 @@ header {
     font-size: 1.6rem;
     font-weight: 800;
     background: linear-gradient(to bottom, rgb(123, 104, 199, 0.8), rgb(167, 151, 231, 0.8));
-    box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.5);
-    box-shadow: 4px 4px 20px rgba(214, 213, 221, 0.6);
     color: var(--white);
-    line-height: 140%;
 }
 
 /* 導覽列清單 */
@@ -124,7 +119,6 @@ header {
     display: block;
     font-size: 1.6rem;
     line-height: 150%;
-    font-weight: 800;
     color: var(--white);
     box-shadow: none;
     padding: 20px;
@@ -133,8 +127,6 @@ header {
 .navigation a:hover {
     display: block;
     font-size: 1.6rem;
-    font-weight: 800;
-    line-height: 150%;
     color: var(--yellow);
     background: none;
     box-shadow: none;
@@ -146,30 +138,31 @@ header {
 
 /* 導覽列按鈕 */
 .login {
-    /* display: flex; */
-    /* justify-content: center;
-    align-items: center; */
+    display: block;
     padding: 8px 24px;
-    line-height: 140%;
-    font-size: 1.6rem;
-    font-weight: 800;
     color: var(--primary-400);
     background-color: var(--white);
-    box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.5);
-    box-shadow: 4px 4px 20px rgba(214, 213, 221, 0.3);
     border-radius: 999px;
     gap: 8px;
+    /* box-shadow: 
+        -4px -4px 10px rgba(255, 255, 255, 0.5),
+        4px 4px 20px rgba(214, 213, 221, 0.3); */
 }
 
 .login img {
     width: 28px;
     height: 28px;
     margin-left: 10px;
-}  /*有疑問*/
+}  
 
 .login i{
     padding-left: 10px;
 }
+
+.login a{
+font-weight: 800;
+}
+
 
 
 /* 頁面A：大LOGO+找心理師按鈕 */
@@ -190,12 +183,6 @@ header {
     position: relative;
 }
 
-/* .home-images-logo {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-} */
-
 .home-images-logo img {
     width: 100%;
     max-width: 700px;
@@ -208,7 +195,7 @@ header {
     justify-content: center;
     line-height: 140%;
 }
-.search-btn button { /* 陰影超不明顯QQ */
+.search-btn button {
     display: block;
     background-color: #FFFFFF ;
     box-shadow:
@@ -227,30 +214,47 @@ header {
 }
 .search-btn button:hover {
     background: linear-gradient(to bottom, rgb(123, 104, 199, 0.8), rgb(167, 151, 231, 0.8));
-    box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.5);
-    box-shadow: 4px 4px 20px rgba(214, 213, 221, 0.6);
+    box-shadow: -4px -4px 10px rgba(222, 209, 240, 0.315), 4px 4px 20px rgba(43, 41, 41, 0.925);
     color: var(--white);
 }
 .search-btn i {
     padding: 16px 0px 16px 14px;
 }
 
-.home-images-moon-container {
+
+/* 原本的程式碼 */
+/* .home-images-moon-container {
     position: absolute;
-    top: 0%; /* 調整距離頂部的間距 */
-    right: -50%; /* 調整距離右側的間距 */
+    top: 5%;  
+    right: -45%; 
     z-index: 10;
+    max-width: 300px; 
 }
 
 .home-images-moon-container img {
-    width: 100%;
+    width: 90%; 
+    height: auto;
+    display: block;
+} */ 
+
+.home-images-moon-container{
+    position: absolute;
+    background: linear-gradient(to bottom, rgb(238, 233, 203),rgb(235, 216, 149));
+    width:128px;
+    height:128px;
+    border-radius:500px;
+    top: 10%;  
+    right: -45%; 
+    box-shadow:
+        0px 0px 100px rgb(255, 255, 255,0.8);
 }
+
+
 
 /* 頁面B：痛點 */
 #problems {
     position: relative;
     background: rgb(112, 105, 138);
-    /* padding: 80px 20px; */
     text-align: center;
     width: 100%;
     height: 190vh; 
@@ -277,7 +281,6 @@ header {
 .icon-annoymoon,
 .item-6q{
     position: absolute;
-    object-fit: cover; 
 }
 
 .item-wave1, 
@@ -287,18 +290,29 @@ header {
 {
     position: absolute;
     bottom: 0;
-    object-fit: cover; 
+    /* object-fit: cover;  */
 }
 .icon-annoymoon{
-    bottom:300px;
+    top: 58%;  
+    right: 40%; 
 }
 
-.icon-anny{
-    bottom:530px;
+.icon-anny {
+    top: 50%;  
+    right: 48%; 
 }
 
 .item-6q{
     width: 75%;
+}
+
+.item-q1,
+.item-q2,
+.item-q3,
+.item-q4,
+.item-q5,
+.item-q6,{
+    position: absolute;
 }
 
 .icon-anny,
