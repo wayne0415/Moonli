@@ -9,31 +9,27 @@
             .member-left {
                 list-style-type: none;
                 padding: 0;
+                margin: 0;
             }
 
             .member-left li {
-                position: relative; /* 讓子選單相對於父級li定位 */
+                position: relative;
+                margin-bottom: 10px; /* 增加每個li之間的距離 */
             }
 
             /* 隱藏所有下拉選單 */
             .member-left .dropdown {
-                display: none;
-                position: absolute; /* 使下拉選單定位在父級li的下方 */
-                left: 0;
-                top: 100%;
-                background-color: #f9f9f9;
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-                min-width: 160px;
-                z-index: 1;
+                display: none; /* 初始隱藏下拉選單 */
+                padding-left: 20px; /* 讓下拉選單內的項目有一些縮進 */
             }
 
             .member-left .dropdown li {
                 display: block;
             }
 
-            /* 當鼠標懸停時顯示下拉選單 */
-            .member-left li:hover .dropdown {
-                display: block;
+            /* 當父項目被點擊時，顯示下拉選單 */
+            .member-left li.active .dropdown {
+                display: block; /* 顯示下拉選單 */
             }
 
             /* 設置大項目的樣式 */
@@ -42,6 +38,8 @@
                 display: block;
                 text-decoration: none;
                 color: #333;
+                background-color: #f1f1f1;
+                cursor: pointer;
             }
 
             /* 設置下拉選單內的小項目樣式 */
@@ -87,21 +85,14 @@
             // 為每個父項目添加點擊事件
             dropdownParents.forEach((parent) => {
                 const bigItem = parent.querySelector(".big-item");
-                const dropdown = parent.querySelector(".dropdown");
 
-                if (bigItem && dropdown) {
+                if (bigItem) {
                     bigItem.addEventListener("click", (e) => {
                         e.preventDefault(); // 防止鏈接跳轉
-                        dropdown.classList.toggle("show"); // 切換下拉菜單的顯示
-                    });
-                }
-            });
 
-            // 添加CSS來控制顯示/隱藏的狀態
-            document.addEventListener("click", function (e) {
-                if (!e.target.matches(".big-item")) {
-                    const dropdowns = document.querySelectorAll(".dropdown.show");
-                    dropdowns.forEach((dropdown) => dropdown.classList.remove("show"));
+                        // 切換當前選項的活躍狀態
+                        parent.classList.toggle("active");
+                    });
                 }
             });
         </script>
