@@ -46,6 +46,7 @@ html {
 
 /* 字體設定 */
 body {
+    font-family: "Noto Sans", sans-serif;
     font-size: 100%;
     line-height: 1.5;
     background-image: linear-gradient(to bottom, #fff 0%, #f7f3ff 25%, #a0bce5 100%);
