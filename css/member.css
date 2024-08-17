@@ -161,6 +161,7 @@ main {
 .member-left li {
     display: flex;
 }
+
 .member-left li a {
     color: var(--black-700);
     margin-bottom: 8px;
