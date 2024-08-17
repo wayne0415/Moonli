@@ -123,5 +123,23 @@
         <footer><small>© 2024 Moonli. All Rights Reserved.</small></footer>
 
         <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>
+        <script>
+            // 選取所有帶有下拉選單的父項目
+            const dropdownParents = document.querySelectorAll(".member-left li");
+
+            // 為每個父項目添加點擊事件
+            dropdownParents.forEach((parent) => {
+                const bigItem = parent.querySelector(".big-item");
+
+                if (bigItem) {
+                    bigItem.addEventListener("click", (e) => {
+                        e.preventDefault(); // 防止鏈接跳轉
+
+                        // 切換當前選項的活躍狀態
+                        parent.classList.toggle("active");
+                    });
+                }
+            });
+        </script>
     </body>
 </html>

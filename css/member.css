@@ -160,6 +160,17 @@ main {
 }
 .member-left li {
     display: flex;
+    position: relative;
+}
+.member-left .dropdown {
+    display: none; /* 初始隱藏下拉選單 */
+}
+.member-left .dropdown li {
+    display: flex;
+}
+/* 當父項目被點擊時，顯示下拉選單 */
+.member-left li.active .dropdown {
+    display: block; /* 顯示下拉選單 */
 }
 
 .member-left li a {
