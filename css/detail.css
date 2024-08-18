@@ -4,9 +4,9 @@ body{
     background-position: bottom center;
     background-repeat: no-repeat;
 }
-
-
 /* Header 和導航欄樣式 */
+
+
 header {
     padding: 30px 120px;
     display: flex;
@@ -19,6 +19,12 @@ header img {
     width: 60%;
     max-width: 100%;
     height: auto;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    gap: 24px; /* 使用 gap 控制間距 */
 }
 
 .navigation{
@@ -34,16 +40,12 @@ header img {
     display: block;
     font-size: 1.6rem;
     line-height: 150%;
-    color: var(--black-700);
+    color: var(--black-600);
     box-shadow: none;
     font-weight: 800;
 }
 
-.menu-container {
-    display: flex;
-    align-items: center;
-    gap: 24px; /* 使用 gap 控制間距 */
-}
+
 
 .nav-menu {
     font-size: 1.6rem;
@@ -97,7 +99,7 @@ header img {
     display: flex;
     flex-direction: column;
     gap: 3.2rem;
-    width: 30%;
+    width: 28%;
 }
 
 .profile__photo {
@@ -324,7 +326,7 @@ header img {
     display: flex;
     flex-direction: column;
     gap: 3.2rem;
-    width: 65%;
+    width: auto;
 }
 
 /* -------------basic starts------------- */
