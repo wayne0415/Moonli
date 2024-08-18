@@ -520,29 +520,63 @@ header{
 
 .experience_sharing_list_box {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     /* flex-wrap: wrap; */
     padding: 20px;
     padding-bottom: 80px;
     gap: 20px;
+    width: 80%;
+    height: 50vh;
+    gap: 2.5%;
 }
 
 .experience_sharing_list {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items:center ;
     background-color: rgba(255, 255, 255, 0.5);
     padding: 30px;
-    margin: 15px;
-    border-radius: 10px;
-    width: 200px;
-    height: 240px;
+    border-radius: 30px;
     font-size: 16px;
+    width: 100%;
+    height: 100%;
 }
 
 .icon_box{
-    padding-bottom: 20px;
+    width: 40%; 
+    height:auto;
+    /* padding-bottom: 15px; */
 }
+
+.icon_box img{
+    object-fit: cover;
+}
+
+.heart{
+    width: 80%;
+    height: auto;
+    padding: 16px;
+}
+
+.context-box{
+    height: auto;
+    /* width: 180px; */
+    max-width: 238px; /* 控制最大寬度 */
+    overflow: hidden; /* 超出內容隱藏 */
+    text-align: left;
+}
+
+.context-box p {
+    white-space: normal; /* 允許文字換行 */
+    text-overflow: ellipsis; /* 用省略號來表示被截斷的文字 */
+    font-size: 1.4rem;
+    line-height: 1.5; /* 設置行高 */
+    max-height: 100%; /* 確保不會超過box的高度 */
+    text-align: center;
+    
+}
+
 .experience_sharing_title{
     padding: 30px;
     display: flex;
@@ -557,6 +591,7 @@ header{
     background-color: #fff;
     margin-top: 5px;
 }
+
 .go-top-btn {
     position: fixed;
     bottom: 90px;
