@@ -91,9 +91,9 @@ main {
 
 section {
 	display: flex;
-	padding:8% 4%;
-	margin: 30px;
-	width: 60%;
+	padding:4% 4%;
+	margin: 20px;
+	width: 50%;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
@@ -103,6 +103,16 @@ section {
 	z-index: 10;
 }
 
+.cloud {
+	position: absolute;
+	justify-content: center;
+	align-items: flex-end;
+	z-index: 1;
+	bottom: 0;
+	object-fit: cover;
+}
+
+/* 選項按鈕區 */
 form {
 	display: flex;
 	flex-direction: column;
@@ -143,6 +153,7 @@ button:hover {
 	cursor: pointer;
 }
 
+/* 進度條 */
 .progress-bar {
 	margin: 20px;
 	width: 50%;
@@ -160,6 +171,14 @@ button:hover {
 	box-shadow: inset var(--inset-shadow);
 }
 
+.progress99 {
+	width: 99%;
+	height: 16px;
+	background-color: var(--purple-400);
+	border-radius: 99px;
+	box-shadow: inset var(--inset-shadow);
+}
+
 small {
 	font-family: K2D;
 	color: var(--white);
@@ -171,18 +190,39 @@ small {
 	padding-right: 8px;
 }
 
+/* 下一步按鈕 */
+.btn-box {
+	display: flex;
+	justify-content: center;
+}
+
 #btn__next {
 	color: var(--white);
+	outline: var(--purple-400) solid 3px;
 	background-color: var(--purple-400);
 	font-size: 1.6rem;
 	font-weight: bold;
 	padding: 12px 20%;
 	border-radius: 99px;
 	border: none;
-	margin: 40px 0 0;
+	margin: 20px;
 	cursor: pointer;
 }
 
+#btn__back {
+	color: var(--purple-400);
+	background-color: transparent;
+	outline: var(--purple-400) solid 3px;
+	font-size: 1.6rem;
+	font-weight: bold;
+	padding: 12px 20%;
+	border-radius: 99px;
+	border: none;
+	margin: 20px;
+	cursor: pointer;
+}
+
+/* 選擇地區下拉選單 */
 .select-menu {
 	width: 60%;
 	margin: 10px auto;
@@ -231,6 +271,7 @@ small {
 	background-color: transparent;
 }
 
+/* 下拉選單選項捲軸 */
 .select-menu.active ::-webkit-scrollbar {
 	width: 12px;
 }
@@ -285,15 +326,6 @@ small {
 	font-size: 1.6rem;
 	font-weight: bold;
 	color: var(--black-600);
-}
-
-.cloud {
-	position: absolute;
-	justify-content: center;
-	align-items: flex-end;
-	z-index: 1;
-	bottom: 0;
-	object-fit: cover;
 }
 
 /* Header 和導航欄樣式 */
