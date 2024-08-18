@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+/* 這是首頁的 */
+* {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all .2s linear;
+}
+
+:root /* 字體顏色樣式設定 */
+:root {
+    --small-cpation: 1.2rem;
+    --K2D-body: 1.6rem;
+    --body-text: 1.6rem;
+    --body-semibold: 2rem;
+    --body-title: 1.8rem;
+    --subtitle: 1.4rem;
+    --heading-h1: 2.4rem;
+
+    --black-500-border: #d9d9d9;
+    --black-800-main-text: #4b4b4b;
+    --black-700: #6f6f6f;
+    --white: #fff;
+
+    --primary-200: #dddafa;
+    --primary-400: #a797e7;
+    --primary-500: #856be7;
+
+    --secondary-100: #e7f0ce;
+    --secondary-400: #7fc179;
+
+    --yellow: #ffee92;
+
+    /* 灰階 */
+	--card:rgba(249, 249, 249, 0.9);
+	--black-500: rgba(211, 211, 211, 0.447);
+	--black-600: rgb(144, 144, 144);
+	--black-700: rgb(111, 111, 111);
+	--purple-100: rgb(236, 235, 252);
+	--purple-200: rgb(221, 218, 250);
+	--purple-400: rgb(167, 151, 231);
+	--white: rgba(255, 255, 255);
+	/* 透明 */
+	--shadow: 0px 4px 20px  rgba(194, 191, 209, 0.4);
+	--btn-shadow: 4px 4px 20px rgba(214, 213, 221, .6), -4px -4px 8px rgba(255, 255, 255, 0.5);
+	--inset-shadow: 0 4px 10px rgba(214, 213, 221, .6);
+	/* 漸層 */
+	--gradient-card: rgb(255, 255, 255), rgb(255, 255, 255, .5);
+	--gradient-btn: rgba(203, 194, 212, 0.2),  rgba(249, 249, 249, 0);
+	--gradient-sky-purple: rgb(91, 97, 149), rgb(157, 134, 159);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+    letter-spacing: 0.12em;
+}
+
+/* 字體設定 */
+body {
+    /* color: #FFFFFF; */
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+img {
+    display: block;
+    width: 100%;
+	height: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+ol,
+ul {
+    list-style: none;
+}
