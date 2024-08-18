@@ -20,7 +20,8 @@
     --body-title:2.4rem;
     --subtitle:1.4rem;
     --heading-h1:2.8rem;
-	/* 灰階 */
+	/* 顏色 */
+	--yellow: #ffee92;
 	--card:rgba(249, 249, 249, 0.9);
 	--black-500: rgba(211, 211, 211, 0.447);
 	--black-600: rgb(144, 144, 144);
@@ -303,6 +304,11 @@ header {
     align-items: center;
 }
 
+.logo img{
+    width: 120px; 
+    height: auto;
+}
+
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -318,16 +324,40 @@ header {
 
 .menu-container a {
     display: block;
-    box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.5);
-    box-shadow: 4px 4px 20px rgba(214, 213, 221, 0.6);
+    font-size: 1.6rem;
+    line-height: 150%;
+    font-weight: 800;
 }
 
-.navigation a{
-    padding: 16px 12px;
+.menu-container a:hover {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 800;
+    background: linear-gradient(to bottom, rgb(123, 104, 199, 0.8), rgb(167, 151, 231, 0.8));
+    color: var(--white);
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.navigation a:hover {
+    display: block;
+    font-size: 1.6rem;
+    color: var(--yellow);
+    background: none;
+    box-shadow: none;
+}
+
+.navigation a {
+    padding: 20px;
     display: block;
     font-size: 1.6rem;
     line-height: 150%;
-    color: var(--black-700);
+    color: var(--white);
     box-shadow: none;
 }
 
@@ -339,7 +369,7 @@ header {
     line-height: 140%;
     font-size: 1.6rem;
     font-weight: 800;
-    color: var(--primary-400);
+    color: var(--purple-400);
     background-color: var(--white);
     border-radius: 999px;
     gap: 8px;
