@@ -10,8 +10,6 @@
     border: none;
     transition: all .2s linear;
 }
-
-:root /* 字體顏色樣式設定 */
 :root {
     --small-cpation: 1.2rem;
     --K2D-body: 1.6rem;
@@ -24,6 +22,7 @@
     --black-500-border: #d9d9d9;
     --black-800-main-text: #4b4b4b;
     --black-700: #6f6f6f;
+    --black-600:#909090;
     --white: #fff;
 
     --primary-200: #dddafa;

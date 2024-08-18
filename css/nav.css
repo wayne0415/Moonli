@@ -1,0 +1,76 @@
+/* Header 和導航欄樣式 */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header img {
+    display: block;
+    width: 60%;
+    max-width: 100%;
+    height: auto;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    gap: 24px; /* 使用 gap 控制間距 */
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.navigation a{
+    padding: 16px 12px;
+    display: block;
+    font-size: 1.6rem;
+    line-height: 150%;
+    color: var(--white);
+    box-shadow: none;
+    font-weight: 800;
+}
+
+.login {
+    padding: 8px 24px;
+    color: var(--primary-400);
+    background-color: var(--white);
+    border-radius: 999px;
+    /* 光暈 */
+    /* box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 4px 4px 20px rgba(214, 213, 221, 0.6); */
+    /* 光暈 */
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.login i{
+    padding-left: 8px;
+}
+
+.menu-container a:hover {
+    display: block;
+    background: linear-gradient(to bottom, rgb(123, 104, 199, 0.8), rgb(167, 151, 231, 0.8));
+    /* 光暈 */
+    box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 4px 4px 20px rgba(214, 213, 221, 0.6);
+    /* 光暈 */
+    color: var(--white);
+}
+
+.navigation a:hover {
+    display: block;
+    font-size: 1.6rem;
+    color: var(--yellow);
+    background: none;
+    font-weight: 800;
+    box-shadow: none;
+}
