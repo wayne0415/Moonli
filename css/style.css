@@ -80,11 +80,17 @@ header {
     box-sizing: border-box;
 }
 
-.logo img{
+/* .logo img{
     width: 120px; 
     height: auto;
-}
+} */
 
+header img {
+    display: block;
+    width: 60%;
+    max-width: 100%;
+    height: auto;
+}
 
 /* 導覽列選單 */
 .menu-container {
