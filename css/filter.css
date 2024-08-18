@@ -83,10 +83,10 @@ a {
 
 
 main {
-	display: flex;
-	width: 100%;
-	justify-content: center;
-
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
 }
 
 section {
@@ -104,12 +104,14 @@ section {
 }
 
 .cloud {
-	position: absolute;
-	justify-content: center;
-	align-items: flex-end;
-	z-index: 1;
-	bottom: 0;
-	object-fit: cover;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 1;
+    bottom: 0;
+    object-fit: cover;
 }
 
 /* 選項按鈕區 */
