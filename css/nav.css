@@ -57,11 +57,23 @@ h5,
 h6 {
     font-weight: normal;
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 271b3b3ad48bfcd630a5f0a605050296354efdd6
 a {
     text-decoration: none;
 }
 
 /* Header 和導航欄樣式 */
+header img {
+    display: block;
+    width: 60%;
+    max-width: 100%;
+    height: auto;
+}
+
 header {
     display: flex;
     justify-content: space-between;

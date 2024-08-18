@@ -20,7 +20,8 @@
     --body-title:2.4rem;
     --subtitle:1.4rem;
     --heading-h1:2.8rem;
-	/* 灰階 */
+	/* 顏色 */
+	--yellow: #ffee92;
 	--card:rgba(249, 249, 249, 0.9);
 	--black-500: rgba(211, 211, 211, 0.447);
 	--black-600: rgb(144, 144, 144);
@@ -90,9 +91,9 @@ main {
 
 section {
 	display: flex;
-	padding:8% 4%;
-	margin: 30px;
-	width: 60%;
+	padding:4% 4%;
+	margin: 20px;
+	width: 50%;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
@@ -102,6 +103,16 @@ section {
 	z-index: 10;
 }
 
+.cloud {
+	position: absolute;
+	justify-content: center;
+	align-items: flex-end;
+	z-index: 1;
+	bottom: 0;
+	object-fit: cover;
+}
+
+/* 選項按鈕區 */
 form {
 	display: flex;
 	flex-direction: column;
@@ -142,6 +153,7 @@ button:hover {
 	cursor: pointer;
 }
 
+/* 進度條 */
 .progress-bar {
 	margin: 20px;
 	width: 50%;
@@ -159,6 +171,14 @@ button:hover {
 	box-shadow: inset var(--inset-shadow);
 }
 
+.progress99 {
+	width: 99%;
+	height: 16px;
+	background-color: var(--purple-400);
+	border-radius: 99px;
+	box-shadow: inset var(--inset-shadow);
+}
+
 small {
 	font-family: K2D;
 	color: var(--white);
@@ -170,18 +190,39 @@ small {
 	padding-right: 8px;
 }
 
+/* 下一步按鈕 */
+.btn-box {
+	display: flex;
+	justify-content: center;
+}
+
 #btn__next {
 	color: var(--white);
+	outline: var(--purple-400) solid 3px;
 	background-color: var(--purple-400);
 	font-size: 1.6rem;
 	font-weight: bold;
 	padding: 12px 20%;
 	border-radius: 99px;
 	border: none;
-	margin: 40px 0 0;
+	margin: 20px;
 	cursor: pointer;
 }
 
+#btn__back {
+	color: var(--purple-400);
+	background-color: transparent;
+	outline: var(--purple-400) solid 3px;
+	font-size: 1.6rem;
+	font-weight: bold;
+	padding: 12px 20%;
+	border-radius: 99px;
+	border: none;
+	margin: 20px;
+	cursor: pointer;
+}
+
+/* 選擇地區下拉選單 */
 .select-menu {
 	width: 60%;
 	margin: 10px auto;
@@ -230,6 +271,7 @@ small {
 	background-color: transparent;
 }
 
+/* 下拉選單選項捲軸 */
 .select-menu.active ::-webkit-scrollbar {
 	width: 12px;
 }
@@ -286,15 +328,6 @@ small {
 	color: var(--black-600);
 }
 
-.cloud {
-	position: absolute;
-	justify-content: center;
-	align-items: flex-end;
-	z-index: 1;
-	bottom: 0;
-	object-fit: cover;
-}
-
 /* Header 和導航欄樣式 */
 header {
     padding: 30px 120px;
@@ -318,16 +351,40 @@ header {
 
 .menu-container a {
     display: block;
-    box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.5);
-    box-shadow: 4px 4px 20px rgba(214, 213, 221, 0.6);
+    font-size: 1.6rem;
+    line-height: 150%;
+    font-weight: 800;
 }
 
-.navigation a{
-    padding: 16px 12px;
+.menu-container a:hover {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 800;
+    background: linear-gradient(to bottom, rgb(123, 104, 199, 0.8), rgb(167, 151, 231, 0.8));
+    color: var(--white);
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.navigation a:hover {
+    display: block;
+    font-size: 1.6rem;
+    color: var(--yellow);
+    background: none;
+    box-shadow: none;
+}
+
+.navigation a {
+    padding: 20px;
     display: block;
     font-size: 1.6rem;
     line-height: 150%;
-    color: var(--black-700);
+    color: var(--white);
     box-shadow: none;
 }
 
@@ -339,7 +396,7 @@ header {
     line-height: 140%;
     font-size: 1.6rem;
     font-weight: 800;
-    color: var(--primary-400);
+    color: var(--purple-400);
     background-color: var(--white);
     border-radius: 999px;
     gap: 8px;
@@ -366,4 +423,20 @@ header {
     background: none;
     font-weight: 800;
     box-shadow: none;
+}
+
+/* 頁尾區 */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 40px;
+}
+
+footer small {
+	font-family:  var(--K2D-body);
+    font-size: 1.4rem;
+    color: var(--white);
+    flex: 1;
+    text-align: right;
 }
