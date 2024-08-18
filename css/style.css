@@ -773,6 +773,7 @@ footer nav ul li a {
 }
 
 footer small {
+    font-family:  var(--K2D-body);
     font-size: 1.4rem;
     color: #6F6F6F;
     flex: 1;

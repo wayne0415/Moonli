@@ -304,11 +304,6 @@ header {
     align-items: center;
 }
 
-.logo img{
-    width: 120px; 
-    height: auto;
-}
-
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -396,4 +391,20 @@ header {
     background: none;
     font-weight: 800;
     box-shadow: none;
+}
+
+/* 頁尾區 */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 40px;
+}
+
+footer small {
+	font-family:  var(--K2D-body);
+    font-size: 1.4rem;
+    color: var(--white);
+    flex: 1;
+    text-align: right;
 }
