@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>下拉式選單測試</title>
+        <style>
+            /* 基本樣式設置 */
+            .member-left {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .member-left li {
+                position: relative;
+                margin-bottom: 10px; /* 增加每個li之間的距離 */
+            }
+
+            /* 隱藏所有下拉選單 */
+            .member-left .dropdown {
+                display: none; /* 初始隱藏下拉選單 */
+                padding-left: 20px; /* 讓下拉選單內的項目有一些縮進 */
+            }
+
+            .member-left .dropdown li {
+                display: block;
+            }
+
+            /* 當父項目被點擊時，顯示下拉選單 */
+            .member-left li.active .dropdown {
+                display: block; /* 顯示下拉選單 */
+            }
+
+            /* 設置大項目的樣式 */
+            .big-item {
+                padding: 10px 20px;
+                display: block;
+                text-decoration: none;
+                color: #333;
+                background-color: #f1f1f1;
+                cursor: pointer;
+            }
+
+            /* 設置下拉選單內的小項目樣式 */
+            .small-item {
+                padding: 10px 20px;
+                display: block;
+                text-decoration: none;
+                color: #333;
+                background-color: #f9f9f9;
+            }
+
+            /* 當鼠標懸停時，改變小項目的背景顏色 */
+            .small-item:hover {
+                background-color: #ddd;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 會員中心左側選單 -->
+        <ul class="member-left">
+            <li class="member-management">
+                <a href="#" class="big-item" id="color1">會員管理</a>
+                <ul class="dropdown">
+                    <li><a href="#" class="small-item">帳號管理</a></li>
+                    <li><a href="#" class="small-item" id="color2">會員資料</a></li>
+                </ul>
+            </li>
+            <li class="appointment-management">
+                <a href="#" class="big-item">預約管理</a>
+                <ul class="dropdown">
+                    <li><a href="#" class="small-item">進行中</a></li>
+                    <li><a href="#" class="small-item">歷史紀錄</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="big-item">已收藏的心理師</a></li>
+            <li><a href="#" class="big-item">隱私政策</a></li>
+            <li><a href="#" class="big-item">常見問題</a></li>
+        </ul>
+        <script>
+            // 選取所有帶有下拉選單的父項目
+            const dropdownParents = document.querySelectorAll(".member-left li");
+
+            // 為每個父項目添加點擊事件
+            dropdownParents.forEach((parent) => {
+                const bigItem = parent.querySelector(".big-item");
+
+                if (bigItem) {
+                    bigItem.addEventListener("click", (e) => {
+                        e.preventDefault(); // 防止鏈接跳轉
+
+                        // 切換當前選項的活躍狀態
+                        parent.classList.toggle("active");
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>

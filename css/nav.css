@@ -1,80 +1,33 @@
-@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
-
-/* CSS Reset */
-* {
-    font-family: "Noto Sans", sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    outline: none;
-    border: none;
-    transition: all 0.1s linear;
-}
-
-/* 字體顏色樣式設定 */
-:root {
-    --small-cpation: 1.2rem;
-    --K2D-body: 1.6rem;
-    --body-text: 1.6rem;
-    --body-semibold: 2rem;
-    --body-title: 1.8rem;
-    --subtitle: 1.4rem;
-    --heading-h1: 2.4rem;
-
-    --black-500-border: #d9d9d9;
-    --black-800-main-text: #4b4b4b;
-    --black-700: #6f6f6f;
-    --white: #fff;
-
-    --primary-400: #a797e7;
-
-    --secondary-100: #e7f0ce;
-    --secondary-400: #7fc179;
-
-    --yellow: #ffee92;
-}
-
-html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-    scroll-padding-top: 5.5rem;
-    scroll-behavior: smooth;
-    letter-spacing: 0.12em;
-}
-
-/* 字體設定 */
-body {
-    font-size: 100%;
-    line-height: 1.5;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: normal;
-}
-
-img {
-    display: block;
-    width: 60%;
-    max-width: 100%;
-    height: auto;
-}
-
-a {
-    text-decoration: none;
-}
-
 /* Header 和導航欄樣式 */
+
 header {
-    padding: 30px 12rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 2rem 5%;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #000;
+}
+
+header a.logo {
+    display: inline-block !important;
+    max-width: 100%;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    max-width: 60%;
+    height: auto;
+}
+
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+    /* 使用 gap 控制間距 */
 }
 
 .navigation {
@@ -84,60 +37,74 @@ header {
     gap: 2rem;
 }
 
-.menu-container {
-    display: flex;
-    align-items: center;
-    gap: 2.4rem; /* 使用 gap 控制間距 */
-}
-
-.menu-container a {
-    display: block;
-    box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.5);
-    box-shadow: 4px 4px 20px rgba(214, 213, 221, 0.6);
-}
-
-.navigation a{
-    padding: 16px 12px;
-    display: block;
+.navigation a {
+    padding: 1.6rem 1.2rem;
+    display: inline-block;
     font-size: 1.6rem;
     line-height: 150%;
-    color: var(--black-700);
+    color: var(--white);
     box-shadow: none;
+    font-weight: 800;
 }
 
 .login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.8rem 2.4rem;
-    line-height: 140%;
-    font-size: 1.6rem;
-    font-weight: 800;
+    padding: .8rem 2.4rem;
     color: var(--primary-400);
     background-color: var(--white);
     border-radius: 999px;
-    gap: .8rem;
+    /* 光暈 */
+    /* box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 4px 4px 20px rgba(214, 213, 221, 0.6); */
+    /* 光暈 */
+    font-size: 1.6rem;
+    font-weight: 800;
 }
 
-.login img {
-    width: 28px;
-    height: 28px;
-    margin-left: 10px;
+.login i {
+    padding-left: 8px;
 }
 
 .menu-container a:hover {
     display: block;
     background: linear-gradient(to bottom, rgb(123, 104, 199, 0.8), rgb(167, 151, 231, 0.8));
+    /* 光暈 */
     box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.5);
     box-shadow: 4px 4px 20px rgba(214, 213, 221, 0.6);
+    /* 光暈 */
     color: var(--white);
 }
 
 .navigation a:hover {
-    display: block;
+    display: inline-block;
     font-size: 1.6rem;
     color: var(--yellow);
     background: none;
     font-weight: 800;
     box-shadow: none;
+}
+
+@media(max-width:820px) {
+    header img {
+        width: 40%;
+        max-width: 100%;
+    }
+
+    .menu-container {
+        gap: 1.6rem;
+    }
+
+    .navigation {
+        gap: 1.2rem;
+    }
+
+    .navigation a {
+        padding: 1.2rem .8rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+
+    .login {
+        padding: .8rem 1.6rem;
+        font-size: 1.4rem;
+    }
 }

@@ -4,29 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/filter.css">
+    <title>篩選系統</title>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/filter.css">
 </head>
 
 <body>
-         <!-- 導覽列區 -->
-         <header>
-            <h1 class="logo">
-                <a href="#"><img src="./images/logo_NavBar.svg" alt="Moonli-logo" /></a>
-            </h1>
-            <!-- 選單列表 -->
-            <nav class="menu-container">
-                <div class="navigation">
-                    <a href="#" class="nav-menu">服務項目</a>
-                    <a href="#" class="nav-menu">心理師列表</a>
-                    <a href="#" class="nav-menu">常見問題</a>
-                    <a href="#" class="nav-menu">相關資訊</a>
-                    <a href="#" class="nav-menu">自我檢測</a>
-                </div>
-                <a href="#" class="login">登入註冊<i class="fa-solid fa-bars"></i></a>
-            </nav>
-        </header>
+    <!-- 導覽列區 -->
+    <header>
+        <h1 class="logo">
+            <a href="#"><img src="./images/logo_NavBar.svg" alt="Moonli-logo" /></a>
+        </h1>
+                <!-- 漢堡選單 -->
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+        <!-- 選單列表 -->
+        <nav class="menu-container">
+            <div class="navigation">
+                <a href="#" class="nav-menu">服務項目</a>
+                <a href="#" class="nav-menu">心理師列表</a>
+                <a href="#" class="nav-menu">常見問題</a>
+                <a href="#" class="nav-menu">相關資訊</a>
+                <a href="#" class="nav-menu">自我檢測</a>
+            </div>
+            <a href="#" class="login">登入註冊<i class="fa-solid fa-bars"></i></a>
+        </nav>
+    </header>
     <main id="filter">
         <div class="cloud"><img src="./images/wave1.png" alt="背景雲"></div>
         <!-- progress bar -->
@@ -125,13 +131,18 @@
                                 <span class="option-text">離島地區</span>
                             </li>
                         </ul>
-                        <div>
-                            <input type="submit" name="btn__next" id="btn__next" title="下一步" value="下一步">
-                        </div>
                 </ul>
+                <div class="btn-box">
+                    <input type="submit" name="btn__next" id="btn__next" title="下一步" value="下一步">
+                </div>
+
             </form>
         </section>
     </main>
+    <!-- 頁尾區 -->
+    <footer>
+        <small> 2024 Mooni. All Rights Reserved.</small>
+    </footer>
     <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
 </body>
