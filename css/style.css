@@ -360,11 +360,11 @@ header{
 
 /* 選擇地區下拉選單 */
 .select-menu {
-	width: 60%;
+	width: 20%;
 	margin: 10px auto;
 }
 
-.select-menu .select-btn {
+.select-menu .select_btn {
 	display: flex;
 	height: 40px;
 	padding: 20px;
@@ -378,20 +378,20 @@ header{
 	box-shadow: inset var(--btn-shadow);
 }
 
-.select-btn i {
+.select_btn i {
 	font-size: 1.6rem;
 	transition: 0.3s;
-	color: var(--black-600);
+	color: var(--white);
 }
 
-.select-menu.active .select-btn i {
+.select-menu.active .select_btn i {
 	transform: rotate(-180deg);
 }
 
 .sBtn-text {
 	font-size: 1.6rem;
 	font-weight: bold;
-	color: var(--black-600);
+	color: var(--white);
 }
 
 /* .question {
