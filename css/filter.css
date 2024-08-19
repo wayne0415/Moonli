@@ -413,8 +413,7 @@ header {
 .menu-container a:hover {
     display: block;
     background: linear-gradient(to bottom, rgb(123, 104, 199, 0.8), rgb(167, 151, 231, 0.8));
-    box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.5);
-    box-shadow: 4px 4px 20px rgba(214, 213, 221, 0.6);
+    box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.5), 4px 4px 20px rgba(214, 213, 221, 0.6);
     color: var(--white);
 }
 
@@ -425,6 +424,134 @@ header {
     background: none;
     font-weight: 800;
     box-shadow: none;
+}
+
+/* 漢堡選單 */
+.hamburger{
+	display: flex;
+width: 32px;
+height: 32px;
+justify-content: center;
+align-items: center;
+    background-color: var(--white);
+    color: var(--purple-400);
+	border-radius: 50px;
+}
+
+.hamburger:active {
+	display: flex;
+width: 32px;
+height: 32px;
+justify-content: center;
+align-items: center;
+    background: linear-gradient(to bottom, rgb(123, 104, 199, 0.8), rgb(167, 151, 231, 0.8));
+    box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.5), 4px 4px 20px rgba(214, 213, 221, 0.6);
+    color: var(--white);
+	border-radius: 50px;
+}
+
+
+@media (min-width:641px) {
+	.hamburger {
+		display: none;
+	}
+}
+
+@media (max-width:640px) {
+	#topbar {
+		align-items: flex-start;
+	}
+
+	.hamburger .bar {
+		display: block;
+		/* margin-bottom: 10px; */
+		background-color: var(--deep);
+		width: 25px;
+		height: 3px;
+		margin: 5px auto;
+		transition: .5s ease-in-out;
+	}
+
+	/* 漢堡選單 三 變換為 X */
+	.hamburger.is-active .bar:nth-child(1) {
+		transform: rotate(45deg) translateY(11.5px);
+	}
+
+	.hamburger.is-active .bar:nth-child(2) {
+		opacity: 0;
+	}
+
+	.hamburger.is-active .bar:nth-child(3) {
+		transform: rotate(-45deg) translateY(-11.5px);
+	}
+
+	#topbar .navigation {
+
+		border-radius: 15px;
+		padding: 10px;
+		align-items: center;
+		/* 副軸水平置中 */
+		/* 玻璃擬態效果 */
+		background-image:
+			linear-gradient(120deg, rgba(255, 255, 255, 0.5) 10%,
+				rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+		box-shadow:
+			0 1px 2px var(--alpha-b-20),
+			inset -1px 0 3px var(--alpha-w-40);
+		backdrop-filter: blur(5px);
+		background-color: var(--alpha-w-40);
+		border: 1px solid var(--gray);
+		/* 動畫效果 */
+		animation: hide .5s both;
+	}
+
+	#topbar .navigation.show {
+		display: flex;
+		/* 動畫效果 */
+		animation: show .5s both;
+	}
+
+	@keyframes hide {
+		from {
+			opacity: 1;
+			display: flex; /* 動態顯示 */
+		}
+
+		to {
+			opacity: 0;
+			display: none; /* 動態消失 */
+		}
+	}
+
+	@keyframes show {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
+
+	#topbar .menu {
+		flex-direction: column;
+		text-align: center;
+		order: -1;
+		/* 還原玻璃擬態效果 */
+		background-image: none;
+		box-shadow: none;
+		backdrop-filter: none;
+		border: none;
+		background-color: transparent;
+	}
+
+	.navigation .menu li {
+		border: none;
+	}
+
+	.navigation .menu a {
+		margin: 15px;
+	}
 }
 
 /* 頁尾區 */
