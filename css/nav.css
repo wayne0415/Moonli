@@ -71,7 +71,7 @@ a {
 
 /* Header 和導航欄樣式 */
 header {
-    padding: 30px 120px;
+    padding: 30px 12rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -81,13 +81,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 2rem;
 }
 
 .menu-container {
     display: flex;
     align-items: center;
-    gap: 24px; /* 使用 gap 控制間距 */
+    gap: 2.4rem; /* 使用 gap 控制間距 */
 }
 
 .menu-container a {
@@ -109,14 +109,14 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 8px 24px;
+    padding: 0.8rem 2.4rem;
     line-height: 140%;
     font-size: 1.6rem;
     font-weight: 800;
     color: var(--primary-400);
     background-color: var(--white);
     border-radius: 999px;
-    gap: 8px;
+    gap: .8rem;
 }
 
 .login img {
