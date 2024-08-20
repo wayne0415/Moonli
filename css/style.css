@@ -337,10 +337,12 @@ header{
 /* 選擇地區下拉選單 */
 .select-menu {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 40%;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    width: 80%;
     margin: 0 auto;
+    padding-bottom:72px ;
+    gap: 24px;
 }
 
 .select-btn {
@@ -353,15 +355,16 @@ header{
     font-weight: 400;
     border-radius: 10px;
 	align-items: center;
+    text-align: start;
 	cursor: pointer;
 	background-image: linear-gradient( rgba(203, 194, 212, 0.2),  rgba(224, 219, 230, 0.049)) ;
-	box-shadow: inset var(--btn-shadow);
+	/* box-shadow: inset var(--btn-shadow); */
 }
 
 .select-btn i {
 	font-size: 1.6rem;
 	transition: 0.3s;
-	color: var(--black-600);
+	color: var(--white);
 }
 
 .select-menu.active .select-btn i {
@@ -373,7 +376,7 @@ header{
 	padding: 20px;
 	margin-top: 10px;
 	border-radius: 8px;
-	background-color: var(--card);
+	/* background-color: var(--card); */
 	box-shadow: var(--shadow);
 	display: none;
 }
@@ -396,18 +399,20 @@ header{
     line-height: 1.6;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
     transition: max-height 0.5s ease, padding 0.5s ease; /* 使用過渡效果控制展開 */
 }
 
-.options:hover {
-	background-color: var(--purple-200);
-	/* background-image: linear-gradient( rgba(203, 194, 212, 0.2),  rgba(224, 219, 230, 0.049)) ; */
+
+
+/* .options:hover {
+	background-color: var(--purple-200); 
+	background-image: linear-gradient( rgba(203, 194, 212, 0.2),  rgba(224, 219, 230, 0.049)) ; 
 	box-shadow: var(--btn-shadow);
-}
+} */
 
 .options:active {
-	background:var(--purple-200);
+	background:var(--primary-400);
 	box-shadow: inset var(--btn-shadow);
 }
 
@@ -415,7 +420,7 @@ header{
 .sBtn-text {
 	font-size: 1.6rem;
 	font-weight: bold;
-	color: var(--black-600);
+	color: var(--white);
 }
 
 .home-images-wave-green img {
