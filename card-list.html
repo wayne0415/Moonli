@@ -7,69 +7,166 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/card-list.css">
     <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <script src="../javascripts/vendor.js"></script>
 </head>
 
 <body>
+    <!-- 步驟一：載入React, Bable -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
     <section>
         <!-- -----------------------header----------------------- -->
-        <header>
-            <h1 class="logo">
-                <a href="#"><img src="./images/logo_NavBar.svg" alt="Moonli-logo" /></a>
-            </h1>
-            <!-- 選單列表 -->
-            <nav class="menu-container">
-                <div class="navigation">
-                    <a href="#" class="nav-menu">服務項目</a>
-                    <a href="#" class="nav-menu">心理師列表</a>
-                    <a href="#" class="nav-menu">常見問題</a>
-                    <a href="#" class="nav-menu">相關資訊</a>
-                    <a href="#" class="nav-menu">自我檢測</a>
-                </div>
-                <a href="#" class="login">登入註冊<i class="fa-solid fa-bars"></i></a>
-            </nav>
-        </header>
+        <!-- 導覽列區 -->
+    <header>
+        <a href="#" class="logo"><img src="./images/logo_NavBar.svg" alt="Moonli-logo" /></a>
+        <!-- 選單列表 -->
+        <nav class="menu-container">
+            <div class="navigation">
+                <a href="#" class="nav-menu">服務項目</a>
+                <a href="#" class="nav-menu">心理師列表</a>
+                <a href="#" class="nav-menu">常見問題</a>
+                <a href="#" class="nav-menu">相關資訊</a>
+                <a href="#" class="nav-menu">自我檢測</a>
+            </div>
+            <div class="login">
+                <p>登入註冊</p>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
 
         <!-- -----------------------側選單----------------------- -->
 
 
         <!-- -----------------------諮商師列表----------------------- -->
-        <div class="card__list">
-            <div class="card">
-                <img src="./images/卡牌列表1.jpg" alt="">
-                <i class="fa-regular fa-star"></i>
-                <span>查看更多</span>
-                <div class="detail-info">
-                    <div class="title">
-                        <div>
-                            <span class="title__name">Sunshine</span>
-                            <span class="staus">已額滿</span>
+        <!-- 步驟二：載入root元素 -->
+        <div id="root"></div>
+
+        <!-- 使用JSX，type類型為 "text/babel" -->
+        <script type="text/babel">
+            function GetImg(props) {
+                const { img, name, full, price, district, clinic, tag, issue1, issue2, issue3, issue4 } = props;
+                return (
+                    <div class="card__list">
+                        <div class="card">
+                            <img src={img} alt="" />
+                            <i class="fa-regular fa-star"></i>
+                            <span>查看更多</span>
+                            <div class="detail-info">
+                                <div class="title">
+                                    <div>
+                                        <span class="title__name">{name}</span>
+                                        <span class="staus">{full}</span>
+                                    </div>
+                                    <span class="title__name">{price}/小時</span>
+                                </div>
+                                <div class="district">
+                                    <span>{district}</span>
+                                    <div></div>
+                                    <span>{clinic}</span>
+                                </div>
+                                <div class="tag">{tag}</div>
+                                <div class="issue">
+                                    <span>{issue1}</span>
+                                    <div></div>
+                                    <span>{issue2}</span>
+                                    <div></div>
+                                    <span>{issue3}</span>
+                                    <div></div>
+                                    <span>{issue4}</span>
+                                </div>
+                                <div class="player">
+                                    <span>這裡放音檔</span>
+                                </div>
+                            </div>
                         </div>
-                        <span class="title__name">2200元/小時</span>
                     </div>
-                    <div class="district">
-                        <span>台北市</span>
-                        <div></div>
-                        <span>XX診所</span>
-                    </div>
-                    <div class="tag">4.2</div>
-                    <div class="issue">
-                        <span>憂鬱排解</span>
-                        <div></div>
-                        <span>失眠困擾</span>
-                        <div></div>
-                        <span>失戀情傷</span>
-                        <div></div>
-                        <span>家庭諮商</span>
-                    </div>
-                    <div class="player">
-                        <span>這裡放音檔</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+                )
+            }
+            // const { img, name, full, price, district, clinic, tag, issue1, issue2, issue3, issue4 } = props;
+
+            const App = () => {
+                        const products = [
+                            {
+                                id: 1,/* 跑迴圈時，需要一個資料不會重複的key值 */
+                                img:,
+                                name:,
+                                full:,
+                                price:,
+                                district:,
+                                clinic:,
+                                tag:,
+                                issue1:,
+                                issue2:,
+                                issue3:,
+                                issue4:,
+                            },
+                            {
+                                id: 2,/* 跑迴圈時，需要一個資料不會重複的key值 */
+                                title: '進階版',
+                                price: 6000,
+                                desc: '進階版說明',
+                                btnName: '進階版申請'
+                            },
+                            {
+                                id: 3,/* 跑迴圈時，需要一個資料不會重複的key值 */
+                                title: '企業版',
+                                price: '請洽客服',
+                                desc: '多人適用。。。',
+                                btnName: '企業版申請'
+                            }
+                        ]
+
+                        return (
+                            <>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore molestiae
+                                    facere asperiores sit aspernatur laboriosam ipsum, excepturi fuga,
+                                    consequuntur cupiditate, nam a doloremque error adipisci nulla reiciendis
+                                    itaque odio voluptatibus.
+                                </p>
+                                {/*使用迴圈，將陣列物件中的資料填入*/}
+                                {/*在輸出(return)時，使用js的話，要加上{}*/}
+
+                                {
+                                    products.map((item) => {
+                                        /*呼叫卡片元件*/
+                                        /*return <Card title='基本版' msgPrice='$1000' month='' desc='基本版說明區' btnName='免費試用' />*/
+
+                                        // 改用陣列傳值給元件
+                                        return <Card title={item.title} price={item.price} desc={item.desc} btnName={item.btnName} />
+                                    })
+                                }
+                                <h2>方案使用說明</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore molestiae
+                                    facere asperiores sit aspernatur laboriosam ipsum, excepturi fuga,
+                                    consequuntur cupiditate, nam a doloremque error adipisci nulla reiciendis
+                                    itaque odio voluptatibus.
+                                </p>
+                                {/*單獨呼叫元件*/}
+                                <Card title='專人解說' price='請聯絡客服' desc='專人解說文字區' btnName='專人服務'/>
+                            </>
+                        );
+                    };
+
+
+            ReactDOM
+                .createRoot(document.getElementById('root'))
+                .render(<App />);
+        </script>
+
+
+
 
     </section>
     <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./RWD/stylesheets/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
 </body>
 
 </html>

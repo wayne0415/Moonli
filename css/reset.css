@@ -30,6 +30,7 @@
     --primary-500: #856be7;
 
     --secondary-100: #e7f0ce;
+    --secondary-300: #ABD795;
     --secondary-400: #7fc179;
 
     --yellow: #ffee92;
@@ -45,10 +46,10 @@
 	--white: rgba(255, 255, 255);
 	/* 透明 */
 	--shadow: 0px 4px 20px  rgba(194, 191, 209, 0.4);
-	--btn-shadow: 4px 4px 20px rgba(214, 213, 221, .6), -4px -4px 8px rgba(255, 255, 255, 0.5);
+	--btn-shadow: 4px 4px 20px rgba(214, 213, 221, .6),-4px -4px 10px rgba(255, 255, 255, 0.5);
 	--inset-shadow: 0 4px 10px rgba(214, 213, 221, .6);
 	/* 漸層 */
-	--gradient-card: rgb(255, 255, 255), rgb(255, 255, 255, .5);
+	--gradient-card: rgb(244, 244, 244, .25), rgb(255, 255, 255, .25);
 	--gradient-btn: rgba(203, 194, 212, 0.2),  rgba(249, 249, 249, 0);
 	--gradient-sky-purple: rgb(91, 97, 149), rgb(157, 134, 159);
 }

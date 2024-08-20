@@ -1,30 +1,36 @@
 body{
     
-    background-image: url(./images/backgroung\ image.svg);
+    background-image: url(../images/backgroung\ image.svg);
     background-position: bottom center;
     background-repeat: no-repeat;
+    background-color: #F9F9F9;
 }
 /* Header 和導航欄樣式 */
-
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem 5%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-header img {
-    display: block;
-    width: 100%;
-    max-width: 60%;
-    height: auto;
+header a.logo{
+    display: inline-block;
+    width: 15%;
 }
+
+header img{
+    display: block;
+    width: auto;
+}
+
 
 .menu-container {
     display: flex;
     align-items: center;
-    gap: 2.4rem;
+    gap: 2rem;
     /* 使用 gap 控制間距 */
 }
 
@@ -73,13 +79,54 @@ header img {
 }
 
 .login i{
-    padding-left: .8rem;
+    display: none;
 }
 
 
 .login:hover {
     background-color: var(--primary-400);
     color: var(--white);
+}
+
+@media(max-width:820px) {
+    .menu-container {
+        gap: 1.2rem;
+    }
+
+    .navigation {
+        gap: .8rem;
+    }
+
+    .navigation a {
+        padding: 1.2rem .8rem;
+        font-size: 1.2rem;
+    }
+
+    .navigation a:hover{
+        font-size: 1.2rem;
+    }
+
+    .login {
+        padding: .8rem 1.6rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media(max-width:768px){
+    header a.logo{
+        width: 20%;
+    }
+    .navigation{
+        display: none;
+    }
+
+    .login p{
+        display: none;
+    }
+    .login i{
+        display: block;
+        font-size: 2rem;
+    }
 }
 
 /* Header ends */
@@ -89,7 +136,7 @@ header img {
     margin: 0 auto;
     display: flex;
     gap: 60px;
-    padding:2rem 12% ;
+    padding:2rem 8% ;
 }
 
 /* -------------info starts------------- */
@@ -98,7 +145,7 @@ header img {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    width: 25%;
+    width: 30%;
 }
 
 .profile__photo {
@@ -140,11 +187,11 @@ header img {
     flex-direction: column;
     padding: 2rem;
     gap: 2rem;
-    border: solid 1px var(--black-500-border);
     border-radius: 1.2rem;
     box-sizing: border-box;
-    background-color: #fff;
+    background-image: linear-gradient(var(--gradient-card));
     justify-content: center;
+    box-shadow: var(--btn-shadow);
 }
 
 /* -------------預約表單start------------- */
@@ -163,10 +210,11 @@ header img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1.2rem;
+    padding: 1.2rem 1.6rem;
     font-size: var(--small-caption);
     line-height: 1.4;
-    border: 1px solid var(--black-500-border);
+    background-image: linear-gradient(var(--gradient-card));
+    box-shadow: var(--btn-shadow);
     border-radius: 0.8rem;
     transition: none;
 }
@@ -201,11 +249,17 @@ header img {
     font-weight: 600;
 }
 
+.reservation:hover{
+    background-color: var(--secondary-300);
+    cursor: pointer;
+}
+
 .time {
     display: flex;
     padding: .8rem 1.2rem;
     border-radius: 1.2rem;
-    border: solid 1px var(--black-500-border);
+    background-image: linear-gradient(var(--gradient-card));
+    box-shadow: var(--btn-shadow);
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -220,7 +274,7 @@ header img {
 }
 
 .time span{
-    font-size: var(--K2D-body);
+    font-size: var(--subtitle);
     font-family: "K2D", sans-serif;
 }
 
@@ -482,8 +536,10 @@ header img {
     padding: 1.2rem 1.6rem;
     gap: 2rem;
     border-radius: 1.2rem;
-    border: var(--black-500-border) solid 0.5px;
+    background-image: linear-gradient(var(--gradient-card));
+    box-shadow: var(--btn-shadow);
     width: 100%;
+    background-color: var(--white);
 }
 
 .article img{
