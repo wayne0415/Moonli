@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flexbox 下拉菜单</title>
+        <style>
+            /* styles.css */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .menu-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .dropdown {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .dropdown-toggle {
+                padding: 10px 20px;
+                background-color: #3498db;
+                color: white;
+                border: none;
+                cursor: pointer;
+                border-radius: 4px;
+                font-size: 16px;
+            }
+
+            .dropdown-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #333;
+                border-radius: 4px;
+                margin-top: 5px;
+                width: 100%;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+            }
+
+            .dropdown-menu a {
+                padding: 10px 20px;
+                color: white;
+                text-decoration: none;
+                background-color: #333;
+            }
+
+            .dropdown-menu a:hover {
+                background-color: #575757;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="menu-container">
+            <div class="dropdown">
+                <button class="dropdown-toggle">選單</button>
+                <div class="dropdown-menu">
+                    <a href="#">選項 1</a>
+                    <a href="#">選項 2</a>
+                    <a href="#">選項 3</a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // script.js
+            document.querySelector(".dropdown-toggle").addEventListener("click", function () {
+                const dropdownMenu = document.querySelector(".dropdown-menu");
+                dropdownMenu.style.display = dropdownMenu.style.display === "flex" ? "none" : "flex";
+            });
+
+            // 可选：点击页面其他地方时隐藏下拉菜单
+            window.addEventListener("click", function (event) {
+                if (!event.target.matches(".dropdown-toggle")) {
+                    const dropdownMenu = document.querySelector(".dropdown-menu");
+                    dropdownMenu.style.display = "none";
+                }
+            });
+        </script>
+    </body>
+</html>
