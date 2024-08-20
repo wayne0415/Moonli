@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
+    <style>
+        /* Q&A區 */
+
+        #faq {
+            color: #fff;
+            position: relative;
+            width: 100%;
+            background: linear-gradient(to bottom, #44615E, #1F8970);
+            text-align: center;
+
+        }
+
+        #faq h2 {
+            padding: 50px 20px;
+            font-size: 3.2rem;
+            font-weight: 800;
+
+        }
+
+        /* 選擇地區下拉選單 */
+        .select-menu {
+            display: flex;
+            /* flex-direction: column; */
+            /* align-items: center; */
+            width: 80%;
+            margin: 0 auto;
+            padding-bottom: 72px;
+            background-color: transparent;
+            gap: 24px;
+        }
+
+        .select-menu .select-btn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            font-size: 1.8rem;
+            font-weight: 400;
+            border-radius: 10px;
+            align-items: center;
+            text-align: start;
+            cursor: pointer;
+            background-image: linear-gradient(rgba(203, 194, 212, 0.2), rgba(224, 219, 230, 0.049));
+            /* box-shadow: inset var(--btn-shadow); */
+        }
+
+        .select-btn i {
+            font-size: 1.6rem;
+            transition: 0.3s;
+            color: var(--white);
+        }
+
+        .select-menu.active .select-btn i {
+            transform: rotate(-180deg);
+        }
+
+
+        .option {
+            z-index: 10;
+            padding: 20px;
+            margin-top: 10px;
+            box-shadow: var(--shadow);
+            /* max-height: 0; /* 設置初始高度為0 */
+            /* overflow: hidden; 隱藏超出部分 */
+            font-size: 1.6rem;
+            line-height: 1.6;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            transition: max-height 0.5s ease, padding 0.5s ease;
+            /* 使用過渡效果控制展開 */
+            display: none;
+        }
+
+        .sBtn-text {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: var(--white);
+        }
+
+        .home-images-wave-green img {
+            width: 100%;
+            height: auto;
+        }
+
+        .select-btn.active .option {
+            width: 100%;
+            height: 500px;
+            /* 根據內容調整合適的最大高度 */
+            padding: 10px;
+            /* 展開後恢復內邊距 */
+            display: flex;
+            background: var(--primary-400);
+            box-shadow: inset var(--btn-shadow);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Q&A區 -->
+    <section id="faq">
+        <div class="home-images-wave-green">
+
+            <!-- <img src="./images/photo_home_wave-green.svg" alt="綠色的波浪" />
+
+            <div class="home-images-icon_annoymoonQQ">
+                <img src="./images/icon_annoymoon_QQ.svg" alt="一隻充滿問號的小可愛" />
+            </div> -->
+
+            <h2>我需要心理諮商嗎？</h2>
+            <div class="select-menu">
+                <div class="select-btn">
+                    <div class="select-q">
+                        <span class="sBtn-text">什麼是心理諮商？</span>
+                        <i class="bx bx-chevron-down"></i>
+                    </div>
+                    <div class="option">
+                        <p class="option-text">心理諮商是由專業心理師引導，根據您的需求制定個性化的療程。</p>
+                    </div>
+                </div>
+
+
+                <!-- <div class="select-btn">
+                    <div class="select-q">
+                        <span class="sBtn-text">長期心理諮商<br />與一般心理諮商的差異？</span>
+                        <i class="bx bx-chevron-down"></i>
+                    </div>
+                    <div class="options">
+                        <p class="option-text">長期心理諮商是深入探討問題，適合持續數月甚至數年。</p>
+                    </div>
+                </div>
+
+                <div class="select-btn">
+                    <div class="select-q">
+                        <span class="sBtn-text">心理諮商前<br />我可先做哪些準備？</span>
+                        <i class="bx bx-chevron-down"></i>
+                    </div>
+                    <div class="options">
+                        <p class="option-text">了解心理諮商的流程，並做好自我評估。</p>
+                    </div>
+                </div> -->
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
