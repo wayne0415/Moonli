@@ -8,30 +8,31 @@ body{
 
 
 header {
-    padding: 30px 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 2rem 5%;
 }
 
 header img {
     display: block;
-    width: 60%;
-    max-width: 100%;
+    width: 100%;
+    max-width: 60%;
     height: auto;
 }
 
 .menu-container {
     display: flex;
     align-items: center;
-    gap: 24px; /* 使用 gap 控制間距 */
+    gap: 2.4rem;
+    /* 使用 gap 控制間距 */
 }
 
-.navigation{
+.navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 2rem;
 }
 
 
@@ -59,7 +60,7 @@ header img {
 }
 
 .login {
-    padding: 8px 24px;
+    padding: .8rem 2.4rem;
     color: var(--primary-400);
     background-color: var(--white);
     border-radius: 999px;
@@ -72,7 +73,7 @@ header img {
 }
 
 .login i{
-    padding-left: 8px;
+    padding-left: .8rem;
 }
 
 
@@ -87,10 +88,8 @@ header img {
 .container {
     margin: 0 auto;
     display: flex;
-    width: 1380px;
     gap: 60px;
-    padding-bottom: 120px;
-    padding-top: 60px;
+    padding:2rem 12% ;
 }
 
 /* -------------info starts------------- */
@@ -98,8 +97,8 @@ header img {
 .info {
     display: flex;
     flex-direction: column;
-    gap: 3.2rem;
-    width: 28%;
+    gap: 2rem;
+    width: 25%;
 }
 
 .profile__photo {
@@ -111,8 +110,8 @@ header img {
 }
 
 .profile__photo img {
-    width: 80%;
-    height: 240px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 1.2rem;
 }
@@ -120,8 +119,8 @@ header img {
 .profile__photo .clinic {
     display: flex;
     flex-direction: row;
+    width: 100%;
     gap: 12px;
-    overflow: hidden;
     max-width: 100%;
 }
 
@@ -139,7 +138,7 @@ header img {
 .block__content{
     display: flex;
     flex-direction: column;
-    padding: 3.2rem;
+    padding: 2rem;
     gap: 2rem;
     border: solid 1px var(--black-500-border);
     border-radius: 1.2rem;
@@ -152,22 +151,30 @@ header img {
 
 .week {
     display: flex;
-    justify-content: space-between;
+    gap: 0.8rem;
     width: 100%;
+    padding: 0.8rem;
+    overflow: hidden;
 }
 
 .weekday {
+    flex: 0 0 auto;
+    min-width: 0;  /* 允許 flex item 縮小到比內容更小 */
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: .8rem 1.6rem;
-    row-gap: .4rem;
-    font-size: var(--small-cpation);
-    line-height: 140%;
-    border: solid 1px var(--black-500-border);
-    border-radius: .8rem;
-    box-sizing: border-box;
+    padding: 1.2rem;
+    font-size: var(--small-caption);
+    line-height: 1.4;
+    border: 1px solid var(--black-500-border);
+    border-radius: 0.8rem;
     transition: none;
+}
+
+
+.day {
+    font-weight: bold;
+    margin-bottom: 0.4rem;
 }
 
 .weekday:hover{
@@ -182,27 +189,28 @@ header img {
 .reserve {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem;
+    grid-gap: 1.2rem;
 }
 
 .reservation{
-    padding: 1.2rem 2.4rem;
+    padding: .8rem 1.2rem;
     border-radius: 10rem;
     background-color: var(--secondary-400);
-    font-size: var(--body-semibold);
+    font-size: var(--body-text);
     color: #fff;
     font-weight: 600;
 }
 
 .time {
     display: flex;
-    height: 58px;
-    padding: .8rem 2.4rem;
+    padding: .8rem 1.2rem;
     border-radius: 1.2rem;
     border: solid 1px var(--black-500-border);
     text-align: center;
     justify-content: center;
     align-items: center;
+    font-size: var(--subtitle);
+    color: var(--black-800-main-text);
 }
 
 .time:hover{
@@ -232,6 +240,7 @@ header img {
 .style__data {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .style__data span{
@@ -261,7 +270,7 @@ header img {
 }
 
 .style__bar {
-    width: 210px;
+    width: 130px;
     background-color: var(--secondary-100);
 }
 
@@ -431,10 +440,10 @@ header img {
 
 .data .tag span{
     display: inline-block;
-    padding: .8rem 1.6rem;
+    padding: .4rem 1.2rem;
     background-color: var(--secondary-100);
     border-radius: .8rem;
-    font-size: var(--body-text);
+    font-size: var(--subtitle);
     color: var(--black-800-main-text);
     letter-spacing: 0.1em;
 }
@@ -474,6 +483,7 @@ header img {
     gap: 2rem;
     border-radius: 1.2rem;
     border: var(--black-500-border) solid 0.5px;
+    width: 100%;
 }
 
 .article img{
@@ -484,23 +494,24 @@ header img {
 }
 
 .article__content{
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: .8rem;
 }
 
 .article__title{
-    font-size: var(--body-semibold);
+    font-size: var(--body-text);
     color: var(--black-800-main-text);
     font-weight: 800;
 }
 
 .article__content .body{
-    font-size: var(--body-text);
+    font-size: var(--subtitle);
     color: var(--black-700);
-    width: 636px; 
+    line-height: 1.6;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* 顯示三行文本 */
+    -webkit-line-clamp: 4; /* 顯示三行文本 */
     -webkit-box-orient: vertical; /* 設為垂直方向 */
     overflow: hidden; /* 隐藏超出部分 */
     text-overflow: ellipsis;
