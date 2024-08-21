@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 /* 重置樣式 */
 * {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Noto Sans",sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -18,7 +20,7 @@
     --body-semibold: 2rem;
     --body-title: 1.8rem;
     --subtitle: 1.4rem;
-    --heading-h1: 2.4rem;
+    --heading-h2: 2rem;
 
     --black-500-border: #d9d9d9;
     --black-800-main-text: #4b4b4b;
@@ -42,9 +44,19 @@ html {
     letter-spacing: 0.12em;
 }
 
-/* 字體設定 */
+/* img {
+	display: block;
+	width: 100%;
+	height: 100%;
+} */
+
+a {
+	display: block;
+	text-decoration: none;
+}
+
 body {
-    font-family: "Noto Sans", sans-serif;
+    font-family:"Noto Sans",sans-serif;
     font-size: 100%;
     line-height: 1.5;
     background-color: #f7f3ff;
@@ -58,29 +70,40 @@ body {
     background-color: #fff;
     border-radius: 16px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    padding: 40px 40px;
-    max-width: 240vh;
-    width: 24%;
+    padding: 40px 56px;
+    max-width: 200vh;
+    width: 32%;
     text-align: center;
 }
 
 .info-section h2 {
     font-size: 2rem;
-    color: #4a4a4a;
-    margin-bottom: 20px;
+    color:var(--black-800-main-text);
+    margin-top: 4px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.info-row h3 {
+    font-size: 2.4rem;
+    color: var(--black-700);
+    margin-top: 4px;
+    font-weight: 700;
+}
+.info-row small {
+    color: var(--black-700);
+    font-weight: bold;
+}
+.therapist-photo {
+    width: 70%;
+    height: auto;
+    border-radius: 12px;
 }
 
 .info-wrapper {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
-}
-
-.therapist-photo {
-    width: 72%;
-    height: auto;
-    border-radius: 12px;
-    object-fit: cover;
+    margin-bottom: 16px;
 }
 
 .info-text {
@@ -90,58 +113,94 @@ body {
 }
 
 .info-row {
-    flex: 1;
-    text-align: center;
+    text-align: left;
 }
 
-.info-row p {
-    font-size: 14px;
-    color: #777;
-}
-
-.info-row h3 {
-    font-size: 18px;
-    color: #4A4A4A;
-    margin-top: 5px;
-    font-weight: bold;
-}
-
-.status-cancelled {
+/* .status-cancelled {
     color: #d9534f;
-}
+} */
 
 .info-details {
-    font-size: 14px;
-    color: #555;
-    line-height: 1.8;
+    color: var(--black-700);
+    font-weight: bold;
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
+    line-height:1.6;
 }
 
-.more-info {
-    font-size: 14px;
-    color: #6c63ff;
-    text-decoration: underline;
+.info-details p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding-bottom: 16px;
+
+}
+
+/* 查看更多 */
+.more-info-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+    margin-top: 4px;
+    margin-bottom: 64px;
+    
+}
+
+.more-info-box small {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--black-700);
     cursor: pointer;
+    margin-right: 4px;
+    /* flex: 1;  */
 }
 
+.more-info-box a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.more-info-box img {
+    width: 80%;
+    height: auto;
+}
+
+/* 按鈕 */
 .btn-CTA {
     text-align: center;
     margin-top: 20px;
 }
 
 button {
-    padding: 10px 50px;
-    font-size: 16px;
+    padding: 10px 120px;
+    font-size: 1.6rem;
+    font-weight: bold;
     border-radius: 30px;
-    border: 2px solid #856be7;
+    border: 3px solid var(--primary-400);
     background-color: transparent;
-    color: #856be7;
+    color:var(--primary-400);
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
 
 button:hover {
     background-color: #856be7;
+    border: 3px solid var(--primary-500);
     color: #fff;
+}
+/* 手機和小型螢幕的樣式 */
+@media (max-width: 768px) {
+    button {
+        padding: 10px 60px; /* 減少按鈕內邊距 */
+        font-size: 1.4rem;  /* 減小字體大小 */
+    }
+}
+
+/* 超小型螢幕（如手機）的樣式 */
+@media (max-width: 480px) {
+    button {
+        padding: 10px 40px; /* 進一步減少內邊距 */
+        font-size: 1.2rem;  /* 繼續減小字體大小 */
+    }
 }
