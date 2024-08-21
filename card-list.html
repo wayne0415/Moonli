@@ -18,63 +18,49 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
     <section>
-        <!-- -----------------------header----------------------- -->
-        <!-- 導覽列區 -->
-        <header>
-            <a href="#" class="logo"><img src="./images/logo_NavBar.svg" alt="Moonli-logo" /></a>
-            <!-- 選單列表 -->
-            <nav class="menu-container">
-                <div class="navigation">
-                    <a href="#" class="nav-menu">服務項目</a>
-                    <a href="#" class="nav-menu">心理師列表</a>
-                    <a href="#" class="nav-menu">常見問題</a>
-                    <a href="#" class="nav-menu">相關資訊</a>
-                    <a href="#" class="nav-menu">自我檢測</a>
-                </div>
-                <div class="login">
-                    <p>登入註冊</p>
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-            </nav>
-        </header>
-
         <!-- -----------------------側選單----------------------- -->
-
         <!-- -----------------------諮商師列表----------------------- -->
         <!-- 步驟二：載入root元素 -->
         <div id="root"></div>
 
-        <!-- 使用JSX，type類型為 "text/babel" -->
+        <!-- JSX 代碼 -->
         <script type="text/babel">
             function Card(props) {
-                const { img, name, full, price, district, clinic, tag, issue1, issue2, issue3, issue4 } = props;
+                const { img, name, full, price, district, clinic, style, tag, issue1, issue2, issue3, issue4 } = props;
                 return (
-                    <div className="card__list">
                         <div className="card">
-                            <img src={img} alt="" />
-                            <i className="fa-regular fa-star"></i>
-                            <span>查看更多</span>
+                            <img src={img} alt={name} />
+                            <div className="icon">
+                                <i className="fa-regular fa-star"></i>
+                                <div class="more">
+                                    <span>查看更多</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                            </div>
                             <div className="detail-info">
                                 <div className="title">
                                     <div>
-                                        <span className="title__name">{name}</span>
-                                        <span className="staus">{full}</span>
+                                        <span className="title__np">{name}</span>
+                                        <span className="status">{full}</span>
                                     </div>
-                                    <span className="title__name">{price}/小時</span>
+                                    <span className="title__np">{price}/小時</span>
                                 </div>
-                                <div className="district">
+                                <div className="desc">
                                     <span>{district}</span>
-                                    <div></div>
+                                    <div className="circle"></div>
                                     <span>{clinic}</span>
                                 </div>
-                                <div className="tag">{tag}</div>
-                                <div className="issue">
+                                <div className="tag">
+                                   <span>{style}</span> 
+                                   <span>{tag}</span> 
+                                    </div>
+                                <div className="desc">
                                     <span>{issue1}</span>
-                                    <div></div>
+                                    <div className="circle"></div>
                                     <span>{issue2}</span>
-                                    <div></div>
+                                    <div className="circle"></div>
                                     <span>{issue3}</span>
-                                    <div></div>
+                                    <div className="circle"></div>
                                     <span>{issue4}</span>
                                 </div>
                                 <div className="player">
@@ -82,51 +68,81 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                )
+                );
             }
 
-
-            const App = () => {
+            function App() {
                 const products = [
                     {
-                        id: 1,/* 跑迴圈時，需要一個資料不會重複的key值 */
+                        id: 1,
                         img: "./images/諮商師1.jpg",
                         name: '陳美美',
                         full: '',
                         price: 2200,
                         district: '台北市',
                         clinic: '和平診所',
+                        style:'溫柔',
                         tag: 4.2,
                         issue1: '憂鬱排解',
                         issue2: '失眠困擾',
                         issue3: '失戀情傷',
                         issue4: '家庭諮商',
                     },
-                    // {
-                    //     id: 2,/* 跑迴圈時，需要一個資料不會重複的key值 */
-
-                    // },
-                    // {
-                    //     id: 3,/* 跑迴圈時，需要一個資料不會重複的key值 */
-
-                    // }
-                ]
+                    {
+                        id: 2,
+                        img: "./images/諮商師2.jpg",
+                        name: '陳美美',
+                        full: '已額滿',
+                        price: 2200,
+                        district: '台北市',
+                        clinic: '和平診所',
+                        style:'溫柔',
+                        tag: 4.2,
+                        issue1: '憂鬱排解',
+                        issue2: '失眠困擾',
+                        issue3: '失戀情傷',
+                        issue4: '家庭諮商',
+                    },{
+                        id: 3,
+                        img: "./images/諮商師3.jpg",
+                        name: '陳美美',
+                        full: '已額滿',
+                        price: 2200,
+                        district: '台北市',
+                        clinic: '和平診所',
+                        style:'溫柔',
+                        tag: 4.2,
+                        issue1: '憂鬱排解',
+                        issue2: '失眠困擾',
+                        issue3: '失戀情傷',
+                        issue4: '家庭諮商',
+                    },
+                    // 可以在此添加更多產品
+                ];
 
                 return (
-                    <>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore molestiae
-                            facere asperiores sit aspernatur laboriosam ipsum, excepturi fuga,
-                            consequuntur cupiditate, nam a doloremque error adipisci nulla reiciendis
-                            itaque odio voluptatibus.
-                        </p>
-                        {/*使用迴圈，將陣列物件中的資料填入*/}
-                        {/*在輸出(return)時，使用js的話，要加上{}*/}
+                    <div>
+                        <header>
+                            <a href="#" className="logo"><img src="./images/logo_NavBar.svg" alt="Moonli-logo" /></a>
+                            <nav className="menu-container">
+                                <div className="navigation">
+                                    <a href="#" className="nav-menu">服務項目</a>
+                                    <a href="#" className="nav-menu">心理師列表</a>
+                                    <a href="#" className="nav-menu">常見問題</a>
+                                    <a href="#" className="nav-menu">相關資訊</a>
+                                    <a href="#" className="nav-menu">自我檢測</a>
+                                </div>
+                                <div className="login">
+                                    <p>登入註冊</p>
+                                    <i className="fa-solid fa-bars"></i>
+                                </div>
+                            </nav>
+                        </header>
 
-                        {
-                            products.map((item) => {
-                                return <Card
+                        <section>
+                            <div className="card__list">
+                            {products.map((item) => (
+                                <Card
                                     key={item.id}
                                     img={item.img}
                                     name={item.name}
@@ -134,31 +150,21 @@
                                     price={item.price}
                                     district={item.district}
                                     clinic={item.clinic}
+                                    style={item.style}
                                     tag={item.tag}
                                     issue1={item.issue1}
                                     issue2={item.issue2}
                                     issue3={item.issue3}
                                     issue4={item.issue4}
                                 />
-                            })
-                        }
-                        <h2>方案使用說明</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore molestiae
-                            facere asperiores sit aspernatur laboriosam ipsum, excepturi fuga,
-                            consequuntur cupiditate, nam a doloremque error adipisci nulla reiciendis
-                            itaque odio voluptatibus.
-                        </p>
-                        {/*單獨呼叫元件*/}
-                        <Card title='專人解說' price='請聯絡客服' desc='專人解說文字區' btnName='專人服務' />
-                    </>
+                            ))}
+                        </div>
+                        </section>
+                    </div>
                 );
-            };
+            }
 
-
-            ReactDOM
-                .createRoot(document.getElementById('root'))
-                .render(<App />);
+            ReactDOM.createRoot(document.getElementById('root')).render(<App />);
         </script>
 
 
