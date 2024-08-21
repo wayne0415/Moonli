@@ -4,6 +4,8 @@ a{
 }
 
 header {
+    position: fixed;
+    top:0; left:0; right:0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,7 +25,7 @@ header img{
 }
 
 
-.menu-container {
+.navbar {
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -90,7 +92,7 @@ header img{
 }
 
 @media(max-width:820px) {
-    .menu-container {
+    .navbar {
         gap: 1.2rem;
     }
 
@@ -114,18 +116,37 @@ header img{
 }
 
 @media(max-width:768px){
+    body{
+        background-color: #ccc;
+    }
     header a.logo{
         width: 20%;
     }
-    .navigation{
-        display: none;
+
+
+    header .navbar .login #menu-bars{
+        display: inline-block;
     }
 
-    .login p{
-        display: none;
+    header .navigation{
+        position: absolute;
+        top:100%; left:0; right:0;
+        padding: 1rem;
+        clip-path: polygon(0 0,100% 0, 100% 0, 0 0);
     }
-    .login i{
+
+    
+
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%,0% 100%);
+    }
+
+
+    header .navbar a{
         display: block;
+        padding: 1.5rem;
+        margin: 1rem;
         font-size: 2rem;
+        background: #eee;
     }
 }
