@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>滑鼠滾動控制旋轉</title>
+        <style>
+            body,
+            html {
+                height: 200vh; /* 設置頁面高度，以便可以滾動 */
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #square {
+                width: 200px;
+                height: 200px;
+                background-color: coral;
+                transition: transform 0.1s ease-out; /* 平滑過渡效果 */
+            }
+        </style>
+    </head>
+    <body>
+        <div id="square"></div>
+
+        <script>
+            // JavaScript 代碼將會在這裡編寫
+            const square = document.getElementById("square");
+            let rotation = 0; // 初始旋轉角度為 0
+
+            window.addEventListener("scroll", function () {
+                const scrollY = window.scrollY; // 獲取滾動距離
+                rotation = scrollY % 360; // 設置旋轉角度，讓它在 0 到 360 度之間循環
+                square.style.transform = `rotate(${rotation}deg)`; // 應用旋轉變換
+            });
+        </script>
+    </body>
+</html>
