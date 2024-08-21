@@ -2,7 +2,7 @@
 
 /* 重置樣式 */
 * {
-    font-family: "Noto Sans", sans-serif,;
+    font-family: "Noto Sans",sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -56,7 +56,7 @@ a {
 }
 
 body {
-    font-family: "Noto Sans", sans-serif;
+    font-family:"Noto Sans",sans-serif;
     font-size: 100%;
     line-height: 1.5;
     background-color: #f7f3ff;
@@ -71,13 +71,13 @@ body {
     border-radius: 16px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     padding: 40px 56px;
-    max-width: 240vh;
+    max-width: 200vh;
     width: 32%;
     text-align: center;
 }
 
 .info-section h2 {
-    font-size: 2.4rem;
+    font-size: 2rem;
     color:var(--black-800-main-text);
     margin-top: 4px;
     font-weight: bold;
@@ -85,10 +85,10 @@ body {
 }
 
 .info-row h3 {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     color: var(--black-700);
     margin-top: 4px;
-    font-weight: 800;
+    font-weight: 700;
 }
 .info-row small {
     color: var(--black-700);
@@ -188,4 +188,19 @@ button:hover {
     background-color: #856be7;
     border: 3px solid var(--primary-500);
     color: #fff;
+}
+/* 手機和小型螢幕的樣式 */
+@media (max-width: 768px) {
+    button {
+        padding: 10px 60px; /* 減少按鈕內邊距 */
+        font-size: 1.4rem;  /* 減小字體大小 */
+    }
+}
+
+/* 超小型螢幕（如手機）的樣式 */
+@media (max-width: 480px) {
+    button {
+        padding: 10px 40px; /* 進一步減少內邊距 */
+        font-size: 1.2rem;  /* 繼續減小字體大小 */
+    }
 }
