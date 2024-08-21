@@ -1,0 +1,129 @@
+html {
+  display: flex;
+  min-height: 100%;
+  font-family:  "K2D", sans-serif;
+  box-sizing: border-box;
+}
+html * {
+  font-family: inherit;
+}
+html *,
+html *::before,
+html *::after {
+  box-sizing: inherit;
+}
+
+
+.counters {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: .8rem;
+}
+
+.counters .number{
+    
+}
+
+.counter {
+  letter-spacing: 0.125rem;
+  line-height: 1;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  height: 3.125rem;
+  font-size: 4rem;
+  margin: 0 1.25rem;
+}
+
+.counters .number span{
+    font-size: var(--heading-h1);
+    color: var(--white);
+}
+.counter > span {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 2s ease;
+  transform: translateY(0);
+  line-height: 1;
+}
+.counter > span span {
+  flex: 0 0 100%;
+  height: 100%;
+}
+.counter .number:nth-child(1) > span {
+  transition-delay: 0s;
+}
+.counter  .number:nth-child(2) > span {
+  transition-delay: 0.375s;
+}
+.counter  .number:nth-child(3) > span {
+  transition-delay: 0.75s;
+}
+.counter  .number:nth-child(4) > span {
+  transition-delay: 1.125s;
+}
+.counter  .number:nth-child(5) > span {
+  transition-delay: 1.5s;
+}
+.counter  .number:nth-child(6) > span {
+  transition-delay: 1.875s;
+}
+.counter  .number:nth-child(7) > span {
+  transition-delay: 2.25s;
+}
+.counter  .number:nth-child(8) > span {
+  transition-delay: 2.625s;
+}
+.counter  .number:nth-child(9) > span {
+  transition-delay: 3s;
+}
+.counter  .number:nth-child(10) > span {
+  transition-delay: 3.375s;
+}
+.counter  .number:nth-child(11) > span {
+  transition-delay: 3.75s;
+}
+.counter  .number:nth-child(12) > span {
+  transition-delay: 4.125s;
+}
+.counter  .number:nth-child(13) > span {
+  transition-delay: 4.5s;
+}
+.counter  .number:nth-child(14) > span {
+  transition-delay: 4.875s;
+}
+.counter  .number:nth-child(15) > span {
+  transition-delay: 5.25s;
+}
+.counter  .number:nth-child(16) > span {
+  transition-delay: 5.625s;
+}
+.counter  .number:nth-child(17) > span {
+  transition-delay: 6s;
+}
+.counter  .number:nth-child(18) > span {
+  transition-delay: 6.375s;
+}
+.counter  .number:nth-child(19) > span {
+  transition-delay: 6.75s;
+}
+.counter  .number:nth-child(20) > span {
+  transition-delay: 7.125s;
+}
+
+.counters .number:nth-child(1) .counter {
+    color: #ffffff;
+  }
+
+.counters .number:nth-child(2) .counter {
+    color: #ffffff;
+  }
+
+  .counters .number:nth-child(3) .counter {
+    color: #ffffff;
+  }
