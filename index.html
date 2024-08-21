@@ -131,41 +131,59 @@
             <div class="home-images-icon_annoymoonQQ">
                 <img src="./images/icon_annoymoon_QQ.svg" alt="一隻充滿問號的小可愛" />
             </div>
-            <h2>我需要心理諮商嗎？</h2>
-            <div class="select-menu">
-                <div class="select-btn">
-                    <div class="select-q">
-                        <span class="sBtn-text">什麼是心理諮商？</span>
-                        <i class="bx bx-chevron-down"></i>
-                    </div>
-                    <div class="option">
-                        <p class="option-text">心理諮商是由專業心理師引導，根據您的需求制定個性化的療程。</p>
-                    </div>
-                </div>
-
-<!-- 
-                <div class="select-btn">
-                    <div class="select-q">
-                        <span class="sBtn-text">長期心理諮商<br />與一般心理諮商的差異？</span>
-                        <i class="bx bx-chevron-down"></i>
-                    </div>
-                    <div class="options">
-                        <p>長期心理諮商是深入探討問題，適合持續數月甚至數年。</p>
-                    </div>
-                </div>
-
-                <div class="select-btn">
-                    <div class="select-q">
-                        <span class="sBtn-text">心理諮商前<br />我可先做哪些準備？</span>
-                        <i class="bx bx-chevron-down"></i>
-                    </div>
-                    <div class="options">
-                        <p>了解心理諮商的流程，並做好自我評估。</p>
-                    </div>
-                </div>
-            </div> -->
-
         </div>
+            <h2>我需要心理諮商嗎？</h2>
+            <div class="select-list">
+                <div class="select-menu" id="menu1">
+                    <div class="select-btn">
+                        <h3 class="sBtn-text">什麼是心理諮商？</h3>
+                        <i class="bx bx-chevron-down"></i>
+                    </div>
+                    <div class="options">
+                        <div class="option">
+                            <p class="option-text"><span>心理諮商是由專業的心理師引導，在安全、接納的環境下，與您一起討論、釐清與理解您需要處理的議題。</span>
+                                無論是學業、感情、生活、人際、情緒還是對未來的規劃，只要感覺處在無法獨立解決的壓力下，情緒或狀態不佳時，都可以尋求心理諮商的協助。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="select-menu" id="menu2">
+                    <div class="select-btn">
+                        <h3 class="sBtn-text"><span>長期心理諮商</span>與<span>一般心理諮商</span>的差異？</h3>
+                        <i class="bx bx-chevron-down"></i>
+                    </div>
+                    <div class="options">
+                        <div class="option">
+                            <p class="option-text">
+                                <span>長期心理諮商:</span>
+                                深入探索個案的內心和潛在問題，通常需持續數月甚至數年，適合處理深層的情感問題和長期困擾。<br />
+                                <span>一般心理諮商:</span>
+                                關注解決具體問題，通常時間較短，適合快速提供情感支持和實用的解決方案。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="select-menu" id="menu3">
+                    <div class="select-btn">
+                        <h3 class="sBtn-text">心理諮商前，我可以先做哪些準備？</h3>
+                        <i class="bx bx-chevron-down"></i>
+                    </div>
+                    <div class="options">
+                        <div class="option">
+                            <p class="option-text"><span>自我評估：</span>審視自己的問題與需求，確立進行心理諮商的目標。<br />
+                                <span>尋找合適的心理師：</span>選擇專業背景與諮商風格與自己契合的心理師。<br />
+                                <span>保持開放態度：</span>準備好坦誠交流、積極參與諮商。<br />
+                                <span>了解諮商流程：</span>確認諮商的基本流程及可能的治療方法，減少不確定性。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+
+
         <div class="home-images-wave-lightgreen">
             <img src="./images/photo_home_wave-lightgreen.svg" alt="青綠色的波浪" />
         </div>
@@ -296,25 +314,18 @@
 
 </html>
 
-<!-- 下拉式選單 -->
-<!-- <script>
-    document.querySelectorAll('.select-btn').forEach(button => {
-        button.addEventListener('click', () => {
-            // 切換 active 類別，控制展開和收起
-            button.classList.toggle('active');
-
-            // 獲取與當前按鈕相鄰的 options 區域
-            const options = button.nextElementSibling;
-
-            // 展開或收起 options
-            if (options.style.display === 'block') {
-                options.style.display = 'none';
-            } else {
-                options.style.display = 'block';
-            }
-        });
-    });
-</script> -->
+    <!-- faq下拉選單 -->
+    <script>
+        function dropdown(menuId) {
+            const optionMenu = document.querySelector(`#${menuId}`),
+                selectBtn = optionMenu.querySelector(".select-btn");
+            selectBtn.addEventListener("click", () => optionMenu.classList.toggle("active"));
+        }
+        // 初始化
+        dropdown('menu1');
+        dropdown('menu2');
+        dropdown('menu3');
+    </script>
 
 <!-- gotop按鈕 -->
 <script>
@@ -335,5 +346,5 @@
 </script>
 <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>
 
-<script src="./script.js"></script>
+<!-- <script src="./script.js"></script> -->
 </body>
