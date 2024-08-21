@@ -244,6 +244,7 @@ small {
 	box-shadow: inset var(--btn-shadow);
 }
 
+/* 小箭頭 */
 .select-btn i {
 	font-size: 1.6rem;
 	transition: 0.3s;
