@@ -136,6 +136,9 @@ header {
 
 .item-6q {
     width: 75%;
+    opacity: 0; /* 初始完全透明 */
+    transform: scale(0.5); /* 初始縮小 */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* 平滑過渡效果 */
 }
 
 .item-wave1,
