@@ -273,7 +273,7 @@ small {
 	background-color: transparent;
 }
 
-/* 下拉選單選項捲軸 */
+/* 下拉選單選項捲軸 */                      
 .select-menu.active ::-webkit-scrollbar {
 	width: 12px;
 }

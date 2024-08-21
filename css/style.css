@@ -334,78 +334,9 @@ header{
     
 }
 
-/* 選擇地區下拉選單 */
-.select-menu {
-    display: flex;
-    /* flex-direction: column; */
-    /* align-items: center; */
-    width: 80%;
-    margin: 0 auto;
-    padding-bottom:72px ;
-    background-color: transparent;
-    gap: 24px;
-}
-
-.select-menu .select-btn {
-	display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-    font-size: 1.8rem;
-    font-weight: 400;
-    border-radius: 10px;
-	align-items: center;
-    text-align: start;
-	cursor: pointer;
-	background-image: linear-gradient( rgba(203, 194, 212, 0.2),  rgba(224, 219, 230, 0.049)) ;
-	/* box-shadow: inset var(--btn-shadow); */
-}
-
-.select-btn i {
-	font-size: 1.6rem;
-	transition: 0.3s;
-	color: var(--white);
-}
-
-.select-menu.active .select-btn i {
-	transform: rotate(-180deg);
-}
-
-
-.option {
-    z-index: 10;
-    padding: 20px;
-    margin-top: 10px;
-    box-shadow: var(--shadow);
-    /* max-height: 0; /* 設置初始高度為0 */
-    /* overflow: hidden; 隱藏超出部分 */
-    font-size: 1.6rem;
-    line-height: 1.6;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    transition: max-height 0.5s ease, padding 0.5s ease; /* 使用過渡效果控制展開 */
-    display: none;
-}
-
-.sBtn-text {
-	font-size: 1.6rem;
-	font-weight: bold;
-	color: var(--white);
-}
-
 .home-images-wave-green img {
     width: 100%; 
     height: auto; 
-}
-
-.select-btn.active .option {
-    width: 100%;
-    height: 500px; /* 根據內容調整合適的最大高度 */
-    padding: 10px; /* 展開後恢復內邊距 */
-    display: flex;
-	background:var(--primary-400);
-	box-shadow: inset var(--btn-shadow);
 }
 
 .home-images-icon_annoymoonQQ  {
@@ -422,6 +353,97 @@ header{
     width: 100%;
     height: auto;
 }
+
+
+/* 選擇地區下拉選單 */
+.select-list {
+    z-index: 10;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 0 5%;
+    margin-bottom: 88px;
+    gap: 30px;
+}
+
+.select-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.select-menu .select-btn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    font-size: 1.8rem;
+    font-weight: 400;
+text-align: start;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.select-menu.active .select-btn {
+    border-bottom: 1px solid white;
+}
+
+.select-btn i {
+    font-size: 1.6rem;
+    transition: .3s ease-in-out;
+    color: var(--white);
+}
+
+.select-menu.active .select-btn i {
+    transform: rotate(-180deg);
+}
+
+.select-menu .options {
+    padding: 20px;
+    display: none;
+}
+
+.select-menu.active .options {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    width: 100%;
+}
+
+.options .option {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #ffffff;
+    text-align: start;
+}
+
+.sBtn-text {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--white);
+}
+
+.select-menu span {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: rgb(242, 206, 152);
+}
+
+@media(max-width:960px) {
+    .select-list {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        gap: 20px
+    }
+}
+
 
 /* .question {
     background-color: rgba(255, 255, 255, 0.1); 

@@ -7,69 +7,174 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/card-list.css">
     <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- <script src="./React-data/javascripts/vendor.js"></script> -->
 </head>
 
 <body>
+    <!-- 步驟一：載入React, Bable -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
     <section>
-        <!-- -----------------------header----------------------- -->
-        <header>
-            <h1 class="logo">
-                <a href="#"><img src="./images/logo_NavBar.svg" alt="Moonli-logo" /></a>
-            </h1>
-            <!-- 選單列表 -->
-            <nav class="menu-container">
-                <div class="navigation">
-                    <a href="#" class="nav-menu">服務項目</a>
-                    <a href="#" class="nav-menu">心理師列表</a>
-                    <a href="#" class="nav-menu">常見問題</a>
-                    <a href="#" class="nav-menu">相關資訊</a>
-                    <a href="#" class="nav-menu">自我檢測</a>
-                </div>
-                <a href="#" class="login">登入註冊<i class="fa-solid fa-bars"></i></a>
-            </nav>
-        </header>
-
         <!-- -----------------------側選單----------------------- -->
-
-
         <!-- -----------------------諮商師列表----------------------- -->
-        <div class="card__list">
-            <div class="card">
-                <img src="./images/卡牌列表1.jpg" alt="">
-                <i class="fa-regular fa-star"></i>
-                <span>查看更多</span>
-                <div class="detail-info">
-                    <div class="title">
-                        <div>
-                            <span class="title__name">Sunshine</span>
-                            <span class="staus">已額滿</span>
+        <!-- 步驟二：載入root元素 -->
+        <div id="root"></div>
+
+        <!-- JSX 代碼 -->
+        <script type="text/babel">
+            function Card(props) {
+                const { img, name, full, price, district, clinic, style, tag, issue1, issue2, issue3, issue4 } = props;
+                return (
+                        <div className="card">
+                            <img src={img} alt={name} />
+                            <div className="icon">
+                                <i className="fa-regular fa-star"></i>
+                                <div class="more">
+                                    <span>查看更多</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                            </div>
+                            <div className="detail-info">
+                                <div className="title">
+                                    <div>
+                                        <span className="title__np">{name}</span>
+                                        <span className="status">{full}</span>
+                                    </div>
+                                    <span className="title__np">{price}/小時</span>
+                                </div>
+                                <div className="desc">
+                                    <span>{district}</span>
+                                    <div className="circle"></div>
+                                    <span>{clinic}</span>
+                                </div>
+                                <div className="tag">
+                                   <span>{style}</span> 
+                                   <span>{tag}</span> 
+                                    </div>
+                                <div className="desc">
+                                    <span>{issue1}</span>
+                                    <div className="circle"></div>
+                                    <span>{issue2}</span>
+                                    <div className="circle"></div>
+                                    <span>{issue3}</span>
+                                    <div className="circle"></div>
+                                    <span>{issue4}</span>
+                                </div>
+                                <div className="player">
+                                    <span>這裡放音檔</span>
+                                </div>
+                            </div>
                         </div>
-                        <span class="title__name">2200元/小時</span>
+                );
+            }
+
+            function App() {
+                const products = [
+                    {
+                        id: 1,
+                        img: "./images/諮商師1.jpg",
+                        name: '陳美美',
+                        full: '',
+                        price: 2200,
+                        district: '台北市',
+                        clinic: '和平診所',
+                        style:'溫柔',
+                        tag: 4.2,
+                        issue1: '憂鬱排解',
+                        issue2: '失眠困擾',
+                        issue3: '失戀情傷',
+                        issue4: '家庭諮商',
+                    },
+                    {
+                        id: 2,
+                        img: "./images/諮商師2.jpg",
+                        name: '陳美美',
+                        full: '已額滿',
+                        price: 2200,
+                        district: '台北市',
+                        clinic: '和平診所',
+                        style:'溫柔',
+                        tag: 4.2,
+                        issue1: '憂鬱排解',
+                        issue2: '失眠困擾',
+                        issue3: '失戀情傷',
+                        issue4: '家庭諮商',
+                    },{
+                        id: 3,
+                        img: "./images/諮商師3.jpg",
+                        name: '陳美美',
+                        full: '已額滿',
+                        price: 2200,
+                        district: '台北市',
+                        clinic: '和平診所',
+                        style:'溫柔',
+                        tag: 4.2,
+                        issue1: '憂鬱排解',
+                        issue2: '失眠困擾',
+                        issue3: '失戀情傷',
+                        issue4: '家庭諮商',
+                    },
+                    // 可以在此添加更多產品
+                ];
+
+                return (
+                    <div>
+                        <header>
+                            <a href="#" className="logo"><img src="./images/logo_NavBar.svg" alt="Moonli-logo" /></a>
+                            <nav className="menu-container">
+                                <div className="navigation">
+                                    <a href="#" className="nav-menu">服務項目</a>
+                                    <a href="#" className="nav-menu">心理師列表</a>
+                                    <a href="#" className="nav-menu">常見問題</a>
+                                    <a href="#" className="nav-menu">相關資訊</a>
+                                    <a href="#" className="nav-menu">自我檢測</a>
+                                </div>
+                                <div className="login">
+                                    <p>登入註冊</p>
+                                    <i className="fa-solid fa-bars"></i>
+                                </div>
+                            </nav>
+                        </header>
+
+                        <section>
+                            <div className="card__list">
+                            {products.map((item) => (
+                                <Card
+                                    key={item.id}
+                                    img={item.img}
+                                    name={item.name}
+                                    full={item.full}
+                                    price={item.price}
+                                    district={item.district}
+                                    clinic={item.clinic}
+                                    style={item.style}
+                                    tag={item.tag}
+                                    issue1={item.issue1}
+                                    issue2={item.issue2}
+                                    issue3={item.issue3}
+                                    issue4={item.issue4}
+                                />
+                            ))}
+                        </div>
+                        </section>
                     </div>
-                    <div class="district">
-                        <span>台北市</span>
-                        <div></div>
-                        <span>XX診所</span>
-                    </div>
-                    <div class="tag">4.2</div>
-                    <div class="issue">
-                        <span>憂鬱排解</span>
-                        <div></div>
-                        <span>失眠困擾</span>
-                        <div></div>
-                        <span>失戀情傷</span>
-                        <div></div>
-                        <span>家庭諮商</span>
-                    </div>
-                    <div class="player">
-                        <span>這裡放音檔</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+                );
+            }
+
+            ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+        </script>
+
+
+
 
     </section>
     <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="./React-data/stylesheets/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"> -->
+
 </body>
 
 </html>
