@@ -1,0 +1,147 @@
+/* 重置樣式 */
+* {
+    font-family: "Noto Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all 0.1s linear;
+}
+
+/* 字體顏色樣式設定 */
+:root {
+    --small-caption: 1.2rem;
+    --K2D-body: 1.6rem;
+    --body-text: 1.6rem;
+    --body-semibold: 2rem;
+    --body-title: 1.8rem;
+    --subtitle: 1.4rem;
+    --heading-h1: 2.4rem;
+
+    --black-500-border: #d9d9d9;
+    --black-800-main-text: #4b4b4b;
+    --black-700: #6f6f6f;
+    --white: #fff;
+
+    --primary-200: #dddafa;
+    --primary-400: #a797e7;
+    --primary-500: #856be7;
+    --secondary-100: #e7f0ce;
+    --secondary-400: #7fc179;
+
+    --yellow: #ffee92;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+    letter-spacing: 0.12em;
+}
+
+/* 字體設定 */
+body {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+    background-color: #f7f3ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+#main {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 40px 40px;
+    max-width: 240vh;
+    width: 24%;
+    text-align: center;
+}
+
+.info-section h2 {
+    font-size: 2rem;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+}
+
+.info-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.therapist-photo {
+    width: 72%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.info-text {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.info-row {
+    flex: 1;
+    text-align: center;
+}
+
+.info-row p {
+    font-size: 14px;
+    color: #777;
+}
+
+.info-row h3 {
+    font-size: 18px;
+    color: #4A4A4A;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.status-cancelled {
+    color: #d9534f;
+}
+
+.info-details {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.8;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.more-info {
+    font-size: 14px;
+    color: #6c63ff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.btn-CTA {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 50px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: 2px solid #856be7;
+    background-color: transparent;
+    color: #856be7;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #856be7;
+    color: #fff;
+}
