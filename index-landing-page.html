@@ -49,6 +49,7 @@
                     <h2>在生活中，您是否有遇過這些煩惱？</h2>
                 </div>
                 <div class="item-union">
+                    <!-- 樹葉圖片擺動 -->
                     <img src="./images/photo_Union.png" />
                 </div>
                 <div class="item-wave1">
@@ -74,13 +75,16 @@
 
         <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>
         <script>
+            let item_union = document.getElementsByClassName("item-union")[0];
             let icon_6q = document.getElementsByClassName("item-6q")[0];
             let section = document.getElementById("index-landing-page"); // 選取目標區塊
             let sectionHeight = section.offsetHeight; // 取得區塊的高度
             let sectionTop = section.offsetTop; // 取得區塊距離頁面頂部的距離
 
             let startScroll = sectionTop + sectionHeight * 0.35; // 動畫開始的滾動位置
+            let startScroll2 = sectionTop + sectionHeight * 0.5; // 動畫開始的滾動位置
             let endScroll = sectionTop + sectionHeight * 0.45; // 動畫結束的滾動位置
+            let endScroll2 = sectionTop + sectionHeight * 0.6; // 動畫結束的滾動位置
 
             window.addEventListener("scroll", () => {
                 let scrollY = window.scrollY;
@@ -89,12 +93,26 @@
                     let progress = (scrollY - startScroll) / (endScroll - startScroll);
                     let opacityValue = progress; // 根據進度設置透明度
                     let scaleValue = 0.5 + 0.5 * progress; // 根據進度設置縮放大小
+
                     icon_6q.style.opacity = opacityValue;
                     icon_6q.style.transform = `scale(${scaleValue})`;
                 } else if (scrollY >= endScroll) {
                     // 當滾動超過結束位置時，確保屬性值為最終值
                     icon_6q.style.opacity = 1;
                     icon_6q.style.transform = `scale(1)`;
+                }
+
+                if (scrollY > startScroll2 && scrollY < endScroll2) {
+                    let progress = (scrollY - startScroll2) / (endScroll2 - startScroll2);
+
+                    // 使用 ease-out 減速效果
+                    progress = Math.pow(progress, 0.5); // 這會讓滑動開始時較快，結束時較慢
+
+                    let bottomValue = -500 + 500 * progress; // 根據進度設置bottom值
+
+                    item_union.style.bottom = `${bottomValue}px`; // 設置滑動效果
+                } else if (scrollY >= endScroll2) {
+                    item_union.style.bottom = `0px`; // 最終位置固定為0
                 }
             });
         </script>
