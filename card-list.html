@@ -173,7 +173,7 @@
 
                 return (
                     <div>
-                        <header>
+                        {/*<header>
                             <a href="#" className="logo"><img src="./images/logo_NavBar.svg" alt="Moonli-logo" /></a>
                             <nav className="menu-container">
                                 <div className="navigation">
@@ -188,7 +188,7 @@
                                     <i className="fa-solid fa-bars"></i>
                                 </div>
                             </nav>
-                        </header>
+                        </header>*/}
 
                         <section>
                             <div class="container">
@@ -197,16 +197,22 @@
                                     {/*12个下拉菜单*/}
 
                                     <div class="dropdown">
-                                        <div class="dropdown-title" onClick="toggleDropdown('dropdown0')">
+                                        <div class="dropdown-title" onClick={()=>{
+                                            toggleDropdown('dropdown0')
+                                        }}>
                                             <span>排序條件</span>
                                             <i id="dropdown-icon0" class="bx bx-chevron-down"></i>
                                         </div>
                                         <ul class="sb_dropdown" id="dropdown0">
-                                            <li class="lii" onClick="toggleCheckbox('checkbox-0-1')">
+                                            <li class="lii" onClick={()=>{
+                                                toggleCheckbox('checkbox-0-1')
+                                            }}>
                                                 <input id="checkbox-0-1" class="checkbox-custom" name="checkbox-0-1" type="checkbox" />
                                                 <label htmlFor="checkbox-0-1" class="checkbox-custom-label"><i class="material-icons"></i>價位較低優先</label>
                                             </li>
-                                            <li class="lii" onClick="toggleCheckbox('checkbox-0-2')">
+                                            <li class="lii" onClick={()=>{
+                                                toggleCheckbox('checkbox-0-2')
+                                            }}>
                                                 <input id="checkbox-0-2" class="checkbox-custom" name="checkbox-1-2" type="checkbox" />
                                                 <label htmlFor="checkbox-0-2" class="checkbox-custom-label">最快可預約優先</label>
                                             </li>
