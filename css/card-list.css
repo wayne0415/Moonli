@@ -1,5 +1,17 @@
 body{
-    background-color: #ccc;
+    background:url(../images/list-bottom-pic.jpg),linear-gradient(var(--gradient-sky-purple));
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom center;
+}
+
+.list-container{
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25%;
 }
 
 .card__list {
@@ -22,10 +34,11 @@ body{
     box-shadow: 4px 4px 15px rgba(119, 119, 119, 0.2);
 }
 
-.card img{
+.card a img{
     width: 257px;
     height: 216px;
     border-radius: .4rem;
+    cursor: pointer;
 }
 
 .card .icon{
@@ -43,6 +56,12 @@ body{
     display: inline-block;
     font-size: 2.4rem;
     color: var(--white);
+    cursor: pointer;
+}
+
+.card .icon i.fa-solid {
+    color: var(--yellow);
+    cursor: pointer; 
 }
 
 .card .icon span{
@@ -52,6 +71,7 @@ body{
 }
 
 .card .icon .more{
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -59,6 +79,7 @@ body{
 .card .icon .more i{
     font-size: 1.2rem;
     margin-left: .4rem;
+    color: var(--white);
 }
 
 .card .detail-info{
@@ -120,4 +141,12 @@ body{
     padding: 0px;
     font-size: var(--small-cpation);
     color: var(--white);
+}
+
+#more{
+    color: var(--primary-400);
+    font-size: var(--body-semibold);
+    font-weight: 800;
+    padding: 1.2rem 6rem;
+    border-radius: 100px;
 }

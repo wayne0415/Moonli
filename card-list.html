@@ -28,46 +28,48 @@
             function Card(props) {
                 const { img, name, full, price, district, clinic, style, tag, issue1, issue2, issue3, issue4 } = props;
                 return (
-                        <div className="card">
-                            <img src={img} alt={name} />
-                            <div className="icon">
-                                <i className="fa-regular fa-star"></i>
+                    <div className="card">
+                        <a href="#"><img src={img} alt={name} /></a>
+                        <div className="icon">
+                            <i className="fa-regular fa-star"></i>
+                            <a href="#">
                                 <div class="more">
                                     <span>查看更多</span>
                                     <i class="fa-solid fa-chevron-right"></i>
                                 </div>
+                            </a>
+                        </div>
+                        <div className="detail-info">
+                            <div className="title">
+                                <div>
+                                    <span className="title__np">{name}</span>
+                                    <span className="status">{full}</span>
+                                </div>
+                                <span className="title__np">{price}/小時</span>
                             </div>
-                            <div className="detail-info">
-                                <div className="title">
-                                    <div>
-                                        <span className="title__np">{name}</span>
-                                        <span className="status">{full}</span>
-                                    </div>
-                                    <span className="title__np">{price}/小時</span>
-                                </div>
-                                <div className="desc">
-                                    <span>{district}</span>
-                                    <div className="circle"></div>
-                                    <span>{clinic}</span>
-                                </div>
-                                <div className="tag">
-                                   <span>{style}</span> 
-                                   <span>{tag}</span> 
-                                    </div>
-                                <div className="desc">
-                                    <span>{issue1}</span>
-                                    <div className="circle"></div>
-                                    <span>{issue2}</span>
-                                    <div className="circle"></div>
-                                    <span>{issue3}</span>
-                                    <div className="circle"></div>
-                                    <span>{issue4}</span>
-                                </div>
-                                <div className="player">
-                                    <span>這裡放音檔</span>
-                                </div>
+                            <div className="desc">
+                                <span>{district}</span>
+                                <div className="circle"></div>
+                                <span>{clinic}</span>
+                            </div>
+                            <div className="tag">
+                                <span>{style}</span>
+                                <span>{tag}</span>
+                            </div>
+                            <div className="desc">
+                                <span>{issue1}</span>
+                                <div className="circle"></div>
+                                <span>{issue2}</span>
+                                <div className="circle"></div>
+                                <span>{issue3}</span>
+                                <div className="circle"></div>
+                                <span>{issue4}</span>
+                            </div>
+                            <div className="player">
+                                <span>這裡放音檔</span>
                             </div>
                         </div>
+                    </div>
                 );
             }
 
@@ -81,7 +83,7 @@
                         price: 2200,
                         district: '台北市',
                         clinic: '和平診所',
-                        style:'溫柔',
+                        style: '溫柔',
                         tag: 4.2,
                         issue1: '憂鬱排解',
                         issue2: '失眠困擾',
@@ -91,32 +93,77 @@
                     {
                         id: 2,
                         img: "./images/諮商師2.jpg",
-                        name: '陳美美',
+                        name: '李小華',
                         full: '已額滿',
                         price: 2200,
                         district: '台北市',
-                        clinic: '和平診所',
-                        style:'溫柔',
+                        clinic: '康寧診所',
+                        style: '溫柔',
                         tag: 4.2,
                         issue1: '憂鬱排解',
                         issue2: '失眠困擾',
                         issue3: '失戀情傷',
                         issue4: '家庭諮商',
-                    },{
+                    }, {
                         id: 3,
                         img: "./images/諮商師3.jpg",
-                        name: '陳美美',
-                        full: '已額滿',
+                        name: '張大衛',
+                        full: '',
                         price: 2200,
                         district: '台北市',
-                        clinic: '和平診所',
-                        style:'溫柔',
-                        tag: 4.2,
+                        clinic: '瑞祥診所',
+                        style: '溫柔',
+                        tag: 4,
+                        issue1: '憂鬱排解',
+                        issue2: '失眠困擾',
+                        issue3: '失戀情傷',
+                        issue4: '家庭諮商',
+                    }, {
+                        id: 4,
+                        img: "./images/諮商師4.jpg",
+                        name: '林小白',
+                        full: '',
+                        price: 2200,
+                        district: '台北市',
+                        clinic: '健康之家診所',
+                        style: '溫柔',
+                        tag: 4.7,
                         issue1: '憂鬱排解',
                         issue2: '失眠困擾',
                         issue3: '失戀情傷',
                         issue4: '家庭諮商',
                     },
+                    {
+                        id: 5,
+                        img: "./images/諮商師5.jpg",
+                        name: '孫小芳',
+                        full: '已額滿',
+                        price: 2200,
+                        district: '台北市',
+                        clinic: '華康診所',
+                        style: '溫柔',
+                        tag: 3.5,
+                        issue1: '憂鬱排解',
+                        issue2: '失眠困擾',
+                        issue3: '失戀情傷',
+                        issue4: '家庭諮商',
+                    },
+                    {
+                        id: 6,
+                        img: "./images/諮商師6.jpg",
+                        name: '王小明',
+                        full: '',
+                        price: 2200,
+                        district: '台北市',
+                        clinic: '長青診所',
+                        style: '溫柔',
+                        tag: 3.8,
+                        issue1: '憂鬱排解',
+                        issue2: '失眠困擾',
+                        issue3: '失戀情傷',
+                        issue4: '家庭諮商',
+                    },
+
                     // 可以在此添加更多產品
                 ];
 
@@ -140,25 +187,29 @@
                         </header>
 
                         <section>
-                            <div className="card__list">
-                            {products.map((item) => (
-                                <Card
-                                    key={item.id}
-                                    img={item.img}
-                                    name={item.name}
-                                    full={item.full}
-                                    price={item.price}
-                                    district={item.district}
-                                    clinic={item.clinic}
-                                    style={item.style}
-                                    tag={item.tag}
-                                    issue1={item.issue1}
-                                    issue2={item.issue2}
-                                    issue3={item.issue3}
-                                    issue4={item.issue4}
-                                />
-                            ))}
-                        </div>
+                            <div class="list-container">
+                                <div className="card__list">
+                                    {products.map((item) => (
+                                        <Card
+                                            key={item.id}
+                                            img={item.img}
+                                            name={item.name}
+                                            full={item.full}
+                                            price={item.price}
+                                            district={item.district}
+                                            clinic={item.clinic}
+                                            style={item.style}
+                                            tag={item.tag}
+                                            issue1={item.issue1}
+                                            issue2={item.issue2}
+                                            issue3={item.issue3}
+                                            issue4={item.issue4}
+                                        />
+                                    ))}
+                                </div>
+                                <button id='more'>載入更多</button>
+                            </div>
+                            <footer></footer>
                         </section>
                     </div>
                 );
@@ -172,6 +223,7 @@
 
     </section>
     <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>
+    <script src="./javascripts/card-list.js"></script>
     <!-- <link rel="stylesheet" href="./React-data/stylesheets/all.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"> -->
 

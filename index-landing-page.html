@@ -10,67 +10,93 @@
         <title>Document</title>
     </head>
     <body>
-        <!-- 導覽列區 -->
-        <header>
-            <a href="#" class="logo"><img src="./images/logo_NavBar.svg" alt="Moonli-logo" /></a>
-            <!-- 選單列表 -->
-            <nav class="menu-container">
-                <div class="navigation">
-                    <a href="#" class="nav-menu">服務項目</a>
-                    <a href="#" class="nav-menu">心理師列表</a>
-                    <a href="#" class="nav-menu">常見問題</a>
-                    <a href="#" class="nav-menu">相關資訊</a>
-                    <a href="#" class="nav-menu">自我檢測</a>
-                </div>
-                <div class="login">
-                    <p>登入註冊</p>
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-            </nav>
-        </header>
+        <section id="index-landing-page">
+            <!-- 導覽列區 -->
+            <header>
+                <a href="#" class="logo"><img src="./images/logo_NavBar.svg" alt="Moonli-logo" /></a>
+                <!-- 選單列表 -->
+                <nav class="menu-container">
+                    <div class="navigation">
+                        <a href="#" class="nav-menu">服務項目</a>
+                        <a href="#" class="nav-menu">心理師列表</a>
+                        <a href="#" class="nav-menu">常見問題</a>
+                        <a href="#" class="nav-menu">相關資訊</a>
+                        <a href="#" class="nav-menu">自我檢測</a>
+                    </div>
+                    <div class="login">
+                        <p>登入註冊</p>
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </nav>
+            </header>
 
-        <!-- 頁面A：大LOGO+找心理師按鈕 -->
-        <section id="home">
-            <div class="home-container">
-                <div class="home-images-moon"></div>
-                <div class="home-images-logo">
-                    <img src="./images/logo_Home.jpg" alt="Moonli logo" />
+            <!-- 頁面A：大LOGO+找心理師按鈕 -->
+            <section id="home">
+                <div class="home-container">
+                    <div class="home-images-moon"></div>
+                    <div class="home-images-logo">
+                        <img src="./images/logo_Home.jpg" alt="Moonli logo" />
+                    </div>
+                    <div class="search-btn">
+                        <button>篩選心理師<i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
                 </div>
-                <div class="search-btn">
-                    <button>篩選心理師<i class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- 頁面B：痛點 -->
-        <section id="problems">
-            <div class="problems-title">
-                <h2>在生活中，您是否有遇過這些煩惱？</h2>
-            </div>
-            <div class="item-union">
-                <img src="./images/photo_Union.png" />
-            </div>
-            <div class="item-wave1">
-                <img src="./images/wave1.png" />
-            </div>
-            <div class="item-wave2">
-                <img src="./images/photo_home_wave2.png" />
-            </div>
-            <div class="item-wave3">
-                <img src="./images/photo_home_wave3.svg" />
-            </div>
-            <div class="icon-anny">
-                <img src="./images/icon_annoy.jpg" />
-            </div>
-            <div class="icon-annoymoon">
-                <img src="./images/icon_annoymoon.png" />
-            </div>
-            <div class="item-6q">
-                <img src="./images/photo_home_6q.jpg" />
-            </div>
+            <!-- 頁面B：痛點 -->
+            <section id="problems">
+                <div class="problems-title">
+                    <h2>在生活中，您是否有遇過這些煩惱？</h2>
+                </div>
+                <div class="item-union">
+                    <img src="./images/photo_Union.png" />
+                </div>
+                <div class="item-wave1">
+                    <img src="./images/wave1.png" />
+                </div>
+                <div class="item-wave2">
+                    <img src="./images/photo_home_wave2.png" />
+                </div>
+                <div class="item-wave3">
+                    <img src="./images/photo_home_wave3.svg" />
+                </div>
+                <div class="icon-anny">
+                    <img src="./images/icon_annoy.jpg" />
+                </div>
+                <div class="icon-annoymoon">
+                    <img src="./images/icon_annoymoon.png" />
+                </div>
+                <div class="item-6q">
+                    <img src="./images/photo_home_6q.jpg" />
+                </div>
+            </section>
         </section>
 
         <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>
-        <script></script>
+        <script>
+            let icon_6q = document.getElementsByClassName("item-6q")[0];
+            let section = document.getElementById("index-landing-page"); // 選取目標區塊
+            let sectionHeight = section.offsetHeight; // 取得區塊的高度
+            let sectionTop = section.offsetTop; // 取得區塊距離頁面頂部的距離
+
+            let startScroll = sectionTop + sectionHeight * 0.35; // 動畫開始的滾動位置
+            let endScroll = sectionTop + sectionHeight * 0.45; // 動畫結束的滾動位置
+
+            window.addEventListener("scroll", () => {
+                let scrollY = window.scrollY;
+
+                if (scrollY > startScroll && scrollY < endScroll) {
+                    let progress = (scrollY - startScroll) / (endScroll - startScroll);
+                    let opacityValue = progress; // 根據進度設置透明度
+                    let scaleValue = 0.5 + 0.5 * progress; // 根據進度設置縮放大小
+                    icon_6q.style.opacity = opacityValue;
+                    icon_6q.style.transform = `scale(${scaleValue})`;
+                } else if (scrollY >= endScroll) {
+                    // 當滾動超過結束位置時，確保屬性值為最終值
+                    icon_6q.style.opacity = 1;
+                    icon_6q.style.transform = `scale(1)`;
+                }
+            });
+        </script>
     </body>
 </html>
