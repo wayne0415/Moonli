@@ -14,6 +14,16 @@
             background-color: #5B6195;
         }
 
+        .reset-filter {
+            display: flex;
+            flex-direction: column;
+            width: 180px;
+            margin: 100px auto;
+            border-radius: 16px;
+            background-color: rgb(249, 249, 249);
+            padding: 8px 0;
+        }
+
         input[type=checkbox] {
             cursor: pointer;
             background-color: rgb(249, 249, 249);
@@ -35,7 +45,7 @@
             display: none;
             width: 100%;
             list-style-type: none;
-            padding: 0 8px 8px;
+            padding: 0 4px 8px;
         }
 
         input[type=checkbox]:checked~ul {
@@ -47,9 +57,8 @@
             flex-direction: column;
             background-color: rgb(249, 249, 249);
             color: rgb(167, 151, 231);
-            width: 200px;
-            margin: 20px auto;
-            padding: 1em 1em 1em 1em;
+            width: 160px;
+            margin: 4px auto;
             border-radius: 16px;
             justify-content: space-between;
             align-items: start;
@@ -73,7 +82,7 @@
         .dropdown i {
             font-size: 1.6rem;
             transition: 0.3s;
-            color: var(--black-600);
+            color: rgb(167, 151, 231);
         }
 
         .rotate {
@@ -83,7 +92,7 @@
         .lii {
             border-radius: 8px;
             cursor: pointer;
-            font-size: 1.5em;
+            font-size: 1.4em;
             font-weight: 400;
             display: flex;
             align-items: center;
@@ -131,11 +140,22 @@
         }
 
         .checkbox-custom:checked+.checkbox-custom-label:before {
-            background: rgb(167, 151, 231);
-        }
-
-        .radio-custom:checked+.radio-custom-label:before {
-            background: #ccc;
+            content: '✔';
+            /* 使用打勾符号 */
+            background-color: rgb(167, 151, 231);
+            /* 勾选框的背景颜色 */
+            color: white;
+            /* 打勾符号的颜色 */
+            display: inline-block;
+            vertical-align: middle;
+            width: 8px;
+            height: 8px;
+            padding: 2px;
+            margin-right: 10px;
+            text-align: center;
+            font-size: 10px;
+            /* 根据需要调整大小 */
+            line-height: .8em;
         }
 
         .checkbox-custom:focus+.checkbox-custom-label,
@@ -143,74 +163,429 @@
             outline: 0px solid #ddd;
             /* focus style */
         }
+
+        .reset-btn {
+            display: flex;
+            justify-content: center;
+            background-color: transparent;
+            color: rgb(167, 151, 231);
+            border-radius: 100px;
+            border: 2px solid rgb(167, 151, 231);
+            padding: 0.5em 0.5em 0.5em 0.5em;
+            margin: 8px auto;
+            width: 80%;
+            font-size: 1.5em;
+            font-weight: 600;
+            letter-spacing: .2em;
+            cursor: pointer;
+        }
+
+        .reset-btn:hover {
+            background-color: rgb(167, 151, 231);
+            color: white;
+        }
     </style>
 </head>
 
 <body>
-    <!-- 12个下拉菜单 -->
-    <div class="dropdown">
-        <div class="dropdown-title" onclick="toggleDropdown('dropdown1')">
-            <span>心理師的性別</span>
-            <i id="dropdown-icon1" class="bx bx-chevron-down"></i>
+    <div class="reset-filter">
+        <!-- 12个下拉菜单 -->
+        <div class="dropdown">
+            <div class="dropdown-title" onclick="toggleDropdown('dropdown0')">
+                <span>排序條件</span>
+                <i id="dropdown-icon0" class="bx bx-chevron-down"></i>
+            </div>
+            <ul class="sb_dropdown" id="dropdown0">
+                <li class="lii" onclick="toggleCheckbox('checkbox-0-1')">
+                    <input id="checkbox-0-1" class="checkbox-custom" name="checkbox-0-1" type="checkbox">
+                    <label for="checkbox-0-1" class="checkbox-custom-label"><i class="material-icons"></i>價位較低優先</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-0-2')">
+                    <input id="checkbox-0-2" class="checkbox-custom" name="checkbox-1-2" type="checkbox">
+                    <label for="checkbox-0-2" class="checkbox-custom-label">最快可預約優先</label>
+                </li>
+            </ul>
         </div>
-        <ul class="sb_dropdown" id="dropdown1">
-            <li class="lii" onclick="toggleCheckbox('checkbox-1-1')">
-                <input id="checkbox-1-1" class="checkbox-custom" name="checkbox-1-1" type="checkbox">
-                <label for="checkbox-1-1" class="checkbox-custom-label">皆可</label>
-            </li>
-            <li class="lii" onclick="toggleCheckbox('checkbox-1-2')">
-                <input id="checkbox-1-2" class="checkbox-custom" name="checkbox-1-2" type="checkbox">
-                <label for="checkbox-1-2" class="checkbox-custom-label">女心理師</label>
-            </li>
-            <li class="lii" onclick="toggleCheckbox('checkbox-1-3')">
-                <input id="checkbox-1-3" class="checkbox-custom" name="checkbox-1-3" type="checkbox">
-                <label for="checkbox-1-3" class="checkbox-custom-label">男心理師</label>
-            </li>
-        </ul>
-    </div>
 
-    <div class="dropdown">
-        <div class="dropdown-title" onclick="toggleDropdown('dropdown2')">
-            <span>心理師的性別</span>
-            <i id="dropdown-icon2" class="bx bx-chevron-down"></i>
+        <div class="dropdown">
+            <div class="dropdown-title" onclick="toggleDropdown('dropdown1')">
+                <span>心理師的性別</span>
+                <i id="dropdown-icon1" class="bx bx-chevron-down"></i>
+            </div>
+            <ul class="sb_dropdown" id="dropdown1">
+                <li class="lii" onclick="toggleCheckbox('checkbox-1-1')">
+                    <input id="checkbox-1-1" class="checkbox-custom" name="checkbox-1-1" type="checkbox">
+                    <label for="checkbox-1-1" class="checkbox-custom-label">皆可</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-1-2')">
+                    <input id="checkbox-1-2" class="checkbox-custom" name="checkbox-1-2" type="checkbox">
+                    <label for="checkbox-1-2" class="checkbox-custom-label">女心理師</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-1-3')">
+                    <input id="checkbox-1-3" class="checkbox-custom" name="checkbox-1-3" type="checkbox">
+                    <label for="checkbox-1-3" class="checkbox-custom-label">男心理師</label>
+                </li>
+            </ul>
         </div>
-        <ul class="sb_dropdown" id="dropdown2">
-            <li class="lii" onclick="toggleCheckbox('checkbox-2-1')">
-                <input id="checkbox-2-1" class="checkbox-custom" name="checkbox-2-1" type="checkbox">
-                <label for="checkbox-2-1" class="checkbox-custom-label">皆可</label>
-            </li>
-            <li class="lii" onclick="toggleCheckbox('checkbox-2-2')">
-                <input id="checkbox-2-2" class="checkbox-custom" name="checkbox-2-2" type="checkbox">
-                <label for="checkbox-2-2" class="checkbox-custom-label">女心理師</label>
-            </li>
-            <li class="lii" onclick="toggleCheckbox('checkbox-2-3')">
-                <input id="checkbox-2-3" class="checkbox-custom" name="checkbox-2-3" type="checkbox">
-                <label for="checkbox-2-3" class="checkbox-custom-label">男心理師</label>
-            </li>
-        </ul>
-    </div>
 
-    <!-- 继续复制并修改 ID，直到达到12个下拉菜单 -->
-    
-    <div class="dropdown">
-        <div class="dropdown-title" onclick="toggleDropdown('dropdown12')">
-            <span>心理師的性別</span>
-            <i id="dropdown-icon12" class="bx bx-chevron-down"></i>
+        <div class="dropdown">
+            <div class="dropdown-title" onclick="toggleDropdown('dropdown2')">
+                <span>諮商類型</span>
+                <i id="dropdown-icon2" class="bx bx-chevron-down"></i>
+            </div>
+            <ul class="sb_dropdown" id="dropdown2">
+                <li class="lii" onclick="toggleCheckbox('checkbox-2-1')">
+                    <input id="checkbox-2-1" class="checkbox-custom" name="checkbox-2-1" type="checkbox">
+                    <label for="checkbox-2-1" class="checkbox-custom-label">皆可</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-2-2')">
+                    <input id="checkbox-2-2" class="checkbox-custom" name="checkbox-2-2" type="checkbox">
+                    <label for="checkbox-2-2" class="checkbox-custom-label">個別諮詢</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-2-3')">
+                    <input id="checkbox-2-3" class="checkbox-custom" name="checkbox-2-3" type="checkbox">
+                    <label for="checkbox-2-3" class="checkbox-custom-label">伴侶諮商</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-2-4')">
+                    <input id="checkbox-2-4" class="checkbox-custom" name="checkbox-2-4" type="checkbox">
+                    <label for="checkbox-2-4" class="checkbox-custom-label">婚姻諮商</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-2-5')">
+                    <input id="checkbox-2-5" class="checkbox-custom" name="checkbox-2-5" type="checkbox">
+                    <label for="checkbox-2-5" class="checkbox-custom-label">家庭諮商</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-2-6')">
+                    <input id="checkbox-2-6" class="checkbox-custom" name="checkbox-2-6" type="checkbox">
+                    <label for="checkbox-2-6" class="checkbox-custom-label">團體諮商</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-2-7')">
+                    <input id="checkbox-2-7" class="checkbox-custom" name="checkbox-2-7" type="checkbox">
+                    <label for="checkbox-2-7" class="checkbox-custom-label">兒童早療</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-2-8')">
+                    <input id="checkbox-2-8" class="checkbox-custom" name="checkbox-2-8" type="checkbox">
+                    <label for="checkbox-2-8" class="checkbox-custom-label">青少年諮商</label>
+                </li>
+            </ul>
         </div>
-        <ul class="sb_dropdown" id="dropdown12">
-            <li class="lii" onclick="toggleCheckbox('checkbox-12-1')">
-                <input id="checkbox-12-1" class="checkbox-custom" name="checkbox-12-1" type="checkbox">
-                <label for="checkbox-12-1" class="checkbox-custom-label">皆可</label>
-            </li>
-            <li class="lii" onclick="toggleCheckbox('checkbox-12-2')">
-                <input id="checkbox-12-2" class="checkbox-custom" name="checkbox-12-2" type="checkbox">
-                <label for="checkbox-12-2" class="checkbox-custom-label">女心理師</label>
-            </li>
-            <li class="lii" onclick="toggleCheckbox('checkbox-12-3')">
-                <input id="checkbox-12-3" class="checkbox-custom" name="checkbox-12-3" type="checkbox">
-                <label for="checkbox-12-3" class="checkbox-custom-label">男心理師</label>
-            </li>
-        </ul>
+
+        <div class="dropdown">
+            <div class="dropdown-title" onclick="toggleDropdown('dropdown3')">
+                <span>可預約時段</span>
+                <i id="dropdown-icon3" class="bx bx-chevron-down"></i>
+            </div>
+            <ul class="sb_dropdown" id="dropdown3">
+                <li class="lii" onclick="toggleCheckbox('checkbox-3-1')">
+                    <input id="checkbox-3-1" class="checkbox-custom" name="checkbox-3-1" type="checkbox">
+                    <label for="checkbox-3-1" class="checkbox-custom-label">皆可</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-3-2')">
+                    <input id="checkbox-3-2" class="checkbox-custom" name="checkbox-3-2" type="checkbox">
+                    <label for="checkbox-3-2" class="checkbox-custom-label">週一到週五</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-3-3')">
+                    <input id="checkbox-3-3" class="checkbox-custom" name="checkbox-3-3" type="checkbox">
+                    <label for="checkbox3-3" class="checkbox-custom-label">假日</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-3-4')">
+                    <input id="checkbox-3-4" class="checkbox-custom" name="checkbox-3-4" type="checkbox">
+                    <label for="checkbox3-4" class="checkbox-custom-label">24小時內</label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropdown-title" onclick="toggleDropdown('dropdown4')">
+                <span>服務地區</span>
+                <i id="dropdown-icon4" class="bx bx-chevron-down"></i>
+            </div>
+            <ul class="sb_dropdown" id="dropdown4">
+                <li class="lii" onclick="toggleCheckbox('checkbox-4-1')">
+                    <input id="checkbox-4-1" class="checkbox-custom" name="checkbox-4-1" type="checkbox">
+                    <label for="checkbox-4-1" class="checkbox-custom-label">皆可</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-4-2')">
+                    <input id="checkbox-4-2" class="checkbox-custom" name="checkbox-4-2" type="checkbox">
+                    <label for="checkbox-4-2" class="checkbox-custom-label">台北市</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-4-3')">
+                    <input id="checkbox-4-3" class="checkbox-custom" name="checkbox-4-3" type="checkbox">
+                    <label for="checkbox-4-3" class="checkbox-custom-label">新北市</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-4-4')">
+                    <input id="checkbox-4-4" class="checkbox-custom" name="checkbox-4-4" type="checkbox">
+                    <label for="checkbox-4-4" class="checkbox-custom-label">宜蘭縣</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-4-5')">
+                    <input id="checkbox-4-5" class="checkbox-custom" name="checkbox-4-5" type="checkbox">
+                    <label for="checkbox-4-5" class="checkbox-custom-label">基隆市</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-4-6')">
+                    <input id="checkbox-4-6" class="checkbox-custom" name="checkbox-4-6" type="checkbox">
+                    <label for="checkbox-4-6" class="checkbox-custom-label">桃園市</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-4-7')">
+                    <input id="checkbox-4-7" class="checkbox-custom" name="checkbox-4-7" type="checkbox">
+                    <label for="checkbox-4-7" class="checkbox-custom-label">新竹縣市</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-4-8')">
+                    <input id="checkbox-4-8" class="checkbox-custom" name="checkbox-4-8" type="checkbox">
+                    <label for="checkbox-4-8" class="checkbox-custom-label">苗栗縣</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-4-9')">
+                    <input id="checkbox-4-9" class="checkbox-custom" name="checkbox-4-9" type="checkbox">
+                    <label for="checkbox-4-9" class="checkbox-custom-label">台中市</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-4-10')">
+                    <input id="checkbox-4-10" class="checkbox-custom" name="checkbox-4-10" type="checkbox">
+                    <label for="checkbox-4-10" class="checkbox-custom-label">彰化縣</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-4-11')">
+                    <input id="checkbox-4-11" class="checkbox-custom" name="checkbox-4-11" type="checkbox">
+                    <label for="checkbox-4-11" class="checkbox-custom-label">南投縣</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-4-12')">
+                    <input id="checkbox-4-12" class="checkbox-custom" name="checkbox-4-12" type="checkbox">
+                    <label for="checkbox-4-12" class="checkbox-custom-label">雲林縣</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-4-13')">
+                    <input id="checkbox-4-13" class="checkbox-custom" name="checkbox-4-13" type="checkbox">
+                    <label for="checkbox-4-13" class="checkbox-custom-label">嘉義縣市</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-4-14')">
+                    <input id="checkbox-4-14" class="checkbox-custom" name="checkbox-4-14" type="checkbox">
+                    <label for="checkbox-4-14" class="checkbox-custom-label">台南市</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-4-15')">
+                    <input id="checkbox-4-15" class="checkbox-custom" name="checkbox-4-15" type="checkbox">
+                    <label for="checkbox-4-15" class="checkbox-custom-label">高雄市</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-4-16')">
+                    <input id="checkbox-4-16" class="checkbox-custom" name="checkbox-4-16" type="checkbox">
+                    <label for="checkbox-4-16" class="checkbox-custom-label">屏東縣</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-4-17')">
+                    <input id="checkbox-4-17" class="checkbox-custom" name="checkbox-4-17" type="checkbox">
+                    <label for="checkbox-4-17" class="checkbox-custom-label">台東縣</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-4-18')">
+                    <input id="checkbox-4-18" class="checkbox-custom" name="checkbox-4-18" type="checkbox">
+                    <label for="checkbox-4-18" class="checkbox-custom-label">花蓮縣</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-4-19')">
+                    <input id="checkbox-4-19" class="checkbox-custom" name="checkbox-4-19" type="checkbox">
+                    <label for="checkbox-4-19" class="checkbox-custom-label">離島地區</label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropdown-title" onclick="toggleDropdown('dropdown5')">
+                <span>專長議題</span>
+                <i id="dropdown-icon5" class="bx bx-chevron-down"></i>
+            </div>
+            <ul class="sb_dropdown" id="dropdown5">
+                <li class="lii" onclick="toggleCheckbox('checkbox-5-1')">
+                    <input id="checkbox-5-1" class="checkbox-custom" name="checkbox-5-1" type="checkbox">
+                    <label for="checkbox-5-1" class="checkbox-custom-label">皆可</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-5-2')">
+                    <input id="checkbox-5-2" class="checkbox-custom" name="checkbox-5-2" type="checkbox">
+                    <label for="checkbox-5-2" class="checkbox-custom-label">自我探索</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-5-3')">
+                    <input id="checkbox-5-3" class="checkbox-custom" name="checkbox-5-3" type="checkbox">
+                    <label for="checkbox-5-3" class="checkbox-custom-label">家庭議題</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-5-4')">
+                    <input id="checkbox-5-4" class="checkbox-custom" name="checkbox-5-4" type="checkbox">
+                    <label for="checkbox-5-4" class="checkbox-custom-label">職場適應</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-5-5')">
+                    <input id="checkbox-5-5" class="checkbox-custom" name="checkbox-5-5" type="checkbox">
+                    <label for="checkbox-5-5" class="checkbox-custom-label">親職教養</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-5-6')">
+                    <input id="checkbox-5-6" class="checkbox-custom" name="checkbox-5-6" type="checkbox">
+                    <label for="checkbox-5-6" class="checkbox-custom-label">情感議題</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-5-7')">
+                    <input id="checkbox-5-7" class="checkbox-custom" name="checkbox-5-7" type="checkbox">
+                    <label for="checkbox-5-7" class="checkbox-custom-label">情緒困擾</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-5-8')">
+                    <input id="checkbox-5-8" class="checkbox-custom" name="checkbox-5-8" type="checkbox">
+                    <label for="checkbox-5-8" class="checkbox-custom-label">人際關係</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-5-9')">
+                    <input id="checkbox-5-9" class="checkbox-custom" name="checkbox-5-9" type="checkbox">
+                    <label for="checkbox-5-9" class="checkbox-custom-label">性與性別</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-5-10')">
+                    <input id="checkbox-5-10" class="checkbox-custom" name="checkbox-5-10" type="checkbox">
+                    <label for="checkbox-5-10" class="checkbox-custom-label">其他</label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropdown-title" onclick="toggleDropdown('dropdown6')">
+                <span>線上 / 實體諮商</span>
+                <i id="dropdown-icon6" class="bx bx-chevron-down"></i>
+            </div>
+            <ul class="sb_dropdown" id="dropdown6">
+                <li class="lii" onclick="toggleCheckbox('checkbox-6-1')">
+                    <input id="checkbox-6-1" class="checkbox-custom" name="checkbox-6-1" type="checkbox">
+                    <label for="checkbox-6-1" class="checkbox-custom-label">皆可</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-6-2')">
+                    <input id="checkbox-6-2" class="checkbox-custom" name="checkbox-6-2" type="checkbox">
+                    <label for="checkbox-6-2" class="checkbox-custom-label">線上諮商</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-6-3')">
+                    <input id="checkbox-6-3" class="checkbox-custom" name="checkbox-6-3" type="checkbox">
+                    <label for="checkbox-6-3" class="checkbox-custom-label">實體諮商</label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropdown-title" onclick="toggleDropdown('dropdown7')">
+                <span>心理師資歷</span>
+                <i id="dropdown-icon7" class="bx bx-chevron-down"></i>
+            </div>
+            <ul class="sb_dropdown" id="dropdown7">
+                <li class="lii" onclick="toggleCheckbox('checkbox-7-1')">
+                    <input id="checkbox-7-1" class="checkbox-custom" name="checkbox-7-1" type="checkbox">
+                    <label for="checkbox-7-1" class="checkbox-custom-label">皆可</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-7-2')">
+                    <input id="checkbox-7-2" class="checkbox-custom" name="checkbox-7-2" type="checkbox">
+                    <label for="checkbox-7-2" class="checkbox-custom-label">1 年 以下</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-7-3')">
+                    <input id="checkbox-7-3" class="checkbox-custom" name="checkbox-7-3" type="checkbox">
+                    <label for="checkbox-7-3" class="checkbox-custom-label">1 ~ 3 年</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-7-4')">
+                    <input id="checkbox-7-4" class="checkbox-custom" name="checkbox-7-4" type="checkbox">
+                    <label for="checkbox-7-4" class="checkbox-custom-label">3 ~ 5 年</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-7-5')">
+                    <input id="checkbox-7-5" class="checkbox-custom" name="checkbox-7-5" type="checkbox">
+                    <label for="checkbox-7-5" class="checkbox-custom-label">5 ~ 7 年</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-7-6')">
+                    <input id="checkbox-7-6" class="checkbox-custom" name="checkbox-7-6" type="checkbox">
+                    <label for="checkbox-7-6" class="checkbox-custom-label">7 年以上</label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropdown-title" onclick="toggleDropdown('dropdown8')">
+                <span>價位區間</span>
+                <i id="dropdown-icon8" class="bx bx-chevron-down"></i>
+            </div>
+            <ul class="sb_dropdown" id="dropdown8">
+                <li class="lii" onclick="toggleCheckbox('checkbox-8-1')">
+                    <input id="checkbox-8-1" class="checkbox-custom" name="checkbox-8-1" type="checkbox">
+                    <label for="checkbox-8-1" class="checkbox-custom-label">皆可</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-8-2')">
+                    <input id="checkbox-8-2" class="checkbox-custom" name="checkbox-8-2" type="checkbox">
+                    <label for="checkbox-8-2" class="checkbox-custom-label">2000 元 以下</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-8-3')">
+                    <input id="checkbox-8-3" class="checkbox-custom" name="checkbox-8-3" type="checkbox">
+                    <label for="checkbox-8-3" class="checkbox-custom-label">2000 ~ 3000 元</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-8-4')">
+                    <input id="checkbox-8-4" class="checkbox-custom" name="checkbox-8-4" type="checkbox">
+                    <label for="checkbox-8-4" class="checkbox-custom-label">3000 ~ 4000 元</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-8-5')">
+                    <input id="checkbox-8-5" class="checkbox-custom" name="checkbox-8-5" type="checkbox">
+                    <label for="checkbox-8-5" class="checkbox-custom-label">4000 ~ 5000 元</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-8-6')">
+                    <input id="checkbox-8-6" class="checkbox-custom" name="checkbox-8-6" type="checkbox">
+                    <label for="checkbox-8-6" class="checkbox-custom-label">5000 元 以上</label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropdown-title" onclick="toggleDropdown('dropdown9')">
+                <span>語言</span>
+                <i id="dropdown-icon9" class="bx bx-chevron-down"></i>
+            </div>
+            <ul class="sb_dropdown" id="dropdown9">
+                <li class="lii" onclick="toggleCheckbox('checkbox-9-1')">
+                    <input id="checkbox-9-1" class="checkbox-custom" name="checkbox-9-1" type="checkbox">
+                    <label for="checkbox-9-1" class="checkbox-custom-label">皆可</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-9-2')">
+                    <input id="checkbox-9-2" class="checkbox-custom" name="checkbox-9-2" type="checkbox">
+                    <label for="checkbox-9-2" class="checkbox-custom-label">中文</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-9-3')">
+                    <input id="checkbox-9-3" class="checkbox-custom" name="checkbox-9-3" type="checkbox">
+                    <label for="checkbox-9-3" class="checkbox-custom-label">英文</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-9-4')">
+                    <input id="checkbox-9-4" class="checkbox-custom" name="checkbox-9-4" type="checkbox">
+                    <label for="checkbox-9-4" class="checkbox-custom-label">台語</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-9-5')">
+                    <input id="checkbox-9-5" class="checkbox-custom" name="checkbox-9-5" type="checkbox">
+                    <label for="checkbox-9-5" class="checkbox-custom-label">客語</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-9-6')">
+                    <input id="checkbox-9-6" class="checkbox-custom" name="checkbox-9-6" type="checkbox">
+                    <label for="checkbox-9-6" class="checkbox-custom-label">其他</label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropdown-title" onclick="toggleDropdown('dropdown10')">
+                <span>諮商風格</span>
+                <i id="dropdown-icon10" class="bx bx-chevron-down"></i>
+            </div>
+            <ul class="sb_dropdown" id="dropdown10">
+                <li class="lii" onclick="toggleCheckbox('checkbox-10-1')">
+                    <input id="checkbox-10-1" class="checkbox-custom" name="checkbox-10-1" type="checkbox">
+                    <label for="checkbox-10-1" class="checkbox-custom-label">皆可</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-10-2')">
+                    <input id="checkbox-10-2" class="checkbox-custom" name="checkbox-10-2" type="checkbox">
+                    <label for="checkbox-10-2" class="checkbox-custom-label">溫柔</label>
+                </li>
+                <!-- <li class="lii" onclick="toggleCheckbox('checkbox-10-3')">
+                    <input id="checkbox-10-3" class="checkbox-custom" name="checkbox-10-3" type="checkbox">
+                    <label for="checkbox-10-3" class="checkbox-custom-label">犀利</label>
+                </li> -->
+                <li class="lii" onclick="toggleCheckbox('checkbox-10-4')">
+                    <input id="checkbox-10-4" class="checkbox-custom" name="checkbox-10-4" type="checkbox">
+                    <label for="checkbox-10-4" class="checkbox-custom-label">主動主導</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-10-5')">
+                    <input id="checkbox-10-5" class="checkbox-custom" name="checkbox-10-5" type="checkbox">
+                    <label for="checkbox-10-5" class="checkbox-custom-label">被動引導</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-10-6')">
+                    <input id="checkbox-10-6" class="checkbox-custom" name="checkbox-10-6" type="checkbox">
+                    <label for="checkbox-10-6" class="checkbox-custom-label">情緒同理</label>
+                </li>
+                <li class="lii" onclick="toggleCheckbox('checkbox-10-7')">
+                    <input id="checkbox-10-7" class="checkbox-custom" name="checkbox-10-7" type="checkbox">
+                    <label for="checkbox-10-7" class="checkbox-custom-label">認知思考</label>
+                </li>
+            </ul>
+        </div>
+
+        <button class="reset-btn">進階篩選</button>
     </div>
 
     <script>
