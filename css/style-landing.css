@@ -148,6 +148,13 @@ header {
     position: absolute;
     bottom: 0;
 }
+.item-union {
+    position: absolute;
+    bottom: -700px; /* 初始位置在視窗下方 */
+
+    transform: translateY(0); /* 初始不變形 */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* 平滑過渡效果 */
+}
 
 /* Z-Index Management */
 .icon-anny,
