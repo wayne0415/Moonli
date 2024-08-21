@@ -12,14 +12,6 @@
 
 /* 字體顏色樣式設定 */
 :root {
-    --small-caption: 1.2rem;
-    --K2D-body: 1.6rem;
-    --body-text: 1.6rem;
-    --body-semibold: 2rem;
-    --body-title: 1.8rem;
-    --subtitle: 1.4rem;
-    --heading-h1: 2.4rem;
-
     --black-500-border: #d9d9d9;
     --black-800-main-text: #4b4b4b;
     --black-700: #6f6f6f;
@@ -36,73 +28,80 @@
 
 html {
     font-size: 62.5%;
-    overflow-x: hidden;
-    scroll-padding-top: 5.5rem;
+    /* overflow-x: hidden; */
+    /* scroll-padding-top: 5.5rem; */
     scroll-behavior: smooth;
-    letter-spacing: 0.12em;
+    /* letter-spacing: 0.12em; */
 }
 
 /* 字體設定 */
 body {
     font-family: "Noto Sans", sans-serif;
-    font-size: 100%;
-    line-height: 1.5;
     background-color: #f7f3ff;
+    /* font-size: 100%; */
+    /* line-height: 1.5; */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    margin: 0;
 }
 
-#main {
+.container {
     background-color: #fff;
     border-radius: 16px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    max-width: 700px;
+    max-width: 1000px; /* 增加寬度來容納兩個區塊 */
     width: 60%;
     padding: 48px;
+    gap: 20px; 
+    display: flex;
+    flex-direction: column;
+}
+.main {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    gap: 32px; /* 區塊之間的間距 */
+    width: 100%;
 }
 
-/* #main {
-    background-color: #fff;
-    border-radius: 16px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    padding: 32px 56px;
-    max-width: 200vh;
-    width: 28%;
-    text-align: center;
-} */
+.member-history-box,
+.rating-section {
+    width: 48%; 
+}
 
-.info-section h2 {
-    font-size: 2rem;
-    color:var(--black-800-main-text);
-    margin-top: 4px;
+/* 預約詳細資訊區域 */
+.info-section h3 {
+    font-size: 1.8rem;
     font-weight: bold;
-    padding-bottom: 20px;
+    color: var(--black-800-main-text);
+    margin-bottom: 16px;
     text-align: center;
 }
 
-.info-row h3 {
+.therapist-photo {
+    width: 55%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.info-row h2 {
     font-size: 2.4rem;
     color: var(--black-700);
-    margin-top: 4px;
     font-weight: 700;
+    margin-top: 4px;
+    text-align: center;
 }
 .info-row small {
     color: var(--black-700);
     font-weight: bold;
 }
-.therapist-photo {
-    width: 30%;
-    height: auto;
-    border-radius: 12px;
-}
 
-.info-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 16px;
+.info-row{
+    text-align: left;
+    margin-bottom: 8px;
 }
 
 .info-text {
@@ -110,6 +109,24 @@ body {
     justify-content: space-around;
     margin: 20px 0;
 }
+
+.info-details {
+    color: var(--black-700);
+    font-weight: 500;
+    display: grid;
+    justify-content: end;
+    text-align: left;
+    margin-bottom: 8px;
+    line-height:1.6;
+}
+
+
+.info-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
 
 .info-row {
     text-align: left;
@@ -119,19 +136,9 @@ body {
     color: #d9534f;
 } */
 
-.info-details {
-    color: var(--black-700);
-    font-weight: bold;
-    text-align: left;
-    margin-bottom: 8px;
-    line-height:1.6;
-}
-
 .info-details p {
     font-size: 1.6rem;
-    font-weight: 400;
-    padding-bottom: 16px;
-
+    margin-bottom: 16px;
 }
 
 /* 查看更多 */
@@ -139,9 +146,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%; 
+    margin-top: 24px;
+    /* width: 100%; 
     margin-top: 4px;
-    margin-bottom: 64px;
+    margin-bottom: 64px; */
     
 }
 
@@ -151,7 +159,7 @@ body {
     color: var(--black-700);
     cursor: pointer;
     margin-right: 4px;
-    /* flex: 1;  */
+    cursor: pointer;
 }
 
 .more-info-box a {
@@ -166,52 +174,89 @@ body {
 }
 
 /* 右邊的評分區域和表單 */
-.score-part {
-    flex: 1;
-    min-width: 300px;
-}
-
-.score-part h2 {
-    font-size: 22px;
-    color: #4a4a4a;
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.score-grid {
-    gap: 15px;
-    margin-bottom: 30px;
-}
-/* .score-item h4 span{
-    width: 2rem;
-} */
-
-.score-item{
-    display: flex;
-    margin: 0px auto;
-    justify-content: center;
-    
-}
-.score-item #sp{
-    margin-right: 3rem;
-}
-.score-item h4 {
-    
-    font-size: 16px;
-    color: #4a4a4a;
-    margin-bottom: 10px;
+.rating-section {
     text-align: left;
+    margin-top: 0;
 }
 
-/* 評價表單區域 */
-.feedback-section h4 {
-    font-size: 18px;
-    color: #4a4a4a;
-    margin-bottom: 10px;
+.rating-category {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 16px;
+}
+.category1{
+    padding-right: 3rem;
+}
+.rating-category span {
+    font-size: 1.6rem;
+    margin-right: 10px;
+    flex-basis: 80px;
+    color: var(--black-700);
+    font-weight: 600;
 }
 
+.stars {
+    display: flex;
+}
+
+.star {
+    margin-right: 5px;
+    font-size: 2rem;
+}
+
+.item-left{
+padding-top: 60px;
+}
+
+.rating-section h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--black-800-main-text);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.stars {
+    display: flex;
+}
+
+.star { 
+    margin-right: 4px;
+    font-weight:bold;
+
+    
+}
+
+.star:last-child {
+    margin-right: 0;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .rating-category span {
+        font-size: 1.4rem;
+        flex-basis: 100px;
+    }
+    
+    .star {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .rating-category span {
+        font-size: 1.2rem;
+        flex-basis: 80px;
+    }
+    
+    .star {
+        font-size: 1.6rem;
+    }
+}
+/* 評價此經驗區域 */
 textarea {
     width: 100%;
+    height: 24vh; 
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -235,14 +280,19 @@ textarea::placeholder {
     margin-right: 10px;
 }
 
+.feedback-section h4 {
+    font-size: 18px;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
 /* 按鈕區域 */
 .btn-CTA {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     text-align: center;
     margin-top: 30px;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 4%;
 }
 
 button {
