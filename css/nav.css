@@ -1,4 +1,7 @@
 /* Header 和導航欄樣式 */
+a{
+    text-decoration: none;
+}
 
 header {
     display: flex;
@@ -65,7 +68,7 @@ header img{
     display: none;
 }
 
-.menu-container a:hover {
+.login:hover {
     display: block;
     background: linear-gradient(to bottom, rgb(123, 104, 199, 0.8), rgb(167, 151, 231, 0.8));
     /* 光暈 */
@@ -73,6 +76,8 @@ header img{
     box-shadow: 4px 4px 20px rgba(214, 213, 221, 0.6);
     /* 光暈 */
     color: var(--white);
+    transition: none;
+    cursor: pointer;
 }
 
 .navigation a:hover {
