@@ -13,17 +13,31 @@ html *::after {
   box-sizing: inherit;
 }
 
+#statistics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #42514E;
+    color: #fff;
+    padding: 4rem 5%;
+    text-align: center;
+}
+
 
 .counters {
   display: flex;
   padding: 20px;
   justify-content: center;
   align-items: center;
-  gap: .8rem;
+  gap: 4rem;
 }
 
 .counters .number{
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
 }
 
 .counter {
@@ -34,12 +48,12 @@ html *::after {
   overflow: hidden;
   align-items: center;
   height: 3.125rem;
-  font-size: 4rem;
   margin: 0 1.25rem;
+  font-size: 4rem;
 }
 
 .counters .number span{
-    font-size: var(--heading-h1);
+    font-size: 2.8rem;
     color: var(--white);
 }
 .counter > span {
