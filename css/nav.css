@@ -3,10 +3,6 @@ a {
     text-decoration: none;
 }
 
-body {
-    background-color: #ccc;
-}
-
 header {
     position: fixed;
     top: 0;
