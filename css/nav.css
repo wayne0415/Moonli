@@ -3,17 +3,18 @@ a {
     text-decoration: none;
 }
 
+
 header {
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
-    right: 0;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem 5%;
     width: 100%;
     box-sizing: border-box;
+    z-index: 1000;
 }
 
 header a.logo {
@@ -148,7 +149,7 @@ header img {
     header .navigation {
         display: flex;
         flex-direction: column;
-        clip-path: polygon(0 0,100% 0, 100% 0, 0 0);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         position: absolute;
         margin: 1.2rem;
         margin-right: 0;

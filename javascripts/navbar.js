@@ -40,4 +40,20 @@ function adjustNavigation() {
     }
 }
 
+let lastScrollTop = 0;
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop) {
+        // 向下滚动时隐藏 header
+        header.style.top = '-100px';
+    } else {
+        // 向上滚动时显示 header
+        header.style.top = '0';
+    }
+    lastScrollTop = scrollTop;
+});
+
+
 
