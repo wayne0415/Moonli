@@ -1,11 +1,17 @@
 /* Header 和導航欄樣式 */
-a{
+a {
     text-decoration: none;
+}
+
+body {
+    background-color: #ccc;
 }
 
 header {
     position: fixed;
-    top:0; left:0; right:0;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,12 +20,12 @@ header {
     box-sizing: border-box;
 }
 
-header a.logo{
+header a.logo {
     display: inline-block;
     width: 15%;
 }
 
-header img{
+header img {
     display: block;
     width: auto;
 }
@@ -54,7 +60,7 @@ header img{
     justify-content: center;
     align-items: center;
     padding: .8rem 2.4rem;
-    color: var(--primary-400);
+    background: linear-gradient(var(gradient-card));
     background-color: var(--white);
     border-radius: 999px;
     /* 光暈 */
@@ -65,22 +71,33 @@ header img{
     font-weight: 800;
 }
 
+.login span {
+    color: var(--primary-400);
+}
+
 .login i {
     /* padding-left: 8px; */
     display: none;
 }
 
 .login:hover {
-    display: block;
+    display: flex;
     background: linear-gradient(to bottom, rgb(123, 104, 199, 0.8), rgb(167, 151, 231, 0.8));
-    /* 光暈 */
-    box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.5);
     box-shadow: 4px 4px 20px rgba(214, 213, 221, 0.6);
-    /* 光暈 */
-    color: var(--white);
     transition: none;
     cursor: pointer;
 }
+
+.login span {
+    color: var(--primary-400);
+    /* 默认颜色 */
+}
+
+.login:hover span {
+    color: var(--white);
+    /* 悬停时颜色 */
+}
+
 
 .navigation a:hover {
     display: inline-block;
@@ -91,7 +108,7 @@ header img{
     box-shadow: none;
 }
 
-@media(max-width:820px) {
+@media(max-width:820px) and (min-width: 769px) {
     .navbar {
         gap: 1.2rem;
     }
@@ -105,7 +122,7 @@ header img{
         font-size: 1.2rem;
     }
 
-    .navigation a:hover{
+    .navigation a:hover {
         font-size: 1.2rem;
     }
 
@@ -115,38 +132,79 @@ header img{
     }
 }
 
-@media(max-width:768px){
-    body{
-        background-color: #ccc;
-    }
-    header a.logo{
-        width: 20%;
-    }
 
-
-    header .navbar .login #menu-bars{
-        display: inline-block;
+@media(max-width:768px) {
+    header {
+        display: flex;
+        align-items: flex-start;
     }
 
-    header .navigation{
-        position: absolute;
-        top:100%; left:0; right:0;
-        padding: 1rem;
+    header a.logo {
+        width: 30%;
+    }
+
+    header .navbar {
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    header .navigation {
+        display: flex;
+        flex-direction: column;
         clip-path: polygon(0 0,100% 0, 100% 0, 0 0);
+        position: absolute;
+        margin: 1.2rem;
+        margin-right: 0;
+        padding: 1.2rem;
+        width: 150px;
+        right: 0;
+        top: 100%;
+        align-items: center;
+        background-color: var(--white);
+        border-radius: 1.6rem;
     }
 
-    
-
-    header .navbar.active{
-        clip-path: polygon(0 0, 100% 0, 100% 100%,0% 100%);
+    header .navigation.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
 
+    header .navigation a {
+        font-size: 1.4rem;
+        color: var(--primary-400);
+        padding: .8rem 1.2rem;
+    }
 
-    header .navbar a{
+    header .navigation a:hover {
+        font-size: 1.4rem;
+        color: var(--primary-500)
+    }
+
+    .login {
+        padding: .8rem 1.6rem;
+        color: var(--primary-400);
+        background-color: var(--white);
+    }
+
+    .login.active {
+        background-color: var(--primary-400);
+        color: var(--white);
+    }
+
+    header .navbar .login span {
+        display: none;
+    }
+
+    header .navbar .login #menu-bars {
         display: block;
-        padding: 1.5rem;
-        margin: 1rem;
-        font-size: 2rem;
-        background: #eee;
+    }
+}
+
+
+
+@media(hover: hover) {
+    .login:hover {
+        background-color: var(--primary-400);
+        color: var(--white);
     }
 }

@@ -6,7 +6,7 @@ body{
 }
 
 .container{
-    /* width: 80%; */
+    width: 100%;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -190,7 +190,7 @@ input[type=checkbox]:checked~ul {
     display: flex;
     flex-direction: column;
     gap: 6rem;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin-bottom: 25%;
 }
