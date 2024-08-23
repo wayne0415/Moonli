@@ -6,38 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>篩選系統</title>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
     <link rel="stylesheet" href="./css/filter.css">
 </head>
 
 <body>
-    <!-- 導覽列區 -->
-    <header id="topbar">
-        <h1 class="logo">
-            <a href="#"><img src="./images/logo_NavBar.svg" alt="Moonli-logo" /></a>
-        </h1>
-        <!-- 漢堡選單 -->
+        <!-- 導覽列區 -->
+        <header>
+            <a href="#" class="logo"><img src="./images/logo_NavBar.svg" alt="Moonli-logo" /></a>
+            <!-- 選單列表 -->
+            <nav class="navbar">
+                <div class="navigation">
+                    <a href="#" class="nav-menu">服務項目</a>
+                    <a href="#" class="nav-menu">心理師列表</a>
+                    <a href="#" class="nav-menu">常見問題</a>
+                    <a href="#" class="nav-menu">相關資訊</a>
+                    <a href="#" class="nav-menu">自我檢測</a>
+                </div>
+                <div class="login" id="bars">
+                    <span>登入註冊</span>
+                    <i class="fa-solid fa-bars" id="menu-bars"></i>
+                </div>
+            </nav>
+        </header>
 
-        <!-- 選單列表 -->
-        <nav class="menu-container">
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <div class="navigation">
-                <a href="#" class="nav-menu">服務項目</a>
-                <a href="#" class="nav-menu">心理師列表</a>
-                <a href="#" class="nav-menu">常見問題</a>
-                <a href="#" class="nav-menu">相關資訊</a>
-                <a href="#" class="nav-menu">自我檢測</a>
-            </div>
-            <a href="#" class="login">登入註冊<i class="fa-solid fa-bars"></i></a>
-        </nav>
-    </header>
     <main id="filter">
         <div class="cloud"><img src="./images/wave1.png" alt="背景雲"></div>
         <!-- progress bar -->
         <section>
+            <div id="general">
             <div class="progress-bar">
                 <div class="progress">
                     <small>50%</small>
@@ -134,17 +132,69 @@
                         </ul>
                 </ul>
                 <div class="btn-box">
-                    <input type="submit" name="btn__next" id="btn__next" title="下一步" value="下一步">
+                    <input type="button" name="btn__next" id="btn__next" title="下一步" value="下一步" onclick="changeToIssue()">
                 </div>
-
             </form>
+        </div>
+
+        <div id='issue' style="display: none;">
+            <div class="progress-bar">
+                <div class="progress99">
+                    <small>99%</small>
+                </div>
+            </div>
+            <form action="">
+                <ul class="title">
+                    <h2>想諮詢的議題</h2>
+                    <li class="option">
+                        <button>自我探索</button>
+                        <button>家庭議題</button>
+                        <button>職場適應</button>
+                        <button>親職教養</button>
+                        <button>情感議題</button>
+                        <button>情緒困擾</button>
+                        <button>人際關係</button>
+                        <button>性與性別</button>
+                        <button>其他</button>
+                    </li>
+                </ul>
+            </ul>
+            <div class="btn-box">
+                <input type="button" name="btn__back" id="btn__back" title="返回" value="返回" onclick="changeToGeneral()">
+                <input type="submit" name="btn__next" id="btn__next" title="送出" value="送出">
+            </div>
+        </div>
         </section>
     </main>
     <!-- 頁尾區 -->
     <footer>
         <small> 2024 Mooni. All Rights Reserved.</small>
     </footer>
+    <script>
+    let generalDiv = '';
+    let issueDiv = '';
+
+    function getDiv() {
+        // 只取得操作的標籤div，不更改display屬性
+        generalDiv = document.querySelector('#general');
+        issueDiv = document.querySelector('#issue');
+    }
+
+    function changeToGeneral() {
+        getDiv();
+        generalDiv.style.display = 'block';
+        issueDiv.style.display = 'none';
+    }
+
+    function changeToIssue() {
+        getDiv();
+        generalDiv.style.display = 'none';
+        issueDiv.style.display = 'block';
+    }
+</script>
+    </script>
     <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>
+    <script src="./javascripts/navbar.js"></script>
     <script src="./script.js"></script>
 </body>
 
