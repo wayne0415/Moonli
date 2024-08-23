@@ -1,28 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 * {
-    font-family: 'Noto Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    outline: none;
-    border: none;
-    transition: all .2s linear;
+	font-family: 'Noto Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	outline: none;
+	border: none;
+	transition: all .2s linear;
 }
 
 :root {
 	/* 字型 */
 	--small-cpation: 1.2rem;
-    --K2D-body: 1.6rem;
-    --body-text:1.6rem;
-    --body-semibold:2rem;
-    --body-title:2.4rem;
-    --subtitle:1.4rem;
-    --heading-h1:2.8rem;
+	--K2D-body: 1.6rem;
+	--body-text: 1.6rem;
+	--body-semibold: 2rem;
+	--body-title: 2.4rem;
+	--subtitle: 1.4rem;
+	--heading-h1: 2.8rem;
 	/* 顏色 */
 	--yellow: #ffee92;
-	--card:rgba(249, 249, 249, 0.9);
+	--card: rgba(249, 249, 249, 0.9);
 	--black-500: rgba(211, 211, 211, 0.447);
 	--black-600: rgb(144, 144, 144);
 	--black-700: rgb(111, 111, 111);
@@ -31,21 +31,21 @@
 	--purple-400: rgb(167, 151, 231);
 	--white: rgba(255, 255, 255);
 	/* 透明 */
-	--shadow: 0px 4px 20px  rgba(194, 191, 209, 0.4);
+	--shadow: 0px 4px 20px rgba(194, 191, 209, 0.4);
 	--btn-shadow: 4px 4px 20px rgba(214, 213, 221, .6), -4px -4px 8px rgba(255, 255, 255, 0.5);
 	--inset-shadow: 0 4px 10px rgba(214, 213, 221, .6);
 	/* 漸層 */
 	--gradient-card: rgb(255, 255, 255), rgb(255, 255, 255, .5);
-	--gradient-btn: rgba(203, 194, 212, 0.2),  rgba(249, 249, 249, 0);
+	--gradient-btn: rgba(203, 194, 212, 0.2), rgba(249, 249, 249, 0);
 	--gradient-sky-purple: rgb(91, 97, 149), rgb(157, 134, 159);
 }
 
 html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-    scroll-padding-top: 5.5rem;
-    scroll-behavior: smooth;
-    letter-spacing: 0.12em;
+	font-size: 62.5%;
+	overflow-x: hidden;
+	scroll-padding-top: 5.5rem;
+	scroll-behavior: smooth;
+	letter-spacing: 0.12em;
 }
 
 body {
@@ -83,15 +83,15 @@ a {
 
 
 main {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    position: relative;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	position: relative;
 }
 
 section {
 	display: flex;
-	padding:4% 4%;
+	padding: 4% 4%;
 	margin: 20px;
 	width: 50%;
 	flex-direction: column;
@@ -104,21 +104,21 @@ section {
 }
 
 .cloud {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    justify-content: center;
-    align-items: flex-end;
-    z-index: 1;
-    bottom: 0;
-    object-fit: cover;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	justify-content: center;
+	align-items: flex-end;
+	z-index: 1;
+	bottom: 0;
+	object-fit: cover;
 }
 
 /* 選項按鈕區 */
 form {
 	display: flex;
 	flex-direction: column;
-row-gap: 20px;
+	row-gap: 20px;
 }
 
 .title {
@@ -138,7 +138,7 @@ row-gap: 20px;
 
 button {
 	width: 160px;
-	background-image:  linear-gradient(var(--gradient-btn));
+	background-image: linear-gradient(var(--gradient-btn));
 	color: var(--purple-400);
 	height: 40px;
 	line-height: 30px;
@@ -155,9 +155,15 @@ button:hover {
 	cursor: pointer;
 }
 
+button.active {
+	background-color: var(--purple-400);
+	color: var(--white);
+	cursor: pointer;
+}
+
 /* 進度條 */
 .progress-bar {
-	margin: 20px;
+	margin: 20px auto;
 	width: 50%;
 	height: 16px;
 	background-color: var(--purple-200);
@@ -196,32 +202,45 @@ small {
 .btn-box {
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	padding: 0 2%;
 }
 
 #btn__next {
+	width: 50%;
+	min-width: 160px;
+	height: 40px;
 	color: var(--white);
-	outline: var(--purple-400) solid 3px;
+	border: var(--purple-400) solid 2px;
 	background-color: var(--purple-400);
 	font-size: 1.6rem;
 	font-weight: bold;
-	padding: 12px 20%;
 	border-radius: 99px;
-	border: none;
-	margin: 20px;
 	cursor: pointer;
 }
 
 #btn__back {
+	width: 50%;
+	min-width: 160px;
+	height: 40px;
 	color: var(--purple-400);
 	background-color: transparent;
-	outline: var(--purple-400) solid 3px;
+	border: var(--purple-400) solid 3px;
 	font-size: 1.6rem;
 	font-weight: bold;
-	padding: 12px 20%;
 	border-radius: 99px;
-	border: none;
-	margin: 20px;
 	cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+	.btn-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin: 0 2%;
+
+	}
 }
 
 /* 選擇地區下拉選單 */
@@ -240,10 +259,11 @@ small {
 	align-items: center;
 	cursor: pointer;
 	justify-content: space-between;
-	background-image: linear-gradient( rgba(203, 194, 212, 0.2),  rgba(224, 219, 230, 0.049)) ;
+	background-image: linear-gradient(rgba(203, 194, 212, 0.2), rgba(224, 219, 230, 0.049));
 	box-shadow: inset var(--btn-shadow);
 }
 
+/* 小箭頭 */
 .select-btn i {
 	font-size: 1.6rem;
 	transition: 0.3s;
@@ -314,7 +334,7 @@ small {
 }
 
 .options .option:active {
-	background:var(--purple-200);
+	background: var(--purple-200);
 	box-shadow: inset var(--btn-shadow);
 }
 
@@ -330,115 +350,18 @@ small {
 	color: var(--black-600);
 }
 
-/* Header 和導航欄樣式 */
-header {
-    padding: 30px 120px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-
-.menu-container {
-    display: flex;
-    align-items: center;
-    gap: 24px; /* 使用 gap 控制間距 */
-}
-
-.menu-container a {
-    display: block;
-    font-size: 1.6rem;
-    line-height: 150%;
-    font-weight: 800;
-}
-
-.menu-container a:hover {
-    display: block;
-    font-size: 1.6rem;
-    font-weight: 800;
-    background: linear-gradient(to bottom, rgb(123, 104, 199, 0.8), rgb(167, 151, 231, 0.8));
-    color: var(--white);
-}
-
-.navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-
-.navigation a:hover {
-    display: block;
-    font-size: 1.6rem;
-    color: var(--yellow);
-    background: none;
-    box-shadow: none;
-}
-
-.navigation a {
-    padding: 20px;
-    display: block;
-    font-size: 1.6rem;
-    line-height: 150%;
-    color: var(--white);
-    box-shadow: none;
-}
-
-.login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 24px;
-    line-height: 140%;
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: var(--purple-400);
-    background-color: var(--white);
-    border-radius: 999px;
-    gap: 8px;
-}
-
-.login img {
-    width: 28px;
-    height: 28px;
-    margin-left: 10px;
-}
-
-.menu-container a:hover {
-    display: block;
-    background: linear-gradient(to bottom, rgb(123, 104, 199, 0.8), rgb(167, 151, 231, 0.8));
-    box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.5);
-    box-shadow: 4px 4px 20px rgba(214, 213, 221, 0.6);
-    color: var(--white);
-}
-
-.navigation a:hover {
-    display: block;
-    font-size: 1.6rem;
-    color: var(--yellow);
-    background: none;
-    font-weight: 800;
-    box-shadow: none;
-}
-
 /* 頁尾區 */
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 40px 40px;
 }
 
 footer small {
-	font-family:  var(--K2D-body);
-    font-size: 1.4rem;
-    color: var(--white);
-    flex: 1;
-    text-align: right;
+	font-family: var(--K2D-body);
+	font-size: 1.4rem;
+	color: var(--white);
+	flex: 1;
+	text-align: right;
 }

@@ -1,6 +1,7 @@
 header{
-    background-color: rgb(51, 42, 84);
+    background-color: rgb(50, 44, 79);
 }
+
 
 /* 頁面A：大LOGO+找心理師按鈕 */
 #home {
@@ -68,7 +69,6 @@ header{
 }
 
 .search-btn button {
-    /* display: block; */
     background-color: #FFFFFF ;
     color: var(--primary-400);
     font-size: 2.4rem;
@@ -289,9 +289,6 @@ header{
     color: #fff;
     padding: 40px 88px 93px 88px;
     text-align: center;
-
-
-    
 }
 
 .stas-container {
@@ -320,21 +317,26 @@ header{
 }
 
 /* Q&A區 */
+
 #faq {
     color: #fff;
     position:relative;
-    width: auto;
+    width: 100%;
     background: linear-gradient(to bottom, #44615E, #1F8970);
     text-align: center;
-    /* height: 800px; */
-    /* margin-top: 50px; */
 
+}
+
+#faq h2 {
+    padding: 50px 20px;
+    font-size:3.2rem;
+    font-weight: 800;
+    
 }
 
 .home-images-wave-green img {
     width: 100%; 
     height: auto; 
-    display: block; /* 去除圖片下方的空隙 */
 }
 
 .home-images-icon_annoymoonQQ  {
@@ -346,26 +348,104 @@ header{
     z-index: 10; 
 }
 
-.home-images-icon_annoymoonQQ img {
-    height: auto; 
-    display: block; /* 去除圖片下方的空隙 */
+.home-images-wave-green img,
+.home-images-wave-lightgreen img {
+    width: 100%;
+    height: auto;
 }
 
-#faq h2 {
-    padding: 50px 20px;
-    font-size:3.2rem;
-    font-weight: 800;
-    
-}
 
-.faq-container {
+/* 選擇地區下拉選單 */
+.select-list {
+    z-index: 10;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 0 5%;
     margin-bottom: 88px;
+    gap: 30px;
 }
 
-.question {
+.select-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.select-menu .select-btn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    font-size: 1.8rem;
+    font-weight: 400;
+text-align: start;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.select-menu.active .select-btn {
+    border-bottom: 1px solid white;
+}
+
+.select-btn i {
+    font-size: 1.6rem;
+    transition: .3s ease-in-out;
+    color: var(--white);
+}
+
+.select-menu.active .select-btn i {
+    transform: rotate(-180deg);
+}
+
+.select-menu .options {
+    padding: 20px;
+    display: none;
+}
+
+.select-menu.active .options {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    width: 100%;
+}
+
+.options .option {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #ffffff;
+    text-align: start;
+}
+
+.sBtn-text {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--white);
+}
+
+.select-menu span {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: rgb(242, 206, 152);
+}
+
+@media(max-width:960px) {
+    .select-list {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        gap: 20px
+    }
+}
+
+
+/* .question {
     background-color: rgba(255, 255, 255, 0.1); 
     border: 2px solid #ffffff;
     border-radius: 10px;
@@ -376,19 +456,15 @@ header{
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
         /* justify-content: center; */
-}
+/* }
 
 .question h3 {
     font-size: 1.8rem;
     margin-bottom: 10px;
     font-weight: 800;
-}
+} */ 
 
-.home-images-wave-lightgreen img{
-    width: 100%; 
-    height: auto; 
-    display: block; /* 去除圖片下方的空隙 */
-}
+
 
 /* 服務流程區 */
 #step-section {
@@ -404,7 +480,6 @@ header{
 
 #step-section img{
     width: 24%;
-    display: block; /* 去除圖片下方的空隙 */
     margin-right: 2px;
 }
 
@@ -487,28 +562,6 @@ header{
     justify-content: center;
     text-align: center;
     position: relative;
-    /* overflow: hidden;  */
-}
-
-.wave-background img {
-    display: block;
-    width: 100%; 
-    height: auto; 
-}
-
-
-.icon_annoymoon_Happy  {
-    position: absolute; 
-    top: 15%; 
-    left: 9%; 
-    width: 18%;
-    /* z-index: 100;  */
-}
-
-.icon_annoymoon_Happy img {
-    width: 100%;
-    height: auto; 
-    display: block; /* 去除圖片下方的空隙 */
 }
 
 #experience_sharing h2 {
@@ -518,19 +571,19 @@ header{
     margin: 40px 10px;
 }
 
-.experience_sharing_list_box {
+.experience_sharing_item_box {
     display: flex;
     justify-content: center;
     /* flex-wrap: wrap; */
     padding: 20px;
     padding-bottom: 80px;
     gap: 20px;
-    width: 80%;
-    height: 50vh;
+    width: 85%;
+    height: 60vh;
     gap: 2.5%;
 }
 
-.experience_sharing_list {
+.experience_sharing_item {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -562,8 +615,7 @@ header{
 .context-box{
     height: auto;
     /* width: 180px; */
-    max-width: 238px; /* 控制最大寬度 */
-    overflow: hidden; /* 超出內容隱藏 */
+    max-width: 238px; 
     text-align: left;
 }
 
@@ -584,6 +636,25 @@ header{
     align-items: center;
 }
 
+
+.wave-background img {
+    display: block;
+    width: 100%; 
+    height: auto; 
+}
+
+
+.icon_annoymoon_Happy  {
+    position: absolute; 
+    top: 15%; 
+    left: 9%; 
+    width: 18%;
+}
+
+.icon_annoymoon_Happy img {
+    width: 100%;
+    height: auto; 
+}
 .line {
     display: inline-block;
     width: 300px;

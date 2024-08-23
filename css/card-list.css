@@ -1,8 +1,334 @@
+body{
+    background:url(../images/list-bottom-pic.jpg),linear-gradient(var(--gradient-sky-purple));
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom center;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding:2rem 8% ;
+
+}
+
+
+.reset-filter {
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    border-radius: 16px;
+    background-color: rgb(249, 249, 249);
+    padding: 8px 0;
+    height: fit-content;
+}
+
+input[type=checkbox] {
+    cursor: pointer;
+    background-color: rgb(249, 249, 249);
+}
+
+ul li {
+    width: 100%;
+    margin: 4px 0;
+    padding: 4px;
+}
+
+ul li a {
+    color: rgb(167, 151, 231);
+    text-align: start;
+    display: flex;
+}
+
+ul {
+    display: none;
+    width: 100%;
+    list-style-type: none;
+    padding: 0 4px 8px;
+}
+
+input[type=checkbox]:checked~ul {
+    display: block;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(249, 249, 249);
+    color: rgb(167, 151, 231);
+    width: 160px;
+    margin: 4px auto;
+    border-radius: 16px;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.dropdown:hover {
+    color: rgb(167, 151, 231);
+}
+
+.dropdown-title {
+    display: flex;
+    padding: 8px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.6em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.dropdown i {
+    font-size: 1.6rem;
+    transition: 0.3s;
+    color: rgb(167, 151, 231);
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.lii {
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.4em;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+.lii:hover {
+    background: rgb(236, 235, 252);
+    color: rgb(167, 151, 231);
+}
+
+.checkbox-custom,
+.radio-custom {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-custom,
+.checkbox-custom-label,
+.radio-custom,
+.radio-custom-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.checkbox-custom-label,
+.radio-custom-label {
+    position: relative;
+}
+
+.checkbox-custom+.checkbox-custom-label:before,
+.radio-custom+.radio-custom-label:before {
+    content: '';
+    background-color: transparent;
+    border: 1px solid rgb(167, 151, 231);
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 8px;
+    height: 8px;
+    padding: 2px;
+    margin-right: 10px;
+    text-align: start;
+}
+
+.checkbox-custom:checked+.checkbox-custom-label:before {
+    content: '✔';
+    /* 使用打勾符号 */
+    background-color: rgb(167, 151, 231);
+    /* 勾选框的背景颜色 */
+    color: white;
+    /* 打勾符号的颜色 */
+    display: inline-block;
+    vertical-align: middle;
+    width: 8px;
+    height: 8px;
+    padding: 2px;
+    margin-right: 10px;
+    text-align: center;
+    font-size: 10px;
+    /* 根据需要调整大小 */
+    line-height: .8em;
+}
+
+.checkbox-custom:focus+.checkbox-custom-label,
+.radio-custom:focus+.radio-custom-label {
+    outline: 0px solid #ddd;
+    /* focus style */
+}
+
+.reset-btn {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    color: rgb(167, 151, 231);
+    border-radius: 100px;
+    border: 2px solid rgb(167, 151, 231);
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    margin: 8px auto;
+    width: 80%;
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: .2em;
+    cursor: pointer;
+}
+
+.reset-btn:hover {
+    background-color: rgb(167, 151, 231);
+    color: white;
+}
+
+.list-container{
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 25%;
+}
+
+.card__list {
+    max-width: 950px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.4rem;
+
+}
+
 .card{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 1.6rem;
+    border-radius: 1.6rem;
+    gap: 1.2rem;
+    background-color: #F9F9F9;
+    box-shadow: 4px 4px 15px rgba(119, 119, 119, 0.2);
+}
+
+.card a img{
+    width: 257px;
+    height: 216px;
+    border-radius: .4rem;
+    cursor: pointer;
+}
+
+.card .icon{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: absolute;
+    right: 2.8rem;
+    top: 2.8rem;
+    height: 192px;
+}
+
+.card .icon i{
+    display: inline-block;
+    font-size: 2.4rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.card .icon i.fa-solid {
+    color: var(--yellow);
+    cursor: pointer; 
+}
+
+.card .icon span{
+    font-size: var(--subtitle);
+    color: var(--white);
+    font-weight: 800;
+}
+
+.card .icon .more{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2.4rem;
-    border-radius: 1.6rem;
-    gap: 2rem;
+}
+
+.card .icon .more i{
+    font-size: 1.2rem;
+    margin-left: .4rem;
+    color: var(--white);
+}
+
+.card .detail-info{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    width: 100%;
+}
+
+.card .detail-info .title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .detail-info .title div{
+    display: flex;
+    gap: .4rem;
+    align-items: center;
+}
+
+.title .title__np{
+    font-size: var(--body-text);
+    color: var(--black-800-main-text);
+    font-weight: 800;
+    font-family: "K2D", sans-serif;
+}
+
+.title .status{
+    color: #E44941;
+    font-size: var(--small-cpation);
+}
+
+.desc{
+    display: flex;
+    align-items: center;
+    font-size: var(--small-cpation);
+    color: var(--black-600);
+    gap: .8rem;
+}
+
+.circle{
+    width: 3px;
+    height: 3px;
+    border-radius: 100px;
+    background-color: var(--black-600);
+}
+
+.card .tag{
+    display: flex;
+    padding: .2rem .8rem;
+    gap: .4rem;
+    background-color: var(--secondary-400);
+    border-radius: 100px;
+    width: fit-content;
+}
+
+.card .tag span{
+    display: inline;
+    padding: 0px;
+    font-size: var(--small-cpation);
+    color: var(--white);
+}
+
+#more{
+    color: var(--primary-400);
+    font-size: var(--body-semibold);
+    font-weight: 800;
+    padding: 1.2rem 6rem;
+    border-radius: 100px;
 }

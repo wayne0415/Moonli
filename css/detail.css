@@ -1,37 +1,44 @@
 body{
     
-    background-image: url(./images/backgroung\ image.svg);
+    background-image: url(../images/backgroung\ image.svg);
     background-position: bottom center;
     background-repeat: no-repeat;
+    background-color: #F9F9F9;
 }
 /* Header 和導航欄樣式 */
 
-
 header {
-    padding: 30px 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 2rem 5%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-header img {
+header a.logo{
+    display: inline-block;
+    width: 15%;
+}
+
+header img{
     display: block;
-    width: 60%;
-    max-width: 100%;
-    height: auto;
+    width: auto;
 }
 
-.menu-container {
+
+.navbar {
     display: flex;
     align-items: center;
-    gap: 24px; /* 使用 gap 控制間距 */
+    gap: 2rem;
+    /* 使用 gap 控制間距 */
 }
 
-.navigation{
+.navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 2rem;
 }
 
 
@@ -59,7 +66,7 @@ header img {
 }
 
 .login {
-    padding: 8px 24px;
+    padding: .8rem 2.4rem;
     color: var(--primary-400);
     background-color: var(--white);
     border-radius: 999px;
@@ -71,14 +78,117 @@ header img {
     font-weight: 800;
 }
 
+.login span {
+    color: var(--primary-400);
+}
+
 .login i{
-    padding-left: 8px;
+    display: none;
 }
 
 
 .login:hover {
+    display: flex;
     background-color: var(--primary-400);
     color: var(--white);
+    transition: none;
+    cursor: pointer;
+}
+
+.login span {
+    color: var(--primary-400);
+    /* 默认颜色 */
+}
+
+.login:hover span {
+    color: var(--white);
+    /* 悬停时颜色 */
+}
+
+
+.navigation a:hover {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: var(--black-800-main-text);
+    background: none;
+    font-weight: 800;
+    box-shadow: none;
+}
+
+@media(max-width:768px) {
+    header {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    header a.logo {
+        width: 30%;
+    }
+
+    header .navbar {
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    header .navigation {
+        display: flex;
+        flex-direction: column;
+        clip-path: polygon(0 0,100% 0, 100% 0, 0 0);
+        position: absolute;
+        margin: 1.2rem;
+        margin-right: 0;
+        padding: 1.2rem;
+        width: 150px;
+        right: 0;
+        top: 100%;
+        align-items: center;
+        background-color: var(--white);
+        border-radius: 1.6rem;
+    }
+
+    header .navigation.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navigation a {
+        font-size: 1.4rem;
+        color: var(--primary-400);
+        padding: .8rem 1.2rem;
+    }
+
+    header .navigation a:hover {
+        font-size: 1.4rem;
+        color: var(--primary-500)
+    }
+
+    .login {
+        padding: .8rem 1.6rem;
+        color: var(--primary-400);
+        background-color: var(--white);
+    }
+
+    .login.active {
+        background-color: var(--primary-400);
+        color: var(--white);
+    }
+
+    header .navbar .login span {
+        display: none;
+    }
+
+    header .navbar .login #menu-bars {
+        display: block;
+    }
+}
+
+
+
+@media(hover: hover) {
+    .login:hover {
+        background-color: var(--primary-400);
+        color: var(--white);
+    }
 }
 
 /* Header ends */
@@ -87,10 +197,8 @@ header img {
 .container {
     margin: 0 auto;
     display: flex;
-    width: 1380px;
     gap: 60px;
-    padding-bottom: 120px;
-    padding-top: 60px;
+    padding:2rem 8% ;
 }
 
 /* -------------info starts------------- */
@@ -98,8 +206,8 @@ header img {
 .info {
     display: flex;
     flex-direction: column;
-    gap: 3.2rem;
-    width: 28%;
+    gap: 2rem;
+    width: 30%;
 }
 
 .profile__photo {
@@ -111,8 +219,8 @@ header img {
 }
 
 .profile__photo img {
-    width: 80%;
-    height: 240px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 1.2rem;
 }
@@ -120,8 +228,8 @@ header img {
 .profile__photo .clinic {
     display: flex;
     flex-direction: row;
+    width: 100%;
     gap: 12px;
-    overflow: hidden;
     max-width: 100%;
 }
 
@@ -139,35 +247,44 @@ header img {
 .block__content{
     display: flex;
     flex-direction: column;
-    padding: 3.2rem;
+    padding: 2rem;
     gap: 2rem;
-    border: solid 1px var(--black-500-border);
     border-radius: 1.2rem;
     box-sizing: border-box;
-    background-color: #fff;
+    background-image: linear-gradient(var(--gradient-card));
     justify-content: center;
+    box-shadow: var(--btn-shadow);
 }
 
 /* -------------預約表單start------------- */
 
 .week {
     display: flex;
-    justify-content: space-between;
+    gap: 0.8rem;
     width: 100%;
+    padding: 0.8rem;
+    overflow: hidden;
 }
 
 .weekday {
+    flex: 0 0 auto;
+    min-width: 0;  /* 允許 flex item 縮小到比內容更小 */
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: .8rem 1.6rem;
-    row-gap: .4rem;
-    font-size: var(--small-cpation);
-    line-height: 140%;
-    border: solid 1px var(--black-500-border);
-    border-radius: .8rem;
-    box-sizing: border-box;
+    padding: 1.2rem 1.6rem;
+    font-size: var(--small-caption);
+    line-height: 1.4;
+    background-image: linear-gradient(var(--gradient-card));
+    box-shadow: var(--btn-shadow);
+    border-radius: 0.8rem;
     transition: none;
+}
+
+
+.day {
+    font-weight: bold;
+    margin-bottom: 0.4rem;
 }
 
 .weekday:hover{
@@ -182,27 +299,34 @@ header img {
 .reserve {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem;
+    grid-gap: 1.2rem;
 }
 
 .reservation{
-    padding: 1.2rem 2.4rem;
+    padding: .8rem 1.2rem;
     border-radius: 10rem;
     background-color: var(--secondary-400);
-    font-size: var(--body-semibold);
+    font-size: var(--body-text);
     color: #fff;
     font-weight: 600;
 }
 
+.reservation:hover{
+    background-color: var(--secondary-300);
+    cursor: pointer;
+}
+
 .time {
     display: flex;
-    height: 58px;
-    padding: .8rem 2.4rem;
+    padding: .8rem 1.2rem;
     border-radius: 1.2rem;
-    border: solid 1px var(--black-500-border);
+    background-image: linear-gradient(var(--gradient-card));
+    box-shadow: var(--btn-shadow);
     text-align: center;
     justify-content: center;
     align-items: center;
+    font-size: var(--subtitle);
+    color: var(--black-800-main-text);
 }
 
 .time:hover{
@@ -212,7 +336,7 @@ header img {
 }
 
 .time span{
-    font-size: var(--K2D-body);
+    font-size: var(--subtitle);
     font-family: "K2D", sans-serif;
 }
 
@@ -232,6 +356,7 @@ header img {
 .style__data {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .style__data span{
@@ -261,7 +386,7 @@ header img {
 }
 
 .style__bar {
-    width: 210px;
+    width: 130px;
     background-color: var(--secondary-100);
 }
 
@@ -431,10 +556,10 @@ header img {
 
 .data .tag span{
     display: inline-block;
-    padding: .8rem 1.6rem;
+    padding: .4rem 1.2rem;
     background-color: var(--secondary-100);
     border-radius: .8rem;
-    font-size: var(--body-text);
+    font-size: var(--subtitle);
     color: var(--black-800-main-text);
     letter-spacing: 0.1em;
 }
@@ -473,7 +598,10 @@ header img {
     padding: 1.2rem 1.6rem;
     gap: 2rem;
     border-radius: 1.2rem;
-    border: var(--black-500-border) solid 0.5px;
+    background-image: linear-gradient(var(--gradient-card));
+    box-shadow: var(--btn-shadow);
+    width: 100%;
+    background-color: var(--white);
 }
 
 .article img{
@@ -484,23 +612,24 @@ header img {
 }
 
 .article__content{
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: .8rem;
 }
 
 .article__title{
-    font-size: var(--body-semibold);
+    font-size: var(--body-text);
     color: var(--black-800-main-text);
     font-weight: 800;
 }
 
 .article__content .body{
-    font-size: var(--body-text);
+    font-size: var(--subtitle);
     color: var(--black-700);
-    width: 636px; 
+    line-height: 1.6;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* 顯示三行文本 */
+    -webkit-line-clamp: 4; /* 顯示三行文本 */
     -webkit-box-orient: vertical; /* 設為垂直方向 */
     overflow: hidden; /* 隐藏超出部分 */
     text-overflow: ellipsis;

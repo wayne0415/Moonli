@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="zh-Hant-TW">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Moonli 心理諮商媒合平台</title>
-        <link rel="icon" href="#" />
-        <link rel="stylesheet" href="./css/reset.css" />
-        <link rel="stylesheet" href="./css/style.css" />
-        <link rel="stylesheet" href="./css/nav.css" />
-        <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/animated-number.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
 
-    <body>
-        <!-- 我是首頁 -->
+     <!-- 我是首頁 -->
         <!-- 導覽列 -->
         <header>
-            <a href="#" class="logo"><img src="./images/logo_NavBar.svg" alt="Moonli-logo" /></a>
+            <h1 class="logo">
+                <a href="#"><img src="./images/logo_NavBar.svg" alt="Moonli-logo" /></a>
+            </h1>
             <!-- 選單列表 -->
-            <nav class="navbar">
+            <nav class="menu-container">
                 <div class="navigation">
                     <a href="#" class="nav-menu">服務項目</a>
                     <a href="#" class="nav-menu">心理師列表</a>
@@ -25,10 +25,7 @@
                     <a href="#" class="nav-menu">相關資訊</a>
                     <a href="#" class="nav-menu">自我檢測</a>
                 </div>
-                <div class="login" id="bars">
-                    <span>登入註冊</span>
-                    <i class="fa-solid fa-bars" id="menu-bars"></i>
-                </div>
+                <a href="#" class="login">登入註冊<i class="fa-solid fa-bars"></i></a>
             </nav>
         </header>
         <!-- 頁面A：大LOGO+找心理師按鈕 -->
@@ -108,18 +105,18 @@
 
         <!-- 數據證明區 -->
         <section id="statistics">
-            <div class="stas-container">
-                <div class="stas-item">
-                    <h3>6666+</h3>
-                    <p>註冊使用者</p>
+            <div class="counters">
+                <div class="number">
+                    <h3 class="counter">6531+</h3>
+                    <span>註冊使用者</span>
                 </div>
-                <div class="stas-item">
-                    <h3>365+</h3>
-                    <p>合作心理諮商所</p>
+                <div class="number">
+                    <h3 class="counter">365+</h3>
+                    <span>合作心理諮商所</span>
                 </div>
-                <div class="stas-item">
-                    <h3>8888+</h3>
-                    <p>預約成立次數者</p>
+                <div class="number">
+                    <h3 class="counter">8654+</h3>
+                    <span>預約成立次數者</span>
                 </div>
             </div>
         </section>
@@ -347,8 +344,28 @@
                 window.scrollTo({ top: 0, behavior: "smooth" });
             });
         </script>
-        <script src="./javascripts/navbar.js"></script>
         <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>
+
         <!-- <script src="./script.js"></script> -->
-    </body>
+    
+    <!-- <section class="counters">
+        <div class="number">
+            <h3 class="counter" aria-label="66666+">66666+</h3>
+            <span>註冊使用者</span>
+        </div>
+
+        <div class="number">
+            <h3 class="counter" aria-label="666+">666+</h3>
+            <span>合作心理諮商所</span>
+        </div>
+
+        <div class="number">
+            <h3 class="counter" aria-label="66666+">66666+</h3>
+            <span>預約成立次數</span>
+        </div>
+        
+    
+      </section> -->
+      <script src="./javascripts/animated-number.js"></script>
+</body>
 </html>
