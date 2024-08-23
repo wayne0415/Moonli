@@ -1,0 +1,195 @@
+header {
+    background-color: rgb(50, 44, 79);
+}
+
+/* 頁面A：大LOGO+找心理師按鈕 */
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgb(51, 42, 84), rgb(112, 105, 138));
+    position: relative;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+}
+
+/* .home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+} */
+
+.home-images-moon {
+    position: absolute;
+    top: 12%;
+    right: 15%;
+    width: 16vw;
+    max-width: 100px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, rgb(238, 233, 203), rgb(235, 216, 149));
+    box-shadow: 0px 0px 100px rgba(255, 255, 255, 0.8);
+}
+
+.home-images-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 16px auto;
+    padding-bottom: 24px;
+    height: auto;
+}
+
+.home-images-logo img {
+    width: 88%;
+    height: auto;
+}
+
+.search-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.search-btn button {
+    background-color: #ffffff;
+    color: var(--primary-400);
+    font-size: 2.4rem;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+    padding: 8px 72px;
+    border-radius: 50px;
+    box-shadow: 4px 0px 4px rgba(125, 125, 125, 0.25), 0px 4px 4px rgba(255, 255, 255, 0.33), inset 0px -4px 20px rgba(210, 210, 210, 0.7), inset 4px 0px 10px rgba(144, 144, 144, 0.8);
+}
+
+.search-btn button:hover {
+    background: linear-gradient(to bottom, rgb(123, 104, 199, 0.8), rgb(167, 151, 231, 0.8));
+    color: var(--white);
+    box-shadow: -4px -4px 10px rgba(222, 209, 240, 0.315), 4px 4px 20px rgba(43, 41, 41, 0.925);
+}
+
+.search-btn i {
+    padding: 16px 0px 16px 14px;
+}
+
+/* 原本月亮圖片的程式碼 */
+/* .home-images-moon-container {
+    position: absolute;
+    top: 5%;  
+    right: -45%; 
+    z-index: 10;
+    max-width: 300px; 
+}
+.home-images-moon-container img {
+    width: 100%; 
+    height: auto;
+    object-fit:cover;
+} */
+
+/* .home-images-moon{
+    position: absolute;
+    background: linear-gradient(to bottom, rgb(238, 233, 203),rgb(235, 216, 149));
+    width: 15vw;
+    max-width: 128px; 
+    height: auto; 
+    border-radius: 50%; 
+    top: 10%;  
+    right: -45%; 
+    box-shadow:
+        0px 0px 100px rgb(255, 255, 255,0.8);
+} */
+
+/* 頁面B：痛點 */
+#problems {
+    position: relative;
+    background: rgb(112, 105, 138);
+    text-align: center;
+    width: 100%;
+    height: 190vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.problems-title {
+    margin-bottom: 400px;
+}
+
+.problems-title h2 {
+    display: inline-block;
+    z-index: 5;
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.icon-anny,
+.icon-annoymoon,
+.item-6q {
+    position: absolute;
+}
+
+.item-wave1,
+.item-wave2,
+.item-wave3,
+.item-union {
+    position: absolute;
+    bottom: 0;
+}
+.icon-annoymoon {
+    top: 58%;
+    right: 40%;
+}
+
+.icon-anny {
+    top: 50%;
+    right: 48%;
+}
+
+.item-6q {
+    width: 75%;
+}
+
+/* .item-q1,
+.item-q2,
+.item-q3,
+.item-q4,
+.item-q5,
+.item-q6 {
+    position: absolute;
+} */
+
+.icon-anny,
+.icon-annoymoon,
+.item-6q,
+.item-wave3,
+.item-union {
+    z-index: 3;
+}
+
+.item-wave2 {
+    z-index: 1;
+    opacity: 0.7;
+}
+
+.item-wave1 {
+    z-index: 0;
+}
