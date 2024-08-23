@@ -12,158 +12,161 @@
 </head>
 
 <body>
-        <!-- 導覽列區 -->
-        <header>
-            <a href="#" class="logo"><img src="./images/logo_NavBar.svg" alt="Moonli-logo" /></a>
-            <!-- 選單列表 -->
-            <nav class="navbar">
-                <div class="navigation">
-                    <a href="#" class="nav-menu">服務項目</a>
-                    <a href="#" class="nav-menu">心理師列表</a>
-                    <a href="#" class="nav-menu">常見問題</a>
-                    <a href="#" class="nav-menu">相關資訊</a>
-                    <a href="#" class="nav-menu">自我檢測</a>
-                </div>
-                <div class="login" id="bars">
-                    <span>登入註冊</span>
-                    <i class="fa-solid fa-bars" id="menu-bars"></i>
-                </div>
-            </nav>
-        </header>
+    <!-- 導覽列區 -->
+    <header>
+        <a href="#" class="logo"><img src="./images/logo_NavBar.svg" alt="Moonli-logo" /></a>
+        <!-- 選單列表 -->
+        <nav class="navbar">
+            <div class="navigation">
+                <a href="#" class="nav-menu">服務項目</a>
+                <a href="#" class="nav-menu">心理師列表</a>
+                <a href="#" class="nav-menu">常見問題</a>
+                <a href="#" class="nav-menu">相關資訊</a>
+                <a href="#" class="nav-menu">自我檢測</a>
+            </div>
+            <div class="login" id="bars">
+                <span>登入註冊</span>
+                <i class="fa-solid fa-bars" id="menu-bars"></i>
+            </div>
+        </nav>
+    </header>
 
     <main id="filter">
         <div class="cloud"><img src="./images/wave1.png" alt="背景雲"></div>
         <!-- progress bar -->
         <section>
             <div id="general">
-            <div class="progress-bar">
-                <div class="progress">
-                    <small>50%</small>
+                <div class="progress-bar">
+                    <div class="progress">
+                        <small>50%</small>
+                    </div>
                 </div>
+                <form action="">
+                    <ul class="title">
+                        <h2>心理師的性別</h2>
+                        <li class="option">
+                            <button type="button" onclick="toggleActive(this)">皆可</button>
+                            <button type="button" onclick="toggleActive(this)">女心理師</button>
+                            <button type="button" onclick="toggleActive(this)">男心理師</button>
+                        </li>
+                    </ul>
+                    <ul class="title">
+                        <h2>心理師擅長的諮商類型</h2>
+                        <li class="option">
+                            <button type="button" onclick="toggleActive(this)">皆可</button>
+                            <button type="button" onclick="toggleActive(this)">個別諮商</button>
+                            <button type="button" onclick="toggleActive(this)">伴侶諮商</button>
+                            <button type="button" onclick="toggleActive(this)">婚姻諮商</button>
+                            <button type="button" onclick="toggleActive(this)">家庭諮商</button>
+                            <button type="button" onclick="toggleActive(this)">團體諮商</button>
+                            <button type="button" onclick="toggleActive(this)">兒童諮商</button>
+                            <button type="button" onclick="toggleActive(this)">青少年諮商</button>
+                        </li>
+                    </ul>
+                    <ul class="title">
+                        <h2>心理師可預約的時段</h2>
+                        <li class="option">
+                            <button type="button" onclick="toggleActive(this)">皆可</button>
+                            <button type="button" onclick="toggleActive(this)">週一至週五</button>
+                            <button type="button" onclick="toggleActive(this)">假日</button>
+                            <button type="button" onclick="toggleActive(this)">24小時內</button>
+                        </li>
+                    </ul>
+                    <!-- https://youtu.be/59bhXBQL5m0?si=xRQSnxHnpSHw01OS -->
+                    <ul class="title">
+                        <h2>心理師服務地區</h2>
+                        <div class="select-menu">
+                            <div class="select-btn">
+                                <span class="sBtn-text">請選擇地區</span>
+                                <i class="bx bx-chevron-down"></i>
+                            </div>
+                            <ul class="options">
+                                <li class="option">
+                                    <span class="option-text">台北市</span>
+                                </li>
+                                <li class="option">
+                                    <span class="option-text">新北市</span>
+                                </li>
+                                <li class="option">
+                                    <span class="option-text">基隆市</span>
+                                </li>
+                                <li class="option">
+                                    <span class="option-text">宜蘭縣</span>
+                                </li>
+                                <li class="option">
+                                    <span class="option-text">桃園市</span>
+                                </li>
+                                <li class="option">
+                                    <span class="option-text">新竹縣市</span>
+                                </li>
+                                <li class="option">
+                                    <span class="option-text">苗栗縣</span>
+                                </li>
+                                <li class="option">
+                                    <span class="option-text">台中市</span>
+                                </li>
+                                <li class="option">
+                                    <span class="option-text">彰化縣</span>
+                                </li>
+                                <li class="option">
+                                    <span class="option-text">南投縣</span>
+                                </li>
+                                <li class="option">
+                                    <span class="option-text">嘉義縣市</span>
+                                </li>
+                                <li class="option">
+                                    <span class="option-text">高雄市</span>
+                                </li>
+                                <li class="option">
+                                    <span class="option-text">屏東縣</span>
+                                </li>
+                                <li class="option">
+                                    <span class="option-text">台東縣</span>
+                                </li>
+                                <li class="option">
+                                    <span class="option-text">花蓮縣</span>
+                                </li>
+                                <li class="option">
+                                    <span class="option-text">離島地區</span>
+                                </li>
+                            </ul>
+                    </ul>
+                    <div class="btn-box">
+                        <input type="button" name="btn__next" id="btn__next" title="下一步" value="下一步"
+                            onclick="changeToIssue()">
+                    </div>
+                </form>
             </div>
-            <form action="">
-                <ul class="title">
-                    <h2>心理師的性別</h2>
-                    <li class="option">
-                        <button>皆可</button>
-                        <button>女心理師</button>
-                        <button>男心理師</button>
-                    </li>
-                </ul>
-                <ul class="title">
-                    <h2>心理師擅長的諮商類型</h2>
-                    <li class="option">
-                        <button>皆可</button>
-                        <button>個別諮商</button>
-                        <button>伴侶諮商</button>
-                        <button>婚姻諮商</button>
-                        <button>家庭諮商</button>
-                        <button>團體諮商</button>
-                        <button>兒童諮商</button>
-                        <button>青少年諮商</button>
-                    </li>
-                </ul>
-                <ul class="title">
-                    <h2>心理師可預約的時段</h2>
-                    <li class="option">
-                        <button>皆可</button>
-                        <button>週一至週五</button>
-                        <button>假日</button>
-                        <button>24小時內</button>
-                    </li>
-                </ul>
-                <!-- https://youtu.be/59bhXBQL5m0?si=xRQSnxHnpSHw01OS -->
-                <ul class="title">
-                    <h2>心理師服務地區</h2>
-                    <div class="select-menu">
-                        <div class="select-btn">
-                            <span class="sBtn-text">請選擇地區</span>
-                            <i class="bx bx-chevron-down"></i>
-                        </div>
-                        <ul class="options">
-                            <li class="option">
-                                <span class="option-text">台北市</span>
-                            </li>
-                            <li class="option">
-                                <span class="option-text">新北市</span>
-                            </li>
-                            <li class="option">
-                                <span class="option-text">基隆市</span>
-                            </li>
-                            <li class="option">
-                                <span class="option-text">宜蘭縣</span>
-                            </li>
-                            <li class="option">
-                                <span class="option-text">桃園市</span>
-                            </li>
-                            <li class="option">
-                                <span class="option-text">新竹縣市</span>
-                            </li>
-                            <li class="option">
-                                <span class="option-text">苗栗縣</span>
-                            </li>
-                            <li class="option">
-                                <span class="option-text">台中市</span>
-                            </li>
-                            <li class="option">
-                                <span class="option-text">彰化縣</span>
-                            </li>
-                            <li class="option">
-                                <span class="option-text">南投縣</span>
-                            </li>
-                            <li class="option">
-                                <span class="option-text">嘉義縣市</span>
-                            </li>
-                            <li class="option">
-                                <span class="option-text">高雄市</span>
-                            </li>
-                            <li class="option">
-                                <span class="option-text">屏東縣</span>
-                            </li>
-                            <li class="option">
-                                <span class="option-text">台東縣</span>
-                            </li>
-                            <li class="option">
-                                <span class="option-text">花蓮縣</span>
-                            </li>
-                            <li class="option">
-                                <span class="option-text">離島地區</span>
-                            </li>
-                        </ul>
-                </ul>
-                <div class="btn-box">
-                    <input type="button" name="btn__next" id="btn__next" title="下一步" value="下一步" onclick="changeToIssue()">
-                </div>
-            </form>
-        </div>
 
-        <div id='issue' style="display: none;">
-            <div class="progress-bar">
-                <div class="progress99">
-                    <small>99%</small>
+            <div id='issue' style="display: none;">
+                <div class="progress-bar">
+                    <div class="progress99">
+                        <small>99%</small>
+                    </div>
                 </div>
+                <form action="">
+                    <ul class="title">
+                        <h2>想諮詢的議題</h2>
+                        <li class="option">
+                            <button type="button" onclick="toggleActive(this)">自我探索</button>
+                            <button type="button" onclick="toggleActive(this)">家庭議題</button>
+                            <button type="button" onclick="toggleActive(this)">職場適應</button>
+                            <button type="button" onclick="toggleActive(this)">親職教養</button>
+                            <button type="button" onclick="toggleActive(this)">情感議題</button>
+                            <button type="button" onclick="toggleActive(this)">情緒困擾</button>
+                            <button type="button" onclick="toggleActive(this)">人際關係</button>
+                            <button type="button" onclick="toggleActive(this)">性與性別</button>
+                            <button type="button" onclick="toggleActive(this)">其他</button>
+                        </li>
+                    </ul>
+                    </ul>
+                    <div class="btn-box">
+                        <input type="button" name="btn__back" id="btn__back" title="返回" value="返回"
+                            onclick="changeToGeneral()">
+                        <input type="button" name="btn__next" id="btn__next" title="送出" value="送出"
+                            onclick="submitForm()">
+                    </div>
             </div>
-            <form action="">
-                <ul class="title">
-                    <h2>想諮詢的議題</h2>
-                    <li class="option">
-                        <button>自我探索</button>
-                        <button>家庭議題</button>
-                        <button>職場適應</button>
-                        <button>親職教養</button>
-                        <button>情感議題</button>
-                        <button>情緒困擾</button>
-                        <button>人際關係</button>
-                        <button>性與性別</button>
-                        <button>其他</button>
-                    </li>
-                </ul>
-            </ul>
-            <div class="btn-box">
-                <input type="button" name="btn__back" id="btn__back" title="返回" value="返回" onclick="changeToGeneral()">
-                <input type="submit" name="btn__next" id="btn__next" title="送出" value="送出">
-            </div>
-        </div>
         </section>
     </main>
     <!-- 頁尾區 -->
@@ -171,27 +174,38 @@
         <small> 2024 Mooni. All Rights Reserved.</small>
     </footer>
     <script>
-    let generalDiv = '';
-    let issueDiv = '';
+        let generalDiv = '';
+        let issueDiv = '';
 
-    function getDiv() {
-        // 只取得操作的標籤div，不更改display屬性
-        generalDiv = document.querySelector('#general');
-        issueDiv = document.querySelector('#issue');
-    }
+        function getDiv() {
+            // 只取得操作的標籤div，不更改display屬性
+            generalDiv = document.querySelector('#general');
+            issueDiv = document.querySelector('#issue');
+        }
 
-    function changeToGeneral() {
-        getDiv();
-        generalDiv.style.display = 'block';
-        issueDiv.style.display = 'none';
-    }
+        function changeToGeneral() {
+            getDiv();
+            generalDiv.style.display = 'block';
+            issueDiv.style.display = 'none';
+        }
 
-    function changeToIssue() {
-        getDiv();
-        generalDiv.style.display = 'none';
-        issueDiv.style.display = 'block';
-    }
-</script>
+        function changeToIssue() {
+            getDiv();
+            generalDiv.style.display = 'none';
+            issueDiv.style.display = 'block';
+        }
+
+        function toggleActive(button) {
+            // 切换当前按钮的 active 状态
+            button.classList.toggle('active');
+        }
+
+        function submitForm() {
+            // 这里可以加入提交表单的逻辑或数据处理逻辑
+            window.location.href = './card-list.html';
+        }
+
+    </script>
     </script>
     <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>
     <script src="./javascripts/navbar.js"></script>
