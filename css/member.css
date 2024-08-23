@@ -54,7 +54,9 @@ body {
     font-size: 100%;
     line-height: 1.5;
     background-image: linear-gradient(to bottom, #f1f1f1 0%, #f7f3ff 25%, #a0bce5 100%);
-    min-height: 1080px;
+    min-height: 100vh;
+    position: relative;
+    background-size: cover;
 }
 
 h1,
@@ -84,10 +86,28 @@ ul {
 
 
 main {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	width: 100%;
+	justify-content: center;
 }
 
+.cloud {
+	bottom: 0;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: flex-end;
+	z-index: -1;
+	margin: 0;
+}
+
+.cloud img {
+	top: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
 /* 會員中心左側選單 */
 .member-left {
     width: 16%;
@@ -159,12 +179,17 @@ main {
 /* 表單 */
 .member-container {
     width: 50%;
+    min-width: 400px;
     height: fit-content;
     margin: 80px 0;
     padding: 60px;
     background-color: rgba(249, 249, 249, 0.9);
     border-radius: 12px;
     box-shadow: -4px -4px 20px rgba(255, 255, 255, 0.5), 4px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.member-container h1 {
+color: var(--black-800);
 }
 
 .title {
@@ -183,17 +208,17 @@ main {
 .tab {
     padding: 10px 20px;
     font-size: 16px;
-    color: #999;
+    color: var(--black-500-border);
     text-align: center;
     text-decoration: none;
     width: 100%;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid var(--black-500-border);
 }
 
 .tab.active {
-    color: #333;
+    color: var(--black-700);
     font-weight: bold;
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid var(--black-700);
 }
 
 .member-form {
@@ -209,8 +234,8 @@ main {
 
 label {
     font-size: 14px;
-    margin-bottom: 8px;
-    color: #333;
+    margin-right: 8px;
+    color: var(--black-700);
 }
 
 .required {
@@ -222,9 +247,11 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="date"] {
+    margin-top: 8px;
     padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
+    font-size: 1.4em;
+    font-weight: normal;
+    border: 1px solid var(--black-500-border);
     border-radius: 8px;
     background-color: transparent;
     outline: none;
@@ -235,16 +262,18 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
 input[type="date"]:focus {
-    border-color: #666;
+    border-color:var(--black-700-border);
 }
 
 .radio-group {
     display: flex;
-    gap: 20px;
+    align-items: center;
 }
 
+
 .radio-group input[type="radio"] {
-    margin-right: 6px;
+    margin: 8px;
+    background-color: transparent;
 }
 
 .radio-item {
@@ -253,17 +282,18 @@ input[type="date"]:focus {
 }
 
 .radio-item label {
-    margin-bottom: 0;
+    text-align: center;
 }
 
 .submit-button {
     width: 50%;
     margin: 0 auto;
     padding: 12px 0;
-    font-size: 18px;
+    font-size: 1.6em;
     font-weight: bold;
-    color: var(--white);
-    background-color: var(--primary-400);
+    letter-spacing: .2em;
+    color: var(--primary-500);
+    background-color: var(--primary-200);
     border: none;
     border-radius: 999px;
     text-align: center;
@@ -275,11 +305,12 @@ input[type="date"]:focus {
     width: 50%;
     margin: 0 auto;
     padding: 12px 0;
-    font-size: 18px;
+    font-size: 1.6em;
     font-weight: bold;
-    color: var(--primary-400);
+    letter-spacing: .2em;
+    color: var(--primary-200);
     background-color: transparent;
-    border: 2px solid var(--primary-400);
+    border: 2px solid var(--primary-200);
     border-radius: 999px;
     text-align: center;
     cursor: pointer;
@@ -307,7 +338,8 @@ input[type="date"]:focus {
 }
 
 .submit-button:hover {
-    background-color: #7fc179;
+    background-color: var(--primary-400);
+    color: var(--white);
 }
 
 .linkwrap {

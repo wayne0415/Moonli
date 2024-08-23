@@ -13,14 +13,14 @@
         <!-- 會員中心左側選單 -->
         <ul class="member-left">
             <li class="member-management">
-                <a href="#" class="big-item" id="membmanage">會員管理</a>
+                <a class="big-item">會員管理</a>
                 <ul class="dropdown">
                     <li><a href="#" class="small-item" onclick="changeToMemb()">會員資料</a></li>
                     <li><a href="#" class="small-item" onclick="changeToAcco()">帳號管理</a></li>
                 </ul>
             </li>
             <li class="appointment-management">
-                <a href="#" class="big-item" id="book">預約管理</a>
+                <a class="big-item">預約管理</a>
                 <ul class="dropdown">
                     <li><a href="#" class="small-item" onclick="changeToProg()">進行中</a></li>
                     <li><a href="#" class="small-item" onclick="changeToHist()">歷史紀錄</a></li>
@@ -206,89 +206,63 @@
                 <div id="faq" class="member-container" style="display: none;">
                     <h1 class="title">常見問題</h1>
                 </div>
-    </main>
+            </main>
+            <div class="cloud"><img src="./images/wave-white.svg" alt="背景雲"></div>
 
 
     <script>
-
-        let membDiv = '';
-        let accoDiv = '';
-        let pwDiv = '';
-        let progDiv = '';
-        let histDiv = '';
-        let likeDiv = '';
-        let privDiv = '';
-        let faqDiv = '';
-
-        function getDiv() {
-            // 先取得操作的標籤div
-            membDiv = document.querySelector('#memb');
-            accoDiv = document.querySelector('#acco');
-            pwDiv = document.querySelector('#pw');
-            progDiv = document.querySelector('#prog');
-            histDiv = document.querySelector('#hist');
-            likeDiv = document.querySelector('#like');
-            privDiv = document.querySelector('#priv');
-            faqDiv = document.querySelector('#faq');
-
-            // 再對標籤div操作
-            membDiv.style.display = 'none';
-            accoDiv.style.display = 'none';
-            pwDiv.style.display = 'none';
-            progDiv.style.display = 'none';
-            histDiv.style.display = 'none';
-            if (likeDiv) likeDiv.style.display = 'none'; // 加入條件檢查
-            if (privDiv) privDiv.style.display = 'none'; // 因為這些元素可能
-            if (faqDiv) faqDiv.style.display = 'none';   // 不存在於 DOM 中
+const divs = ['memb', 'acco', 'pw', 'prog', 'hist', 'like', 'priv', 'faq'];
+function getDiv() {
+    divs.forEach(id => {
+        const div = document.querySelector(`#${id}`);
+        if (div) {
+            div.style.display = 'none';
         }
+    });
+}
 
-        // 會員管理
         function changeToMemb() {
-            getDiv();
-            membDiv.style.display = 'block';
-        }
+    getDiv();
+    document.querySelector('#memb').style.display = 'block';
+}
 
-        // 帳號管理
-        function changeToAcco() {
-            getDiv();
-            accoDiv.style.display = 'block';
-        }
+function changeToAcco() {
+    getDiv();
+    document.querySelector('#acco').style.display = 'block';
+}
 
-        // 修改密碼
-        function changeToPw() {
-            getDiv();
-            pwDiv.style.display = 'block';
-        }
+function changeToPw() {
+    getDiv();
+    document.querySelector('#pw').style.display = 'block';
+}
 
-        // 進行中
-        function changeToProg() {
-            getDiv();
-            progDiv.style.display = 'block';
-        }
+function changeToProg() {
+    getDiv();
+    document.querySelector('#prog').style.display = 'block';
+}
 
-        // 歷史紀錄
-        function changeToHist() {
-            getDiv();
-            histDiv.style.display = 'block';
-        }
+function changeToHist() {
+    getDiv();
+    document.querySelector('#hist').style.display = 'block';
+}
 
-        // 已收藏
-        function changeToLike() {
-            getDiv();
-            if (likeDiv) likeDiv.style.display = 'block';  // 加入條件檢查
-        }
+function changeToLike() {
+    getDiv();
+    const likeDiv = document.querySelector('#like');
+    if (likeDiv) likeDiv.style.display = 'block';
+}
 
-        // 隱私
-        function changeToPriv() {
-            getDiv();
-            if (privDiv) privDiv.style.display = 'block';  // 加入條件檢查
-        }
+function changeToPriv() {
+    getDiv();
+    const privDiv = document.querySelector('#priv');
+    if (privDiv) privDiv.style.display = 'block';
+}
 
-        // 常見問題
-        function changeToFaq() {
-            getDiv();
-            if (faqDiv) faqDiv.style.display = 'block';    // 加入條件檢查
-        }
+function changeToFaq() {
+    getDiv();
+    const faqDiv = document.querySelector('#faq');
+    if (faqDiv) faqDiv.style.display = 'block';
+}
     </script>
 
     <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>
@@ -310,13 +284,6 @@
             }
         });
 
-        // let membmanage = document.querySelector(".member-management");
-
-        // if (membDiv.style.display === 'block' || accoDiv.style.display === 'block' || pwDiv.style.display === 'block') {
-        //             membmanage.classList.add('active'); // 添加active類名，模擬hover效果
-        //         } else {
-        //             membmanage.classList.remove('active'); // 移除active類名
-        //         }
     </script>
 </body>
 

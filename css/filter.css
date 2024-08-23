@@ -49,10 +49,13 @@ html {
 }
 
 body {
+	min-height: 100vh;
+	height: auto;
 	font-size: 100%;
 	line-height: 1.5;
 	background-image: linear-gradient(var(--gradient-sky-purple));
 	position: relative;
+	background-repeat: no-repeat;
 }
 
 h1,
@@ -70,7 +73,7 @@ ol {
 }
 
 img {
-	display: block;
+	display: flex;
 	width: 100%;
 	height: 100%;
 }
@@ -104,16 +107,22 @@ section {
 }
 
 .cloud {
-	position: absolute;
-	width: 100%;
 	top: 0;
+	position: fixed;
+	width: 100%;
+	height: 100%;
 	justify-content: center;
 	align-items: flex-end;
 	z-index: 1;
-	bottom: 0;
-	object-fit: cover;
+	margin: 0;
 }
 
+.cloud img {
+	top: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
 /* 選項按鈕區 */
 form {
 	display: flex;
