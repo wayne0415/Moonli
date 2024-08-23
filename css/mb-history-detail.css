@@ -51,8 +51,8 @@ body {
     background-color: #fff;
     border-radius: 16px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    max-width: 1000px; /* 增加寬度來容納兩個區塊 */
-    width: 60%;
+    max-width: 700vh; /* 增加寬度來容納兩個區塊 */
+    width: 30%;
     padding: 48px;
     gap: 20px; 
     display: flex;
@@ -197,11 +197,13 @@ body {
 
 .stars {
     display: flex;
+
 }
 
 .star {
     margin-right: 5px;
     font-size: 2rem;
+    width: 20%;
 }
 
 .item-left{
@@ -272,6 +274,7 @@ textarea::placeholder {
 .anonymous-share {
     display: flex;
     align-items: center;
+    max-width: 40%;
     font-size: 14px;
     color: #4A4A4A;
 }
@@ -295,8 +298,13 @@ textarea::placeholder {
     gap: 4%;
 }
 
+.btn-CTA span{
+    display: flex;
+    padding: 5px 80px ;
+}
+
 button {
-    padding: 10px 120px;
+    /* padding: 10px 120px; */
     font-size: 1.6rem;
     font-weight: bold;
     border-radius: 30px;
@@ -305,13 +313,13 @@ button {
     color:var(--primary-400);
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
+
 }
 
 .btn-turn-off {
     background-color: transparent;
     color: var(--primary-400);
     border: 3px solid var(--primary-400);
-
 }
 
 .btn-save {
