@@ -1,15 +1,5 @@
-/* Header */
 header {
-    background-color: rgb(51, 42, 84);
-}
-/* 定义一个平滑、连续的旋转动画 */
-@keyframes smooth-rotate {
-    0% {
-        transform: rotate(0turn);
-    }
-    100% {
-        transform: rotate(1turn);
-    }
+    background-color: rgb(50, 44, 79);
 }
 
 /* 頁面A：大LOGO+找心理師按鈕 */
@@ -33,6 +23,15 @@ header {
     max-width: 1200px;
     margin-bottom: 20px;
 }
+
+/* .home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+} */
 
 .home-images-moon {
     position: absolute;
@@ -89,6 +88,33 @@ header {
     padding: 16px 0px 16px 14px;
 }
 
+/* 原本月亮圖片的程式碼 */
+/* .home-images-moon-container {
+    position: absolute;
+    top: 5%;  
+    right: -45%; 
+    z-index: 10;
+    max-width: 300px; 
+}
+.home-images-moon-container img {
+    width: 100%; 
+    height: auto;
+    object-fit:cover;
+} */
+
+/* .home-images-moon{
+    position: absolute;
+    background: linear-gradient(to bottom, rgb(238, 233, 203),rgb(235, 216, 149));
+    width: 15vw;
+    max-width: 128px; 
+    height: auto; 
+    border-radius: 50%; 
+    top: 10%;  
+    right: -45%; 
+    box-shadow:
+        0px 0px 100px rgb(255, 255, 255,0.8);
+} */
+
 /* 頁面B：痛點 */
 #problems {
     position: relative;
@@ -115,30 +141,10 @@ header {
     color: #fff;
 }
 
-/* Icons and Images */
 .icon-anny,
 .icon-annoymoon,
 .item-6q {
     position: absolute;
-}
-
-.icon-annoymoon {
-    top: 58%;
-    right: 40%;
-}
-
-.icon-anny {
-    top: 50%;
-    right: 48%;
-    animation: smooth-rotate 5s linear infinite; /* 5秒内完成一次旋转，线性动画，无限循环 */
-    transform-origin: center; /* 设置旋转中心为中心点 */
-}
-
-.item-6q {
-    width: 75%;
-    opacity: 0; /* 初始完全透明 */
-    transform: scale(0.5); /* 初始縮小 */
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* 平滑過渡效果 */
 }
 
 .item-wave1,
@@ -148,15 +154,29 @@ header {
     position: absolute;
     bottom: 0;
 }
-.item-union {
-    position: absolute;
-    bottom: -700px; /* 初始位置在視窗下方 */
-
-    transform: translateY(0); /* 初始不變形 */
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* 平滑過渡效果 */
+.icon-annoymoon {
+    top: 58%;
+    right: 40%;
 }
 
-/* Z-Index Management */
+.icon-anny {
+    top: 50%;
+    right: 48%;
+}
+
+.item-6q {
+    width: 75%;
+}
+
+/* .item-q1,
+.item-q2,
+.item-q3,
+.item-q4,
+.item-q5,
+.item-q6 {
+    position: absolute;
+} */
+
 .icon-anny,
 .icon-annoymoon,
 .item-6q,
