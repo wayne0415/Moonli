@@ -61,12 +61,7 @@ body {
     min-height: 100vh;
 }
 
-<<<<<<< HEAD
-/*  卡片本體 */
-.container  {
-=======
 .container {
->>>>>>> 61888b9e41ebbc5a06a34ebb070c04f7054f619a
     background-color: #fff;
     border-radius: 16px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -76,14 +71,6 @@ body {
     text-align: center;
 }
 .info-section h2 {
-<<<<<<< HEAD
-    font-size: 2rem;
-    color:var(--black-800-main-text);
-    margin: 4px 0px;
-    font-weight: bold;
-    padding-bottom: 14px;
-    text-align:center;
-=======
     font-size: 1.8rem;
     color: var(--black-800-main-text);
     margin-top: 4px;
@@ -105,7 +92,6 @@ body {
     width: 70%;
     height: auto;
     border-radius: 12px;
->>>>>>> 61888b9e41ebbc5a06a34ebb070c04f7054f619a
 }
 
 .info-wrapper {
@@ -171,12 +157,7 @@ body {
     justify-content: center;
     width: 100%;
     margin-top: 4px;
-<<<<<<< HEAD
-    margin-bottom: 56px;
-    
-=======
     margin-bottom: 64px;
->>>>>>> 61888b9e41ebbc5a06a34ebb070c04f7054f619a
 }
 
 .moreInfo-box small {
@@ -222,23 +203,18 @@ button:hover {
     background-color: #856be7;
     border: 3px solid var(--primary-500);
     color: #fff;
-<<<<<<< HEAD
 }
-=======
-}
-/* 手機和小型螢幕的樣式 */
+
 @media (max-width: 768px) {
     button {
-        padding: 10px 60px; /* 減少按鈕內邊距 */
-        font-size: 1.4rem; /* 減小字體大小 */
+        padding: 10px 60px; 
+        font-size: 1.4rem; 
     }
 }
 
-/* 超小型螢幕（如手機）的樣式 */
 @media (max-width: 480px) {
     button {
-        padding: 10px 40px; /* 進一步減少內邊距 */
-        font-size: 1.2rem; /* 繼續減小字體大小 */
+        padding: 10px 40px; 
+        font-size: 1.2rem; 
     }
 }
->>>>>>> 61888b9e41ebbc5a06a34ebb070c04f7054f619a
