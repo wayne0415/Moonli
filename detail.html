@@ -7,6 +7,7 @@
     <title>心理師詳細頁面</title>
     <link rel="stylesheet" href="./css/detail.css">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/audio.css">
 </head>
 
 <body>
@@ -177,7 +178,7 @@
                 <div class="basic">
                     <div class="title">
                         <div class="name">
-                            <span>金弼弼</span>
+                            <span>陳美美</span>
                             <div class="social-icon">
                                 <i class="fa-brands fa-square-facebook"></i>
                                 <i class="fa-brands fa-instagram"></i>
@@ -220,9 +221,18 @@
 
                 <div class="data">
                     <span class="data__title">語音介紹</span>
-                    <span class="text">我不知道音樂播放器要放啥</span>
-                </div>
+                    <div class="soundtrack">
+                        <audio id="song">
+                            <source src="./audio/bubble for JYPnation_1720521884125534.mp4" type="audio/mpeg">
+                        </audio>
+                        <div onclick="playPause()"><i class="fa-solid fa-play controls" id="ctrlIcon"></i></div>
+                        <input type="range" value="0" id="progress">
 
+                        <div id="timeDisplay">
+                            <span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
+                        </div>
+                    </div>
+                </div>
                 <div class="data">
                     <span class="data__title">簡介</span>
                     <span class="text">恐懼的事物裡有屬於你的寶藏<br>
@@ -291,13 +301,13 @@
                                         失眠不僅包括無法入睡或睡眠不足，還包括難以維持睡眠、早醒或睡眠質量不佳等問題。失眠可以根據持續時間和頻率分為不同類別，主要包括以下幾種：1.暫時性失眠（Transient
                                         Insomnia）：指持續數天或數週的失眠問題，通常與壓力、焦...
                                     </span>
-    
+
                                     <a href="#" class="reading">繼續閱讀</a>
                                 </div>
                                 <span class="date">2024/07/11</span>
                             </div>
                         </a>
-    
+
                         <a href="#">
                             <div class="article">
                                 <img src="./images/article2.jpg" alt="">
@@ -314,7 +324,7 @@
                             </div>
                         </a>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -349,9 +359,9 @@
             }
         }
 
-        
-       // 获取元素
-       const profilePhoto = document.querySelector('.profile__photo');
+
+        // 获取元素
+        const profilePhoto = document.querySelector('.profile__photo');
         const title = document.querySelector('.content .title');
         const info = document.querySelector('.info');
 
@@ -395,6 +405,9 @@
         moveContent();
         window.addEventListener('resize', moveContent);
     </script>
+
+    <script src="./javascripts/audio.js"></script>
+    <script src="./javascripts/navbar.js"></script>
 </body>
 
 </html>
