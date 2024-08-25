@@ -187,6 +187,13 @@ body {
     text-align: center;
 }
 
+.wrapped {
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
 .rating-box {
     display: flex;
     align-items: center;
