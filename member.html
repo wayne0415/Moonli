@@ -50,7 +50,12 @@
                 <li><a href="#" class="small-item" onclick="changeToHist()">歷史紀錄</a></li>
             </ul>
         </li>
-        <li><a href="#" class="big-item" onclick="changeToLike()">已收藏</a></li>
+        <li class="liked">
+            <a class="big-item">已收藏</a>
+            <ul class="dropdown">
+                <li><a href="#" class="small-item" onclick="changeToLike()">心理師</a></li>
+                <li><a href="#" class="small-item" onclick="changeToArticle()">文章</a></li>
+            </ul>
         <li><a href="#" class="big-item" onclick="changeToPriv()">隱私政策</a></li>
         <li><a href="#" class="big-item" onclick="changeToFaq()">常見問題</a></li>
     </ul>
@@ -318,9 +323,13 @@
     </div>
     </div>
 
-    <!-- 已收藏卡片 -->
+    <!-- 已收藏心理師卡片 -->
     <div id="like" class="member-container" style="display: none;">
-        <h1 class="title">已收藏的心理師</h1>
+        <h1 class="title">已收藏</h1>
+        <div class="tabs">
+            <a href="#" class="tab active" onclick="changeToLike()">心理師</a>
+            <a href="#" class="tab" onclick="changeToArticle()">文章</a>
+        </div>
         <div class="container">
             <div class="info-img-wrap">
                 <img src="./images/psychologist.png" alt="心理諮商師 林菌傑" />
@@ -348,6 +357,36 @@
         </div>
     </div>
 
+    <!-- 已收藏文章卡片 -->
+    <div id="article" class="member-container" style="display: none;">
+        <h1 class="title">已收藏</h1>
+        <div class="tabs">
+            <a href="#" class="tab" onclick="changeToLike()">心理師</a>
+            <a href="#" class="tab active" onclick="changeToArticle()">文章</a>
+        </div>
+        <div class="container">
+            <div class="info-img-wrap">
+                <img src="./images/article2.jpg" alt="" />
+            </div>
+
+            <div class="article-details-wrap">
+                <div class="article-text">
+                        <h3>一定要有喜歡或交往過不同性別的人才能確定自己的性向嗎？</h3>
+                        <small>確定自己的性向並不一定需要與不同性別的人有過交往經歷。性向是個人對他人情感和性吸引的傾向，這種感覺可能會在不同的生活階段和經驗中逐漸明朗。有些人可能會通過與不同性別的人交往來了解自己的性向，但這不是必要的條件。每個人的經驗和自我發現過程都不同，有些人可能會通過其他方式來理解自己的性向。</small>
+                </div>
+                <div class="article-like">
+                    <div class="like"><img src="./images/icon-filled-star.svg" class="star"></img></div>
+                    <div class="moreInfo-box">
+                        <small>查看文章</small>
+                        <a href="#">
+                            <img src="./images/logo_moreinfo.svg" alt="一個向右指的箭頭">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- 隱私政策卡片 -->
     <div id="priv" class="member-container" style="display: none;">
         <h1 class="title">隱私政策</h1>
@@ -362,7 +401,7 @@
 
 
 <script>
-    const divs = ['memb', 'acco', 'pw', 'prog', 'hist', 'like', 'priv', 'faq'];
+    const divs = ['memb', 'acco', 'pw', 'prog', 'hist', 'like', 'article', 'priv', 'faq'];
     function getDiv() {
         divs.forEach(id => {
             const div = document.querySelector(`#${id}`);
@@ -403,6 +442,12 @@
         if (likeDiv) likeDiv.style.display = 'block';
     }
 
+    function changeToArticle() {
+        getDiv();
+        const faqArticle = document.querySelector('#article');
+        if (faqArticle) faqArticle.style.display = 'block';
+    }
+
     function changeToPriv() {
         getDiv();
         const privDiv = document.querySelector('#priv');
@@ -414,6 +459,8 @@
         const faqDiv = document.querySelector('#faq');
         if (faqDiv) faqDiv.style.display = 'block';
     }
+
+
 </script>
 
 <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>

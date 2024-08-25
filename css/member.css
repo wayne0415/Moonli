@@ -118,9 +118,6 @@ main {
     /* position: fixed; */
 }
 
-.member-management {
-    flex-direction: column;
-}
 
 .member-left li {
     display: flex;
@@ -151,7 +148,7 @@ main {
     padding-left: 20px;
 }
 
-.appointment-management {
+.member-management, .appointment-management, .liked {
     flex-direction: column;
 }
 
@@ -388,7 +385,7 @@ small {
 }
 
 .info-img-wrap {
-width: 40%;
+width: 100%;
 height: 100%;
 margin-right: 20px;
 }
@@ -430,6 +427,8 @@ justify-content: space-between;
 
 .moreInfo-box{
     display: flex;
+    width: 100%;
+    height: 100%;
     align-items: center;
     color: var(--black-700);
     gap: .5em;
@@ -439,6 +438,55 @@ justify-content: space-between;
 .moreInfo-box img {
     width: auto;
     height: .8em;
+}
+
+.article-details-wrap {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.article-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.article-text {
+    display: flex;
+    flex-direction: column;
+    width: 80%; 
+    height: 100%;
+}
+
+.article-text small {
+    overflow: hidden;
+	text-overflow: ellipsis;
+	/* 文字溢出時出現省略號，若有設定line-clamp，瀏覽器會自動加入 */
+	display: -webkit-box;
+	/* 彈性布局 */
+	-webkit-box-orient: vertical;
+	/* 定義垂直布局 */
+	-webkit-line-clamp: 3;
+}
+
+.article-text h3 {
+    font-size: 1.8em;
+    font-weight: bold;
+    line-height: 2em;
+	/* 單行省略 */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	/* 文字溢出時出現省略號，若有設定line-clamp，瀏覽器會自動加入 */
+	white-space: nowrap;
+}
+
+.article-like {
+    display: flex;
+    flex-direction: column;
+
 }
 
 .first-line {
