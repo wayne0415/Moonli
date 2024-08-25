@@ -32,7 +32,7 @@
     --primary-500: #856be7;
     --secondary-100: #e7f0ce;
     --secondary-400: #7fc179;
-
+    --red:#DD240B;
     --yellow: #ffee92;
 
     --btn-shadow: 4px 4px 8px rgba(196, 189, 210, 0.2), -4px -4px 8px rgb(255, 255, 255);
@@ -170,12 +170,6 @@ main {
     box-shadow: var(--btn-shadow);
 }
 
-/* 
-.member-management.active .big-item {
-    color: var(--white);
-    background-color: var(--primary-400);
-} */
-
 /* 表單 */
 .member-container {
     width: 50%;
@@ -186,6 +180,10 @@ main {
     background-color: rgba(249, 249, 249, 0.9);
     border-radius: 12px;
     box-shadow: -4px -4px 20px rgba(255, 255, 255, 0.5), 4px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media(max-width:400px) {
+
 }
 
 .member-container h1 {
@@ -239,7 +237,7 @@ label {
 }
 
 .required {
-    color: red;
+    color: var(--red);
     margin-left: 4px;
 }
 
@@ -270,7 +268,6 @@ input[type="date"]:focus {
     align-items: center;
 }
 
-
 .radio-group input[type="radio"] {
     margin: 8px;
     background-color: transparent;
@@ -292,8 +289,8 @@ input[type="date"]:focus {
     font-size: 1.6em;
     font-weight: bold;
     letter-spacing: .2em;
-    color: var(--primary-500);
-    background-color: var(--primary-200);
+    color: var(--white);
+    background-color: var(--primary-400);
     border: none;
     border-radius: 999px;
     text-align: center;
@@ -308,9 +305,9 @@ input[type="date"]:focus {
     font-size: 1.6em;
     font-weight: bold;
     letter-spacing: .2em;
-    color: var(--primary-200);
+    color: var(--primary-500);
     background-color: transparent;
-    border: 2px solid var(--primary-200);
+    border: 2px solid var(--primary-400);
     border-radius: 999px;
     text-align: center;
     cursor: pointer;
@@ -333,7 +330,7 @@ input[type="date"]:focus {
 .deldata {
     display: inline;
     margin: 10px auto;
-    color: #DD240B;
+    color: var(--red);
     cursor: pointer;
 }
 
@@ -369,6 +366,96 @@ input[type="date"]:focus {
 
 small {
     font-size: var(--small-cpation);
+}
+
+/* 心理師卡片 */
+
+.member-container .container-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.member-container .container {
+    display: flex;
+    width: 100%;
+    height: 24vh;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    color: var(--black-800);
+    box-shadow: inset var(--btn-shadow);
+    border-radius: 12px;
+}
+
+.info-img-wrap {
+width: 40%;
+height: 100%;
+margin-right: 20px;
+}
+
+.info-img-wrap img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.info-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-details-wrap{
+display: flex;
+width: 100%;
+height: 100%;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.info-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-details h3 {
+    font-size: 1.8em;
+    font-weight: bold;
+    line-height: 2em;
+}
+
+.status-cancelled{
+    color: var(--secondary-400);
+}
+
+.moreInfo-box{
+    display: flex;
+    align-items: center;
+    color: var(--black-700);
+    gap: .5em;
+    cursor: pointer;
+}
+
+.moreInfo-box img {
+    width: auto;
+    height: .8em;
+}
+
+.first-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tag {
+    color: var(--white);
+    background-color: var(--secondary-400);
+    border-radius: 99px;
+    padding: 2px 8px;
+}
+
+.full {
+    color: var(--red);
 }
 
 /* 頁尾 */
