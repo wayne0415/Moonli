@@ -68,7 +68,7 @@ body {
 
 /*-- 左邊欄位-詳細資訊  */
 
-.info-section{
+.info-section {
     display: flex;
     text-align: left;
     justify-content: space-between;
@@ -87,7 +87,8 @@ body {
 .info-photo-box {
     display: flex;
     justify-content: center;
-    height: 28vh;
+    height: 18vh;
+    max-width: 280px;
 }
 
 .therapist-photo {
@@ -344,18 +345,12 @@ button:hover {
         display: flex;
         justify-content: center;
     }
-}
+} */
 
 @media (max-width: 480px) {
-    .container {
-        max-width: 1200px;
-        width: 78%;
-        align-items: center;
-    }
-
     .main {
-        display: grid;
-        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .rating-section h3 {
@@ -388,22 +383,27 @@ button:hover {
         display: flex;
         justify-content: center;
     }
+    .more-info-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 56px;
+    }
+
     button {
         width: 100%;
         font-size: 1.2rem;
     }
-    .btn-turn-off {
-        margin-bottom: 10px;
-    }
 
-    .btn-turn-off span{
-            display: flex;
-        } 
+    .btn-turn-off span {
+        display: flex;
+        justify-content: center;
+    }
     .btn-box {
         display: flex;
         margin-top: 30px;
         width: 50%;
         flex-wrap: wrap;
         align-content: center;
-    }  
-}*/
+    }
+}
