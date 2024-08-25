@@ -1,0 +1,44 @@
+
+.soundtrack{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.soundtrack i{
+    display: block;
+    margin: 20px;
+    margin-left: 4px;
+    cursor: pointer;
+    font-size: 2.4rem;
+    color: var(--black-700);
+    cursor: pointer;
+}
+
+#progress{
+    -webkit-appearance: none;
+    width: 40%;
+    height: 6px;
+    background: var(--black-400);
+    border-radius: 100px;
+    cursor: pointer;
+    margin: 0;
+     /* 確保進度條顯示不重複 */
+     background-repeat: no-repeat;
+     background-position: left center;
+     background-size: 0% 100%; /* 初始顯示為0% */
+}
+
+#progress::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background: var(--black-700);
+    border-radius: 100px;
+    width: 12px;
+    height: 12px;
+}
+
+#timeDisplay {
+    margin: 20px;
+    font-size: 1.2rem;
+    color: var(--black-700);
+}
