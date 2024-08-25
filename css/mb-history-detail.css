@@ -51,8 +51,7 @@ body {
     background-color: #fff;
     border-radius: 16px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    /* max-width: 120vh; */
-    /* width: 40%; */
+    width: 45%;
     padding: 60px 40px;
     margin: 32px auto;
 }
@@ -63,7 +62,7 @@ body {
     justify-content: space-between;
     width: 100%;
     padding: 0 8px;
-    gap: 4%;
+    gap: 5%;
 }
 
 /*-- 左邊欄位-詳細資訊  */
@@ -87,13 +86,13 @@ body {
 .info-photo-box {
     display: flex;
     justify-content: center;
-    height: 18vh;
-    max-width: 280px;
+    height: 20vh;
+    /* max-width: 280px; */
 }
 
 .therapist-photo {
     object-fit: cover;
-    width: 100%;
+    width: auto;
     height: 100%;
     border-radius: 12px;
     margin-bottom: 16px;
@@ -333,61 +332,192 @@ button:hover {
     opacity: 0.8;
 }
 
-/* RWD  */
-/* @media (max-width: 768px) {
-    .container {
-        max-width: 1200px;
-        width: 70%;
-    }
-    .button {
-        width: 70%;
-        font-size: 1.4rem;
-        display: flex;
-        justify-content: center;
-    }
-} */
 
-@media (max-width: 480px) {
+/* 桌面佈局 - 寬度大於 992px */
+@media (min-width: 992px) {
+    .container {
+        max-width: 850px;
+        width: 70%;
+        padding: 60px;
+    }
     .main {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 40px;
+    }
+    .info-text{
+        justify-content: space-around;
+    }
+    .info-photo-box {
+        height: 30vh;
+    }
+    .btn-box {
+        justify-content: space-between;
+        margin-top: 40px;
     }
 
-    .rating-section h3 {
-        font-size: 1.4rem;
+    button {
+        width: 40%;
+        font-size: 1.6rem;
+    }
+}
+
+
+
+@media (max-width: 992px) {
+    .container {
+        width: 55%;
+        padding: 40px 20px;
     }
 
-    .rating-category span {
-        font-size: 1rem;
-    }
-
-    .info-section,
-    .rating-section {
-        width: 90%;
-    }
-
-    .info-row {
+    .main {
+        gap: 20px;
         display: flex;
-        text-align: center;
-        margin-bottom: 8px;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .info-section, .rating-section {
+        width: 100%;
+    }
+
+    .info-text{
+        justify-content: space-evenly;
+    }
+
+    .more-info-box {
+        margin-bottom: 32px;
+    }
+    
+    .rating-category {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        width: 100%;
+        justify-content: center;
         flex-direction: column;
     }
 
-    .info-row h2 {
-        font-size: 1.9rem;
-    }
     .rating-category span {
-        margin-right: 10px;
-        color: var(--black-700);
-        font-weight: 900;
-        display: flex;
-        justify-content: center;
+        padding-bottom: 4px;
+    }
+
+    .star-box {
+        gap: 4px;
+    }
+
+    .btn-box {
+        flex-direction: column;
+        width: 100%;
+        gap: 16px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 1.4rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 60%;
+        padding: 20px 10px;
+    }
+
+    .main {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .info-section, .rating-section {
+        width: 100%;
+    }
+    
+    .info-photo-box{
+        height: 18vh;
+    }
+    .info-text{
+        justify-content: space-evenly;
     }
     .more-info-box {
+        margin-bottom: 32px;
+    }
+
+    .rating-category {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        margin-bottom: 56px;
+        margin-bottom: 16px;
+        width: 100%;
+    }
+
+    .star-box {
+        gap: 4px;
+    }
+
+    .rating-category span {
+        padding-bottom: 4px;
+    }
+
+    .btn-box {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        justify-content: center; 
+        align-items: center; 
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .container {
+        width: 70%;
+        padding: 10px;
+    }
+    .info-section{
+        width: 10%;
+    }
+    
+    .main {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .info-photo-box{
+        height: 15vh;
+    }
+
+    .more-info-box img {
+        width: 100%;
+        height: auto;
+    }
+
+    .info-section, .rating-section {
+        width: 100%;
+    }
+
+    .rating-section h3, .info-section h3 {
+        font-size: 1.6rem;
+    }
+
+    .info-row h2{
+        font-size: 1.8rem;
+
+    }
+    
+    .rating-category span {
+        font-size: 1.4rem;
+    }
+
+    .star-box{
+        gap: 1%;
+        min-width: 15px;
     }
 
     button {
@@ -402,8 +532,8 @@ button:hover {
     .btn-box {
         display: flex;
         margin-top: 30px;
-        width: 50%;
-        flex-wrap: wrap;
-        align-content: center;
+        width: 100%;
+        justify-content: center; 
+        align-items: center; 
     }
 }
