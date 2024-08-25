@@ -344,18 +344,22 @@ input[type="date"]:focus {
 
 .linkwrap {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
     gap: 12px;
+    margin-top: 8px;
 }
 
 .fbgoogle img {
-    width: 48px;
-    height: auto;
+    width: auto;
+    height: 100%;
     margin-right: 8px;
 }
 
 .fbgoogle {
     display: flex;
-    padding: 10px 24px;
+    width: 100%;
+    padding: 4px 8px;
     align-items: center;
     font-size: 1.4em;
     border: 1px solid var(--black-500-border);

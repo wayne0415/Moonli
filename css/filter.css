@@ -214,6 +214,7 @@ small {
 	align-items: center;
 	gap: 20px;
 	padding: 0 2%;
+	margin-top: 8px
 }
 
 #btn__next {
@@ -235,7 +236,7 @@ small {
 	height: 40px;
 	color: var(--purple-400);
 	background-color: transparent;
-	border: var(--purple-400) solid 3px;
+	border: var(--purple-400) solid 2px;
 	font-size: 1.6rem;
 	font-weight: bold;
 	border-radius: 99px;
