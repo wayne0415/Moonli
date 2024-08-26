@@ -21,6 +21,24 @@
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
+    <header style="background-color: rgb(91, 97, 149);">
+        <a href="#" class="logo"><img src="./images/logo_NavBar.svg" alt="Moonli-logo" /></a>
+        <nav class="navbar">
+            <div class="navigation">
+                <a href="#" class="nav-menu">服務項目</a>
+                <a href="#" class="nav-menu">心理師列表</a>
+                <a href="#" class="nav-menu">常見問題</a>
+                <a href="#" class="nav-menu">相關資訊</a>
+                <a href="#" class="nav-menu">自我檢測</a>
+            </div>
+            <div class="login" id="bars">
+                <span>登入註冊</span>
+                <i class="fa-solid fa-bars" id="menu-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <script src="./javascripts/navbar.js"></script>
+
     <section>
         <!-- -----------------------側選單----------------------- -->
         <!-- -----------------------諮商師列表----------------------- -->
@@ -117,6 +135,7 @@
                         issue2: '失眠困擾',
                         issue3: '失戀情傷',
                         issue4: '家庭諮商',
+                        audio: './audio/bubble for JYPnation_1720521884125534.mp4'
                     }, {
                         id: 3,
                         img: "./images/諮商師3.jpg",
@@ -131,6 +150,7 @@
                         issue2: '失眠困擾',
                         issue3: '失戀情傷',
                         issue4: '家庭諮商',
+                        audio: './audio/bubble for JYPnation_1720521884125534.mp4'
                     }, {
                         id: 4,
                         img: "./images/諮商師4.jpg",
@@ -145,6 +165,7 @@
                         issue2: '失眠困擾',
                         issue3: '失戀情傷',
                         issue4: '家庭諮商',
+                        audio: './audio/bubble for JYPnation_1720521884125534.mp4'
                     },
                     {
                         id: 5,
@@ -160,6 +181,7 @@
                         issue2: '失眠困擾',
                         issue3: '失戀情傷',
                         issue4: '家庭諮商',
+                        audio: './audio/bubble for JYPnation_1720521884125534.mp4'
                     },
                     {
                         id: 6,
@@ -175,6 +197,7 @@
                         issue2: '失眠困擾',
                         issue3: '失戀情傷',
                         issue4: '家庭諮商',
+                        audio: './audio/bubble for JYPnation_1720521884125534.mp4'
                     },
 
                     // 可以在此添加更多產品
@@ -182,22 +205,6 @@
 
                 return (
                     <div>
-                        <header>
-                            <a href="#" class="logo"><img src="./images/logo_NavBar.svg" alt="Moonli-logo" /></a>
-                            <nav class="navbar">
-                                <div class="navigation">
-                                    <a href="#" class="nav-menu">服務項目</a>
-                                    <a href="#" class="nav-menu">心理師列表</a>
-                                    <a href="#" class="nav-menu">常見問題</a>
-                                    <a href="#" class="nav-menu">相關資訊</a>
-                                    <a href="#" class="nav-menu">自我檢測</a>
-                                </div>
-                                <div class="login" id="bars">
-                                    <span>登入註冊</span>
-                                    <i class="fa-solid fa-bars" id="menu-bars"></i>
-                                </div>
-                            </nav>
-                        </header>
 
                         <section>
                             <div className="container">
@@ -626,6 +633,7 @@
                                                 issue2={item.issue2}
                                                 issue3={item.issue3}
                                                 issue4={item.issue4}
+                                                audio={item.audio}
                                             />
                                         ))}
                                     </div>
@@ -642,11 +650,9 @@
         </script>
     </section>
 
-    <script src="./javascripts/navbar.js"></script>
     <script src="./javascripts/card-list-filter.js"></script>
     <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>
     <script src="./javascripts/card-list.js"></script>
-    <script src="./javascripts/audio.js"></script>
     <!-- <link rel="stylesheet" href="./React-data/stylesheets/all.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"> -->
 
