@@ -32,12 +32,12 @@
     --primary-500: #856be7;
     --secondary-100: #e7f0ce;
     --secondary-400: #7fc179;
-    --red:#DD240B;
+    --red: #DD240B;
     --yellow: #ffee92;
 
     --btn-shadow: 4px 4px 8px rgba(196, 189, 210, 0.2), -4px -4px 8px rgb(255, 255, 255);
-	--inset-shadow: inset 0 4px 10px rgba(214, 213, 221, .6);
-	--gradient-btn: rgba(234, 231, 237, 0.498), rgba(249, 249, 249, 0);
+    --inset-shadow: inset 0 4px 10px rgba(214, 213, 221, .6);
+    --gradient-btn: rgba(234, 231, 237, 0.498), rgba(249, 249, 249, 0);
 }
 
 html {
@@ -86,34 +86,35 @@ ul {
 
 
 main {
-	display: flex;
-	width: 100%;
-	justify-content: center;
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 .cloud {
-	bottom: 0;
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	justify-content: center;
-	align-items: flex-end;
-	z-index: -1;
-	margin: 0;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: -1;
+    margin: 0;
 }
 
 .cloud img {
-	top: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
+
 /* 會員中心左側選單 */
 .member-left {
     width: 16%;
     min-width: 160px;
     padding: 20px;
-    margin: 80px 40px 0 0; 
+    margin: 80px 40px 0 0;
     height: fit-content;
     /* position: fixed; */
 }
@@ -148,7 +149,9 @@ main {
     padding-left: 20px;
 }
 
-.member-management, .appointment-management, .liked {
+.member-management,
+.appointment-management,
+.liked {
     flex-direction: column;
 }
 
@@ -161,7 +164,8 @@ main {
     font-size: var(--body-text);
 }
 
-.small-item:hover, .big-item:hover  {
+.small-item:hover,
+.big-item:hover {
     color: var(--primary-500);
     background-image: linear-gradient(var(--gradient-btn));
     box-shadow: var(--btn-shadow);
@@ -179,12 +183,10 @@ main {
     box-shadow: -4px -4px 20px rgba(255, 255, 255, 0.5), 4px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-@media(max-width:400px) {
-
-}
+@media(max-width:400px) {}
 
 .member-container h1 {
-color: var(--black-800);
+    color: var(--black-800);
 }
 
 .title {
@@ -257,7 +259,7 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
 input[type="date"]:focus {
-    border-color:var(--black-700-border);
+    border-color: var(--black-700-border);
 }
 
 .radio-group {
@@ -366,17 +368,17 @@ small {
 }
 
 /* 心理師卡片 */
-
 .member-container .container-wrap {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
+
 .member-container .container {
     display: flex;
     width: 100%;
     height: 24vh;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 16px;
     color: var(--black-800);
@@ -385,9 +387,10 @@ small {
 }
 
 .info-img-wrap {
-width: 100%;
-height: 100%;
-margin-right: 20px;
+    width: 50%;
+    height: 100%;
+    margin-right: 20px;
+    max-width: 170px;
 }
 
 .info-img-wrap img {
@@ -402,12 +405,12 @@ margin-right: 20px;
     justify-content: space-between;
 }
 
-.info-details-wrap{
-display: flex;
-width: 100%;
-height: 100%;
-flex-direction: column;
-justify-content: space-between;
+.info-details-wrap {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .info-text {
@@ -421,78 +424,8 @@ justify-content: space-between;
     line-height: 2em;
 }
 
-.status-cancelled{
+.status-cancelled {
     color: var(--secondary-400);
-}
-
-.moreInfo-box{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    color: var(--black-700);
-    gap: .5em;
-    cursor: pointer;
-}
-
-.moreInfo-box img {
-    width: auto;
-    height: .8em;
-}
-
-.article-details-wrap {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: space-between;
-}
-
-.article-details {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-}
-
-.article-text {
-    display: flex;
-    flex-direction: column;
-    width: 80%; 
-    height: 100%;
-}
-
-.article-text small {
-    overflow: hidden;
-	text-overflow: ellipsis;
-	/* 文字溢出時出現省略號，若有設定line-clamp，瀏覽器會自動加入 */
-	display: -webkit-box;
-	/* 彈性布局 */
-	-webkit-box-orient: vertical;
-	/* 定義垂直布局 */
-	-webkit-line-clamp: 3;
-}
-
-.article-text h3 {
-    font-size: 1.8em;
-    font-weight: bold;
-    line-height: 2em;
-	/* 單行省略 */
-	overflow: hidden;
-	text-overflow: ellipsis;
-	/* 文字溢出時出現省略號，若有設定line-clamp，瀏覽器會自動加入 */
-	white-space: nowrap;
-}
-
-.article-like {
-    display: flex;
-    flex-direction: column;
-
-}
-
-.first-line {
-    display: flex;
-    align-items: center;
-    gap: 8px;
 }
 
 .tag {
@@ -504,6 +437,111 @@ justify-content: space-between;
 
 .full {
     color: var(--red);
+}
+
+
+.info-details p {
+    display: inline;
+    width: auto;
+    height: auto;
+}
+
+.moreInfo-box {
+    display: flex;
+    width: 60px;
+    height: auto;
+    justify-content: right;
+    align-items: center;
+    color: var(--black-700);
+    gap: .5em;
+    cursor: pointer;
+}
+
+.moreInfo-box img {
+    width: auto;
+    height: .8em;
+}
+
+/* 已收藏文章 */
+.article-img-wrap {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 170px;
+}
+
+.article-details-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 50%;
+    height: 100%;
+    margin: 0 16px;
+    justify-content: center;
+}
+
+.article-img-wrap img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: .8rem;
+}
+
+.article-details-wrap small {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 文字溢出時出現省略號，若有設定line-clamp，瀏覽器會自動加入 */
+    display: -webkit-box;
+    /* 彈性布局 */
+    -webkit-box-orient: vertical;
+    /* 定義垂直布局 */
+    -webkit-line-clamp: 4;
+}
+
+.article-details-wrap h3 {
+    font-size: 1.8em;
+    font-weight: bold;
+    line-height: 1.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 文字溢出時出現省略號，若有設定line-clamp，瀏覽器會自動加入 */
+    display: -webkit-box;
+    /* 彈性布局 */
+    -webkit-box-orient: vertical;
+    /* 定義垂直布局 */
+    -webkit-line-clamp: 2;
+}
+
+.article-like {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    height: 100%;
+    width: auto;
+}
+
+.first-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.like {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    justify-content: end;
+}
+
+.like img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    justify-content: end;
 }
 
 /* 頁尾 */
