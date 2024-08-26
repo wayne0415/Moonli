@@ -1,12 +1,12 @@
-let menubars = document.getElementById('bars');
+let bars = document.getElementById('bars');
 let navbar = document.querySelector('.navigation'); // 只選取第一個匹配的元素
 let cross = document.getElementById('menu-bars');
 
-menubars.addEventListener('click', () => {
+bars.addEventListener('click', () => {
     cross.classList.toggle('fa-bars');
     cross.classList.toggle('fa-x');
 
-    menubars.classList.toggle('active');
+    bars.classList.toggle('active');
 
     // 對第一個匹配的 .navigation 元素進行操作
     if (navbar) { // 確保 .navigation 元素存在
