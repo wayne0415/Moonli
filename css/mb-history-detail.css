@@ -255,6 +255,10 @@ body {
 .rating-experience {
     padding-top: 40px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 .rating-experience h3 {
     color: var(--black-800-main-text);
@@ -278,7 +282,7 @@ body {
 .anonymous-share {
     display: flex;
     align-items: center;
-    max-width: 40%;
+    max-width: 100%;
     font-size: 14px;
     color: #4a4a4a;
     justify-content: center;
@@ -413,6 +417,7 @@ button:hover {
     .star-box {
         gap: 4px;
     }
+
 
     .btn-box {
         flex-direction: column;
