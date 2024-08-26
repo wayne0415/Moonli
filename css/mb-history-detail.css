@@ -28,18 +28,16 @@
 
 html {
     font-size: 62.5%;
-    /* overflow-x: hidden; */
-    /* scroll-padding-top: 5.5rem; */
-    scroll-behavior: smooth;
-    /* letter-spacing: 0.12em; */
+    overflow-x: hidden;
+    /*scroll-padding-top: 5.5rem; */
+    /* scroll-behavior: smooth; */
+    letter-spacing: 0.12em;
 }
 
 /* 字體設定 */
 body {
     font-family: "Noto Sans", sans-serif;
     background-color: #f7f3ff;
-    /* font-size: 100%; */
-    /* line-height: 1.5; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,30 +46,35 @@ body {
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
     background-color: #fff;
     border-radius: 16px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    max-width: 700vh; /* 增加寬度來容納兩個區塊 */
-    width: 30%;
-    padding: 48px;
-    gap: 20px; 
-    display: flex;
-    flex-direction: column;
+    width: 45%;
+    padding: 60px 40px;
+    margin: 32px auto;
 }
+
 .main {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     justify-content: space-between;
-    gap: 32px; /* 區塊之間的間距 */
+    width: 100%;
+    padding: 0 8px;
+    gap: 5%;
+}
+
+/*-- 左邊欄位-詳細資訊  */
+
+.info-section {
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    flex-direction: column;
     width: 100%;
 }
 
-.member-history-box,
-.rating-section {
-    width: 48%; 
-}
-
-/* 預約詳細資訊區域 */
 .info-section h3 {
     font-size: 1.8rem;
     font-weight: bold;
@@ -80,77 +83,79 @@ body {
     text-align: center;
 }
 
+.info-photo-box {
+    display: flex;
+    justify-content: center;
+    height: 20vh;
+    /* max-width: 280px; */
+}
+
 .therapist-photo {
-    width: 55%;
-    height: auto;
+    object-fit: cover;
+    width: auto;
+    height: 100%;
     border-radius: 12px;
     margin-bottom: 16px;
 }
 
-.info-row h2 {
-    font-size: 2.4rem;
-    color: var(--black-700);
-    font-weight: 700;
-    margin-top: 4px;
-    text-align: center;
+.info-text {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px auto;
+    width: 100%;
 }
+
+.info-row {
+    margin-bottom: 8px;
+}
+
+.info-row .status-finished {
+    color: var(--secondary-400);
+}
+
 .info-row small {
     color: var(--black-700);
     font-weight: bold;
 }
 
-.info-row{
-    text-align: left;
-    margin-bottom: 8px;
-}
-
-.info-text {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
+.info-row h2 {
+    font-size: 2rem;
+    color: var(--black-700);
+    font-weight: 700;
+    margin-top: 4px;
+    text-align: center;
 }
 
 .info-details {
     color: var(--black-700);
     font-weight: 500;
     display: grid;
-    justify-content: end;
+    justify-content: center;
     text-align: left;
     margin-bottom: 8px;
-    line-height:1.6;
+    line-height: 1.6;
 }
 
-
-.info-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 16px;
+.info-details small {
+    color: var(--black-700);
+    font-weight: bold;
 }
-
-
-.info-row {
-    text-align: left;
-}
-
-/* .status-cancelled {
-    color: #d9534f;
-} */
 
 .info-details p {
-    font-size: 1.6rem;
     margin-bottom: 16px;
+    font-size: 1.4rem;
+    margin-right: 10px;
+    flex-basis: 80px;
+    color: var(--black-700);
+    /* font-weight: bold; */
 }
 
-/* 查看更多 */
+/* 左邊欄位裡的查看更多 */
 .more-info-box {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 24px;
-    /* width: 100%; 
-    margin-top: 4px;
-    margin-bottom: 64px; */
-    
 }
 
 .more-info-box small {
@@ -173,43 +178,16 @@ body {
     height: auto;
 }
 
-/* 右邊的評分區域和表單 */
+/* 右邊欄位 */
 .rating-section {
+    display: flex;
     text-align: left;
-    margin-top: 0;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
 }
 
-.rating-category {
-    display: flex;
-    align-items: flex-end;
-    margin-bottom: 16px;
-}
-.category1{
-    padding-right: 3rem;
-}
-.rating-category span {
-    font-size: 1.6rem;
-    margin-right: 10px;
-    flex-basis: 80px;
-    color: var(--black-700);
-    font-weight: 600;
-}
-
-.stars {
-    display: flex;
-
-}
-
-.star {
-    margin-right: 5px;
-    font-size: 2rem;
-    width: 20%;
-}
-
-.item-left{
-padding-top: 60px;
-}
-
+/*右邊欄位-特質評分區  */
 .rating-section h3 {
     font-size: 1.8rem;
     font-weight: bold;
@@ -218,47 +196,73 @@ padding-top: 60px;
     text-align: center;
 }
 
+.rating-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.rating-category {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 16px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.rating-category span {
+    font-size: 1.6rem;
+    color: var(--black-700);
+    font-weight: 900;
+}
+
 .stars {
     display: flex;
 }
 
-.star { 
-    margin-right: 4px;
-    font-weight:bold;
+.star-box {
+    display: flex;
+    width: auto;
+}
 
-    
+.star {
+    font-size: 2rem;
+    font-weight: bold;
+    width: 100%;
+    height: auto;
+    gap: 5%;
 }
 
 .star:last-child {
     margin-right: 0;
 }
 
-/* Media Queries for Responsive Design */
-@media (max-width: 768px) {
-    .rating-category span {
-        font-size: 1.4rem;
-        flex-basis: 100px;
-    }
-    
+/* RWD 星星 */
+/* @media (max-width: 768px) {
     .star {
-        font-size: 1.8rem;
+        width: 16px; 
     }
 }
 
 @media (max-width: 480px) {
-    .rating-category span {
-        font-size: 1.2rem;
-        flex-basis: 80px;
-    }
-    
     .star {
-        font-size: 1.6rem;
+        width: 14px; 
     }
-}
-/* 評價此經驗區域 */
-textarea {
+} */
+
+/*右邊欄位-心得分享區  */
+.rating-experience {
+    padding-top: 40px;
     width: 100%;
-    height: 24vh; 
+}
+.rating-experience h3 {
+    color: var(--black-800-main-text);
+}
+
+.rating-experience textarea {
+    width: 100%;
+    height: 28vh;
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -267,7 +271,7 @@ textarea {
     font-size: 14px;
 }
 
-textarea::placeholder {
+.rating-experience textarea::placeholder {
     color: #bbb;
 }
 
@@ -276,7 +280,8 @@ textarea::placeholder {
     align-items: center;
     max-width: 40%;
     font-size: 14px;
-    color: #4A4A4A;
+    color: #4a4a4a;
+    justify-content: center;
 }
 
 .anonymous-share input {
@@ -290,10 +295,9 @@ textarea::placeholder {
 }
 
 /* 按鈕區域 */
-.btn-CTA {
+.btn-box {
     display: flex;
     justify-content: center;
-    text-align: center;
     margin-top: 30px;
     gap: 4%;
 }
@@ -304,13 +308,17 @@ textarea::placeholder {
 }
 
 button {
-    /* padding: 10px 120px; */
+    width: 100%;
+    margin: 0 auto;
+    padding: 12px 0;
     font-size: 1.6rem;
+    max-width: 300px;
     font-weight: bold;
-    border-radius: 30px;
+    border-radius: 999px;
+    text-align: center;
     border: 3px solid var(--primary-400);
     background-color: transparent;
-    color:var(--primary-400);
+    color: var(--primary-400);
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 
@@ -323,10 +331,216 @@ button {
 }
 
 .btn-save {
-    background-color:var(--primary-400);
+    background-color: var(--primary-400);
     color: #fff;
 }
 
 button:hover {
     opacity: 0.8;
+}
+
+
+/* 桌面佈局 - 寬度大於 992px */
+@media (min-width: 992px) {
+    .container {
+        max-width: 850px;
+        width: 70%;
+        padding: 60px;
+    }
+    .main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 40px;
+    }
+    .info-text{
+        justify-content: space-around;
+    }
+    .info-photo-box {
+        height: 30vh;
+    }
+    .btn-box {
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+
+    button {
+        width: 40%;
+        font-size: 1.6rem;
+    }
+}
+
+
+
+@media (max-width: 992px) {
+    .container {
+        width: 55%;
+        padding: 40px 20px;
+    }
+
+    .main {
+        gap: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .info-section, .rating-section {
+        width: 100%;
+    }
+
+    .info-text{
+        justify-content: space-evenly;
+    }
+
+    .more-info-box {
+        margin-bottom: 32px;
+    }
+    
+    .rating-category {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .rating-category span {
+        padding-bottom: 4px;
+    }
+
+    .star-box {
+        gap: 4px;
+    }
+
+    .btn-box {
+        flex-direction: column;
+        width: 100%;
+        gap: 16px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 1.4rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 60%;
+        padding: 20px 10px;
+    }
+
+    .main {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .info-section, .rating-section {
+        width: 100%;
+    }
+    
+    .info-photo-box{
+        height: 18vh;
+    }
+    .info-text{
+        justify-content: space-evenly;
+    }
+    .more-info-box {
+        margin-bottom: 32px;
+    }
+
+    .rating-category {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 16px;
+        width: 100%;
+    }
+
+    .star-box {
+        gap: 4px;
+    }
+
+    .rating-category span {
+        padding-bottom: 4px;
+    }
+
+    .btn-box {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        justify-content: center; 
+        align-items: center; 
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .container {
+        width: 70%;
+        padding: 10px;
+    }
+    .info-section{
+        width: 10%;
+    }
+    
+    .main {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .info-photo-box{
+        height: 15vh;
+    }
+
+    .more-info-box img {
+        width: 100%;
+        height: auto;
+    }
+
+    .info-section, .rating-section {
+        width: 100%;
+    }
+
+    .rating-section h3, .info-section h3 {
+        font-size: 1.6rem;
+    }
+
+    .info-row h2{
+        font-size: 1.8rem;
+
+    }
+    
+    .rating-category span {
+        font-size: 1.4rem;
+    }
+
+    .star-box{
+        gap: 1%;
+        min-width: 15px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    .btn-turn-off span {
+        display: flex;
+        justify-content: center;
+    }
+    .btn-box {
+        display: flex;
+        margin-top: 30px;
+        width: 100%;
+        justify-content: center; 
+        align-items: center; 
+    }
 }

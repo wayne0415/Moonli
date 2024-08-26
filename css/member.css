@@ -32,7 +32,7 @@
     --primary-500: #856be7;
     --secondary-100: #e7f0ce;
     --secondary-400: #7fc179;
-
+    --red:#DD240B;
     --yellow: #ffee92;
 
     --btn-shadow: 4px 4px 8px rgba(196, 189, 210, 0.2), -4px -4px 8px rgb(255, 255, 255);
@@ -54,7 +54,9 @@ body {
     font-size: 100%;
     line-height: 1.5;
     background-image: linear-gradient(to bottom, #f1f1f1 0%, #f7f3ff 25%, #a0bce5 100%);
-    min-height: 1080px;
+    min-height: 100vh;
+    position: relative;
+    background-size: cover;
 }
 
 h1,
@@ -84,10 +86,28 @@ ul {
 
 
 main {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	width: 100%;
+	justify-content: center;
 }
 
+.cloud {
+	bottom: 0;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: flex-end;
+	z-index: -1;
+	margin: 0;
+}
+
+.cloud img {
+	top: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
 /* 會員中心左側選單 */
 .member-left {
     width: 16%;
@@ -98,9 +118,6 @@ main {
     /* position: fixed; */
 }
 
-.member-management {
-    flex-direction: column;
-}
 
 .member-left li {
     display: flex;
@@ -131,7 +148,7 @@ main {
     padding-left: 20px;
 }
 
-.appointment-management {
+.member-management, .appointment-management, .liked {
     flex-direction: column;
 }
 
@@ -150,21 +167,24 @@ main {
     box-shadow: var(--btn-shadow);
 }
 
-/* 
-.member-management.active .big-item {
-    color: var(--white);
-    background-color: var(--primary-400);
-} */
-
 /* 表單 */
 .member-container {
     width: 50%;
+    min-width: 400px;
     height: fit-content;
     margin: 80px 0;
     padding: 60px;
     background-color: rgba(249, 249, 249, 0.9);
     border-radius: 12px;
     box-shadow: -4px -4px 20px rgba(255, 255, 255, 0.5), 4px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media(max-width:400px) {
+
+}
+
+.member-container h1 {
+color: var(--black-800);
 }
 
 .title {
@@ -183,17 +203,17 @@ main {
 .tab {
     padding: 10px 20px;
     font-size: 16px;
-    color: #999;
+    color: var(--black-500-border);
     text-align: center;
     text-decoration: none;
     width: 100%;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid var(--black-500-border);
 }
 
 .tab.active {
-    color: #333;
+    color: var(--black-700);
     font-weight: bold;
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid var(--black-700);
 }
 
 .member-form {
@@ -209,12 +229,12 @@ main {
 
 label {
     font-size: 14px;
-    margin-bottom: 8px;
-    color: #333;
+    margin-right: 8px;
+    color: var(--black-700);
 }
 
 .required {
-    color: red;
+    color: var(--red);
     margin-left: 4px;
 }
 
@@ -222,9 +242,11 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="date"] {
+    margin-top: 8px;
     padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
+    font-size: 1.4em;
+    font-weight: normal;
+    border: 1px solid var(--black-500-border);
     border-radius: 8px;
     background-color: transparent;
     outline: none;
@@ -235,16 +257,17 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
 input[type="date"]:focus {
-    border-color: #666;
+    border-color:var(--black-700-border);
 }
 
 .radio-group {
     display: flex;
-    gap: 20px;
+    align-items: center;
 }
 
 .radio-group input[type="radio"] {
-    margin-right: 6px;
+    margin: 8px;
+    background-color: transparent;
 }
 
 .radio-item {
@@ -253,15 +276,16 @@ input[type="date"]:focus {
 }
 
 .radio-item label {
-    margin-bottom: 0;
+    text-align: center;
 }
 
 .submit-button {
     width: 50%;
     margin: 0 auto;
     padding: 12px 0;
-    font-size: 18px;
+    font-size: 1.6em;
     font-weight: bold;
+    letter-spacing: .2em;
     color: var(--white);
     background-color: var(--primary-400);
     border: none;
@@ -275,9 +299,10 @@ input[type="date"]:focus {
     width: 50%;
     margin: 0 auto;
     padding: 12px 0;
-    font-size: 18px;
+    font-size: 1.6em;
     font-weight: bold;
-    color: var(--primary-400);
+    letter-spacing: .2em;
+    color: var(--primary-500);
     background-color: transparent;
     border: 2px solid var(--primary-400);
     border-radius: 999px;
@@ -302,28 +327,33 @@ input[type="date"]:focus {
 .deldata {
     display: inline;
     margin: 10px auto;
-    color: #DD240B;
+    color: var(--red);
     cursor: pointer;
 }
 
 .submit-button:hover {
-    background-color: #7fc179;
+    background-color: var(--primary-400);
+    color: var(--white);
 }
 
 .linkwrap {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
     gap: 12px;
+    margin-top: 8px;
 }
 
 .fbgoogle img {
-    width: 48px;
-    height: auto;
+    width: auto;
+    height: 100%;
     margin-right: 8px;
 }
 
 .fbgoogle {
     display: flex;
-    padding: 10px 24px;
+    width: 100%;
+    padding: 4px 8px;
     align-items: center;
     font-size: 1.4em;
     border: 1px solid var(--black-500-border);
@@ -333,6 +363,147 @@ input[type="date"]:focus {
 
 small {
     font-size: var(--small-cpation);
+}
+
+/* 心理師卡片 */
+
+.member-container .container-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.member-container .container {
+    display: flex;
+    width: 100%;
+    height: 24vh;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    color: var(--black-800);
+    box-shadow: inset var(--btn-shadow);
+    border-radius: 12px;
+}
+
+.info-img-wrap {
+width: 100%;
+height: 100%;
+margin-right: 20px;
+}
+
+.info-img-wrap img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.info-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-details-wrap{
+display: flex;
+width: 100%;
+height: 100%;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.info-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-details h3 {
+    font-size: 1.8em;
+    font-weight: bold;
+    line-height: 2em;
+}
+
+.status-cancelled{
+    color: var(--secondary-400);
+}
+
+.moreInfo-box{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    color: var(--black-700);
+    gap: .5em;
+    cursor: pointer;
+}
+
+.moreInfo-box img {
+    width: auto;
+    height: .8em;
+}
+
+.article-details-wrap {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.article-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.article-text {
+    display: flex;
+    flex-direction: column;
+    width: 80%; 
+    height: 100%;
+}
+
+.article-text small {
+    overflow: hidden;
+	text-overflow: ellipsis;
+	/* 文字溢出時出現省略號，若有設定line-clamp，瀏覽器會自動加入 */
+	display: -webkit-box;
+	/* 彈性布局 */
+	-webkit-box-orient: vertical;
+	/* 定義垂直布局 */
+	-webkit-line-clamp: 3;
+}
+
+.article-text h3 {
+    font-size: 1.8em;
+    font-weight: bold;
+    line-height: 2em;
+	/* 單行省略 */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	/* 文字溢出時出現省略號，若有設定line-clamp，瀏覽器會自動加入 */
+	white-space: nowrap;
+}
+
+.article-like {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.first-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tag {
+    color: var(--white);
+    background-color: var(--secondary-400);
+    border-radius: 99px;
+    padding: 2px 8px;
+}
+
+.full {
+    color: var(--red);
 }
 
 /* 頁尾 */

@@ -11,48 +11,49 @@
 <body>
     <main id="member-history" class="container">
         <section class="main">
-                <div class="member-history-box">
-                    <div class="info-section">
-                        <h3>預約詳細資訊</h3>
-                        <!-- 詳細資訊 -->
-                        <div class="info-wrapper">
-                            <img src="./images/Profile.jpg" alt="心理諮商師 林菌傑" class="therapist-photo">
-                        </div>
-                        <div class="info-text">
-                            <div class="info-row">
-                                <small> 心理諮商師</small>
-                                <h2> 林菌傑</h2>
-                            </div>
-                            <div class="info-row">
-                                <small> 預約狀態</small>
-                                <h2 class="status-cancelled">已完成</h2>
-                            </div>
-                        </div>
-                        <div class="info-details">
-                            <small>預約時間</small>
-                            <p>2024/7/6 週二 18:00</p>
-                            <small>預約地點</small>
-                            <p>早安午安晚安心理諮商所</p>
-                            <small>地址</small>
-                            <p> 100 台北市中正區濟南路一段321號</p>
-                            <small>價格</small>
-                            <p>2200/小時</p>
-                        </div>
-                        <!-- 看更多-超連結 -->
-                        <div class="more-info-box">
-                            <small>查看此心理師詳細頁面</small>
-                            <a href="#">
-                                <img src="./images/logo_moreinfo.svg" alt="一個向右指的箭頭">
-                            </a>
-                        </div>
+            <!-- 左欄位 -->
+            <div class="info-section">
+                <h3>預約詳細資訊</h3>
+                <!-- 詳細資訊 -->
+                <div class="info-photo-box">
+                    <img src="./images/psychologist.png" alt="心理諮商師 林菌傑" class="therapist-photo">
+                </div>
+                <div class="info-text">
+                    <div class="info-row">
+                        <small> 心理諮商師</small>
+                        <h2> 林菌傑</h2>
+                    </div>
+                    <div class="info-row">
+                        <small> 預約狀態</small>
+                        <h2 class="status-finished">已完成</h2>
                     </div>
                 </div>
-                <div class="rating-section">
+                <div class="info-details">
+                    <small>預約時間</small>
+                    <p>2024/7/6 週二 18:00</p>
+                    <small>預約地點</small>
+                    <p>早安午安晚安心理諮商所</p>
+                    <small>地址</small>
+                    <p> 100 台北市中正區濟南路一段321號</p>
+                    <small>價格</small>
+                    <p>2200/小時</p>
+                </div>
+                <!-- 看更多 -->
+                <div class="more-info-box">
+                    <small>查看此心理師詳細頁面</small>
+                    <a href="#">
+                        <img src="./images/logo_moreinfo.svg" alt="一個向右指的箭頭">
+                    </a>
+                </div>
+            </div>
+            <!-- 右欄位 -->
+            <div class="rating-section">
                 <!--五星評分區 -->
+                <div class="rating-box">
                     <h3>諮商風格評分</h3>
                     <div class="rating-category">
                         <span>溫柔</span>
-                        <div class="stars">
+                        <div class="star-box">
                             <img src="./images/icon-filled-star.svg" class="star"></img>
                             <img src="./images/icon-filled-star.svg" class="star"></img>
                             <img src="./images/icon-filled-star.svg" class="star"></img>
@@ -62,7 +63,7 @@
                     </div>
                     <div class="rating-category">
                         <span>主動主導</span>
-                        <div class="stars">
+                        <div class="star-box">
                             <img src="./images/icon-filled-star.svg" class="star"></img>
                             <img src="./images/icon-filled-star.svg" class="star"></img>
                             <img src="./images/icon-filled-star.svg" class="star"></img>
@@ -72,7 +73,7 @@
                     </div>
                     <div class="rating-category">
                         <span>被動引導</span>
-                        <div class="stars">
+                        <div class="star-box">
                             <img src="./images/icon-filled-star.svg" class="star"></img>
                             <img src="./images/icon-filled-star.svg" class="star"></img>
                             <img src="./images/icon-filled-star.svg" class="star"></img>
@@ -82,7 +83,7 @@
                     </div>
                     <div class="rating-category">
                         <span>情緒同理</span>
-                        <div class="stars">
+                        <div class="star-box">
                             <img src="./images/icon-filled-star.svg" class="star"></img>
                             <img src="./images/icon-filled-star.svg" class="star"></img>
                             <img src="./images/icon-filled-star.svg" class="star"></img>
@@ -92,29 +93,31 @@
                     </div>
                     <div class="rating-category">
                         <span>認知思考</span>
-                        <div class="stars">
+                        <div class="star-box">
                             <img src="./images/icon-filled-star.svg" class="star"></img>
                             <img src="./images/icon-filled-star.svg" class="star"></img>
                             <img src="./images/icon-filled-star.svg" class="star"></img>
                             <img src="./images/icon-filled-star.svg" class="star"></img>
                             <img src="./images/icon-filled-star.svg" class="star"></img>
-                        </div>
-                    </div>
-                <!--心得分享區 -->
-                    <div class="item-left">
-                        <h3>評價此經驗</h3>
-                        <textarea id="experience" name="experience" rows="4" placeholder="請輸入您的寶貴評論"></textarea>
-                        <div class="anonymous-share">
-                                <input type="checkbox" id="anonymous" name="anonymous" class="checkbox">
-                                <label for="anonymous">我願意匿名分享</label>
                         </div>
                     </div>
                 </div>
+                <!--心得分享區 -->
+                <div class="rating-experience">
+                    <h3>評價此經驗</h3>
+                    <textarea id="experience" name="experience" rows="4" placeholder="請輸入您的寶貴評論"></textarea>
+                    <div class="anonymous-share">
+                        <input type="checkbox" id="anonymous" name="anonymous" class="checkbox">
+                        <label for="anonymous">我願意匿名分享</label>
+                    </div>
+                </div>
+            </div>
         </section>
-                <!--按鈕區  -->
-        <section class="btn-CTA">
-                <button class="btn-turn-off"><span>關閉</span></button>
-                <button class="btn-save"><span>儲存</span></button>
+
+        <!--按鈕區  -->
+        <section class="btn-box">
+            <button class="btn-turn-off"><span>關閉</span></button>
+            <button class="btn-save"><span>儲存</span></button>
         </section>
     </main>
 </body>

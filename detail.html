@@ -7,6 +7,7 @@
     <title>心理師詳細頁面</title>
     <link rel="stylesheet" href="./css/detail.css">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/audio.css">
 </head>
 
 <body>
@@ -177,7 +178,7 @@
                 <div class="basic">
                     <div class="title">
                         <div class="name">
-                            <span>金弼弼</span>
+                            <span>陳美美</span>
                             <div class="social-icon">
                                 <i class="fa-brands fa-square-facebook"></i>
                                 <i class="fa-brands fa-instagram"></i>
@@ -220,9 +221,18 @@
 
                 <div class="data">
                     <span class="data__title">語音介紹</span>
-                    <span class="text">我不知道音樂播放器要放啥</span>
-                </div>
+                    <div class="soundtrack">
+                        <audio id="song">
+                            <source src="./audio/bubble for JYPnation_1720521884125534.mp4" type="audio/mpeg">
+                        </audio>
+                        <div onclick="playPause()"><i class="fa-solid fa-play controls" id="ctrlIcon"></i></div>
+                        <input type="range" value="0" id="progress">
 
+                        <div id="timeDisplay">
+                            <span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
+                        </div>
+                    </div>
+                </div>
                 <div class="data">
                     <span class="data__title">簡介</span>
                     <span class="text">恐懼的事物裡有屬於你的寶藏<br>
@@ -279,39 +289,42 @@
 
                 <div class="data">
                     <span class="data__title">相關文章</span>
-                    <a href="#">
-                        <div class="article">
-                            <img src="./images/article.jpg" alt="">
-                            <div class="article__content">
-                                <span class="article__title">
-                                    明明身體很累，但心理上抗拒睡覺，算是失眠嗎？
-                                </span>
-                                <span class="body">
-                                    失眠不僅包括無法入睡或睡眠不足，還包括難以維持睡眠、早醒或睡眠質量不佳等問題。失眠可以根據持續時間和頻率分為不同類別，主要包括以下幾種：1.暫時性失眠（Transient
-                                    Insomnia）：指持續數天或數週的失眠問題，通常與壓力、焦...
-                                </span>
+                    <div class="wrap">
+                        <a href="#">
+                            <div class="article">
+                                <img src="./images/article.jpg" alt="">
+                                <div class="article__content">
+                                    <span class="article__title">
+                                        明明身體很累，但心理上抗拒睡覺，算是失眠嗎？
+                                    </span>
+                                    <span class="body">
+                                        失眠不僅包括無法入睡或睡眠不足，還包括難以維持睡眠、早醒或睡眠質量不佳等問題。失眠可以根據持續時間和頻率分為不同類別，主要包括以下幾種：1.暫時性失眠（Transient
+                                        Insomnia）：指持續數天或數週的失眠問題，通常與壓力、焦...
+                                    </span>
 
-                                <a href="#" class="reading">繼續閱讀</a>
+                                    <a href="#" class="reading">繼續閱讀</a>
+                                </div>
+                                <span class="date">2024/07/11</span>
                             </div>
-                            <span class="date">2024/07/11</span>
-                        </div>
-                    </a>
+                        </a>
 
-                    <a href="#">
-                        <div class="article">
-                            <img src="./images/article2.jpg" alt="">
-                            <div class="article__content">
-                                <span class="article__title">
-                                    一定要有喜歡或交往過不同性別的人才能確定自己的性向嗎？
-                                </span>
-                                <span class="body">
-                                    確定自己的性向並不一定需要與不同性別的人有過交往經歷。性向是個人對他人情感和性吸引的傾向，這種感覺可能會在不同的生活階段和經驗中逐漸明朗。有些人可能會通過與不同性別的人交往來了解自己的性向，但這不是必要的條件。每個人的經驗和自我發現過程都不同，有些人可能會通過其他方式來理解自己的性向。
-                                </span>
-                                <a href="#" class="reading">繼續閱讀</a>
+                        <a href="#">
+                            <div class="article">
+                                <img src="./images/article2.jpg" alt="">
+                                <div class="article__content">
+                                    <span class="article__title">
+                                        一定要有喜歡或交往過不同性別的人才能確定自己的性向嗎？
+                                    </span>
+                                    <span class="body">
+                                        確定自己的性向並不一定需要與不同性別的人有過交往經歷。性向是個人對他人情感和性吸引的傾向，這種感覺可能會在不同的生活階段和經驗中逐漸明朗。有些人可能會通過與不同性別的人交往來了解自己的性向，但這不是必要的條件。每個人的經驗和自我發現過程都不同，有些人可能會通過其他方式來理解自己的性向。
+                                    </span>
+                                    <a href="#" class="reading">繼續閱讀</a>
+                                </div>
+                                <span class="date">2024/07/11</span>
                             </div>
-                            <span class="date">2024/07/11</span>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -320,6 +333,80 @@
     <!-- ====================================諮商師頁面 end==================================== -->
 
     <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>
+    <script src="./javascripts/navbar.js"></script>
+    <script>
+        function moveContent() {
+            const calendar = document.querySelector('.calendar');
+            const style = document.querySelector('.block__content.style');
+            const map = document.querySelector('.block__content.map');
+            const notice = document.querySelector('.block__content.notice');
+            const content = document.querySelector('.content');
+            const screenWidth = window.innerWidth;
+
+            // 移动内容到 .content
+            if (screenWidth <= 768) {
+                if (calendar) content.appendChild(calendar);
+                if (style) content.appendChild(style);
+                if (map) content.appendChild(map);
+                if (notice) content.appendChild(notice);
+            } else {
+                // 恢复内容到 .info
+                const info = document.querySelector('.info');
+                if (calendar) info.appendChild(calendar);
+                if (style) info.appendChild(style);
+                if (map) info.appendChild(map);
+                if (notice) info.appendChild(notice);
+            }
+        }
+
+
+        // 获取元素
+        const profilePhoto = document.querySelector('.profile__photo');
+        const title = document.querySelector('.content .title');
+        const info = document.querySelector('.info');
+
+        // 函数：移动元素
+        function moveProfilePhoto() {
+            if (window.innerWidth <= 768) {
+                // 如果宽度小于等于768px，检查 .title 是否已有 .profile__photo
+                if (!title.querySelector('.profile__photo')) {
+                    // 创建一个新的 div，并将 profilePhoto 移动到新的 div 中
+                    const newDiv = document.createElement('div');
+                    newDiv.className = 'profile__photo';
+                    newDiv.innerHTML = profilePhoto.innerHTML; // 复制内容
+
+                    // 将新的 div 添加到 .title 的开头
+                    title.insertAdjacentElement('afterbegin', newDiv);
+
+                    // 从 .info 中移除原始 .profile__photo
+                    profilePhoto.remove();
+                }
+            } else {
+                // 如果宽度大于768px，将 .profile__photo 移动回原位置
+                if (title.querySelector('.profile__photo')) {
+                    // 移除 .profile__photo 内的内容并移回 .info
+                    const profilePhotoInTitle = title.querySelector('.profile__photo');
+                    if (profilePhotoInTitle) {
+                        // 移回 .info 的开头
+                        info.insertAdjacentElement('afterbegin', profilePhotoInTitle);
+                    }
+                }
+            }
+        }
+
+        // 初次调用函数
+        moveProfilePhoto();
+
+        // 监听窗口大小变化事件
+        window.addEventListener('resize', moveProfilePhoto);
+
+
+        // 初始化和监听窗口调整事件
+        moveContent();
+        window.addEventListener('resize', moveContent);
+    </script>
+
+    <script src="./javascripts/audio.js"></script>
     <script src="./javascripts/navbar.js"></script>
 </body>
 

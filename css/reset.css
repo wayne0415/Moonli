@@ -31,12 +31,14 @@
 
     --secondary-100: #e7f0ce;
     --secondary-300: #ABD795;
+    --secondary-200:#CBE4B7;
     --secondary-400: #7fc179;
 
     --yellow: #ffee92;
 
     /* 灰階 */
 	--card:rgba(249, 249, 249, 0.9);
+    --black-400:#ECECEC;
 	--black-500: rgba(211, 211, 211, 0.447);
 	--black-600: rgb(144, 144, 144);
 	--black-700: rgb(111, 111, 111);

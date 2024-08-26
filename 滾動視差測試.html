@@ -18,7 +18,7 @@
                 width: 200px;
                 height: 200px;
                 background-color: coral;
-                transition: transform 0.1s ease-out; /* 平滑過渡效果 */
+                transition: tranform 0.1s ease-out;
             }
         </style>
     </head>
@@ -30,7 +30,7 @@
             const square = document.getElementById("square");
             let rotation = 0; // 初始旋轉角度為 0
 
-            window.addEventListener("scroll", function () {
+            window.addEventListener("scroll", () => {
                 const scrollY = window.scrollY; // 獲取滾動距離
                 rotation = scrollY % 360; // 設置旋轉角度，讓它在 0 到 360 度之間循環
                 square.style.transform = `rotate(${rotation}deg)`; // 應用旋轉變換
