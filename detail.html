@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/detail.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/audio.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
@@ -93,8 +94,123 @@
                         </div>
                     </div>
 
-                    <button class="reservation">馬上預約</button>
+                    <button class="service__button">馬上預約</button>
                 </div>
+                <div class="service__modal">
+                    <form class="service__modal-content">
+                        <h4>預約心理諮商</h4>
+                        <span>心理諮商師 林菌傑<br>
+                            時間 7/6 週二 18:00<br>
+                            地點 早安午安晚安心理諮商所<br>
+                            地址 100台北市中正區濟南路一段321號<br>
+                        </span>
+                        <div class="dropdown__options">
+                            <div class="select-menu">
+                                <div class="select-btn">
+                                    <span class="sBtn-text">諮商類型</span>
+                                    <i class="bx bx-chevron-down"></i>
+                                </div>
+                                <ul class="options">
+                                    <li class="option">
+                                        <span class="option-text">皆可</span>
+                                        <span class="option-text">個別諮商</span>
+                                        <span class="option-text">伴侶諮商</span>
+                                        <span class="option-text">婚姻諮商</span>
+                                        <span class="option-text">家庭諮商</span>
+                                        <span class="option-text">團體諮商</span>
+                                        <span class="option-text">兒童諮商</span>
+                                        <span class="option-text">青少年諮商</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="select-menu">
+                                <div class="select-btn">
+                                    <span class="sBtn-text">擅長議題</span>
+                                    <i class="bx bx-chevron-down"></i>
+                                </div>
+                                <ul class="options">
+                                    <li class="option">
+                                        <span class="option-text">自我探索</span>
+                                        <span class="option-text">家庭議題</span>
+                                        <span class="option-text">職場適應</span>
+                                        <span class="option-text">親職教養</span>
+                                        <span class="option-text">情感議題</span>
+                                        <span class="option-text">情緒困擾</span>
+                                        <span class="option-text">人際關係</span>
+                                        <span class="option-text">性與性別</span>
+                                        <span class="option-text">其他</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="reservation" value="會員本人預約，同會員資料" onclick="onlyOne(this)">
+                                會員本人預約，同會員資料
+                            </label>
+                            <label>
+                                <input type="checkbox" name="reservation" value="非會員本人預約，可先填寫下方資料" onclick="onlyOne(this)">
+                                非會員本人預約，可先填寫下方資料
+                            </label>
+                        </div>
+                        <div class="info-form">
+                            <div class="form-group">
+                                <label for="name">本名 <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" />
+                            </div>
+                            <div class="form-group">
+                                <label>性別 <span class="required">*</span></label>
+                                <div class="radio-group">
+                                    <input type="radio" id="male" name="gender" checked />
+                                    <label for="male">男性</label>
+                                    <input type="radio" id="female" name="gender" />
+                                    <label for="female">女性</label>
+                                    <input type="radio" id="other" name="gender" />
+                                    <label for="other">其他</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="birthday">生日 <span class="required">*</span></label>
+                                <input type="date" id="birthday" name="birthday" />
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">聯絡電話 <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">聯絡信箱 <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" />
+                            </div>
+                            <div class="form-group">
+                                <label for="line">Line帳號 <span class="required">*</span></label>
+                                <input type="text" id="line" name="line" />
+                            </div>
+                            <div class="input">
+                                <span>想讓心理師知道的事</span>
+                                <textarea name=""></textarea>
+                            </div>
+                        </div>
+                        <div class="notice">
+                            <span>注意事項</span>
+                            <ul class="list">
+                                <li>此表單內容僅作為預約心理諮商使用，請安心填寫。</li>
+                                <li>預約完成後如需取消或調整時間，請於該次心理諮商原定時間24小時前，透過服務方提供之聯繫方式直接向服務方聯繫，由服務方進行取消預約。</li>
+                                <li>如服務方需另外調整時間，會由專人於該次心理諮商原定時間24小時前，透過您所留下之聯繫方式直接向您聯繫，敬請留意相關訊息。</li>
+                                <li>本平臺僅提供媒合服務，不包含付款功能，亦無退款機制，預約完成後將由服務方提供付款資訊，若付款未完成，服務方保留取消預約之權利，敬請留意。</li>
+                                <li>按下確認預約後，即表示您已詳閱並同意我們的服務條款。</li>
+                            </ul>
+                        </div>
+
+
+                        <div class="button">
+                            <button id='service__modal-close'>關閉</button>
+                            <button id="service__modal-next">確認預約</button>
+                        </div>
+                    </form>
+                </div>
+
+
 
                 <div class="block__content style">
                     <span>諮商風格</span>
@@ -172,6 +288,7 @@
                         <li>按下確認預約後，即表示您已詳閱並同意我們的服務條款。</li>
                     </ul>
                 </div>
+
             </div>
 
             <div class="content">
@@ -333,78 +450,7 @@
     <!-- ====================================諮商師頁面 end==================================== -->
 
     <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>
-    <script>
-        function moveContent() {
-            const calendar = document.querySelector('.calendar');
-            const style = document.querySelector('.block__content.style');
-            const map = document.querySelector('.block__content.map');
-            const notice = document.querySelector('.block__content.notice');
-            const content = document.querySelector('.content');
-            const screenWidth = window.innerWidth;
-
-            // 移动内容到 .content
-            if (screenWidth <= 768) {
-                if (calendar) content.appendChild(calendar);
-                if (style) content.appendChild(style);
-                if (map) content.appendChild(map);
-                if (notice) content.appendChild(notice);
-            } else {
-                // 恢复内容到 .info
-                const info = document.querySelector('.info');
-                if (calendar) info.appendChild(calendar);
-                if (style) info.appendChild(style);
-                if (map) info.appendChild(map);
-                if (notice) info.appendChild(notice);
-            }
-        }
-
-
-        // 获取元素
-        const profilePhoto = document.querySelector('.profile__photo');
-        const title = document.querySelector('.content .title');
-        const info = document.querySelector('.info');
-
-        // 函数：移动元素
-        function moveProfilePhoto() {
-            if (window.innerWidth <= 768) {
-                // 如果宽度小于等于768px，检查 .title 是否已有 .profile__photo
-                if (!title.querySelector('.profile__photo')) {
-                    // 创建一个新的 div，并将 profilePhoto 移动到新的 div 中
-                    const newDiv = document.createElement('div');
-                    newDiv.className = 'profile__photo';
-                    newDiv.innerHTML = profilePhoto.innerHTML; // 复制内容
-
-                    // 将新的 div 添加到 .title 的开头
-                    title.insertAdjacentElement('afterbegin', newDiv);
-
-                    // 从 .info 中移除原始 .profile__photo
-                    profilePhoto.remove();
-                }
-            } else {
-                // 如果宽度大于768px，将 .profile__photo 移动回原位置
-                if (title.querySelector('.profile__photo')) {
-                    // 移除 .profile__photo 内的内容并移回 .info
-                    const profilePhotoInTitle = title.querySelector('.profile__photo');
-                    if (profilePhotoInTitle) {
-                        // 移回 .info 的开头
-                        info.insertAdjacentElement('afterbegin', profilePhotoInTitle);
-                    }
-                }
-            }
-        }
-
-        // 初次调用函数
-        moveProfilePhoto();
-
-        // 监听窗口大小变化事件
-        window.addEventListener('resize', moveProfilePhoto);
-
-
-        // 初始化和监听窗口调整事件
-        moveContent();
-        window.addEventListener('resize', moveContent);
-    </script>
-
+    <script src="./javascripts/detail.js"></script>
     <script src="./javascripts/audio.js"></script>
     <script src="./javascripts/navbar.js"></script>
 </body>
