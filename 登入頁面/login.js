@@ -22,3 +22,19 @@ tab_btn_login.addEventListener("click", () => {
         loginButton.textContent = "登入";
     }
 });
+
+// 獲取元素
+const loginBtn = document.getElementById("loginBtn");
+const login_container = document.getElementById("login-container");
+const body = document.getElementsByTagName("body")[0];
+// 點擊登入按鈕時顯示登入框
+loginBtn.addEventListener("click", () => {
+    login_container.style.display = "block";
+});
+
+// 點擊背景區域隱藏登入框
+body.addEventListener("click", (e) => {
+    if (e.target === body) {
+        login_container.style.display = "none";
+    }
+});

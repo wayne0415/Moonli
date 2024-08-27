@@ -2,13 +2,17 @@
 @use "variables";
 body {
     background-color: #818181;
+    // display: block;
 }
 .login-container {
+    position: relative;
+    display: none;
     max-width: 30%;
     margin: 0 auto;
     padding: 32px 36px;
     border-radius: 20px;
     background-color: #fff;
+    z-index: 999;
 }
 
 .tab {

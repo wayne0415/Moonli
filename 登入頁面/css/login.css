@@ -89,11 +89,14 @@ body {
 }
 
 .login-container {
+  position: relative;
+  display: none;
   max-width: 30%;
   margin: 0 auto;
   padding: 32px 36px;
   border-radius: 20px;
   background-color: #fff;
+  z-index: 999;
 }
 
 .tab {
