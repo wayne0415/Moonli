@@ -1,7 +1,9 @@
 // services modal
 const modalViews = document.querySelectorAll('.service__modal');
-modalBtns = document.querySelectorAll('.service__button'),
-modalCloses = document.querySelectorAll('#service__modal-close');
+const modalBtns = document.querySelectorAll('.service__button');
+const modalCloses = document.querySelectorAll('#service__modal-close');
+const modalContents = document.querySelectorAll('.service__modal-content');
+
 let modal = function (modalClick) {
     modalViews[modalClick].classList.add('active-modal')
 }
@@ -14,11 +16,46 @@ modalCloses.forEach((modalClose) => {
 })
 
 modalBtns.forEach((modalBtn, i) => {
-    modalBtn.addEventListener('click',() =>{
+    modalBtn.addEventListener('click', () => {
         modal(i)
     })
 })
+
+modalViews.forEach((modalView) => {
+    modalView.addEventListener('click', (e) => {
+        if (e.target === modalView) {
+            modalView.classList.remove('active-modal');
+        }
+    });
+});
 // services modal ends
+
+
+
+// weekday active
+const weekdays = document.querySelectorAll('.weekday');
+
+weekdays.forEach(day => {
+    day.addEventListener('click', function () {
+        // 移除所有元素的 active 类
+        weekdays.forEach(d => d.classList.remove('active'));
+
+        // 为当前点击的元素添加 active 类
+        this.classList.add('active');
+    });
+});
+
+const time = document.querySelectorAll('.time');
+
+time.forEach(day => {
+    day.addEventListener('click', function () {
+        // 移除所有元素的 active 类
+        time.forEach(d => d.classList.remove('active'));
+
+        // 为当前点击的元素添加 active 类
+        this.classList.add('active');
+    });
+});
 
 
 
@@ -30,6 +67,10 @@ function onlyOne(checkbox) {
         if (item !== checkbox) item.checked = false;
     });
 }
+
+
+
+
 
 // RWD移動section
 
@@ -106,7 +147,7 @@ window.addEventListener('resize', moveContent);
 
 document.addEventListener('DOMContentLoaded', () => {
     const optionMenus = document.querySelectorAll(".select-menu");
-    
+
     optionMenus.forEach(optionMenu => {
         const selectBtn = optionMenu.querySelector(".select-btn");
         const options = optionMenu.querySelectorAll(".option-text");
