@@ -94,13 +94,13 @@
                         </div>
                     </div>
 
-                    <button class="service__button">馬上預約</button>
+                    <button class="service__button" id="service__modal-check">馬上預約</button>
                 </div>
                 <div class="service__modal">
                     <form class="service__modal-content">
                         <h4>預約心理諮商</h4>
                         <span>心理諮商師 林菌傑<br>
-                            時間 7/6 週二 18:00<br>
+                            時間 <span id="date"></span> <span id="time"></span><br>
                             地點 早安午安晚安心理諮商所<br>
                             地址 100台北市中正區濟南路一段321號<br>
                         </span>
@@ -150,7 +150,8 @@
                                 會員本人預約，同會員資料
                             </label>
                             <label>
-                                <input type="checkbox" name="reservation" value="非會員本人預約，可先填寫下方資料" onclick="onlyOne(this)">
+                                <input type="checkbox" name="reservation" value="非會員本人預約，可先填寫下方資料"
+                                    onclick="onlyOne(this)">
                                 非會員本人預約，可先填寫下方資料
                             </label>
                         </div>
@@ -275,7 +276,7 @@
                     <span>實體諮商地點</span>
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7696126874334!2d121.52304307537672!3d25.041891477811255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a970a11a84ad%3A0x58e05f2528812097!2z5ZyL56uL6Ie65YyX5ZWG5qWt5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1723303050643!5m2!1szh-TW!2stw"
-                        width="280" height="280" style="border:0;" allowfullscreen="" loading="lazy"
+                        style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
 

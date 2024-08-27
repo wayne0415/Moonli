@@ -58,7 +58,49 @@ time.forEach(day => {
 });
 
 
+// 預約表單日期
+document.querySelectorAll('.weekday').forEach(day => {
+    day.addEventListener('click', function () {
 
+        // 取得該元素內的 span 內容
+        const dayContent = this.querySelector('.day').textContent;
+        const dateContent = this.querySelector('.date').textContent;
+
+        // 將內容儲存到 localStorage
+        localStorage.setItem('selectedDay', dayContent);
+        localStorage.setItem('selectedDate', dateContent);
+    });
+});
+
+// 當點擊確認預約按鈕時，從 localStorage 讀取內容並顯示在彈跳框中
+document.getElementById('service__modal-check').addEventListener('click', function () {
+    const dayContent = localStorage.getItem('selectedDay');
+    const dateContent = localStorage.getItem('selectedDate');
+
+    // 更新 service__modal-content 中的 <span> 元素內容
+    document.getElementById('date').textContent = dateContent;
+    document.getElementById('time').textContent = dayContent;
+});
+
+
+// 預約表單時間
+document.querySelectorAll('.time').forEach(time => {
+    time.addEventListener('click', function () {
+        // 取得該元素內的 span 內容
+        const timeContent = this.querySelector('span').textContent;
+
+        // 將內容儲存到 localStorage
+        localStorage.setItem('selectedTime', timeContent);
+    });
+});
+
+// 當點擊確認預約按鈕時，從 localStorage 讀取內容並顯示在彈跳框中
+document.getElementById('service__modal-check').addEventListener('click', function () {
+    const timeContent = localStorage.getItem('selectedTime');
+
+    // 更新 service__modal-content 中的 <span> 元素內容
+    document.getElementById('time').textContent = timeContent;
+});
 
 // checkbox只能選一個
 function onlyOne(checkbox) {
@@ -67,8 +109,6 @@ function onlyOne(checkbox) {
         if (item !== checkbox) item.checked = false;
     });
 }
-
-
 
 
 
