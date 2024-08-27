@@ -1,9 +1,75 @@
+.testimonial-slider {
+	position: relative;
+	width: 80%;
+	margin: 0 auto;
+	overflow: hidden;
+}
 
+.slider-wrapper {
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+	cursor: grab;
+	/* 顯示拖動手勢 */
+}
 
+.testimonial-card {
+	flex: 0 0 100%;
+	/* 讓每個卡片占滿容器寬度 */
+	padding: 20px;
+	background: #fff;
+	text-align: center;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	margin: 10px;
+	border-radius: 10px;
+}
+
+button.prev,
+button.next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: #ddd;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+}
+
+button.prev {
+	left: 10px;
+}
+
+button.next {
+	right: 10px;
+}
+
+.dots {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.dot {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background-color: #bbb;
+	border-radius: 50%;
+	margin: 0 5px;
+	cursor: pointer;
+}
+
+.dot.active {
+	background-color: #333;
+}
+
+.slider-wrapper.active {
+	cursor: grabbing;
+}
+
+/* 
 .mycard {
 	height: 100%;
 	width: 100%;
-	/* max-width: 24rem; */
+	/* max-width: 24rem; 
 }
 
 .cardtitle {
@@ -18,10 +84,6 @@
 	margin-right: auto;
 	width: 40%; 
     height:auto;
-	/* margin-top: 2.75rem;
-	margin-bottom: 2.75rem;
-	max-height: 6rem;
-	border-radius: 9999px; */
 }
 
 .carddescription {
@@ -46,9 +108,9 @@ body {
 
 .slider input {
 	display: none;
-}
+} */
 
-.testimonials {
+/* .testimonials {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -56,9 +118,10 @@ body {
 	min-height: 375px;
 	perspective: 500px;
 	/* margin-top: 5rem; */
-	/* overflow: hidden; */
-}
+/* overflow: hidden; 
+}*/
 
+/* 
 .testimonials .item {
 	max-width: 16%;
 	height: auto;
@@ -84,10 +147,13 @@ body {
     padding: 16px;
     height: auto;
 	width: 80%; 
-    margin: 0 auto; /* 自動左右邊距，將愛心水平居中 */
-    display: block; /* 讓圖片塊級顯示，確保 margin:auto 有效 */
-}
+    margin: 0 auto;  */
+/* 自動左右邊距，將愛心水平居中 */
+/* display: block;  */
+/* 讓圖片塊級顯示，確保 margin:auto 有效 */
+/* } */
 
+/* 
 .testimonials .item p {
 	padding-top: 4px;
 	color: #6F6F6F;
@@ -112,10 +178,10 @@ body {
 	background-color: #413b52;
 	margin: 7px;
 	transition: transform 0.2s, color 0.2s;
-}
+} */
 
 /* First */
-#t-1:checked~.dots label[for="t-1"] {
+/* #t-1:checked~.dots label[for="t-1"] {
 	transform: scale(2);
 	background-color: #fff;
 }
@@ -146,10 +212,10 @@ body {
 
 #t-1:checked~.testimonials label[for="t-5"] {
 	transform: translateX(1200px) translateZ(-360px) translateY(-60px);
-}
+} */
 
 /* Second */
-#t-2:checked~.dots label[for="t-1"] {
+/* #t-2:checked~.dots label[for="t-1"] {
 	transform: scale(1.5);
 }
 
@@ -182,10 +248,10 @@ body {
 
 #t-2:checked~.testimonials label[for="t-5"] {
 	transform: translateX(900px) translateZ(-270px) translateY(-45px);
-}
+} */
 
 /* Third */
-#t-3:checked~.dots label[for="t-2"] {
+/* #t-3:checked~.dots label[for="t-2"] {
 	transform: scale(1.5);
 }
 
@@ -219,7 +285,7 @@ body {
 	transform: translateX(610px) translateZ(-180px) translateY(-30px);
 }
 
-/* Fourth */
+/* Fourth 
 #t-4:checked~.dots label[for="t-3"] {
 	transform: scale(1.5);
 }
@@ -252,10 +318,10 @@ body {
 
 #t-4:checked~.testimonials label[for="t-5"] {
 	transform: translateX(300px) translateZ(-90px) translateY(-15px);
-}
+} */
 
 /* Fifth */
-#t-5:checked~.dots label[for="t-4"] {
+/* #t-5:checked~.dots label[for="t-4"] {
 	transform: scale(1.5);
 }
 
@@ -285,4 +351,4 @@ body {
 
 #t-5:checked~.testimonials label[for="t-5"] {
 	z-index: 4;
-}
+} */
