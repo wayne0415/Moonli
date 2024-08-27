@@ -89,7 +89,7 @@ body {
 }
 
 .login-container {
-  width: 40%;
+  max-width: 30%;
   margin: 0 auto;
   padding: 32px 36px;
   border-radius: 20px;
@@ -199,13 +199,21 @@ body {
   justify-content: left;
   align-items: center;
 }
-.social-login .facebook-login i,
-.social-login .google-login i {
+.social-login .facebook-login figure,
+.social-login .google-login figure {
   width: 10%;
+  font-size: 0;
+}
+.social-login .facebook-login figure img,
+.social-login .google-login figure img {
+  object-fit: cover;
+  width: 60%;
+  height: 60%;
 }
 .social-login .facebook-login p,
 .social-login .google-login p {
   width: 90%;
+  margin-right: 42px;
 }
 .social-login .facebook-login.facebook-login,
 .social-login .google-login.facebook-login {

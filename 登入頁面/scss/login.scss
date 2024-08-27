@@ -4,7 +4,7 @@ body {
     background-color: #818181;
 }
 .login-container {
-    width: 40%;
+    max-width: 30%;
     margin: 0 auto;
     padding: 32px 36px;
     border-radius: 20px;
@@ -125,11 +125,18 @@ body {
         justify-content: left;
         align-items: center;
 
-        i {
+        figure {
             width: 10%;
+            font-size: 0;
+            img {
+                object-fit: cover;
+                width: 60%;
+                height: 60%;
+            }
         }
         p {
             width: 90%;
+            margin-right: 42px;
         }
 
         &.facebook-login {

@@ -10,8 +10,8 @@
     <body>
         <div class="login-container">
             <div class="tab">
-                <button class="tab-btn active">登入</button>
-                <button class="tab-btn">註冊</button>
+                <button class="tab-btn active" id="tab-btn-login">登入</button>
+                <button class="tab-btn" id="tab-btn-logout">註冊</button>
             </div>
 
             <form class="login-form">
@@ -21,7 +21,7 @@
                 <label for="password">密碼</label>
                 <input type="password" id="password" name="password" placeholder="**********" />
 
-                <button type="submit" class="login-btn">登入</button>
+                <button type="submit" class="login-btn" id="loginButton">登入</button>
 
                 <a href="#" class="forgot-password">忘記密碼</a>
 
@@ -29,15 +29,16 @@
 
                 <div class="social-login">
                     <button class="facebook-login">
-                        <i class="fa-brands fa-facebook"></i>
+                        <figure><img src="../images/Facebook_2023.svg" alt="FB" /></figure>
                         <p>使用 Facebook 帳號登入</p>
                     </button>
                     <button class="google-login">
-                        <i class="fa-brands fa-google"></i>
+                        <figure><img src="../images/Chrome.svg" alt="Google" /></figure>
                         <p>使用 Google 帳號登入</p>
                     </button>
                 </div>
             </form>
         </div>
+        <script src="./login.js"></script>
     </body>
 </html>
