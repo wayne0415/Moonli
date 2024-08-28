@@ -1,117 +1,116 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Moonli 心理諮商媒合平台</title>
+        <link rel="icon" href="#" />
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/nav.css" />
+        <link rel="stylesheet" href="./css/style-landing.css" />
+        <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Moonli 心理諮商媒合平台</title>
-    <link rel="icon" href="#" />
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/nav.css" />
-    <link rel="stylesheet" href="./css/style-landing.css" />
-    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
-</head>
-
-<body>
-    <!-- 導覽列 -->
-    <header>
-        <a href="#" class="logo">
-            <img src="./images/logo_NavBar.svg" alt="Moonli-logo" />
-        </a>
-        <!-- 選單列表 -->
-        <nav class="navbar">
-            <div class="navigation">
-                <a href="#" class="nav-menu">服務項目</a>
-                <a href="#" class="nav-menu">心理師列表</a>
-                <a href="#" class="nav-menu">常見問題</a>
-                <a href="#" class="nav-menu">相關資訊</a>
-                <a href="#" class="nav-menu">自我檢測</a>
+    <body>
+        <!-- 導覽列 -->
+        <header>
+            <a href="#" class="logo">
+                <img src="./images/logo_NavBar.svg" alt="Moonli-logo" />
+            </a>
+            <!-- 選單列表 -->
+            <nav class="navbar">
+                <div class="navigation">
+                    <a href="#" class="nav-menu">服務項目</a>
+                    <a href="#" class="nav-menu">心理師列表</a>
+                    <a href="#" class="nav-menu">常見問題</a>
+                    <a href="#" class="nav-menu">相關資訊</a>
+                    <a href="#" class="nav-menu">自我檢測</a>
+                </div>
+                <div class="login" id="bars">
+                    <span>登入註冊</span>
+                    <i class="fa-solid fa-bars" id="menu-bars"></i>
+                </div>
+            </nav>
+        </header>
+        <!-- 登入頁面 -->
+        <div id="overlay" class="overlay"></div>
+        <div class="login-container" id="login-container">
+            <div class="tab">
+                <button class="tab-btn active" id="tab-btn-login">登入</button>
+                <button class="tab-btn" id="tab-btn-logout">註冊</button>
             </div>
-            <div class="login" id="bars">
-                <span>登入註冊</span>
-                <i class="fa-solid fa-bars" id="menu-bars"></i>
+
+            <form class="login-form">
+                <label for="email">信箱</label>
+                <input type="text" id="email" name="email" placeholder="123456@gmail.com" />
+
+                <label for="password">密碼</label>
+                <input type="password" id="password" name="password" placeholder="**********" />
+
+                <button type="submit" class="login-btn" id="loginButton">登入</button>
+
+                <a href="#" class="forgot-password">忘記密碼</a>
+
+                <div class="divider">或是使用</div>
+
+                <div class="social-login">
+                    <button class="facebook-login">
+                        <figure><img src="../images/Facebook_2023.svg" alt="FB" /></figure>
+                        <p>使用 Facebook 帳號登入</p>
+                    </button>
+                    <button class="google-login">
+                        <figure><img src="../images/Chrome.svg" alt="Google" /></figure>
+                        <p>使用 Google 帳號登入</p>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- 頁面A：大LOGO+找心理師按鈕 -->
+        <section id="home">
+            <div class="home-container">
+                <div class="home-images-moon"></div>
+                <div class="home-images-logo">
+                    <img src="./images/logo_Home.jpg" alt="Moonli logo" />
+                </div>
+                <div class="search-btn">
+                    <button>篩選心理師<i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
             </div>
-        </nav>
-    </header>
-    <!-- 登入頁面 -->
-    <div class="login-container" id="login-container">
-        <div class="tab">
-            <button class="tab-btn active" id="tab-btn-login">登入</button>
-            <button class="tab-btn" id="tab-btn-logout">註冊</button>
-        </div>
+        </section>
 
-        <form class="login-form">
-            <label for="email">信箱</label>
-            <input type="text" id="email" name="email" placeholder="123456@gmail.com" />
-
-            <label for="password">密碼</label>
-            <input type="password" id="password" name="password" placeholder="**********" />
-
-            <button type="submit" class="login-btn" id="loginButton">登入</button>
-
-            <a href="#" class="forgot-password">忘記密碼</a>
-
-            <div class="divider">或是使用</div>
-
-            <div class="social-login">
-                <button class="facebook-login">
-                    <figure><img src="../images/Facebook_2023.svg" alt="FB" /></figure>
-                    <p>使用 Facebook 帳號登入</p>
-                </button>
-                <button class="google-login">
-                    <figure><img src="../images/Chrome.svg" alt="Google" /></figure>
-                    <p>使用 Google 帳號登入</p>
-                </button>
+        <!-- 頁面B：痛點 -->
+        <section id="problems">
+            <div class="problems-title">
+                <h2>在生活中，您是否有遇過這些煩惱？</h2>
             </div>
-        </form>
-    </div>
-
-    <!-- 頁面A：大LOGO+找心理師按鈕 -->
-    <section id="home">
-        <div class="home-container">
-            <div class="home-images-moon"></div>
-            <div class="home-images-logo">
-                <img src="./images/logo_Home.jpg" alt="Moonli logo" />
+            <div class="item-union">
+                <img src="./images/photo_Union.png" alt="黑色樹葉" />
             </div>
-            <div class="search-btn">
-                <button>篩選心理師<i class="fa-solid fa-magnifying-glass"></i></button>
+            <div class="item-wave1">
+                <img src="./images/wave1.png" alt="雲霧" />
             </div>
-        </div>
-    </section>
+            <div class="item-wave2">
+                <img src="./images/photo_home_wave2.png" alt="紫色的大山" />
+            </div>
+            <div class="item-wave3">
+                <img src="./images/photo_home_wave3.svg" alt="過場的黑色小山" />
+            </div>
+            <div class="icon-anny">
+                <img src="./images/icon_annoy.jpg" alt="小可惡的煩惱" />
+            </div>
+            <div class="icon-annoymoon">
+                <img src="./images/icon_annoymoon.png" alt="小可惡" />
+            </div>
+            <div class="item-6q">
+                <img src="./images/photo_home_6q.jpg" alt="6個智障問題" />
+            </div>
+        </section>
 
-    <!-- 頁面B：痛點 -->
-    <section id="problems">
-        <div class="problems-title">
-            <h2>在生活中，您是否有遇過這些煩惱？</h2>
-        </div>
-        <div class="item-union">
-            <img src="./images/photo_Union.png" alt="黑色樹葉" />
-        </div>
-        <div class="item-wave1">
-            <img src="./images/wave1.png" alt="雲霧" />
-        </div>
-        <div class="item-wave2">
-            <img src="./images/photo_home_wave2.png" alt="紫色的大山" />
-        </div>
-        <div class="item-wave3">
-            <img src="./images/photo_home_wave3.svg" alt="過場的黑色小山" />
-        </div>
-        <div class="icon-anny">
-            <img src="./images/icon_annoy.jpg" alt="小可惡的煩惱" />
-        </div>
-        <div class="icon-annoymoon">
-            <img src="./images/icon_annoymoon.png" alt="小可惡" />
-        </div>
-        <div class="item-6q">
-            <img src="./images/photo_home_6q.jpg" alt="6個智障問題" />
-        </div>
-    </section>
-
-    <!-- Javascript -->
-    <script src="./javascripts/navbar.js"></script>
-    <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>
-    <script src="./javascripts/landing.js"></script>
-    <script src="./javascripts/login.js"></script>
-</body>
-
+        <!-- Javascript -->
+        <script src="./javascripts/navbar.js"></script>
+        <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>
+        <script src="./javascripts/landing.js"></script>
+        <script src="./javascripts/login.js"></script>
+    </body>
 </html>
