@@ -2,7 +2,6 @@ header{
     background-color: rgb(50, 44, 79);
 }
 
-
 /* 頁面A：大LOGO+找心理師按鈕 */
 #home {
     display: flex;
@@ -25,20 +24,10 @@ header{
     margin-bottom: 20px;
 }
 
-/* .home-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-} */
-
 .home-images-moon {
     position: absolute;
-    top: 12%;
-    right: 15%;
-    width: 16vw; 
+    right: 10%;
+    width: 16vh; 
     max-width: 100px;
     aspect-ratio: 1;
     border-radius: 50%;
@@ -95,35 +84,6 @@ header{
 }
 
 
-/* 原本月亮圖片的程式碼 */
-/* .home-images-moon-container {
-    position: absolute;
-    top: 5%;  
-    right: -45%; 
-    z-index: 10;
-    max-width: 300px; 
-}
-.home-images-moon-container img {
-    width: 100%; 
-    height: auto;
-    object-fit:cover;
-} */ 
-
-/* .home-images-moon{
-    position: absolute;
-    background: linear-gradient(to bottom, rgb(238, 233, 203),rgb(235, 216, 149));
-    width: 15vw;
-    max-width: 128px; 
-    height: auto; 
-    border-radius: 50%; 
-    top: 10%;  
-    right: -45%; 
-    box-shadow:
-        0px 0px 100px rgb(255, 255, 255,0.8);
-} */
-
-
-
 /* 頁面B：痛點 */
 #problems {
     position: relative;
@@ -150,11 +110,55 @@ header{
     color: #fff;
 }
 
-.icon-anny,
-.icon-annoymoon,
-.item-6q{
+.icon-anny{
     position: absolute;
+    top: 40%;  
+    right: 48%; 
 }
+
+.icon-anny img {
+    width: 100%; 
+	height: auto; 
+    object-fit: cover; 
+}
+
+.icon-annoymoon {
+    position: absolute;
+    top: 50%; 
+    left: 50%; /* 水平居中 */
+    transform: translateX(-50%); /* 確保元素完全水平居中 */
+    z-index: 10; /* 確保它位於其他元素上方 */
+    width: 25%; /* 自適應寬度 */
+}
+
+.icon-annoymoon img{
+    width: 100%; 
+	height: auto; 
+    object-fit: cover; 
+}
+
+
+.item-6q{
+    right: 5%; 
+    position: absolute;
+    width: 89%;
+}
+
+.item-6q img{
+    width: 100%; 
+	height: auto; 
+    object-fit: cover; 
+}
+
+
+.icon-anny img,
+.icon-annoymoon img,
+.item-6q img{
+    width: 100%; 
+	height: auto; 
+    object-fit: cover; 
+}
+
 
 .item-wave1, 
 .item-wave2, 
@@ -163,20 +167,19 @@ header{
 {
     position: absolute;
     bottom: 0;
-}
-.icon-annoymoon{
-    top: 58%;  
-    right: 40%; 
+    width: 100%; 
 }
 
-.icon-anny {
-    top: 50%;  
-    right: 48%; 
+.item-wave1 img, 
+.item-wave2 img, 
+.item-wave3 img,
+.item-union img
+{
+    width: 100%; 
+	height: auto; 
+    object-fit: cover; 
 }
 
-.item-6q{
-    width: 75%;
-}
 
 /* .item-q1,
 .item-q2,
@@ -209,12 +212,13 @@ header{
 #services {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     background: linear-gradient(to bottom, #2C2C2D, #42514E);
     text-align: center;
     color: #fff;
 }
+
 .title-container {
     display: flex;
     flex-direction: row;
@@ -226,6 +230,7 @@ header{
 .title-container img {
     width: 24px;
     height: auto;
+    object-fit: cover; 
 }
 
 .services-container {
@@ -263,7 +268,7 @@ header{
 }
 
 .title-container h2 {
-    font-size:4rem;
+    font-size:3.2rem;
     font-weight: 800;
     align-items: center;
     margin: 10px;
@@ -283,6 +288,7 @@ header{
 /* 數據證明區 */
 #statistics {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     background: #42514E;
@@ -361,7 +367,7 @@ header{
     display: flex;
     width: 100%;
     height: 100%;
-    padding: 0 5%;
+    padding: 0 10%;
     margin-bottom: 88px;
     gap: 30px;
 }
@@ -484,7 +490,7 @@ text-align: start;
 }
 
 #step-section h2 {
-    font-size:4rem;
+    font-size:3.2rem;
     font-weight: 800;
     margin-top: 40px;
 }
@@ -567,7 +573,7 @@ text-align: start;
 #experience_sharing h2 {
     color: #fff;
     font-weight: 800;
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     margin: 40px 10px;
 }
 
@@ -605,12 +611,12 @@ text-align: start;
 .icon_box img{
     object-fit: cover;
 }
-
+/* 
 .heart{
     width: 80%;
     height: auto;
     padding: 16px;
-}
+} */
 
 .context-box{
     height: auto;
@@ -636,11 +642,14 @@ text-align: start;
     align-items: center;
 }
 
+.wave-background{
+    width: 100%; 
+}
 
 .wave-background img {
-    display: block;
-    width: 100%; 
-    height: auto; 
+    width: 100%; /* 圖片寬度設為容器的 100% */
+    object-fit: cover; /* 確保圖片填滿容器且不會變形 */
+    height: auto; /* 保持圖片高度自動調整 */
 }
 
 
@@ -654,6 +663,7 @@ text-align: start;
 .icon_annoymoon_Happy img {
     width: 100%;
     height: auto; 
+    object-fit: cover; 
 }
 .line {
     display: inline-block;
@@ -685,6 +695,7 @@ text-align: start;
 .go-top-btn img {
     width: 48px; 
     height: 48px;
+
 }
 
 /* 頁尾區 */
@@ -731,4 +742,291 @@ footer small {
 
 footer img {
     height: 20px;
+}
+
+/* 輪播卡片 */
+
+.EScards {
+	margin: 0;
+	color: #fff;
+	display: flex;
+	align-items: center;
+    width: 50%;
+}
+
+.slider {
+	width: 100%;
+	min-height: 385px;
+}
+
+.slider input {
+	display: none;
+}
+
+.testimonials {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+    min-height: 280px;
+	perspective: 500px;
+    width: auto;
+	/* margin-top: 5rem; */
+	/* overflow: hidden; */
+}
+
+.testimonials .item {
+	max-width: 200px;
+	height: auto;
+	border-radius: 1.5rem;
+	border-width: 2px;
+	--tw-border-opacity: 1;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-color: rgba(30, 58, 138, var(--tw-border-opacity));
+	position: absolute;
+	box-sizing: border-box;
+	background-color: #fff;
+	padding: 30px;
+	text-align: center;
+	transition: transform 0.4s;
+	-webkit-transform-style: preserve-3d;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	user-select: none;
+	cursor: pointer;
+}
+
+.testimonials .item p {
+	padding-top: 4px;
+	color: #6F6F6F;
+}
+
+.mycard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kimo-box{
+    width: 50%;
+}
+
+.kimo-box img {
+    width: 100%; /* 圖片寬度設為容器的 100% */
+    aspect-ratio: 1; /* 設定圖片比例為 1:1，這樣可以確保圖片是正方形 */
+    object-fit: cover; /* 確保圖片填滿容器且不會變形 */
+    height: auto; /* 保持圖片高度自動調整 */
+}
+
+.cardtitle {
+	font-weight: bold;
+	--tw-text-opacity: 1;
+	color: rgba(31, 41, 55, var(--tw-text-opacity));
+    /* 不確定這個顏色是否有套到 */
+	text-align: center;
+}
+
+.heart{
+    padding: 16px;
+    height: auto;
+	width: 80%; 
+    margin: 0 auto; /* 自動左右邊距，將愛心水平居中 */
+    display: block; /* 讓圖片塊級顯示，確保 margin:auto 有效 */
+}
+
+.carddescription {
+	--tw-text-opacity: 1;
+	color: rgba(107, 114, 128, var(--tw-text-opacity));
+	text-align: center;
+}
+
+.dots {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    padding-top: 16px;
+}
+
+.dots label {
+	display: block;
+	height: 5px;
+	width: 5px;
+	border-radius: 50%;
+	cursor: pointer;
+	background-color: var(--white);
+	margin: 7px;
+	transition: transform 0.2s, color 0.2s;
+}
+
+
+/* First */
+#t-1:checked~.dots label[for="t-1"] {
+	transform: scale(2);
+	background-color: #fff;
+}
+
+#t-1:checked~.dots label[for="t-2"] {
+	transform: scale(1.5);
+}
+
+#t-1:checked~.testimonials label[for="t-1"] {
+	z-index: 4;
+}
+
+#t-1:checked~.testimonials label[for="t-2"] {
+	transform: translateX(300px) translateZ(-90px) translateY(-15px);
+
+	z-index: 3;
+}
+
+#t-1:checked~.testimonials label[for="t-3"] {
+	transform: translateX(600px) translateZ(-180px) translateY(-30px);
+	z-index: 2;
+}
+
+#t-1:checked~.testimonials label[for="t-4"] {
+	transform: translateX(900px) translateZ(-270px) translateY(-45px);
+	z-index: 1;
+}
+
+#t-1:checked~.testimonials label[for="t-5"] {
+	transform: translateX(1200px) translateZ(-360px) translateY(-60px);
+}
+
+/* Second */
+#t-2:checked~.dots label[for="t-1"] {
+	transform: scale(1.5);
+}
+
+#t-2:checked~.dots label[for="t-2"] {
+	transform: scale(2);
+	background-color: #fff;
+}
+
+#t-2:checked~.dots label[for="t-3"] {
+	transform: scale(1.5);
+}
+
+#t-2:checked~.testimonials label[for="t-1"] {
+	transform: translateX(-300px) translateZ(-90px) translateY(-15px);
+}
+
+#t-2:checked~.testimonials label[for="t-2"] {
+	z-index: 3;
+}
+
+#t-2:checked~.testimonials label[for="t-3"] {
+	transform: translateX(300px) translateZ(-90px) translateY(-15px);
+	z-index: 2;
+}
+
+#t-2:checked~.testimonials label[for="t-4"] {
+	transform: translateX(600px) translateZ(-180px) translateY(-30px);
+	z-index: 1;
+}
+
+#t-2:checked~.testimonials label[for="t-5"] {
+	transform: translateX(900px) translateZ(-270px) translateY(-45px);
+}
+
+/* Third */
+#t-3:checked~.dots label[for="t-2"] {
+	transform: scale(1.5);
+}
+
+#t-3:checked~.dots label[for="t-3"] {
+	transform: scale(2);
+	background-color: #fff;
+}
+
+#t-3:checked~.dots label[for="t-4"] {
+	transform: scale(1.5);
+}
+
+#t-3:checked~.testimonials label[for="t-1"] {
+	transform: translateX(-610px) translateZ(-180px) translateY(-30px);
+}
+
+#t-3:checked~.testimonials label[for="t-2"] {
+	transform: translateX(-295px) translateZ(-90px) translateY(-15px);
+}
+
+#t-3:checked~.testimonials label[for="t-3"] {
+	z-index: 3;
+}
+
+#t-3:checked~.testimonials label[for="t-4"] {
+	transform: translateX(295px) translateZ(-90px) translateY(-15px);
+	z-index: 2;
+}
+
+#t-3:checked~.testimonials label[for="t-5"] {
+	transform: translateX(610px) translateZ(-180px) translateY(-30px);
+}
+
+/* Fourth */
+#t-4:checked~.dots label[for="t-3"] {
+	transform: scale(1.5);
+}
+
+#t-4:checked~.dots label[for="t-4"] {
+	transform: scale(2);
+	background-color: #fff;
+}
+
+#t-4:checked~.dots label[for="t-5"] {
+	transform: scale(1.5);
+}
+
+#t-4:checked~.testimonials label[for="t-1"] {
+	transform: translateX(-900px) translateZ(-270px) translateY(-45px);
+}
+
+#t-4:checked~.testimonials label[for="t-2"] {
+	transform: translateX(-600px) translateZ(-180px) translateY(-30px);
+}
+
+#t-4:checked~.testimonials label[for="t-3"] {
+	transform: translateX(-300px) translateZ(-90px) translateY(-15px);
+	z-index: 2;
+}
+
+#t-4:checked~.testimonials label[for="t-4"] {
+	z-index: 3;
+}
+
+#t-4:checked~.testimonials label[for="t-5"] {
+	transform: translateX(300px) translateZ(-90px) translateY(-15px);
+}
+
+/* Fifth */
+#t-5:checked~.dots label[for="t-4"] {
+	transform: scale(1.5);
+}
+
+#t-5:checked~.dots label[for="t-5"] {
+	transform: scale(2);
+	background-color: #fff;
+}
+
+#t-5:checked~.testimonials label[for="t-1"] {
+	transform: translateX(-1200px) translateZ(-360px) translateY(-60px);
+}
+
+#t-5:checked~.testimonials label[for="t-2"] {
+	transform: translateX(-900px) translateZ(-270px) translateY(-45px);
+	z-index: 1;
+}
+
+#t-5:checked~.testimonials label[for="t-3"] {
+	transform: translateX(-600px) translateZ(-180px) translateY(-30px);
+	z-index: 2;
+}
+
+#t-5:checked~.testimonials label[for="t-4"] {
+	transform: translateX(-300px) translateZ(-90px) translateY(-15px);
+	z-index: 3;
+}
+
+#t-5:checked~.testimonials label[for="t-5"] {
+	z-index: 4;
 }
