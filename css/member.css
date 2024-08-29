@@ -615,11 +615,22 @@ footer small {
         padding: 20px;
     }
 
+    .member-container .container{
+        height: 16vh
+    }
+
     .member-left {
         display: flex;
         width: 90%;
+        height: 12vh;
         justify-content: space-between;
         align-items: start;
+    }
+
+    .member-left li a{
+        padding: 8px 8px;
+        line-height: 1.2em;
+        border-radius: 8px;
     }
 
     .big-item, .small-item {
