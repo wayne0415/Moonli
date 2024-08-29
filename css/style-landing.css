@@ -293,36 +293,35 @@ header {
     color: #fff;
 }
 
-.icon-anny {
+/* .icon-anny {
     position: absolute;
     top: 48%;
     right: 48%;
-}
+} */
 
-.icon-anny img {
+/* .icon-anny img {
     width: 100%;
     height: auto;
     object-fit: cover;
-}
+} */
 
-.icon-annoymoon {
+/* .icon-annoymoon {
     position: absolute;
     top: 55%;
     left: 50%;
-    /* 水平居中 */
+   
     transform: translateX(-50%);
-    /* 確保元素完全水平居中 */
+    
     z-index: 10;
-    /* 確保它位於其他元素上方 */
+    
     width: 20%;
-    /* 自適應寬度 */
-}
-
+} */
+/* 
 .icon-annoymoon img {
     width: 100%;
     height: auto;
     object-fit: cover;
-}
+} */
 
 .item-6q {
     right: 5%;
@@ -336,8 +335,8 @@ header {
     object-fit: cover;
 }
 
-.icon-anny img,
-.icon-annoymoon img,
+/* .icon-anny img,
+.icon-annoymoon img, */
 .item-6q img {
     width: 100%;
     height: auto;
@@ -371,8 +370,8 @@ header {
     position: absolute;
 } */
 
-.icon-anny,
-.icon-annoymoon,
+/* .icon-anny,
+.icon-annoymoon, */
 .item-6q,
 .item-wave3,
 .item-union {
@@ -391,7 +390,27 @@ header {
 #i-am-so-upset {
     animation: rotateAnimation 3s linear infinite;
 }
+#sticky-little-cute-father {
+    position: relative;
+    background-color: rgb(112, 105, 138);
 
+    /* height: 200vh; */
+    z-index: 1000;
+}
+#sticky-little-cute {
+    position: sticky;
+    top: 0;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+    z-index: 3;
+    width: 25%;
+    /* background-color: #912d2d; */
+}
+.icon-anny {
+    object-fit: cover;
+    width: 30%;
+    height: 30%;
+}
 /* 服務特色區 */
 #services {
     display: flex;

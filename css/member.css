@@ -37,6 +37,7 @@
 
     --btn-shadow: 4px 4px 8px rgba(196, 189, 210, 0.2), -4px -4px 8px rgb(255, 255, 255);
     --inset-shadow: inset 0 4px 10px rgba(214, 213, 221, .6);
+    --card-shadow: 0 4px 10px rgba(214, 213, 221, .6);
     --gradient-btn: rgba(234, 231, 237, 0.498), rgba(249, 249, 249, 0);
 }
 
@@ -149,7 +150,7 @@ main {
     line-height: 40px;
     width: 100%;
     border-radius: 12px;
-    padding: 4px 16px ;
+    padding: 4px 16px;
 }
 
 .member-management,
@@ -550,7 +551,7 @@ footer small {
     font-size: 14px;
 }
 
-@media (max-width:960px){
+@media (max-width:960px) {
     main {
         display: flex;
         width: 100%;
@@ -571,7 +572,7 @@ footer small {
     .small-item {
         font-size: 1.2em;
     }
-    
+
 
     .title {
         margin-bottom: 0;
@@ -584,7 +585,7 @@ footer small {
         margin-top: 4px;
     }
 
-    .member-form{
+    .member-form {
         gap: 8px;
     }
 
@@ -615,8 +616,8 @@ footer small {
         padding: 20px;
     }
 
-    .member-container .container{
-        height: 16vh
+    .member-container .container {
+        height: 20vh
     }
 
     .member-left {
@@ -627,13 +628,21 @@ footer small {
         align-items: start;
     }
 
-    .member-left li a{
-        padding: 8px 8px;
+    .dropdown {
+        background-color: var(--white);
+        padding: 8px;
+        border-radius: 8px;
+        box-shadow: var(--card-shadow);
+    }
+
+    .member-left li a {
+        padding: 8px 4px;
         line-height: 1.2em;
         border-radius: 8px;
     }
 
-    .big-item, .small-item {
+    .big-item,
+    .small-item {
         text-align: center;
     }
 
