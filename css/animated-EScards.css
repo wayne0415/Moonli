@@ -130,12 +130,12 @@
 }
 
 .owl-item:not(.center)>div:hover {
-    opacity: 0.75;
+    opacity: 0.95;
 }
 
 .container {
     width: 100%;  /* 設定為全寬 */
-    overflow: hidden;  /* 隱藏超出容器的部分 */
+    overflow: hidden;  
     position: relative; /* 保證子元素相對於此容器移動 */
     display: flex;
     align-items: center;
@@ -159,7 +159,7 @@
     flex-wrap: nowrap; /* 禁止換行 */
     overflow: hidden;
     width: 100%;
-    max-width: 1000px; /* 設置容器的最大寬度 */
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px 0;
     justify-content: center; /* 保證卡片居中 */
@@ -239,7 +239,7 @@
 
 
 .heart {
-    width: 80px; /* 調整愛心的寬度 */
+    width: 40%; /* 調整愛心的寬度 */
     height: auto;
     margin: 0 auto;
     display: block;
