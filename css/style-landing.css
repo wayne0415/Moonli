@@ -33,7 +33,6 @@ header {
     border-radius: 20px;
     background-color: #fff;
     z-index: 50;
-    
 }
 
 .tab {
@@ -284,7 +283,6 @@ header {
 .problems-title {
     margin-bottom: 30%;
 }
-
 .problems-title h2 {
     display: inline-block;
     z-index: 5;
@@ -328,13 +326,16 @@ header {
     position: absolute;
     width: 89%;
     bottom: 35%;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 1.5s ease-out;
 }
 
-.item-6q img {
+/* .item-6q img {
     width: 100%;
     height: auto;
     object-fit: cover;
-}
+} */
 
 /* .icon-anny img,
 .icon-annoymoon img, */
