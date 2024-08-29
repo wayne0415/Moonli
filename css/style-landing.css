@@ -391,7 +391,7 @@ header {
 }
 #sticky-little-cute-father {
     position: relative;
-    background-color: transparent;
+    background-color: rgb(112, 105, 138);
 
     /* height: 200vh; */
     z-index: 1000;
@@ -403,7 +403,7 @@ header {
     /* transform: translate(-50%, -50%); */
     z-index: 3;
     width: 25%;
-    background-color: #912d2d;
+    /* background-color: #912d2d; */
 }
 .icon-anny {
     object-fit: cover;
