@@ -282,7 +282,7 @@ header {
 }
 
 .problems-title {
-    margin-bottom: 50%;
+    margin-bottom: 30%;
 }
 
 .problems-title h2 {
@@ -327,6 +327,7 @@ header {
     right: 5%;
     position: absolute;
     width: 89%;
+    bottom: 35%;
 }
 
 .item-6q img {
@@ -391,20 +392,31 @@ header {
     animation: rotateAnimation 3s linear infinite;
 }
 #sticky-little-cute-father {
-    position: relative;
-    background-color: rgb(112, 105, 138);
+    position: relative; /* 固定在視窗上，浮在頁面之上 */
 
-    /* height: 200vh; */
-    z-index: 1000;
+    width: 100%; /* 覆蓋整個視窗寬度 */
+    height: 100%;
+
+    background-color: rgb(112, 105, 138); /* 背景設置為完全透明 */
+    z-index: 1; /* 確保它在所有其他內容之上 */
 }
+
 #sticky-little-cute {
     position: sticky;
-    top: 0;
+    top: 50%; /* 在容器內部設置粘附位置 */
     left: 50%;
-    /* transform: translate(-50%, -50%); */
-    z-index: 3;
+    margin-bottom: 25%;
+    transform: translate(-50%, -50%);
+    z-index: 3; /* 確保內容在容器之上 */
     width: 25%;
-    /* background-color: #912d2d; */
+    background-color: rgba(255, 255, 255, 0); /* 設置內容的背景部分透明 */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    pointer-events: auto; /* 確保內部內容可以正常交互 */
+}
+#little-cute {
+    margin-left: 30px;
 }
 .icon-anny {
     object-fit: cover;
