@@ -25,7 +25,7 @@ window.addEventListener("scroll", () => {
     console.log(a);
     // 呼叫函數來處理 problems_title 和 stupid_6q
     toggleVisibility(1, 1, 0, 0, problems_title, 1500, a);
-    toggleVisibility(1, 0.9, 0, 0, stupid_6q, 1600, a);
+    toggleVisibility(1, 0.9, 0, 0, stupid_6q, 1700, a);
     if (a > 1950) {
         let offset = a - 1950;
         fucking_leaf.style.bottom = `${offset * 0.1}px`;
