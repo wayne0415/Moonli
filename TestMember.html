@@ -254,7 +254,7 @@
                         <small>預約時間</small>
                         <p>2024/7/6 週二 18:00</p>
                     </div>
-                    <h3 class="status-cancelled">進行中</h3>
+                    <h3 class="status-ing">進行中</h3>
                 </div>
                 <div class="info-details">
                     <p>2200 /小時</p>
@@ -292,7 +292,7 @@
                     </div>
                     <div class="info-details">
                         <p>2200 /小時</p>
-                        <div class="moreInfo-box" id="moreInfo-box">
+                        <div class="moreInfo-box" id="moreInfo-box-1">
                             <small>查看更多</small>
                             <a href="#">
                                 <img src="./images/logo_moreinfo.svg" alt="一個向右指的箭頭">
@@ -338,11 +338,11 @@
                             <small>預約時間</small>
                             <p>2024/7/6 週二 18:00</p>
                         </div>
-                        <h3 class="status-finished">已取消</h3>
+                        <h3 class="status-cancelled">已取消</h3>
                     </div>
                     <div class="info-details">
                         <p>2200 /小時</p>
-                        <div class="moreInfo-box">
+                        <div class="moreInfo-box"id="moreInfo-box-2">
                             <small>查看更多</small>
                             <a href="#">
                                 <img src="./images/logo_moreinfo.svg" alt="一個向右指的箭頭">
@@ -542,6 +542,8 @@
             </div>
         </div>
     </div>
+
+    
 </main>
 <div class="cloud"><img src="./images/wave-white.svg" alt="背景雲"></div>
 
@@ -633,36 +635,70 @@
 <!-- 懸浮表單 -->
 <script>
     // services modal
+    // const modalViews = document.querySelectorAll('.service__modal');
+    // const modalBtns = document.querySelectorAll('#moreInfo-box-1');
+    // const modalCloses = document.querySelectorAll('.btn-turn-off');
+    // const modalContents = document.querySelectorAll('.service__modal-content');
+
+    // let modal = function (modalClick) {
+    //     modalViews[modalClick].classList.add('active-modal')
+    // }
+
+    // modalCloses.forEach((modalClose) => {
+    //     modalClose.addEventListener('click', () => {
+    //         modalViews.forEach((modalViews) => {
+    //             modalViews.classList.remove('active-modal')
+    //         })
+    //     })
+    // })
+
+    // modalBtns.forEach((modalBtn, i) => {
+    //     modalBtn.addEventListener('click', () => {
+    //         modal(i)
+    //     })
+    // })
+
+    // modalViews.forEach((modalView) => {
+    //     modalView.addEventListener('click', (e) => {
+    //         if (e.target === modalView) {
+    //             modalView.classList.remove('active-modal');
+    //         }
+    //     });
+    // });
     const modalViews = document.querySelectorAll('.service__modal');
-    const modalBtns = document.querySelectorAll('.moreInfo');
+    const modalBtns = document.querySelectorAll('#moreInfo-box-1');
     const modalCloses = document.querySelectorAll('.btn-turn-off');
-    const modalContents = document.querySelectorAll('.service__modal-content');
 
     let modal = function (modalClick) {
-        modalViews[modalClick].classList.add('active-modal')
+        modalViews[modalClick].style.opacity = "1";
+        modalViews[modalClick].style.visibility = "visible";
     }
-
-    modalCloses.forEach((modalClose) => {
-        modalClose.addEventListener('click', () => {
-            modalViews.forEach((modalViews) => {
-                modalViews.classList.remove('active-modal')
-            })
-        })
-    })
 
     modalBtns.forEach((modalBtn, i) => {
         modalBtn.addEventListener('click', () => {
-            modal(i)
-        })
-    })
+            modal(0); // 假設只有一個模態窗口，直接打開第一個
+        });
+    });
 
+    modalCloses.forEach((modalClose) => {
+        modalClose.addEventListener('click', () => {
+            modalViews.forEach((modalView) => {
+                modalView.style.opacity = "0";
+                modalView.style.visibility = "hidden";
+            });
+        });
+    });
+
+    // 點擊模態窗口外部關閉
     modalViews.forEach((modalView) => {
         modalView.addEventListener('click', (e) => {
             if (e.target === modalView) {
-                modalView.classList.remove('active-modal');
+                modalView.style.opacity = "0";
+                modalView.style.visibility = "hidden";
             }
         });
     });
+
 </script>
 
 </body>

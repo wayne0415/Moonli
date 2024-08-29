@@ -424,7 +424,7 @@ small {
 }
 
 .status-cancelled {
-    color: var(--secondary-400);
+    color: var(--red);
 }
 
 .tag {
