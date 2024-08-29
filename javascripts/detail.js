@@ -7,6 +7,7 @@ const modalContents = document.querySelectorAll('.service__modal-content');
 let modal = function (modalClick) {
     modalViews[modalClick].classList.add('active-modal')
 }
+
 modalCloses.forEach((modalClose) => {
     modalClose.addEventListener('click', () => {
         modalViews.forEach((modalViews) => {
