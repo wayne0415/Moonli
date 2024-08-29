@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $(".owl-carousel").owlCarousel({
         loop: true,                // 循環播放
-        margin: 10,                // 卡片之間的間距
+        margin: 20,                // 設置卡片之間的間距
         center: true,              // 中央卡片居中
         items: 3,                  // 每次顯示三張卡片
         autoplay: true,            // 自動播放

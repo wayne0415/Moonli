@@ -258,7 +258,9 @@ header {
     background-color: rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease;
 }
-
+.service-item span{
+    color: #F2CE98;
+}
 
 .service-item:hover {
     transform: translateY(-10px);
@@ -288,58 +290,6 @@ header {
 .service-item p {
     font-size: 1.5rem;
 }
-
-/* 數據證明區 */
-/* #statistics {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background: #42514E;
-    color: #fff;
-    padding: 40px 88px 93px 88px;
-    text-align: center;
-}
-
-.stas-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 1200px; 
-    width: 100%;
-} */
-/* .stas-item {
-    width: 100%;
-    max-width: 300px; 
-}
-
-.stas-item h3 {
-    font-size: 4.5rem;
-    margin-bottom: 8px;
-    font-weight:400;
-}
-
-.stas-item p {
-    font-size: 2rem;
-    font-weight: bold;
-    
-} */
-/* html {
-    display: flex;
-    min-height: 100%;
-    font-family: "K2D", sans-serif;
-    box-sizing: border-box;
-}
-
-html * {
-    font-family: inherit;
-} */
-
-/* html *,
-html *::before,
-html *::after {
-    box-sizing: inherit;
-} */
 
 #statistics {
     display: flex;
@@ -587,6 +537,24 @@ html *::after {
     display: none;
 }
 
+.select-menu .options span{
+    line-height: 1.6; /* 設定行高，這裡的1.8只是建議值，你可以根據需求調整 */
+    margin-bottom: 15px; /* 添加段落之間的間距 */
+}
+
+.select-menu .options .textBig2{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: rgb(252, 252, 252);
+
+}
+
+.select-menu .options .textBig{
+    font-size: 1.8rem;
+    font-weight: bold;
+
+}
+
 .select-menu.active .options {
     display: flex;
     flex-direction: column;
@@ -608,7 +576,7 @@ html *::after {
 }
 
 .select-menu span {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 400;
     color: rgb(242, 206, 152);
 }
@@ -738,7 +706,7 @@ html *::after {
 
 /* 用戶經驗分享區 */
 #experience_sharing {
-    background: linear-gradient(to bottom, #86C89E, #D3D7C4);
+    background: linear-gradient(to bottom, #86C89E, #c8d7c4);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -789,13 +757,6 @@ html *::after {
     object-fit: cover;
 }
 
-/* 
-.heart{
-    width: 80%;
-    height: auto;
-    padding: 16px;
-} */
-
 .context-box {
     height: auto;
     /* width: 180px; */
@@ -837,7 +798,6 @@ html *::after {
     /* 保持圖片高度自動調整 */
 }
 
-
 .icon_annoymoon_Happy {
     position: absolute;
     top: 14%;
@@ -859,11 +819,16 @@ html *::after {
     margin-top: 5px;
 }
 
+.arrow-left ,.arrow-right {
+    width: 5%; /* 設置箭頭圖示的大小 */
+    height: auto;
+}
+
 .go-top-btn {
     position: fixed;
     bottom: 90px;
     right: 24px;
-    background-color: #F2CE98;
+    background-color: transparent;
     display: none;
     color: transparent;
     border: none;
@@ -957,34 +922,27 @@ footer img {
     min-height: 280px;
     perspective: 500px;
     width: auto;
-    /* margin-top: 5rem; */
-    /* overflow: hidden; */
 }
 
 .testimonials .item {
-    max-width: 200px;
+    max-width: 225px;
     height: auto;
     border-radius: 1.5rem;
     border-width: 2px;
     --tw-border-opacity: 1;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-color: rgba(30, 58, 138, var(--tw-border-opacity));
+    background: linear-gradient(to bottom, rgb(255, 255, 255,0.9), rgba(255, 255, 255, 0.5));
+    /* border-color: rgba( rgb(255, 255, 255)); */
+    box-shadow: 0 9px 30px rgba(99, 98, 98, 0.13);
     position: absolute;
     box-sizing: border-box;
-    background-color: #fff;
     padding: 30px;
     text-align: center;
     transition: transform 0.4s;
     -webkit-transform-style: preserve-3d;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     user-select: none;
     cursor: pointer;
 }
 
-.testimonials .item p {
-    padding-top: 4px;
-    color: #6F6F6F;
-}
 
 .mycard {
     display: flex;
@@ -993,41 +951,37 @@ footer img {
 }
 
 .kimo-box {
-    width: 50%;
+    width: 45%;
 }
 
 .kimo-box img {
     width: 100%;
-    /* 圖片寬度設為容器的 100% */
     aspect-ratio: 1;
-    /* 設定圖片比例為 1:1，這樣可以確保圖片是正方形 */
     object-fit: cover;
-    /* 確保圖片填滿容器且不會變形 */
     height: auto;
-    /* 保持圖片高度自動調整 */
 }
 
 .cardtitle {
-    font-weight: bold;
+    padding-top: 12px;
     --tw-text-opacity: 1;
-    color: rgba(31, 41, 55, var(--tw-text-opacity));
-    /* 不確定這個顏色是否有套到 */
     text-align: center;
+    color: #6F6F6F;
+    font-weight: 700;
 }
 
 .heart {
-    padding: 16px;
+    padding: 14px;
     height: auto;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
-    /* 自動左右邊距，將愛心水平居中 */
-    display: block;
-    /* 讓圖片塊級顯示，確保 margin:auto 有效 */
+    display: block;/
 }
 
 .carddescription {
+    font-size: 1.4rem;
+    padding-top: 4px;
     --tw-text-opacity: 1;
-    color: rgba(107, 114, 128, var(--tw-text-opacity));
+    color: var(--black-700);
     text-align: center;
 }
 
@@ -1035,7 +989,7 @@ footer img {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 16px;
+    padding-top: 32px;
 }
 
 .dots label {
@@ -1050,6 +1004,7 @@ footer img {
 }
 
 
+/* 控制卡片位移 */
 /* First */
 #t-1:checked~.dots label[for="t-1"] {
     transform: scale(2);
@@ -1065,23 +1020,22 @@ footer img {
 }
 
 #t-1:checked~.testimonials label[for="t-2"] {
-    transform: translateX(300px) translateZ(-90px) translateY(-15px);
-
+    transform: translateX(295px) translateZ(-90px) translateY(-15px);
     z-index: 3;
 }
 
 #t-1:checked~.testimonials label[for="t-3"] {
-    transform: translateX(600px) translateZ(-180px) translateY(-30px);
+    transform: translateX(610px) translateZ(-180px) translateY(-30px);
     z-index: 2;
 }
 
 #t-1:checked~.testimonials label[for="t-4"] {
-    transform: translateX(900px) translateZ(-270px) translateY(-45px);
+    transform: translateX(-610px) translateZ(-180px) translateY(-30px);
     z-index: 1;
 }
 
 #t-1:checked~.testimonials label[for="t-5"] {
-    transform: translateX(1200px) translateZ(-360px) translateY(-60px);
+    transform: translateX(-295px) translateZ(-90px) translateY(-15px);
 }
 
 /* Second */
@@ -1099,7 +1053,7 @@ footer img {
 }
 
 #t-2:checked~.testimonials label[for="t-1"] {
-    transform: translateX(-300px) translateZ(-90px) translateY(-15px);
+    transform: translateX(-295px) translateZ(-90px) translateY(-15px);
 }
 
 #t-2:checked~.testimonials label[for="t-2"] {
@@ -1107,17 +1061,17 @@ footer img {
 }
 
 #t-2:checked~.testimonials label[for="t-3"] {
-    transform: translateX(300px) translateZ(-90px) translateY(-15px);
+    transform: translateX(295px) translateZ(-90px) translateY(-15px);
     z-index: 2;
 }
 
 #t-2:checked~.testimonials label[for="t-4"] {
-    transform: translateX(600px) translateZ(-180px) translateY(-30px);
+    transform: translateX(610px) translateZ(-180px) translateY(-30px);
     z-index: 1;
 }
 
 #t-2:checked~.testimonials label[for="t-5"] {
-    transform: translateX(900px) translateZ(-270px) translateY(-45px);
+    transform: translateX(-610px) translateZ(-180px) translateY(-30px);
 }
 
 /* Third */
@@ -1170,15 +1124,15 @@ footer img {
 }
 
 #t-4:checked~.testimonials label[for="t-1"] {
-    transform: translateX(-900px) translateZ(-270px) translateY(-45px);
+    transform: translateX(610px) translateZ(-180px) translateY(-30px);
 }
 
 #t-4:checked~.testimonials label[for="t-2"] {
-    transform: translateX(-600px) translateZ(-180px) translateY(-30px);
+    transform: translateX(-610px) translateZ(-180px) translateY(-30px);
 }
 
 #t-4:checked~.testimonials label[for="t-3"] {
-    transform: translateX(-300px) translateZ(-90px) translateY(-15px);
+    transform: translateX(-295px) translateZ(-90px) translateY(-15px);
     z-index: 2;
 }
 
@@ -1187,7 +1141,7 @@ footer img {
 }
 
 #t-4:checked~.testimonials label[for="t-5"] {
-    transform: translateX(300px) translateZ(-90px) translateY(-15px);
+    transform: translateX(295px) translateZ(-90px) translateY(-15px);
 }
 
 /* Fifth */
@@ -1201,21 +1155,21 @@ footer img {
 }
 
 #t-5:checked~.testimonials label[for="t-1"] {
-    transform: translateX(-1200px) translateZ(-360px) translateY(-60px);
+    transform: translateX(295px) translateZ(-90px) translateY(-15px);
 }
 
 #t-5:checked~.testimonials label[for="t-2"] {
-    transform: translateX(-900px) translateZ(-270px) translateY(-45px);
+    transform: translateX(610px) translateZ(-180px) translateY(-30px);
     z-index: 1;
 }
 
 #t-5:checked~.testimonials label[for="t-3"] {
-    transform: translateX(-600px) translateZ(-180px) translateY(-30px);
+    transform: translateX(-610px) translateZ(-180px) translateY(-30px);
     z-index: 2;
 }
 
 #t-5:checked~.testimonials label[for="t-4"] {
-    transform: translateX(-300px) translateZ(-90px) translateY(-15px);
+    transform: translateX(-295px) translateZ(-90px) translateY(-15px);
     z-index: 3;
 }
 
