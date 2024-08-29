@@ -11,13 +11,19 @@ tab_btn.forEach((tab) => {
 const tab_btn_login = document.getElementById("tab-btn-login");
 const tab_btn_logout = document.getElementById("tab-btn-logout");
 const loginButton = document.getElementById("loginButton");
+const forgot_password = document.getElementById("forgot-password");
+const privacy_content = document.getElementById("privacy-content");
 tab_btn_logout.addEventListener("click", () => {
+    forgot_password.style.display = "none";
+    privacy_content.style.display = "flex";
     if (loginButton.textContent === "登入") {
         loginButton.textContent = "下一步";
     }
 });
 // 按登入改login-button的文字變成登入
 tab_btn_login.addEventListener("click", () => {
+    forgot_password.style.display = "block";
+    privacy_content.style.display = "none";
     if (loginButton.textContent === "下一步") {
         loginButton.textContent = "登入";
     }
