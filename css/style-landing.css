@@ -6,6 +6,14 @@
         transform: rotate(360deg);
     }
 }
+@keyframes moveLeftRight {
+    0% {
+        transform: scale(100%);
+    }
+    100% {
+        transform: scale(300%);
+    }
+}
 
 header {
     background-color: rgb(50, 44, 79);
@@ -281,62 +289,65 @@ header {
 }
 
 .problems-title {
-    margin-bottom: 50%;
+    margin-bottom: 30%;
 }
-
 .problems-title h2 {
     display: inline-block;
     z-index: 5;
     font-size: 3.2rem;
     font-weight: 800;
     color: #fff;
+    transition: all 3s ease-out;
 }
 
-.icon-anny {
+/* .icon-anny {
     position: absolute;
     top: 48%;
     right: 48%;
-}
+} */
 
-.icon-anny img {
+/* .icon-anny img {
     width: 100%;
     height: auto;
     object-fit: cover;
-}
+} */
 
-.icon-annoymoon {
+/* .icon-annoymoon {
     position: absolute;
     top: 55%;
     left: 50%;
-    /* 水平居中 */
+   
     transform: translateX(-50%);
-    /* 確保元素完全水平居中 */
+    
     z-index: 10;
-    /* 確保它位於其他元素上方 */
+    
     width: 20%;
-    /* 自適應寬度 */
-}
-
+} */
+/* 
 .icon-annoymoon img {
     width: 100%;
     height: auto;
     object-fit: cover;
-}
+} */
 
 .item-6q {
     right: 5%;
     position: absolute;
     width: 89%;
+    bottom: 35%;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 2.5s ease-out;
 }
 
-.item-6q img {
+/* .item-6q img {
     width: 100%;
     height: auto;
     object-fit: cover;
-}
+} */
 
-.icon-anny img,
-.icon-annoymoon img,
+/* .icon-anny img,
+.icon-annoymoon img, */
 .item-6q img {
     width: 100%;
     height: auto;
@@ -370,8 +381,8 @@ header {
     position: absolute;
 } */
 
-.icon-anny,
-.icon-annoymoon,
+/* .icon-anny,
+.icon-annoymoon, */
 .item-6q,
 .item-wave3,
 .item-union {
@@ -385,12 +396,46 @@ header {
 
 .item-wave1 {
     z-index: 0;
+    /* width: 100%; 圖片的寬度 */
+
+    animation: moveLeftRight 3s ease-in-out infinite alternate;
 }
 
 #i-am-so-upset {
     animation: rotateAnimation 3s linear infinite;
 }
+#sticky-little-cute-father {
+    position: relative; /* 固定在視窗上，浮在頁面之上 */
 
+    width: 100%; /* 覆蓋整個視窗寬度 */
+    height: 100%;
+
+    background-color: rgb(112, 105, 138); /* 背景設置為完全透明 */
+    z-index: 1; /* 確保它在所有其他內容之上 */
+}
+
+#sticky-little-cute {
+    position: sticky;
+    top: 50%; /* 在容器內部設置粘附位置 */
+    left: 50%;
+    margin-bottom: 25%;
+    transform: translate(-50%, -50%);
+    z-index: 3; /* 確保內容在容器之上 */
+    width: 25%;
+    background-color: rgba(255, 255, 255, 0); /* 設置內容的背景部分透明 */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    pointer-events: auto; /* 確保內部內容可以正常交互 */
+}
+#little-cute {
+    margin-left: 30px;
+}
+.icon-anny {
+    object-fit: cover;
+    width: 30%;
+    height: 30%;
+}
 /* 服務特色區 */
 #services {
     display: flex;
