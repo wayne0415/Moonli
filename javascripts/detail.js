@@ -80,7 +80,7 @@ document.getElementById('service__modal-check').addEventListener('click', functi
 
     // 更新 service__modal-content 中的 <span> 元素內容
     document.getElementById('date').textContent = dateContent;
-    document.getElementById('time').textContent = dayContent;
+    document.getElementById('day').textContent = dayContent;
 });
 
 

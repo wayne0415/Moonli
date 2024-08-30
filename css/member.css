@@ -95,6 +95,7 @@ main {
     gap: 40px;
 }
 
+/* 背景圖片 */
 .cloud {
     bottom: 0;
     position: fixed;
@@ -102,11 +103,24 @@ main {
     height: 100%;
     justify-content: center;
     align-items: flex-end;
-    z-index: -1;
+    z-index: -2;
     margin: 0;
 }
 
 .cloud img {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bg-tree {
+    bottom: 0;
+    position: fixed;
+    z-index: -1;
+}
+
+.bg-tree img {
     top: 0;
     width: 100%;
     height: 100%;
@@ -544,11 +558,20 @@ small {
     justify-content: end;
 }
 
-/* 頁尾 */
+/* 頁尾區 */
+footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 40px 40px;
+}
+
 footer small {
-    line-height: 160px;
-    margin-left: 120px;
-    font-size: 14px;
+	font-family: var(--K2D-body);
+	font-size: 1.4rem;
+	color: var(--white);
+	flex: 1;
+	text-align: right;
 }
 
 @media (max-width:960px) {
