@@ -385,7 +385,7 @@ header{
     padding: 20px;
     font-size: 1.8rem;
     font-weight: 400;
-text-align: start;
+    text-align: start;
     cursor: pointer;
     transition: .3s ease-in-out;
 }

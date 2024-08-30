@@ -34,7 +34,7 @@ setInterval(() => {
     }
 }, 500);
 
-progress.onchange = function () {
+progress.onchange = function() {
     song.currentTime = progress.value;
     song.play();
     ctrlIcon.classList.add('fa-pause');
