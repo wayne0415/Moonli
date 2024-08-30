@@ -412,6 +412,8 @@ small {
     justify-content: space-between;
 }
 
+
+
 .info-text {
     display: flex;
     flex-direction: column;
@@ -427,6 +429,9 @@ small {
     color: var(--red);
 }
 
+.status-ing{
+    color: var(--secondary-400);;
+}
 .tag {
     color: var(--white);
     background-color: var(--secondary-400);
@@ -737,12 +742,9 @@ footer small {
     justify-content: space-between;
 }
 
+
 .history-info-row {
     margin-bottom: 8px;
-}
-
-.history-info-row .status-finished {
-    color: var(--secondary-400);
 }
 
 .history-info-row small {
