@@ -3,10 +3,6 @@ let problems_title = document.getElementById("problems-title");
 let fucking_leaf = document.getElementById("fucking-leaf");
 let fucking_mountain = document.getElementById("fucking-mountain");
 let small_mountain = document.getElementById("small-mountain");
-// let text_iphone = document.getElementById("text_iphone");
-// let text_iphone_plus = document.getElementById("text_iphone_plus");
-// let iphone_14 = document.getElementById("iphone_14");
-// let iphone_14_plus = document.getElementById("iphone_14_plus");
 
 // 函數來處理顯示與隱藏
 function toggleVisibility(x, y, z, n, element, triggerPoint, scrollPosition) {
@@ -37,5 +33,4 @@ window.addEventListener("scroll", () => {
     }
 
     // btn.style.marginBottom = a * 0.5 + "px";
-    // text_big.style.top = a * -0.3 + "px";
 });
