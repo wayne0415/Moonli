@@ -8,10 +8,10 @@
 }
 @keyframes moveLeftRight {
     0% {
-        transform: scale(100%);
+        transform: scale(100%, 100%);
     }
     100% {
-        transform: scale(300%);
+        transform: scale(400%, 100%);
     }
 }
 
