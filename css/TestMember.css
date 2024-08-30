@@ -37,7 +37,6 @@
 
     --btn-shadow: 4px 4px 8px rgba(196, 189, 210, 0.2), -4px -4px 8px rgb(255, 255, 255);
     --inset-shadow: inset 0 4px 10px rgba(214, 213, 221, .6);
-    --card-shadow: 0 4px 10px rgba(214, 213, 221, .6);
     --gradient-btn: rgba(234, 231, 237, 0.498), rgba(249, 249, 249, 0);
 }
 
@@ -150,7 +149,7 @@ main {
     line-height: 40px;
     width: 100%;
     border-radius: 12px;
-    padding: 4px 16px;
+    padding: 4px 16px ;
 }
 
 .member-management,
@@ -425,7 +424,7 @@ small {
 }
 
 .status-cancelled {
-    color: var(--secondary-400);
+    color: var(--red);
 }
 
 .tag {
@@ -448,7 +447,7 @@ small {
 
 .moreInfo-box {
     display: flex;
-    width: 60px;
+    /* width: 60px; */
     height: auto;
     justify-content: right;
     align-items: center;
@@ -551,7 +550,7 @@ footer small {
     font-size: 14px;
 }
 
-@media (max-width:960px) {
+@media (max-width:960px){
     main {
         display: flex;
         width: 100%;
@@ -572,7 +571,7 @@ footer small {
     .small-item {
         font-size: 1.2em;
     }
-
+    
 
     .title {
         margin-bottom: 0;
@@ -585,7 +584,7 @@ footer small {
         margin-top: 4px;
     }
 
-    .member-form {
+    .member-form{
         gap: 8px;
     }
 
@@ -616,8 +615,8 @@ footer small {
         padding: 20px;
     }
 
-    .member-container .container {
-        height: 20vh
+    .member-container .container{
+        height: 16vh
     }
 
     .member-left {
@@ -628,22 +627,345 @@ footer small {
         align-items: start;
     }
 
-    .dropdown {
-        background-color: var(--white);
-        padding: 8px;
-        border-radius: 8px;
-        box-shadow: var(--card-shadow);
-    }
-
-    .member-left li a {
-        padding: 8px 4px;
+    .member-left li a{
+        padding: 8px 8px;
         line-height: 1.2em;
         border-radius: 8px;
     }
 
-    .big-item,
-    .small-item {
+    .big-item, .small-item {
         text-align: center;
     }
 
 }
+
+/*滾輪starts */
+.service__modal-content::-webkit-scrollbar {
+	width: 5px;
+}
+
+.service__modal-content::-webkit-scrollbar-track {
+	background-color: var(--black-500-border);
+	border-radius: 99px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+.service__modal-content::-webkit-scrollbar-thumb {
+	background-color: #b9b9b9;
+	border-radius: 99px;
+}
+
+.service__modal-content ::-webkit-scrollbar-thumb:hover {
+	background: var(--black-700);
+}
+/* 滾輪ends */
+
+/* 懸浮視窗-詳細資訊卡片 */
+.HistoryInfo-box {
+    display: flex;
+    gap: 10%;
+}
+.service__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    /* visibility: visible; */
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.service__modal-content {
+    max-height: 80vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 4rem 3.2rem;
+    gap: 2rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    width: 600px;
+}
+
+/*-- 左邊欄位-詳細資訊  */
+.history-info-section {
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+}
+
+.history-info-section h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--black-800-main-text);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.history-info-photo-box {
+    display: flex;
+    justify-content: center;
+    height: 32vh;
+}
+
+.history-therapist-photo {
+    object-fit: cover;
+    width: auto;
+    height: 100%;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.history-info-text {
+    display: flex;
+    margin: 16px auto;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.history-info-row {
+    margin-bottom: 8px;
+}
+
+.history-info-row .status-finished {
+    color: var(--secondary-400);
+}
+
+.history-info-row small {
+    color: var(--black-700);
+    font-weight: bold;
+}
+
+.history-info-row h2 {
+    font-size: 2rem;
+    color: var(--black-700);
+    font-weight: 700;
+    text-align: center;
+}
+
+.history-info-details {
+    color: var(--black-700);
+    font-weight: 500;
+    display: grid;
+    text-align: left;
+    margin-bottom: 8px;
+    line-height: 1.6;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.history-info-details small {
+    color: var(--black-700);
+    font-weight: bold;
+}
+
+.history-info-details p {
+    margin-bottom: 16px;
+    font-size: 1.4rem;
+    margin-right: 10px;
+    flex-basis: 80px;
+    color: var(--black-700);
+}
+
+
+/* 左邊欄位裡的查看更多 */
+.history-more-info-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.history-more-info-box small {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--black-700);
+    cursor: pointer;
+    margin-right: 4px;
+    cursor: pointer;
+}
+
+.history-more-info-box a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.history-more-info-box img {
+    width: 80%;
+    height: auto;
+}
+
+
+/* 右邊欄位 */
+.rating-section {
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+}
+
+/*右邊欄位-特質評分區  */
+.rating-section h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--black-800-main-text);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.rating-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.rating-category {
+    display: flex;
+    margin-bottom: 24px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rating-category span {
+    font-size: 1.6rem;
+    color: var(--black-700);
+    font-weight: 900;
+}
+
+.stars {
+    display: flex;
+}
+
+.star-box {
+    display: flex;
+    width: auto;
+}
+
+.star {
+    font-size: 2rem;
+    font-weight: bold;
+    width: 100%;
+    height: auto;
+    gap: 5%;
+}
+
+.star:last-child {
+    margin-right: 0;
+}
+
+
+/*右邊欄位-心得分享區  */
+.rating-experience {
+    padding-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.rating-experience h3 {
+    color: var(--black-800-main-text);
+}
+
+.rating-experience textarea {
+    width: 100%;
+    height: 28vh;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: none;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.rating-experience textarea::placeholder {
+    color: #bbb;
+}
+
+.anonymous-share {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    font-size: 14px;
+    color: #4a4a4a;
+    justify-content: center;
+}
+
+.anonymous-share input {
+    margin-right: 10px;
+}
+
+.feedback-section h4 {
+    font-size: 18px;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+
+/* 按鈕區域 */
+.btn-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 4%;
+}
+
+.btn-CTA span {
+    display: flex;
+    padding: 5px 80px;
+}
+
+button {
+    width: 100%;
+    margin: 0 auto;
+    padding: 12px 0;
+    font-size: 1.6rem;
+    max-width: 300px;
+    font-weight: bold;
+    border-radius: 999px;
+    text-align: center;
+    border: 3px solid var(--primary-400);
+    background-color: transparent;
+    color: var(--primary-400);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+.btn-turn-off {
+    background-color: transparent;
+    color: var(--primary-400);
+    border: 3px solid var(--primary-400);
+}
+
+.btn-save {
+    background-color: var(--primary-400);
+    color: #fff;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+

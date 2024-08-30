@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="./css/card-list.css">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/reset.css">
@@ -22,11 +23,11 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
     <header style="background-color: rgb(91, 97, 149);">
-        <a href="/index.html" class="logo"><img src="./images/logo_NavBar.svg" alt="Moonli-logo" /></a>
+        <a href="./index.html" class="logo"><img src="./images/logo_NavBar.svg" alt="Moonli-logo" /></a>
         <nav class="navbar">
             <div class="navigation">
                 <a href="#" class="nav-menu">服務項目</a>
-                <a href="#" class="nav-menu">心理師列表</a>
+                <a href="./card-list.html" class="nav-menu">心理師列表</a>
                 <a href="#" class="nav-menu">常見問題</a>
                 <a href="#" class="nav-menu">相關資訊</a>
                 <a href="#" class="nav-menu">自我檢測</a>
@@ -48,92 +49,20 @@
         <!-- JSX 代碼 -->
         <script type="text/babel">
             function Card(props) {
-                const { img, name, page, full, price, district, clinic, style, tag, issue1, issue2, issue3, issue4, audio } = props;
-
-                const [isPlaying, setIsPlaying] = React.useState(false);
-                const [progress, setProgress] = React.useState(0);
-                const [currentTime, setCurrentTime] = React.useState('0:00');
-                const [totalTime, setTotalTime] = React.useState('0:00');
-                const audioRef = React.useRef(null);
-                const progressRef = React.useRef(null);
-                const ctrlIconRef = React.useRef(null);
-
-                React.useEffect(() => {
-                    const audioElement = audioRef.current;
-                    const progressElement = progressRef.current;
-
-                    if (audioElement) {
-                        // 設置音頻元數據載入完成後的處理
-                        audioElement.onloadedmetadata = function () {
-                            progressElement.max = audioElement.duration;
-                            setTotalTime(formatTime(audioElement.duration));
-                        };
-
-                        // 設置定時更新進度條和當前播放時間
-                        const interval = setInterval(() => {
-                            if (!isNaN(audioElement.duration)) {
-                                setProgress(audioElement.currentTime);
-                                progressElement.value = audioElement.currentTime;
-
-                                let percent = (audioElement.currentTime / audioElement.duration) * 100;
-                                progressElement.style.background = `linear-gradient(to right, var(--black-600) ${percent}%, var(--black-400) ${percent}%)`;
-
-                                setCurrentTime(formatTime(audioElement.currentTime));
-                            }
-                        }, 500);
-
-                        // 清理計時器
-                        return () => clearInterval(interval);
-                    }
-                }, []);
-
-                const playPause = () => {
-                    const audioElement = audioRef.current;
-                    const ctrlIconElement = ctrlIconRef.current;
-
-                    if (ctrlIconElement.classList.contains('fa-pause')) {
-                        audioElement.pause();
-                        ctrlIconElement.classList.remove('fa-pause');
-                        ctrlIconElement.classList.add('fa-play');
-                    } else {
-                        audioElement.play();
-                        ctrlIconElement.classList.add('fa-pause');
-                        ctrlIconElement.classList.remove('fa-play');
-                    }
-
-                    setIsPlaying(!isPlaying);
-                };
-
-                const playChange = (event) => {
-                    const audioElement = audioRef.current;
-                    audioElement.currentTime = event.target.value;
-                    audioElement.play();
-
-                    ctrlIconRef.current.classList.add('fa-pause');
-                    ctrlIconRef.current.classList.remove('fa-play');
-
-                    setProgress(event.target.value);
-                };
-
-                const formatTime = (seconds) => {
-                    let minutes = Math.floor(seconds / 60);
-                    let secs = Math.floor(seconds % 60);
-                    return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
-                };
-
+                const { img, name, full, price, district, clinic, style, tag, issue1, issue2, issue3, issue4, audio } = props;
                 return (
                     <div className="card">
-                        <a href={page} target='_blank'><img src={img} alt={name} /></a>
+                        <a href="#"><img src={img} alt={name} /></a>
                         <div className="icon">
                             <i className="fa-regular fa-star"></i>
-                            <a href={page} target='_blank'>
+                            <a href="#">
                                 <div className="more">
                                     <span>查看更多</span>
                                     <i className="fa-solid fa-chevron-right"></i>
                                 </div>
                             </a>
                         </div>
-                        <div className="detail-info">
+                        <div className="detail-info" >
                             <div className="title">
                                 <div>
                                     <span className="title__np">{name}</span>
@@ -160,21 +89,14 @@
                                 <span>{issue4}</span>
                             </div>
                             <div className="soundtrack">
-                                <audio id="song" ref={audioRef}>
+                                <audio id="song">
                                     <source src={audio} type="audio/mpeg" />
                                 </audio>
-                                <div onClick={playPause}>
-                                    <i className="fa-solid fa-play controls" id="ctrlIcon" ref={ctrlIconRef}></i>
-                                </div>
-                                <input
-                                    onChange={playChange}
-                                    type="range"
-                                    value={progress}
-                                    id="progress"
-                                    ref={progressRef}
-                                />
+                                <div onClick="playPause()"><i className="fa-solid fa-play controls" id="ctrlIcon"></i></div>
+                                <input type="range" defaultValue="0" id="progress" />
+
                                 <div id="timeDisplay">
-                                    <span id="currentTime">{currentTime}</span> / <span id="totalTime">{totalTime}</span>
+                                    <span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
                                 </div>
                             </div>
                         </div>
@@ -182,14 +104,12 @@
                 );
             }
 
-
             function App() {
                 const products = [
                     {
                         id: 1,
                         img: "./images/諮商師1.jpg",
                         name: '陳美美',
-                        page:'/detail.html',
                         full: '',
                         price: 2200,
                         district: '台北市',
@@ -206,7 +126,6 @@
                         id: 2,
                         img: "./images/諮商師2.jpg",
                         name: '李小華',
-                        page:'/detail.html',
                         full: '已額滿',
                         price: 2200,
                         district: '台北市',
@@ -222,7 +141,6 @@
                         id: 3,
                         img: "./images/諮商師3.jpg",
                         name: '張大衛',
-                        page:'/detail.html',
                         full: '',
                         price: 2200,
                         district: '台北市',
@@ -238,7 +156,6 @@
                         id: 4,
                         img: "./images/諮商師4.jpg",
                         name: '林小白',
-                        page:'/detail.html',
                         full: '',
                         price: 2200,
                         district: '台北市',
@@ -255,7 +172,6 @@
                         id: 5,
                         img: "./images/諮商師5.jpg",
                         name: '孫小芳',
-                        page:'/detail.html',
                         full: '已額滿',
                         price: 2200,
                         district: '台北市',
@@ -272,7 +188,6 @@
                         id: 6,
                         img: "./images/諮商師6.jpg",
                         name: '王小明',
-                        page:'/detail.html',
                         full: '',
                         price: 2200,
                         district: '台北市',
@@ -700,6 +615,7 @@
                                     </div>
                                     <button className="reset-btn">進階篩選</button>
                                 </div>
+
                                 {/* card */}
                                 <div className="list-container">
                                     <div className="card__list">
@@ -708,7 +624,6 @@
                                                 key={item.id}
                                                 img={item.img}
                                                 name={item.name}
-                                                page={item.page}
                                                 full={item.full}
                                                 price={item.price}
                                                 district={item.district}
@@ -739,7 +654,6 @@
     <script src="./javascripts/card-list-filter.js"></script>
     <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>
     <script src="./javascripts/card-list.js"></script>
-    <script src="./javascripts/audio.js"></script>
     <!-- <link rel="stylesheet" href="./React-data/stylesheets/all.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"> -->
 
