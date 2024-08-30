@@ -107,6 +107,15 @@ overlay.addEventListener("click", (e) => {
 });
 
 
+
+
+
+
+
+
+
+
+
 let lastScrollTop = 0;
 const header = document.querySelector('header');
 
