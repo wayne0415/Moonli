@@ -55,11 +55,11 @@
                 <div class="divider">或是使用</div>
 
                 <div class="social-login">
-                    <button class="facebook-login">
+                    <button class="facebook-login" id="facebook-login">
                         <figure><img src="./images/Facebook_2023.svg" alt="FB" /></figure>
                         <p>使用 Facebook 帳號登入</p>
                     </button>
-                    <button class="google-login">
+                    <button class="google-login" id="google-login">
                         <figure><img src="./images/Chrome.svg" alt="Google" /></figure>
                         <p>使用 Google 帳號登入</p>
                     </button>
@@ -490,6 +490,11 @@
                 window.scrollTo({ top: 0, behavior: "smooth" });
             });
         </script>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+        <script src="./javascripts/navbar.js"></script>
+        <script src="https://accounts.google.com/gsi/client" async defer></script>
+
         <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>
         <script src="./javascripts/animated-number.js"></script>
         <script src="./javascripts/landing-login.js"></script>

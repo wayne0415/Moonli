@@ -40,3 +40,11 @@ overlay.addEventListener("click", (e) => {
         overlay.style.display = "none";
     }
 });
+
+// 用戶點擊下一步時跳轉頁面
+loginButton.addEventListener("click", (e) => {
+    e.preventDefault(); // 阻止表單的默認提交行為
+    if (loginButton.textContent === "下一步") {
+        window.location.href = "https://www.google.com";
+    }
+});
