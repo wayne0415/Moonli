@@ -9,37 +9,6 @@
     <link rel="stylesheet" href="./css/nav-lightmode.css" />
     <link rel="stylesheet" href="./css/TestMember.css" />
     <title>會員管理</title>
-    <!-- <style>
-.service__modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* opacity: 0;
-    visibility: hidden; */
-    visibility: visible;
-    transition: opacity 0.3s, visibility 0.3s;
-}
-
-.service__modal-content {
-    max-height: 80vh;
-    overflow-y: auto;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding: 4rem 3.2rem;
-    gap: 2rem;
-    background-color: #fff;
-    border-radius: 2rem;
-    width: 600px;
-} -->
 </head>
 
 <body>
@@ -277,6 +246,7 @@
             <a href="#" class="tab active" onclick="changeToHist()">歷史紀錄</a>
         </div>
         <div class="container-wrap">
+            <!-- 預約歷史紀錄---狀態：已完成 -->
             <div class="container">
                 <div class="info-img-wrap">
                     <img src="./images/psychologist.png" alt="心理諮商師 林菌傑" />
@@ -326,11 +296,11 @@
                     </div>
                 </div>
             </div>
+            <!-- 預約歷史紀錄---狀態：已取消 -->
             <div class="container">
                 <div class="info-img-wrap">
                     <img src="./images/psychologist.png" alt="心理諮商師 林菌傑" />
                 </div>
-
                 <div class="info-details-wrap">
                     <div class="info-details">
                         <div class="info-text">
@@ -429,7 +399,7 @@
         <h1 class="title">常見問題</h1>
     </div>
 
-    <!-- 新增的彈出視窗容器 -->
+    <!-- 新增的彈出視窗容器---狀態：已完成 -->
     <div id="service__modal" class="service__modal">
         <div class="service__modal-content">
             <div class="HistoryInfo-box">
@@ -441,7 +411,7 @@
                         <img src="./images/psychologist.png" alt="心理諮商師 林菌傑" class="history-therapist-photo">
                     </div>
                     <div class="history-info-text">
-                        <div class="info-row">
+                        <div class="history-info-row">
                             <small> 心理諮商師</small>
                             <h2> 林菌傑</h2>
                         </div>
@@ -543,7 +513,16 @@
         </div>
     </div>
 
-    
+    <!-- 新增的彈出視窗容器---狀態：已取消 -->
+    <!-- <div id="service__modal" class="service__modal">
+        <div class="service__modal-content">
+            <div class=HisInfo-box>
+                
+            <div>
+        </div>
+    </div> -->
+
+
 </main>
 <div class="cloud"><img src="./images/wave-white.svg" alt="背景雲"></div>
 
@@ -607,8 +586,6 @@
         const faqDiv = document.querySelector('#faq');
         if (faqDiv) faqDiv.style.display = 'block';
     }
-
-
 </script>
 
 <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>
@@ -632,39 +609,8 @@
 
 </script>
 
-<!-- 懸浮表單 -->
+<!-- 懸浮表單---狀態：進行中 -->
 <script>
-    // services modal
-    // const modalViews = document.querySelectorAll('.service__modal');
-    // const modalBtns = document.querySelectorAll('#moreInfo-box-1');
-    // const modalCloses = document.querySelectorAll('.btn-turn-off');
-    // const modalContents = document.querySelectorAll('.service__modal-content');
-
-    // let modal = function (modalClick) {
-    //     modalViews[modalClick].classList.add('active-modal')
-    // }
-
-    // modalCloses.forEach((modalClose) => {
-    //     modalClose.addEventListener('click', () => {
-    //         modalViews.forEach((modalViews) => {
-    //             modalViews.classList.remove('active-modal')
-    //         })
-    //     })
-    // })
-
-    // modalBtns.forEach((modalBtn, i) => {
-    //     modalBtn.addEventListener('click', () => {
-    //         modal(i)
-    //     })
-    // })
-
-    // modalViews.forEach((modalView) => {
-    //     modalView.addEventListener('click', (e) => {
-    //         if (e.target === modalView) {
-    //             modalView.classList.remove('active-modal');
-    //         }
-    //     });
-    // });
     const modalViews = document.querySelectorAll('.service__modal');
     const modalBtns = document.querySelectorAll('#moreInfo-box-1');
     const modalCloses = document.querySelectorAll('.btn-turn-off');

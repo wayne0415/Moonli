@@ -1,6 +1,4 @@
 const tab_btn = document.querySelectorAll(".tab-btn");
-const screenWidth = window.innerWidth;
-const login_link = document.getElementById('login-link')
 
 tab_btn.forEach((tab) => {
     tab.addEventListener("click", () => {
@@ -19,109 +17,102 @@ tab_btn_logout.addEventListener("click", () => {
     forgot_password.style.display = "none";
     privacy_content.style.display = "flex";
     if (loginButton.textContent === "登入") {
-        loginButton.textContent = "下一步";
+        loginButton.textContent = "點此註冊";
     }
 });
 // 按登入改login-button的文字變成登入
 tab_btn_login.addEventListener("click", () => {
     forgot_password.style.display = "block";
     privacy_content.style.display = "none";
-    if (loginButton.textContent === "下一步") {
+    if (loginButton.textContent === "點此註冊") {
         loginButton.textContent = "登入";
     }
 });
 
-
-
-
-
-let bars = document.getElementById('bars');
-let navbar = document.querySelector('.navigation');
-let cross = document.getElementById('menu-bars');
-
-// 導覽列隱藏/顯示
-bars.addEventListener('click', () => {
-    const screenWidth = window.innerWidth;
-
-    if (screenWidth > 768) {
-        login_container.style.display = "block";
-        overlay.style.display = "block";
-    }
-
-    cross.classList.toggle('fa-bars');
-    cross.classList.toggle('fa-x');
-    bars.classList.toggle('active');
-    navbar.classList.toggle('active');
-
-});
-
-document.addEventListener('DOMContentLoaded', adjustNavigation);
-window.addEventListener('resize', adjustNavigation);
-
-function adjustNavigation() {
-    const navigation = document.querySelector('.navigation');
-    const loginLink = document.querySelector('.navigation .nav-menu.login-link');
-    const screenWidth = window.innerWidth;
-
-    // <=768時
-    if (screenWidth <= 768) {
-        if (!loginLink) {
-            // 增加連結
-            const newLink = document.createElement('a');
-            newLink.href = '#';
-            newLink.className = 'nav-menu login-link'; // 添加 class
-            newLink.id = 'login-link'; // 添加 id
-            newLink.textContent = '登入';
-            navigation.appendChild(newLink); // 插入到 navigation 中
-
-            // 顯示登入&遮罩
-            newLink.addEventListener('click', (e) => {
-                e.preventDefault(); // 防止跳轉
-                login_container.style.display = "block";
-                overlay.style.display = "block";
-                navbar.classList.remove('active')
-                cross.classList.remove('fa-x');
-                cross.classList.toggle('fa-bars');
-                bars.classList.remove('active');
-            });
-        }
-    } else {
-        if (loginLink) {
-            // 移除登入
-            navigation.removeChild(loginLink);
-        }
-    }
-}
 // 獲取元素
 const bars_btn = document.getElementsByClassName("bars-btn")[0];
 const login_container = document.getElementById("login-container");
 const overlay = document.getElementById("overlay");
+// 點擊登入按鈕時顯示登入框
+bars_btn.addEventListener("click", () => {
+    login_container.style.display = "block";
+    overlay.style.display = "block";
+});
 
 // 點擊背景區域隱藏登入框
 overlay.addEventListener("click", (e) => {
     if (e.target === overlay) {
         login_container.style.display = "none";
         overlay.style.display = "none";
-        bars.classList.remove('active');
     }
 });
-
-
-let lastScrollTop = 0;
-const header = document.querySelector('header');
-
-window.addEventListener('scroll', () => {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollTop > lastScrollTop) {
-        // 向下滚动时隐藏 header
-        header.style.top = '-100px';
-    } else {
-        // 向上滚动时显示 header
-        header.style.top = '0';
+// 用戶點擊下一步時跳轉頁面
+loginButton.addEventListener("click", (e) => {
+    if (loginButton.textContent === "點此註冊") {
+        e.preventDefault(); // 阻止表單的默認提交行為
+        window.location.href = "https://www.google.com";
     }
-    lastScrollTop = scrollTop;
+});
+const facebook_login = document.getElementById("facebook-login");
+const google_login = document.getElementById("google-login");
+// facebook_login.addEventListener("click", (e) => {
+//     e.preventDefault(); // 阻止表單的默認提交行為
+//     window.location.href = "https://www.facebook.com";
+// });
+google_login.addEventListener("click", (e) => {
+    e.preventDefault(); // 阻止表單的默認提交行為
+    window.location.href = "https://www.google.com";
 });
 
+// 以下是第三方登入的部分
+window.fbAsyncInit = function () {
+    FB.init({
+        appId: "1178064053494656", // 用你的 App ID 替換
+        cookie: true,
+        xfbml: true,
+        version: "v20.0", // 使用最新的 API 版本
+    });
 
+    FB.AppEvents.logPageView();
+};
 
+(function (d, s, id) {
+    var js,
+        fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {
+        return;
+    }
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+})(document, "script", "facebook-jssdk");
 
+facebook_login.addEventListener("click", function () {
+    FB.login(
+        function (response) {
+            if (response.status === "connected") {
+                // 用戶已登入，處理登入後的邏輯
+                console.log("User logged in successfully!");
+            } else {
+                // 用戶未登入或取消登入
+                console.log("User did not log in.");
+            }
+        },
+        { scope: "public_profile,email" }
+    ); // 要求的權限
+});
+function handleCredentialResponse(response) {
+    // 解碼 ID token，並處理登入邏輯
+    console.log("ID token: " + response.credential);
+}
+// google
+// google_login.addEventListener("click", function (e) {
+//     e.preventDefault();
+//     google.accounts.id.initialize({
+//         client_id: "YOUR_CLIENT_ID", // 用你的 Client ID 替換
+//         callback: handleCredentialResponse,
+//     });
+
+//     google.accounts.id.prompt(); // 顯示 Google 登入提示框
+// });
