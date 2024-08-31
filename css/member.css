@@ -176,6 +176,7 @@ main {
 .big-item {
     font-size: var(--body-semibold);
     font-weight: 600;
+    cursor: pointer;
 }
 
 .small-item {
@@ -184,7 +185,7 @@ main {
 
 .small-item:hover,
 .big-item:hover {
-    color: var(--primary-500);
+    color: var(--primary-400);
     background-image: linear-gradient(var(--gradient-btn));
     box-shadow: var(--btn-shadow);
 }
@@ -347,8 +348,8 @@ input[type="date"]:focus {
     cursor: pointer;
 }
 
-.submit-button:hover {
-    background-color: var(--primary-400);
+.submit-button:active {
+    background-color: var(--primary-500);
     color: var(--white);
 }
 
