@@ -147,11 +147,11 @@
 
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" name="reservation" value="會員本人預約，同會員資料" onclick="onlyOne(this)">
+                                <input type="checkbox" name="reservation" id="check" value="會員本人預約，同會員資料" onclick="onlyOne(this)">
                                 會員本人預約，同會員資料
                             </label>
                             <label>
-                                <input type="checkbox" name="reservation" value="非會員本人預約，可先填寫下方資料"
+                                <input type="checkbox" name="reservation" id="uncheck" value="非會員本人預約，可先填寫下方資料"
                                     onclick="onlyOne(this)">
                                 非會員本人預約，可先填寫下方資料
                             </label>
@@ -164,11 +164,11 @@
                             <div class="form-group">
                                 <label>性別 <span class="required">*</span></label>
                                 <div class="radio-group">
-                                    <input type="radio" id="male" name="gender" checked />
+                                    <input type="radio" value="male" id="male" name="gender" checked />
                                     <label for="male">男性</label>
-                                    <input type="radio" id="female" name="gender" />
+                                    <input type="radio" value="female" id="female" name="gender" />
                                     <label for="female">女性</label>
-                                    <input type="radio" id="other" name="gender" />
+                                    <input type="radio" value="other" id="other" name="gender" />
                                     <label for="other">其他</label>
                                 </div>
                             </div>

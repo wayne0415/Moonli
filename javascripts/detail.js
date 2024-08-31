@@ -80,7 +80,7 @@ document.getElementById('service__modal-check').addEventListener('click', functi
 
     // 更新 service__modal-content 中的 <span> 元素內容
     document.getElementById('date').textContent = dateContent;
-    document.getElementById('day').textContent = dayContent;
+    document.querySelector('.day').textContent = dayContent;
 });
 
 
@@ -110,6 +110,32 @@ function onlyOne(checkbox) {
         if (item !== checkbox) item.checked = false;
     });
 }
+
+const check = document.getElementById('check');
+const uncheck = document.getElementById('uncheck');
+
+check.addEventListener('change', () => {
+    if (check.checked) {
+        const formData = JSON.parse(localStorage.getItem('formData'));
+        const phoneContent = formData.phone;
+        const nameContent = formData.name;
+        const emailContent = formData.email;
+        const bdContent = formData.birthday;
+
+        document.getElementById('phone').value = phoneContent;
+        document.getElementById('email').value = emailContent;
+        document.getElementById('name').value = nameContent;
+        document.getElementById('birthday').value = bdContent;
+
+        const storedGender = localStorage.getItem('gender');
+        if (storedGender) {
+            const radioToCheck = document.querySelector(`input[name="gender"][value="${storedGender}"]`);
+            if (radioToCheck) {
+                radioToCheck.checked = true;
+            }
+        }
+    }
+});
 
 
 

@@ -94,11 +94,11 @@
             <div class="form-group">
                 <label>性別 <span class="required">*</span></label>
                 <div class="radio-group">
-                    <input type="radio" id="male" name="gender" checked />
+                    <input type="radio" value="male" id="male" name="gender" checked />
                     <label for="male">男性</label>
-                    <input type="radio" id="female" name="gender" />
+                    <input type="radio" value="female" id="female" name="gender" />
                     <label for="female">女性</label>
-                    <input type="radio" id="other" name="gender" />
+                    <input type="radio" value="other" id="other" name="gender" />
                     <label for="other">其他</label>
                 </div>
             </div>
@@ -135,7 +135,7 @@
                 <input type="text" id="education" name="education" />
             </div>
             <small class="editdata">修改會員資料</small>
-            <button type="submit" class="submit-button">儲存</button>
+            <button type="submit" class="submit-button" id="submit-button">儲存</button>
         </form>
     </div>
 
@@ -311,7 +311,7 @@
                         <h3 class="status-finished">已取消</h3>
                     </div>
                     <div class="info-details">
-                            <p>2200 /小時</p>
+                        <p>2200 /小時</p>
                         <div class="moreInfo-box">
                             <small>查看更多</small>
                             <a href="#">
@@ -375,7 +375,7 @@
 
             <div class="article-details-wrap">
                 <h3>一定要有喜歡或交往過不同性別的人才能確定自己的性向嗎？</h3>
-                    <small>確定自己的性向並不一定需要與不同性別的人有過交往經歷。性向是個人對他人情感和性吸引的傾向，這種感覺可能會在不同的生活階段和經驗中逐漸明朗。有些人可能會通過與不同性別的人交往來了解自己的性向，但這不是必要的條件。每個人的經驗和自我發現過程都不同，有些人可能會通過其他方式來理解自己的性向。</small>
+                <small>確定自己的性向並不一定需要與不同性別的人有過交往經歷。性向是個人對他人情感和性吸引的傾向，這種感覺可能會在不同的生活階段和經驗中逐漸明朗。有些人可能會通過與不同性別的人交往來了解自己的性向，但這不是必要的條件。每個人的經驗和自我發現過程都不同，有些人可能會通過其他方式來理解自己的性向。</small>
             </div>
             <div class="article-like">
                 <div class="like"><img src="./images/icon-filled-star.svg" class="star"></img></div>
@@ -399,12 +399,12 @@
         <h1 class="title">常見問題</h1>
     </div>
 </main>
-    <!-- 頁尾區 -->
-    <footer>
-        <small> 2024 Mooni. All Rights Reserved.</small>
-    </footer>
+<!-- 頁尾區 -->
+<footer>
+    <small> 2024 Mooni. All Rights Reserved.</small>
+</footer>
 
-    <!-- 背景圖 -->
+<!-- 背景圖 -->
 <div class="bg-tree"><img src="./images/tree.png" alt="背景樹"></div>
 <div class="cloud"><img src="./images/wave-white.svg" alt="背景雲"></div>
 
@@ -490,6 +490,38 @@
             });
         }
     });
+
+</script>
+
+<script>
+    document.getElementById('submit-button').addEventListener('click', function (event) {
+        event.preventDefault(); // 防止提交表單
+
+        // 姓名 信箱 聯絡電話 生日
+        const birthday = document.getElementById('birthday').value;
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+
+        const formData = {
+            name: name,
+            email: email,
+            phone: phone,
+            birthday: birthday
+        };
+
+        localStorage.setItem('formData', JSON.stringify(formData));
+
+        // radio button的值
+        const radios = document.querySelectorAll(`input[name='gender']`);
+        radios.forEach((radio) => {
+            if (radio.checked) {
+                localStorage.setItem('gender', radio.value);/* 存到localStorage中 */
+            }
+        })
+    });
+
+
 
 </script>
 </body>
