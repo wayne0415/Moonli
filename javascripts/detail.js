@@ -233,3 +233,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// loading gif
+function loader() {
+    document.querySelector('.loader-container').classList.add('active')
+}
+function fadeOut() {
+    setInterval(loader, 1200);
+}
+
+// window.onload = fadeOut;
+// document.getElementById('service__modal-next').addEventListener('click', fadeOut);
