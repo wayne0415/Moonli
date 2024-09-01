@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Moonli 心理諮商媒合平台</title>
-        <link rel="icon" href="#" />
+        <link rel="icon" href="./images/favicon.ico" />
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/style.css" />
         <link rel="stylesheet" href="./css/nav.css" />
@@ -15,22 +15,56 @@
         <!-- 我是首頁 -->
         <!-- 導覽列 -->
         <header>
-            <a href="#" class="logo"><img src="./images/logo_NavBar.svg" alt="Moonli-logo" /></a>
+            <a href="./index.html" class="logo"><img src="./images/logo_NavBar.svg" alt="Moonli-logo" /></a>
             <!-- 選單列表 -->
             <nav class="navbar">
                 <div class="navigation">
                     <a href="#" class="nav-menu">服務項目</a>
-                    <a href="#" class="nav-menu">心理師列表</a>
+                    <a href="./card-list.html" class="nav-menu">心理師列表</a>
                     <a href="#" class="nav-menu">常見問題</a>
                     <a href="#" class="nav-menu">相關資訊</a>
                     <a href="#" class="nav-menu">自我檢測</a>
                 </div>
-                <div class="login" id="bars">
+                <div class="login bars-btn" id="bars">
                     <span>登入註冊</span>
                     <i class="fa-solid fa-bars" id="menu-bars"></i>
                 </div>
             </nav>
         </header>
+        <!-- 登入功能頁面 -->
+        <div class="overlay" id="overlay"></div>
+        <div class="login-container" id="login-container">
+            <div class="tab">
+                <button class="tab-btn active" id="tab-btn-login">登入</button>
+                <button class="tab-btn" id="tab-btn-logout">註冊</button>
+            </div>
+
+            <form class="login-form">
+                <label for="email">信箱</label>
+                <input type="text" id="email" name="email" placeholder="123456@gmail.com" />
+
+                <label for="password">密碼</label>
+                <input type="password" id="password" name="password" placeholder="**********" />
+
+                <button type="submit" class="login-btn" id="loginButton">登入</button>
+
+                <a href="#" class="forgot-password" id="forgot-password">忘記密碼</a>
+                <p id="privacy-content"><img src="./images/Privacy.svg" alt="privacy-icon" />註冊即代表同意隱私權</p>
+
+                <div class="divider">或是使用</div>
+
+                <div class="social-login">
+                    <button class="facebook-login" id="facebook-login">
+                        <figure><img src="./images/Facebook_2023.svg" alt="FB" /></figure>
+                        <p>使用 Facebook 帳號登入</p>
+                    </button>
+                    <button class="google-login" id="google-login">
+                        <figure><img src="./images/Chrome.svg" alt="Google" /></figure>
+                        <p>使用 Google 帳號登入</p>
+                    </button>
+                </div>
+            </form>
+        </div>
         <!-- 頁面A：大LOGO+找心理師按鈕 -->
         <section id="home">
             <div class="home-container">
@@ -39,18 +73,17 @@
                     <img src="./images/logo_Home.jpg" alt="Moonli logo" />
                 </div>
                 <div class="search-btn">
-                    <button>篩選心理師<i class="fa-solid fa-magnifying-glass"></i></button>
+                    <a href="./general-filter.html">篩選心理師<i class="fa-solid fa-magnifying-glass"></i></a>
                 </div>
-                <!-- <div class="home-images-moon-container">
-                <img src="./images/photo_home_moon.jpg" alt="Moon image">
-            </div> -->
-                <!-- 月亮不放圖片了 直接用div捏 -->
             </div>
         </section>
         <!-- 頁面B：痛點 -->
         <section id="problems">
             <div class="problems-title">
                 <h2>在生活中，您是否有遇過這些煩惱？</h2>
+            </div>
+            <div class="icon-annoymoon">
+                <img src="./images/icon_annoymoon.png" />
             </div>
             <div class="item-union">
                 <img src="./images/photo_Union.png" />
@@ -67,9 +100,9 @@
             <div class="icon-anny">
                 <img src="./images/icon_annoy.jpg" />
             </div>
-            <div class="icon-annoymoon">
+            <!-- <div class="icon-annoymoon">
                 <img src="./images/icon_annoymoon.png" />
-            </div>
+            </div> -->
             <div class="item-6q">
                 <img src="./images/photo_home_6q.jpg" />
             </div>
@@ -90,7 +123,7 @@
             <div class="services-container">
                 <div class="service-item">
                     <img src="./images/icon_voice.png" />
-                    <h3>全台首創 語音簡介</h3>
+                    <h3><span>全台首創</span> 語音簡介</h3>
                     <p>30秒心理師的自我介紹<br />快速拉近與心理師的距離</p>
                 </div>
                 <div class="service-item">
@@ -105,21 +138,19 @@
                 </div>
             </div>
         </section>
-
-        <!-- 數據證明區 -->
         <section id="statistics">
-            <div class="stas-container">
-                <div class="stas-item">
-                    <h3>6666+</h3>
-                    <p>註冊使用者</p>
+            <div class="counters">
+                <div class="number">
+                    <h3 class="counter">6531+</h3>
+                    <span>註冊使用者</span>
                 </div>
-                <div class="stas-item">
-                    <h3>365+</h3>
-                    <p>合作心理諮商所</p>
+                <div class="number">
+                    <h3 class="counter">365+</h3>
+                    <span>合作心理諮商所</span>
                 </div>
-                <div class="stas-item">
-                    <h3>8888+</h3>
-                    <p>預約成立次數者</p>
+                <div class="number">
+                    <h3 class="counter">8654+</h3>
+                    <span>預約成立次數者</span>
                 </div>
             </div>
         </section>
@@ -157,9 +188,9 @@
                     <div class="options">
                         <div class="option">
                             <p class="option-text">
-                                <span>長期心理諮商:</span>
+                                <span class="textBig2">長期心理諮商:</span><br />
                                 深入探索個案的內心和潛在問題，通常需持續數月甚至數年，適合處理深層的情感問題和長期困擾。<br />
-                                <span>一般心理諮商:</span>
+                                <span class="textBig2">一般心理諮商:</span><br />
                                 關注解決具體問題，通常時間較短，適合快速提供情感支持和實用的解決方案。
                             </p>
                         </div>
@@ -174,10 +205,10 @@
                     <div class="options">
                         <div class="option">
                             <p class="option-text">
-                                <span>自我評估：</span>審視自己的問題與需求，確立進行心理諮商的目標。<br />
-                                <span>尋找合適的心理師：</span>選擇專業背景與諮商風格與自己契合的心理師。<br />
-                                <span>保持開放態度：</span>準備好坦誠交流、積極參與諮商。<br />
-                                <span>了解諮商流程：</span>確認諮商的基本流程及可能的治療方法，減少不確定性。
+                                <span class="textBig">自我評估：</span><br />審視自己的問題與需求，確立進行心理諮商的目標。<br />
+                                <span class="textBig">尋找合適的心理師：<br /></span>選擇專業背景與諮商風格與自己契合的心理師。<br />
+                                <span class="textBig">保持開放態度：<br /></span>準備好坦誠交流、積極參與諮商。<br />
+                                <span class="textBig">了解諮商流程：<br /></span>確認諮商的基本流程及可能的治療方法，減少不確定性。
                             </p>
                         </div>
                     </div>
@@ -239,67 +270,91 @@
                 <h2>心路燈塔經驗分享</h2>
                 <div class="line"></div>
             </div>
-
-            <div class="experience_sharing_item_box">
-                <div class="experience_sharing_item">
-                    <div class="icon_box">
-                        <img src="./images/icon_kimoji3.svg" />
-                        <p>guaaie</p>
+            <div class="EScards">
+                <div class="slider">
+                    <input type="radio" name="testimonial" id="t-1" />
+                    <input type="radio" name="testimonial" id="t-2" />
+                    <input type="radio" name="testimonial" id="t-3" checked />
+                    <input type="radio" name="testimonial" id="t-4" />
+                    <input type="radio" name="testimonial" id="t-5" />
+                    <div class="testimonials">
+                        <label class="item" for="t-1">
+                            <div class="mycard">
+                                <div class="kimo-box">
+                                    <img src="./images/icon_kimoji1.svg" alt="nivel5" />
+                                </div>
+                                <p class="cardtitle">Práctica</p>
+                                <img src="./images/icon_heart.svg" class="heart" />
+                                <div>
+                                    <p class="carddescription">在Moonli的幫助下，我找回了內心的平靜。諮商師非常專業，給了我很多實用的建議。</p>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="item" for="t-2">
+                            <div class="mycard">
+                                <div class="kimo-box">
+                                    <img src="./images/icon_kimoji2.svg" alt="nivel5" class="cardimg" />
+                                </div>
+                                <p class="cardtitle">Práctica</p>
+                                <img src="./images/icon_heart.svg" class="heart" />
+                                <div>
+                                    <p class="carddescription">在Moonli的幫助下，我找回了內心的平靜。諮商師非常專業，給了我很多實用的建議。</p>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="item" for="t-3">
+                            <div class="mycard">
+                                <div class="kimo-box">
+                                    <img src="./images/icon_kimoji3.svg" alt="nivel5" class="cardimg" />
+                                </div>
+                                <p class="cardtitle">Práctica</p>
+                                <img src="./images/icon_heart.svg" class="heart" />
+                                <div>
+                                    <p class="carddescription">在Moonli的幫助下，我找回了內心的平靜。諮商師非常專業，給了我很多實用的建議。</p>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="item" for="t-4">
+                            <div class="mycard">
+                                <div class="kimo-box">
+                                    <img src="./images/icon_kimoji4.svg" alt="nivel5" class="cardimg" />
+                                </div>
+                                <p class="cardtitle">Práctica</p>
+                                <img src="./images/icon_heart.svg" class="heart" />
+                                <div>
+                                    <p class="carddescription">在Moonli的幫助下，我找回了內心的平靜。諮商師非常專業，給了我很多實用的建議。</p>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="item" for="t-5">
+                            <div class="mycard">
+                                <div class="kimo-box">
+                                    <img src="./images/icon_kimoji5.svg" alt="nivel5" class="cardimg" />
+                                </div>
+                                <p class="cardtitle">Práctica</p>
+                                <img src="./images/icon_heart.svg" class="heart" />
+                                <div>
+                                    <p class="carddescription">在Moonli的幫助下，我找回了內心的平靜。諮商師非常專業，給了我很多實用的建議。</p>
+                                </div>
+                            </div>
+                        </label>
                     </div>
-                    <img src="./images/icon_heart.svg" class="heart" />
-                    <div class="context-box">
-                        <p>在Moonli的幫助下，我找回了內心的平靜。諮商師非常專業，給了我很多實用的建議。</p>
-                    </div>
-                </div>
-
-                <div class="experience_sharing_item">
-                    <div class="icon_box">
-                        <img src="./images/icon_kimoji3.svg" />
-                        <p>guaaie</p>
-                    </div>
-                    <img src="./images/icon_heart.svg" class="heart" />
-                    <div class="context-box">
-                        <p>在Moonli的幫助下，我找回了內心的平靜。諮商師非常專業，給了我很多實用的建議。</p>
-                    </div>
-                </div>
-
-                <div class="experience_sharing_item">
-                    <div class="icon_box">
-                        <img src="./images/icon_kimoji3.svg" />
-                        <p>guaaie</p>
-                    </div>
-                    <img src="./images/icon_heart.svg" class="heart" />
-                    <div class="context-box">
-                        <p>在Moonli的幫助下，我找回了內心的平靜。諮商師非常專業，給了我很多實用的建議。</p>
-                    </div>
-                </div>
-
-                <div class="experience_sharing_item">
-                    <div class="icon_box">
-                        <img src="./images/icon_kimoji3.svg" />
-                        <p>guaaie</p>
-                    </div>
-                    <img src="./images/icon_heart.svg" class="heart" />
-                    <div class="context-box">
-                        <p>在Moonli的幫助下，我找回了內心的平靜。諮商師非常專業，給了我很多實用的建議。</p>
-                    </div>
-                </div>
-                <div class="experience_sharing_item">
-                    <div class="icon_box">
-                        <img src="./images/icon_kimoji3.svg" />
-                        <p>guaaie</p>
-                    </div>
-                    <img src="./images/icon_heart.svg" class="heart" />
-                    <div class="context-box">
-                        <p>在Moonli的幫助下，我找回了內心的平靜。諮商師非常專業，給了我很多實用的建議。</p>
+                    <div class="dots">
+                        <label for="t-1"></label>
+                        <label for="t-2"></label>
+                        <label for="t-3"></label>
+                        <label for="t-4"></label>
+                        <label for="t-5"></label>
                     </div>
                 </div>
             </div>
-
-            <button id="goTopBtn" class="go-top-btn">
-                <img src="./images/icon_gotop.svg" alt="Go to Top" />
-            </button>
+            <!-- <img src="./images/icon_arrow-right.svg" class="arrow-left">
+                <img src="./images/icon_arrow-left.svg"  class="arrow-right"> -->
         </section>
+
+        <button id="goTopBtn" class="go-top-btn">
+            <img src="./images/icon_gotop.svg" alt="Go to Top" />
+        </button>
         <!-- 頁尾區 -->
         <footer>
             <div class="logo">
@@ -317,6 +372,10 @@
             <small> 2024 Mooni. All Rights Reserved.</small>
         </footer>
 
+        <!-- gif -->
+        <div class="loader-container">
+            <img src="./images/mooni-small.gif" alt="">
+        </div>
         <!-- faq下拉選單 -->
         <script>
             function dropdown(menuId) {
@@ -347,8 +406,10 @@
                 window.scrollTo({ top: 0, behavior: "smooth" });
             });
         </script>
-        <script src="./javascripts/navbar.js"></script>
+        <script src="./javascripts/landing-login.js"></script>
         <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>
+        <script src="./javascripts/animated-number.js"></script>
+
         <!-- <script src="./script.js"></script> -->
     </body>
 </html>

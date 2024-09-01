@@ -75,7 +75,7 @@ header img {
     display: none;
 }
 
-.login:hover {
+.login:hover, .login.active{
     display: flex;
     background: linear-gradient(to bottom, rgb(123, 104, 199, 0.8), rgb(167, 151, 231, 0.8));
     box-shadow: 4px 4px 20px rgba(214, 213, 221, 0.6);
@@ -88,7 +88,7 @@ header img {
     /* 默认颜色 */
 }
 
-.login:hover span {
+.login:hover span, .login.active span {
     color: var(--white);
     /* 悬停时颜色 */
 }

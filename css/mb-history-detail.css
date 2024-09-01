@@ -45,7 +45,7 @@ body {
     margin: 0;
 }
 
-.container {
+.service__modal {
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -56,7 +56,7 @@ body {
     margin: 32px auto;
 }
 
-.main {
+.service__modal-conten {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -66,7 +66,6 @@ body {
 }
 
 /*-- 左邊欄位-詳細資訊  */
-
 .info-section {
     display: flex;
     text-align: left;
@@ -258,8 +257,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
+
 .rating-experience h3 {
     color: var(--black-800-main-text);
 }
@@ -306,9 +306,9 @@ body {
     gap: 4%;
 }
 
-.btn-CTA span{
+.btn-CTA span {
     display: flex;
-    padding: 5px 80px ;
+    padding: 5px 80px;
 }
 
 button {
@@ -351,18 +351,22 @@ button:hover {
         width: 70%;
         padding: 60px;
     }
+
     .main {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         gap: 40px;
     }
-    .info-text{
+
+    .info-text {
         justify-content: space-around;
     }
+
     .info-photo-box {
         height: 30vh;
     }
+
     .btn-box {
         justify-content: space-between;
         margin-top: 40px;
@@ -389,18 +393,19 @@ button:hover {
         width: 100%;
     }
 
-    .info-section, .rating-section {
+    .info-section,
+    .rating-section {
         width: 100%;
     }
 
-    .info-text{
+    .info-text {
         justify-content: space-evenly;
     }
 
     .more-info-box {
         margin-bottom: 32px;
     }
-    
+
     .rating-category {
         display: flex;
         align-items: center;
@@ -443,16 +448,19 @@ button:hover {
         gap: 16px;
     }
 
-    .info-section, .rating-section {
+    .info-section,
+    .rating-section {
         width: 100%;
     }
-    
-    .info-photo-box{
+
+    .info-photo-box {
         height: 18vh;
     }
-    .info-text{
+
+    .info-text {
         justify-content: space-evenly;
     }
+
     .more-info-box {
         margin-bottom: 32px;
     }
@@ -477,8 +485,8 @@ button:hover {
         flex-direction: column;
         gap: 10px;
         width: 100%;
-        justify-content: center; 
-        align-items: center; 
+        justify-content: center;
+        align-items: center;
     }
 
     button {
@@ -492,16 +500,17 @@ button:hover {
         width: 70%;
         padding: 10px;
     }
-    .info-section{
+
+    .info-section {
         width: 10%;
     }
-    
+
     .main {
         flex-direction: column;
         gap: 16px;
     }
 
-    .info-photo-box{
+    .info-photo-box {
         height: 15vh;
     }
 
@@ -510,24 +519,26 @@ button:hover {
         height: auto;
     }
 
-    .info-section, .rating-section {
+    .info-section,
+    .rating-section {
         width: 100%;
     }
 
-    .rating-section h3, .info-section h3 {
+    .rating-section h3,
+    .info-section h3 {
         font-size: 1.6rem;
     }
 
-    .info-row h2{
+    .info-row h2 {
         font-size: 1.8rem;
 
     }
-    
+
     .rating-category span {
         font-size: 1.4rem;
     }
 
-    .star-box{
+    .star-box {
         gap: 1%;
         min-width: 15px;
     }
@@ -541,11 +552,13 @@ button:hover {
         display: flex;
         justify-content: center;
     }
+
     .btn-box {
         display: flex;
         margin-top: 30px;
         width: 100%;
-        justify-content: center; 
-        align-items: center; 
+        justify-content: center;
+        align-items: center;
     }
 }
+

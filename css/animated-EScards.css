@@ -1,0 +1,253 @@
+
+/* 用戶經驗分享區 */
+#experience_sharing {
+    background: linear-gradient(to bottom, #86C89E, #D3D7C4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+#experience_sharing h2 {
+    color: #fff;
+    font-weight: 800;
+    font-size: 3.2rem;
+    margin: 40px 10px;
+}
+
+.experience_sharing_item_box {
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    padding: 20px;
+    padding-bottom: 80px;
+    gap: 20px;
+    width: 85%;
+    height: 60vh;
+    gap: 2.5%;
+}
+
+.experience_sharing_item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+}
+
+.icon_box {
+    width: 40%;
+    height: auto;
+    /* padding-bottom: 15px; */
+}
+
+.icon_box img {
+    object-fit: cover;
+}
+
+
+.context-box {
+    height: auto;
+    /* width: 180px; */
+    max-width: 238px;
+    text-align: left;
+}
+
+.context-box p {
+    white-space: normal;
+    /* 允許文字換行 */
+    text-overflow: ellipsis;
+    /* 用省略號來表示被截斷的文字 */
+    font-size: 1.4rem;
+    line-height: 1.5;
+    /* 設置行高 */
+    max-height: 100%;
+    /* 確保不會超過box的高度 */
+    text-align: center;
+
+}
+
+.experience_sharing_title {
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.wave-background {
+    width: 100%;
+}
+
+.wave-background img {
+    width: 100%;
+    /* 圖片寬度設為容器的 100% */
+    object-fit: cover;
+    /* 確保圖片填滿容器且不會變形 */
+    height: auto;
+    /* 保持圖片高度自動調整 */
+}
+
+
+.icon_annoymoon_Happy {
+    position: absolute;
+    top: 14%;
+    left: 6%;
+    width: 18%;
+}
+
+.icon_annoymoon_Happy img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.line {
+    display: inline-block;
+    width: 300px;
+    height: 2px;
+    background-color: #fff;
+    margin-top: 5px;
+}
+
+
+
+.owl-item>div {
+    cursor: pointer;
+    margin: 6% 8%;
+    transition: margin 0.4s ease;
+}
+
+.owl-item.center>div {
+    cursor: auto;
+    margin: 0;
+}
+
+.owl-item:not(.center)>div:hover {
+    opacity: 0.95;
+}
+
+.container {
+    width: 100%;  /* 設定為全寬 */
+    overflow: hidden;  
+    position: relative; /* 保證子元素相對於此容器移動 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 280px;
+    perspective: 500px;
+    width: auto;
+}
+
+
+/* .owl-carousel .owl-item {
+    display: inline-block; 
+    transform: translateX(0);
+    transition: transform 0.5s ease; 
+}
+ */
+
+.owl-carousel {
+    display: flex;
+    flex-wrap: nowrap; /* 禁止換行 */
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+    justify-content: center; /* 保證卡片居中 */
+}
+
+.owl-item {
+    flex: 0 0 auto; /* 禁止項目縮放並保持單行顯示 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px; /* 固定每個卡片的寬度 */
+    margin: 0 15px; /* 控制卡片之間的間距 */
+}
+
+
+/* 卡片的容器 */
+.testimonials .item {
+    max-width: 200px;
+    height: auto;
+    border-radius: 1.5rem;
+    border-width: 2px;
+    --tw-border-opacity: 1;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-color: rgba(30, 58, 138, var(--tw-border-opacity));
+    position: absolute;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.4s;
+    /* -webkit-transform-style: preserve-3d; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    user-select: none;
+    cursor: pointer;
+}
+
+.testimonials .item p {
+    padding-top: 4px;
+    color: #6F6F6F;
+}
+
+
+/* 卡片 */
+.mycard {
+    width: 220px; /* 卡片的寬度 */
+    height: 320px; /* 固定卡片高度 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.85); /* 卡片的半透明背景 */
+    border-radius: 20px; /* 圓角 */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* 柔和陰影 */
+    padding: 20px;
+    text-align: center;
+}
+
+.kimo-box {
+    width: 60px; /* 圖片的寬度 */
+    height: 60px;
+    overflow: hidden; /* 保證圖片不超出邊界 */
+}
+
+.kimo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.cardtitle {
+    font-size: 1.6rem; /* 標題字體大小 */
+    font-weight: 700; /* 字體加粗 */
+    margin: 10px 0;
+}
+
+
+
+.heart {
+    width: 40%; /* 調整愛心的寬度 */
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.carddescription {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: #6F6F6F;
+    padding-top: 10px;
+}

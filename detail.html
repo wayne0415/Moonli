@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>心理師詳細頁面</title>
+    <link rel="icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="./css/detail.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/audio.css">
@@ -14,18 +15,18 @@
 <body>
     <!-- 導覽列區 -->
     <header>
-        <a href="/index.html" class="logo"><img src="./images/logo_NavBar.svg" alt="Moonli-logo" /></a>
+        <a href="./index.html" class="logo"><img src="./images/logo_NavBar.svg" alt="Moonli-logo" /></a>
         <!-- 選單列表 -->
         <nav class="navbar">
             <div class="navigation">
                 <a href="#" class="nav-menu">服務項目</a>
-                <a href="#" class="nav-menu">心理師列表</a>
+                <a href="./card-list.html" class="nav-menu">心理師列表</a>
                 <a href="#" class="nav-menu">常見問題</a>
                 <a href="#" class="nav-menu">相關資訊</a>
                 <a href="#" class="nav-menu">自我檢測</a>
             </div>
             <div class="login" id="bars">
-                <span>登入註冊</span>
+                <span>會員中心</span>
                 <i class="fa-solid fa-bars" id="menu-bars"></i>
             </div>
         </nav>
@@ -100,7 +101,7 @@
                     <form class="service__modal-content">
                         <h4>預約心理諮商</h4>
                         <span>心理諮商師 林菌傑<br>
-                            時間 <span id="date"> </span> <span id="day"></span> <span id="time"></span><br>
+                            時間 <span id="date"></span> <span id="time"></span><br>
                             地點 早安午安晚安心理諮商所<br>
                             地址 100台北市中正區濟南路一段321號<br>
                         </span>
@@ -146,11 +147,11 @@
 
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" name="reservation" value="會員本人預約，同會員資料" onclick="onlyOne(this)">
+                                <input type="checkbox" name="reservation" id="check" value="會員本人預約，同會員資料" onclick="onlyOne(this)">
                                 會員本人預約，同會員資料
                             </label>
                             <label>
-                                <input type="checkbox" name="reservation" value="非會員本人預約，可先填寫下方資料"
+                                <input type="checkbox" name="reservation" id="uncheck" value="非會員本人預約，可先填寫下方資料"
                                     onclick="onlyOne(this)">
                                 非會員本人預約，可先填寫下方資料
                             </label>
@@ -163,11 +164,11 @@
                             <div class="form-group">
                                 <label>性別 <span class="required">*</span></label>
                                 <div class="radio-group">
-                                    <input type="radio" id="male" name="gender" checked />
+                                    <input type="radio" value="male" id="male" name="gender" checked />
                                     <label for="male">男性</label>
-                                    <input type="radio" id="female" name="gender" />
+                                    <input type="radio" value="female" id="female" name="gender" />
                                     <label for="female">女性</label>
-                                    <input type="radio" id="other" name="gender" />
+                                    <input type="radio" value="other" id="other" name="gender" />
                                     <label for="other">其他</label>
                                 </div>
                             </div>
@@ -206,7 +207,7 @@
 
                         <div class="button">
                             <button id='service__modal-close'>關閉</button>
-                            <button id="service__modal-next">確認預約</button>
+                            <button onclick="fadeOut()" id="service__modal-next">確認預約</button>
                         </div>
                     </form>
                 </div>
@@ -310,25 +311,28 @@
                     </div>
 
                     <div class="introduction">
-                        <div class="refer">
-                            <span>性別：
-                            </span>
-                            <span>女</span>
+                        <div class="basic__info">
+                            <div class="refer">
+                                <span>性別：</span>
+                                <span>女</span>
+                            </div>
+                            <div class="refer">
+                                <span>語言：</span>
+                                <span>中文 / 英文 / 台語 / 客語</span>
+                            </div>
+                        </div>
+                        <div class="basic__info">
+                            <div class="refer">
+                                <span>服務地區：</span>
+                                <span>台北市 / 新北市</span>
+                            </div>
+                            <div class="refer">
+                                <span>所在診所：</span>
+                                <span>早安午安晚安心理諮商所</span>
+                            </div>
                         </div>
                         <div class="refer">
-                            <span>語言：</span>
-                            <span>中文 / 英文 / 台語 / 客語</span>
-                        </div>
-                        <div class="refer">
-                            <span>服務地區：</span>
-                            <span>台北市 / 新北市</span>
-                        </div>
-                        <div class="refer">
-                            <span>所在診所：</span>
-                            <span>早安午安晚安心理諮商所</span>
-                        </div>
-                        <div class="refer">
-                            <span>聯絡電話</span>
+                            <span>聯絡電話：</span>
                             <span>02-2333333</span>
                         </div>
                     </div>
@@ -443,7 +447,14 @@
                 </div>
             </div>
         </div>
-        <footer></footer>
+       <!-- 頁尾區 -->
+       <footer>
+        <small> 2024 Mooni. All Rights Reserved.</small>
+    </footer>
+        <!-- loader part -->
+    <div class="loader-container">
+        <img src="./images/mooni-small.gif" alt="">
+    </div>
     </section>
     <!-- ====================================諮商師頁面 end==================================== -->
 

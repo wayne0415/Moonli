@@ -1,0 +1,45 @@
+:root {
+    --small-cpation: 1.2rem;
+    --K2D-body: 1.6rem;
+    --body-text: 1.6rem;
+    --body-semibold: 2rem;
+    --body-title: 1.8rem;
+    --subtitle: 1.4rem;
+    --heading-h1: 2.4rem;
+
+    --black-500-border: #d9d9d9;
+    --black-800-main-text: #4b4b4b;
+    --black-700: #6f6f6f;
+    --black-600: #909090;
+    --white: #fff;
+
+    --primary-200: #dddafa;
+    --primary-400: #a797e7;
+    --primary-500: #856be7;
+
+    --secondary-100: #e7f0ce;
+    --secondary-300: #abd795;
+    --secondary-200: #cbe4b7;
+    --secondary-400: #7fc179;
+
+    --yellow: #ffee92;
+
+    /* 灰階 */
+    --card: rgba(249, 249, 249, 0.9);
+    --black-400: #ececec;
+    --black-500: rgba(211, 211, 211, 0.447);
+    --black-600: rgb(144, 144, 144);
+    --black-700: rgb(111, 111, 111);
+    --purple-100: rgb(236, 235, 252);
+    --purple-200: rgb(221, 218, 250);
+    --purple-400: rgb(167, 151, 231);
+    --white: rgba(255, 255, 255);
+    /* 透明 */
+    --shadow: 0px 4px 20px rgba(194, 191, 209, 0.4);
+    --btn-shadow: 4px 4px 20px rgba(214, 213, 221, 0.6), -4px -4px 10px rgba(255, 255, 255, 0.5);
+    --inset-shadow: 0 4px 10px rgba(214, 213, 221, 0.6);
+    /* 漸層 */
+    --gradient-card: rgb(244, 244, 244, 0.25), rgb(255, 255, 255, 0.25);
+    --gradient-btn: rgba(203, 194, 212, 0.2), rgba(249, 249, 249, 0);
+    --gradient-sky-purple: rgb(91, 97, 149), rgb(157, 134, 159);
+}

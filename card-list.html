@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="./css/card-list.css">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/reset.css">
@@ -22,17 +23,17 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
     <header style="background-color: rgb(91, 97, 149);">
-        <a href="/index.html" class="logo"><img src="./images/logo_NavBar.svg" alt="Moonli-logo" /></a>
+        <a href="./index.html" class="logo"><img src="./images/logo_NavBar.svg" alt="Moonli-logo" /></a>
         <nav class="navbar">
             <div class="navigation">
                 <a href="#" class="nav-menu">服務項目</a>
-                <a href="#" class="nav-menu">心理師列表</a>
+                <a href="./card-list.html" class="nav-menu">心理師列表</a>
                 <a href="#" class="nav-menu">常見問題</a>
                 <a href="#" class="nav-menu">相關資訊</a>
                 <a href="#" class="nav-menu">自我檢測</a>
             </div>
             <div class="login" id="bars">
-                <span>登入註冊</span>
+                <span>會員中心</span>
                 <i class="fa-solid fa-bars" id="menu-bars"></i>
             </div>
         </nav>
@@ -119,9 +120,7 @@
                     let minutes = Math.floor(seconds / 60);
                     let secs = Math.floor(seconds % 60);
                     return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
-                };
-
-                return (
+                }; return (
                     <div className="card">
                         <a href={page} target='_blank'><img src={img} alt={name} /></a>
                         <div className="icon">
@@ -173,15 +172,14 @@
                                     id="progress"
                                     ref={progressRef}
                                 />
+
                                 <div id="timeDisplay">
-                                    <span id="currentTime">{currentTime}</span> / <span id="totalTime">{totalTime}</span>
-                                </div>
+                                    <span id="currentTime">{currentTime}</span> / <span id="totalTime">{totalTime}</span>                                </div>
                             </div>
                         </div>
                     </div>
                 );
             }
-
 
             function App() {
                 const products = [
@@ -700,6 +698,7 @@
                                     </div>
                                     <button className="reset-btn">進階篩選</button>
                                 </div>
+
                                 {/* card */}
                                 <div className="list-container">
                                     <div className="card__list">

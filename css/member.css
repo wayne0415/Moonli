@@ -37,6 +37,7 @@
 
     --btn-shadow: 4px 4px 8px rgba(196, 189, 210, 0.2), -4px -4px 8px rgb(255, 255, 255);
     --inset-shadow: inset 0 4px 10px rgba(214, 213, 221, .6);
+    --card-shadow: 0 4px 10px rgba(214, 213, 221, .6);
     --gradient-btn: rgba(234, 231, 237, 0.498), rgba(249, 249, 249, 0);
 }
 
@@ -57,6 +58,7 @@ body {
     min-height: 100vh;
     position: relative;
     background-size: cover;
+
 }
 
 h1,
@@ -89,8 +91,11 @@ main {
     display: flex;
     width: 100%;
     justify-content: center;
+    padding-top: 80px;
+    gap: 40px;
 }
 
+/* 背景圖片 */
 .cloud {
     bottom: 0;
     position: fixed;
@@ -98,7 +103,7 @@ main {
     height: 100%;
     justify-content: center;
     align-items: flex-end;
-    z-index: -1;
+    z-index: -2;
     margin: 0;
 }
 
@@ -109,13 +114,25 @@ main {
     object-fit: cover;
 }
 
+.bg-tree {
+    bottom: 0;
+    position: fixed;
+    z-index: -1;
+}
+
+.bg-tree img {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* 會員中心左側選單 */
 .member-left {
     width: 16%;
     min-width: 160px;
-    padding: 20px;
-    margin: 80px 40px 0 0;
     height: fit-content;
+    align-items: start;
     /* position: fixed; */
 }
 
@@ -123,6 +140,7 @@ main {
 .member-left li {
     display: flex;
     position: relative;
+    width: 100%;
 }
 
 .member-left .dropdown {
@@ -143,10 +161,10 @@ main {
 .member-left li a {
     color: var(--black-700);
     margin-bottom: 4px;
-    line-height: 52px;
+    line-height: 40px;
     width: 100%;
     border-radius: 12px;
-    padding-left: 20px;
+    padding: 4px 16px;
 }
 
 .member-management,
@@ -158,6 +176,7 @@ main {
 .big-item {
     font-size: var(--body-semibold);
     font-weight: 600;
+    cursor: pointer;
 }
 
 .small-item {
@@ -166,7 +185,7 @@ main {
 
 .small-item:hover,
 .big-item:hover {
-    color: var(--primary-500);
+    color: var(--primary-400);
     background-image: linear-gradient(var(--gradient-btn));
     box-shadow: var(--btn-shadow);
 }
@@ -174,23 +193,19 @@ main {
 /* 表單 */
 .member-container {
     width: 50%;
-    min-width: 400px;
     height: fit-content;
-    margin: 80px 0;
     padding: 60px;
     background-color: rgba(249, 249, 249, 0.9);
     border-radius: 12px;
     box-shadow: -4px -4px 20px rgba(255, 255, 255, 0.5), 4px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-@media(max-width:400px) {}
-
 .member-container h1 {
     color: var(--black-800);
 }
 
 .title {
-    font-size: 24px;
+    font-size: 2.4em;
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
@@ -204,7 +219,7 @@ main {
 
 .tab {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: var(--body-semibold);
     color: var(--black-500-border);
     text-align: center;
     text-decoration: none;
@@ -333,8 +348,8 @@ input[type="date"]:focus {
     cursor: pointer;
 }
 
-.submit-button:hover {
-    background-color: var(--primary-400);
+.submit-button:active {
+    background-color: var(--primary-500);
     color: var(--white);
 }
 
@@ -544,9 +559,115 @@ small {
     justify-content: end;
 }
 
-/* 頁尾 */
+/* 頁尾區 */
+footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 40px 40px;
+}
+
 footer small {
-    line-height: 160px;
-    margin-left: 120px;
-    font-size: 14px;
+	font-family: var(--K2D-body);
+	font-size: 1.4rem;
+	color: var(--white);
+	flex: 1;
+	text-align: right;
+}
+
+@media (max-width:960px) {
+    main {
+        display: flex;
+        width: 100%;
+        padding-top: 10px;
+        gap: 20px;
+    }
+
+    .member-container {
+        width: 60%;
+        height: fit-content;
+        padding: 40px;
+    }
+
+    .big-item {
+        font-size: 1.6em;
+    }
+
+    .small-item {
+        font-size: 1.2em;
+    }
+
+
+    .title {
+        margin-bottom: 0;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"] {
+        margin-top: 4px;
+    }
+
+    .member-form {
+        gap: 8px;
+    }
+
+    .info-details h3 {
+        font-size: 1.8em;
+    }
+
+    .article-details-wrap {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+@media(max-width:768px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+        gap: 10px;
+    }
+
+    .member-container {
+        width: 90%;
+        height: fit-content;
+        padding: 20px;
+    }
+
+    .member-container .container {
+        height: 20vh
+    }
+
+    .member-left {
+        display: flex;
+        width: 90%;
+        height: 12vh;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    .dropdown {
+        background-color: var(--white);
+        padding: 8px;
+        border-radius: 8px;
+        box-shadow: var(--card-shadow);
+    }
+
+    .member-left li a {
+        padding: 8px 4px;
+        line-height: 1.2em;
+        border-radius: 8px;
+    }
+
+    .big-item,
+    .small-item {
+        text-align: center;
+    }
+
 }

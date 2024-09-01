@@ -28,9 +28,12 @@ function adjustNavigation() {
             // 創建新的登入連結
             const newLink = document.createElement('a');
             newLink.href = '#';
-            newLink.className = 'nav-menu login'; // 添加class
+            newLink.className='nav-menu'
+            newLink.id = 'login-link'; // 添加 id
             newLink.textContent = '登入';
             navigation.appendChild(newLink); // 插入到navigation中
+
+            
         }
     } else {
         if (loginLink) {
