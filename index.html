@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Moonli 心理諮商媒合平台</title>
-        <link rel="icon" href="./images/favicon.ico">
+        <link rel="icon" href="./images/favicon.ico" />
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/style.css" />
         <link rel="stylesheet" href="./css/nav.css" />
@@ -31,6 +31,40 @@
                 </div>
             </nav>
         </header>
+        <!-- 登入功能頁面 -->
+        <div class="overlay" id="overlay"></div>
+        <div class="login-container" id="login-container">
+            <div class="tab">
+                <button class="tab-btn active" id="tab-btn-login">登入</button>
+                <button class="tab-btn" id="tab-btn-logout">註冊</button>
+            </div>
+
+            <form class="login-form">
+                <label for="email">信箱</label>
+                <input type="text" id="email" name="email" placeholder="123456@gmail.com" />
+
+                <label for="password">密碼</label>
+                <input type="password" id="password" name="password" placeholder="**********" />
+
+                <button type="submit" class="login-btn" id="loginButton">登入</button>
+
+                <a href="#" class="forgot-password" id="forgot-password">忘記密碼</a>
+                <p id="privacy-content"><img src="./images/Privacy.svg" alt="privacy-icon" />註冊即代表同意隱私權</p>
+
+                <div class="divider">或是使用</div>
+
+                <div class="social-login">
+                    <button class="facebook-login" id="facebook-login">
+                        <figure><img src="./images/Facebook_2023.svg" alt="FB" /></figure>
+                        <p>使用 Facebook 帳號登入</p>
+                    </button>
+                    <button class="google-login" id="google-login">
+                        <figure><img src="./images/Chrome.svg" alt="Google" /></figure>
+                        <p>使用 Google 帳號登入</p>
+                    </button>
+                </div>
+            </form>
+        </div>
         <!-- 頁面A：大LOGO+找心理師按鈕 -->
         <section id="home">
             <div class="home-container">
@@ -121,8 +155,6 @@
             </div>
         </section>
 
-
-
         <!-- Q&A區 -->
         <section id="faq">
             <div class="home-images-wave-green">
@@ -156,9 +188,9 @@
                     <div class="options">
                         <div class="option">
                             <p class="option-text">
-                                <span class="textBig2">長期心理諮商:</span><br>
+                                <span class="textBig2">長期心理諮商:</span><br />
                                 深入探索個案的內心和潛在問題，通常需持續數月甚至數年，適合處理深層的情感問題和長期困擾。<br />
-                                <span class="textBig2">一般心理諮商:</span><br>
+                                <span class="textBig2">一般心理諮商:</span><br />
                                 關注解決具體問題，通常時間較短，適合快速提供情感支持和實用的解決方案。
                             </p>
                         </div>
@@ -173,10 +205,10 @@
                     <div class="options">
                         <div class="option">
                             <p class="option-text">
-                                <span class="textBig">自我評估：</span><br>審視自己的問題與需求，確立進行心理諮商的目標。<br />
-                                <span class="textBig">尋找合適的心理師：<br></span>選擇專業背景與諮商風格與自己契合的心理師。<br />
-                                <span class="textBig">保持開放態度：<br></span>準備好坦誠交流、積極參與諮商。<br />
-                                <span class="textBig">了解諮商流程：<br></span>確認諮商的基本流程及可能的治療方法，減少不確定性。
+                                <span class="textBig">自我評估：</span><br />審視自己的問題與需求，確立進行心理諮商的目標。<br />
+                                <span class="textBig">尋找合適的心理師：<br /></span>選擇專業背景與諮商風格與自己契合的心理師。<br />
+                                <span class="textBig">保持開放態度：<br /></span>準備好坦誠交流、積極參與諮商。<br />
+                                <span class="textBig">了解諮商流程：<br /></span>確認諮商的基本流程及可能的治療方法，減少不確定性。
                             </p>
                         </div>
                     </div>
@@ -249,7 +281,7 @@
                         <label class="item" for="t-1">
                             <div class="mycard">
                                 <div class="kimo-box">
-                                    <img src="./images/icon_kimoji1.svg" alt="nivel5"/>
+                                    <img src="./images/icon_kimoji1.svg" alt="nivel5" />
                                 </div>
                                 <p class="cardtitle">Práctica</p>
                                 <img src="./images/icon_heart.svg" class="heart" />
@@ -316,10 +348,10 @@
                     </div>
                 </div>
             </div>
-                <!-- <img src="./images/icon_arrow-right.svg" class="arrow-left">
+            <!-- <img src="./images/icon_arrow-right.svg" class="arrow-left">
                 <img src="./images/icon_arrow-left.svg"  class="arrow-right"> -->
         </section>
-        
+
         <button id="goTopBtn" class="go-top-btn">
             <img src="./images/icon_gotop.svg" alt="Go to Top" />
         </button>
@@ -370,9 +402,11 @@
                 window.scrollTo({ top: 0, behavior: "smooth" });
             });
         </script>
+        <script src="./javascripts/landing-login-0830.js"></script>
         <script src="./javascripts/navbar.js"></script>
         <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>
         <script src="./javascripts/animated-number.js"></script>
+
         <!-- <script src="./script.js"></script> -->
     </body>
 </html>
