@@ -6,7 +6,7 @@
         <title>Moonli 心理諮商媒合平台</title>
         <link rel="icon" href="./images/favicon.ico" />
         <link rel="stylesheet" href="./css/reset.css" />
-        <link rel="stylesheet" href="./css/style-landing.css" />
+        <link rel="stylesheet" href="./css/style.css" />
         <link rel="stylesheet" href="./css/nav.css" />
         <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
     </head>
@@ -66,71 +66,53 @@
             </form>
         </div>
         <!-- 頁面A：大LOGO+找心理師按鈕 -->
-        <div id="sticky-little-cute-father">
-            <section id="home">
-                <div class="home-container">
-                    <div class="home-images-moon"></div>
-                    <div class="home-images-logo">
-                        <img src="./images/logo_Home.jpg" alt="Moonli logo" />
-                    </div>
-                    <a href="./general-filter.html"><div class="search-btn">
-                        <button>篩選心理師<i class="fa-solid fa-magnifying-glass"></i></button>
-                    </div></a>
-                    
-                    <!-- <div class="home-images-moon-container">
-                <img src="./images/photo_home_moon.jpg" alt="Moon image">
-            </div> -->
-                    <!-- 月亮不放圖片了 直接用div捏 -->
+        <section id="home">
+            <div class="home-container">
+                <div class="home-images-moon"></div>
+                <div class="home-images-logo">
+                    <img src="./images/logo_Home.jpg" alt="Moonli logo" />
                 </div>
-            </section>
-
-            <div id="sticky-little-cute">
-                <div class="icon-anny" id="i-am-so-upset">
-                    <img src="./images/icon_annoy.jpg" />
-                </div>
-                <div class="icon-annoymoon" id="little-cute">
-                    <img src="./images/icon_annoymoon.png" />
+                <div class="search-btn">
+                    <a href="./general-filter.html">篩選心理師<i class="fa-solid fa-magnifying-glass"></i></a>
                 </div>
             </div>
-
-            <!-- 頁面B：痛點 -->
-
-            <section id="problems">
-                <div class="problems-title">
-                    <h2 id="problems-title">在生活中，您是否有遇過這些煩惱？</h2>
-                </div>
-                <!-- <div class="icon-annoymoon" id="little-cute">
+        </section>
+        <!-- 頁面B：痛點 -->
+        <section id="problems">
+            <div class="problems-title">
+                <h2>在生活中，您是否有遇過這些煩惱？</h2>
+            </div>
+            <div class="icon-annoymoon">
                 <img src="./images/icon_annoymoon.png" />
-            </div> -->
-                <div class="item-union" id="fucking-leaf">
-                    <img src="./images/photo_Union.png" />
-                </div>
-                <div class="item-wave1" id="fucking-cloud">
-                    <img src="./images/wave1.png" />
-                </div>
-                <div class="item-wave2" id="fucking-mountain">
-                    <img src="./images/photo_home_wave2.png" />
-                </div>
-                <div class="item-wave3" id="small-mountain">
-                    <img src="./images/photo_home_wave3.png" />
-                </div>
-                <!-- <div class="icon-anny" id="i-am-so-upset">
+            </div>
+            <div class="item-union">
+                <img src="./images/photo_Union.png" />
+            </div>
+            <div class="item-wave1">
+                <img src="./images/wave1.png" />
+            </div>
+            <div class="item-wave2">
+                <img src="./images/photo_home_wave2.png" />
+            </div>
+            <div class="item-wave3">
+                <img src="./images/photo_home_wave3.svg" />
+            </div>
+            <div class="icon-anny">
                 <img src="./images/icon_annoy.jpg" />
-            </div> -->
-                <!-- <div class="icon-annoymoon">
+            </div>
+            <!-- <div class="icon-annoymoon">
                 <img src="./images/icon_annoymoon.png" />
             </div> -->
-                <div class="item-6q" id="stupid-6q">
-                    <img src="./images/photo_home_6q.jpg" />
-                </div>
-                <!-- <div class="item-q1"></div>
+            <div class="item-6q">
+                <img src="./images/photo_home_6q.jpg" />
+            </div>
+            <!-- <div class="item-q1"></div>
         <div class="item-q2"></div>
         <div class="item-q3"></div>
         <div class="item-q4"></div>
         <div class="item-q5"></div>
         <div class="item-q6"></div> -->
-            </section>
-        </div>
+        </section>
         <!-- 服務特色區 -->
         <section id="services">
             <div class="title-container">
@@ -156,7 +138,6 @@
                 </div>
             </div>
         </section>
-        <!-- 數據證明區 -->
         <section id="statistics">
             <div class="counters">
                 <div class="number">
@@ -377,7 +358,7 @@
         <!-- 頁尾區 -->
         <footer>
             <div class="logo">
-                <a href="#home"><img src="./images/logo_Footer.svg" alt="Moonli-logo" /></a>
+                <a href="#"><img src="./images/logo_Footer.svg" alt="Moonli-logo" /></a>
             </div>
             <nav>
                 <ul>
@@ -395,7 +376,6 @@
         <div class="loader-container">
             <img src="./images/mooni-small.gif" alt="">
         </div>
-        
         <!-- faq下拉選單 -->
         <script>
             function dropdown(menuId) {
@@ -426,14 +406,9 @@
                 window.scrollTo({ top: 0, behavior: "smooth" });
             });
         </script>
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
-
-        <script src="https://accounts.google.com/gsi/client" async defer></script>
-
+        <script src="./javascripts/landing-login.js"></script>
         <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>
         <script src="./javascripts/animated-number.js"></script>
-        <script src="./javascripts/landing-login.js"></script>
-        <script src="./javascripts/landing.js"></script>
 
         <!-- <script src="./script.js"></script> -->
     </body>
