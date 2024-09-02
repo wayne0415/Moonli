@@ -278,7 +278,7 @@ header img {
 }
 
 @media(max-width:768px) {
-    .profile__photo img{
+    .profile__photo img {
         border-radius: .8rem;
     }
 }
@@ -308,7 +308,7 @@ header img {
 
 
 @media(max-width:768px) {
-    .profile__photo .clinic img{
+    .profile__photo .clinic img {
         border-radius: .4rem;
     }
 }
@@ -1375,3 +1375,40 @@ input[type="date"]:focus {
 
 
 /* -------------article ends------------- */
+
+/* footer */
+footer small {
+    display: block;
+    font-family: var(--K2D-body);
+    font-size: 1.4rem;
+    color: #6F6F6F;
+    flex: 1;
+    text-align: right;
+    margin: 40px 0px 40px;
+}
+
+/* loading gif */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10000;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.loader-container img {
+    width: 18rem;
+}
+
+.loader-container.active {
+    opacity: 1;
+}

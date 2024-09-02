@@ -6,7 +6,7 @@
         <title>Moonli 心理諮商媒合平台</title>
         <link rel="icon" href="./images/favicon.ico" />
         <link rel="stylesheet" href="./css/reset.css" />
-        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/style-landing.css" />
         <link rel="stylesheet" href="./css/nav.css" />
         <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
     </head>
@@ -25,7 +25,7 @@
                     <a href="#" class="nav-menu">相關資訊</a>
                     <a href="#" class="nav-menu">自我檢測</a>
                 </div>
-                <div class="login" id="bars">
+                <div class="login bars-btn" id="bars">
                     <span>登入註冊</span>
                     <i class="fa-solid fa-bars" id="menu-bars"></i>
                 </div>
@@ -66,53 +66,70 @@
             </form>
         </div>
         <!-- 頁面A：大LOGO+找心理師按鈕 -->
-        <section id="home">
-            <div class="home-container">
-                <div class="home-images-moon"></div>
-                <div class="home-images-logo">
-                    <img src="./images/logo_Home.jpg" alt="Moonli logo" />
+        <div id="sticky-little-cute-father">
+            <section id="home">
+                <div class="home-container">
+                    <div class="home-images-moon"></div>
+                    <div class="home-images-logo">
+                        <img src="./images/logo_Home.jpg" alt="Moonli logo" />
+                    </div>
+                    <div class="search-btn">
+                        <button>篩選心理師<i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <!-- <div class="home-images-moon-container">
+                <img src="./images/photo_home_moon.jpg" alt="Moon image">
+            </div> -->
+                    <!-- 月亮不放圖片了 直接用div捏 -->
                 </div>
-                <div class="search-btn">
-                    <a href="./general-filter.html">篩選心理師<i class="fa-solid fa-magnifying-glass"></i></a>
+            </section>
+
+            <div id="sticky-little-cute">
+                <div class="icon-anny" id="i-am-so-upset">
+                    <img src="./images/icon_annoy.jpg" />
+                </div>
+                <div class="icon-annoymoon" id="little-cute">
+                    <img src="./images/icon_annoymoon.png" />
                 </div>
             </div>
-        </section>
-        <!-- 頁面B：痛點 -->
-        <section id="problems">
-            <div class="problems-title">
-                <h2>在生活中，您是否有遇過這些煩惱？</h2>
-            </div>
-            <div class="icon-annoymoon">
-                <img src="./images/icon_annoymoon.png" />
-            </div>
-            <div class="item-union">
-                <img src="./images/photo_Union.png" />
-            </div>
-            <div class="item-wave1">
-                <img src="./images/wave1.png" />
-            </div>
-            <div class="item-wave2">
-                <img src="./images/photo_home_wave2.png" />
-            </div>
-            <div class="item-wave3">
-                <img src="./images/photo_home_wave3.svg" />
-            </div>
-            <div class="icon-anny">
-                <img src="./images/icon_annoy.jpg" />
-            </div>
-            <!-- <div class="icon-annoymoon">
+
+            <!-- 頁面B：痛點 -->
+
+            <section id="problems">
+                <div class="problems-title">
+                    <h2 id="problems-title">在生活中，您是否有遇過這些煩惱？</h2>
+                </div>
+                <!-- <div class="icon-annoymoon" id="little-cute">
                 <img src="./images/icon_annoymoon.png" />
             </div> -->
-            <div class="item-6q">
-                <img src="./images/photo_home_6q.jpg" />
-            </div>
-            <!-- <div class="item-q1"></div>
+                <div class="item-union" id="fucking-leaf">
+                    <img src="./images/photo_Union.png" />
+                </div>
+                <div class="item-wave1" id="fucking-cloud">
+                    <img src="./images/wave1.png" />
+                </div>
+                <div class="item-wave2" id="fucking-mountain">
+                    <img src="./images/photo_home_wave2.png" />
+                </div>
+                <div class="item-wave3" id="small-mountain">
+                    <img src="./images/photo_home_wave3.png" />
+                </div>
+                <!-- <div class="icon-anny" id="i-am-so-upset">
+                <img src="./images/icon_annoy.jpg" />
+            </div> -->
+                <!-- <div class="icon-annoymoon">
+                <img src="./images/icon_annoymoon.png" />
+            </div> -->
+                <div class="item-6q" id="stupid-6q">
+                    <img src="./images/photo_home_6q.jpg" />
+                </div>
+                <!-- <div class="item-q1"></div>
         <div class="item-q2"></div>
         <div class="item-q3"></div>
         <div class="item-q4"></div>
         <div class="item-q5"></div>
         <div class="item-q6"></div> -->
-        </section>
+            </section>
+        </div>
         <!-- 服務特色區 -->
         <section id="services">
             <div class="title-container">
@@ -372,6 +389,10 @@
             <small> 2024 Mooni. All Rights Reserved.</small>
         </footer>
 
+        <!-- gif -->
+        <div class="loader-container">
+            <img src="./images/mooni-small.gif" alt="">
+        </div>
         <!-- faq下拉選單 -->
         <script>
             function dropdown(menuId) {
@@ -402,10 +423,14 @@
                 window.scrollTo({ top: 0, behavior: "smooth" });
             });
         </script>
-        <script src="./javascripts/landing-login-0830.js"></script>
-        <script src="./javascripts/navbar.js"></script>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+        <script src="https://accounts.google.com/gsi/client" async defer></script>
+
         <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>
         <script src="./javascripts/animated-number.js"></script>
+        <script src="./javascripts/landing-login.js"></script>
+        <script src="./javascripts/landing.js"></script>
 
         <!-- <script src="./script.js"></script> -->
     </body>
