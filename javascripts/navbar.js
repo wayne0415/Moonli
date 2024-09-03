@@ -1,62 +1,55 @@
-let bars = document.getElementById('bars');
-let navbar = document.querySelector('.navigation'); // 只選取第一個匹配的元素
-let cross = document.getElementById('menu-bars');
+// 選取元素
+const bars = document.getElementById("bars");
+const navbar = document.querySelector(".navigation");
+const cross = document.getElementById("menu-bars");
+const header = document.querySelector("header");
 
-bars.addEventListener('click', () => {
-    cross.classList.toggle('fa-bars');
-    cross.classList.toggle('fa-x');
+// 點擊 bars 切換導航列顯示/隱藏
+bars.addEventListener("click", () => {
+    cross.classList.toggle("fa-bars");
+    cross.classList.toggle("fa-x");
+    bars.classList.toggle("active");
 
-    bars.classList.toggle('active');
-
-    // 對第一個匹配的 .navigation 元素進行操作
-    if (navbar) { // 確保 .navigation 元素存在
-        navbar.classList.toggle('active');
+    if (navbar) {
+        navbar.classList.toggle("active");
     }
 });
 
-document.addEventListener('DOMContentLoaded', adjustNavigation);
-window.addEventListener('resize', adjustNavigation);
+// DOM 加載完成和視窗大小變化時調整導航列
+document.addEventListener("DOMContentLoaded", adjustNavigation);
+window.addEventListener("resize", adjustNavigation);
 
 function adjustNavigation() {
-    const navigation = document.querySelector('.navigation');
-    const loginLink = document.querySelector('.navigation .nav-menu.login');
+    const navigation = document.querySelector(".navigation");
+    const loginLink = document.querySelector(".navigation .nav-menu#login-link");
     const screenWidth = window.innerWidth;
 
-    // 如果螢幕寬度小於或等於768px
     if (screenWidth <= 768) {
         if (!loginLink) {
-            // 創建新的登入連結
-            const newLink = document.createElement('a');
-            newLink.href = '#';
-            newLink.className='nav-menu'
-            newLink.id = 'login-link'; // 添加 id
-            newLink.textContent = '登入';
-            navigation.appendChild(newLink); // 插入到navigation中
-
-            
+            // 創建登入連結並插入導航列中
+            const newLink = document.createElement("a");
+            newLink.href = "#";
+            newLink.className = "nav-menu";
+            newLink.id = "login-link";
+            newLink.textContent = "登入";
+            navigation.appendChild(newLink);
         }
-    } else {
-        if (loginLink) {
-            // 移除登入連結
-            navigation.removeChild(loginLink);
-        }
+    } else if (loginLink) {
+        // 移除登入連結
+        navigation.removeChild(loginLink);
     }
 }
 
+// 滾動時隱藏或顯示 header
 let lastScrollTop = 0;
-const header = document.querySelector('header');
+window.addEventListener("scroll", () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-window.addEventListener('scroll', () => {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     if (scrollTop > lastScrollTop) {
-        // 向下滚动时隐藏 header
-        header.style.top = '-100px';
+        header.style.top = "-100px";
     } else {
-        // 向上滚动时显示 header
-        header.style.top = '0';
+        header.style.top = "0";
     }
+
     lastScrollTop = scrollTop;
 });
-
-
-
