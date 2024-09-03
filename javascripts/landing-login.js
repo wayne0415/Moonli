@@ -93,7 +93,7 @@ loginButton.addEventListener("click", (e) => {
 // Facebook 和 Google 登入
 facebook_login.addEventListener("click", (e) => {
     e.preventDefault();
-    window.location.href = "./member.html";
+    window.location.href = "https://www.facebook.com";
 });
 
 google_login.addEventListener("click", (e) => {
