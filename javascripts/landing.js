@@ -2,7 +2,7 @@ let stupid_6q = document.getElementById("stupid-6q");
 let problems_title = document.getElementById("problems-title-1");
 let fucking_leaf = document.getElementById("fucking-leaf");
 let fucking_mountain = document.getElementById("fucking-mountain");
-let small_mountain = document.getElementById("small-mountain");
+let small_mountain = document.querySelector("#small-mountain img");
 
 // 函數來處理顯示與隱藏
 function toggleVisibility(x, y, z, n, element, triggerPoint, scrollPosition) {
@@ -22,13 +22,13 @@ window.addEventListener("scroll", () => {
     // 呼叫函數來處理 problems_title 和 stupid_6q
     toggleVisibility(1, 1, 0, 0, problems_title, 1500, a);
     toggleVisibility(1, 0.9, 0, 0, stupid_6q, 1800, a);
-    if (a > 1950) {
-        let offset = a - 1950;
+    if (a > 2000) {
+        let offset = a - 2000;
         fucking_leaf.style.bottom = `${offset * 0.06}px`;
-        small_mountain.style.transform = `scaleY(${1.5})`;
+        small_mountain.style.transform = `scaleY(2.5)`;
     }
-    if (a > 1700) {
-        let offset = a - 1700;
+    if (a > 1750) {
+        let offset = a - 1750;
         fucking_mountain.style.bottom = `${offset * -0.08}px`;
     }
 
