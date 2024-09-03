@@ -25,7 +25,7 @@ window.addEventListener("scroll", () => {
     if (a > 1950) {
         let offset = a - 1950;
         fucking_leaf.style.bottom = `${offset * 0.06}px`;
-        // small_mountain.style.bottom = `${offset * 0.1}px`;
+        small_mountain.style.transform = `scaleY(${1.5})`;
     }
     if (a > 1700) {
         let offset = a - 1700;

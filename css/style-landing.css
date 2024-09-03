@@ -338,7 +338,7 @@ header {
     font-size: 3.2rem;
     font-weight: 800;
     color: #fff;
-    transition: all 3s ease-out;
+    transition: all 1s ease-out;
     letter-spacing: 20%;
 }
 
@@ -379,7 +379,7 @@ header {
     bottom: 45%;
     opacity: 0;
     transform: scale(0);
-    transition: all 2.5s ease-out;
+    transition: all 1.2s ease-out;
 }
 
 /* .item-6q img {
@@ -439,9 +439,13 @@ header {
     bottom: 0px;
     position: absolute;
     z-index: 5;
+    transform: scaleY(30%);
 }
 .item-wave3 img {
     width: 100%;
+    /* height: 100%;
+    object-fit: cover; */
+    transform: scaleY(130%);
 }
 .item-wave1 {
     z-index: 0;
