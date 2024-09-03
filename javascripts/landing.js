@@ -1,5 +1,5 @@
 let stupid_6q = document.getElementById("stupid-6q");
-let problems_title = document.getElementById("problems-title");
+let problems_title = document.getElementById("problems-title-1");
 let fucking_leaf = document.getElementById("fucking-leaf");
 let fucking_mountain = document.getElementById("fucking-mountain");
 let small_mountain = document.getElementById("small-mountain");
@@ -20,12 +20,12 @@ window.addEventListener("scroll", () => {
     let a = window.scrollY;
     console.log(a);
     // 呼叫函數來處理 problems_title 和 stupid_6q
-    toggleVisibility(1, 1, 0, 0, problems_title, 1500, a);
-    toggleVisibility(1, 0.9, 0, 0, stupid_6q, 1700, a);
+    toggleVisibility(1, 1, 0, 0, problems_title, 1600, a);
+    toggleVisibility(1, 0.9, 0, 0, stupid_6q, 1900, a);
     if (a > 1950) {
         let offset = a - 1950;
-        fucking_leaf.style.bottom = `${offset * 0.1}px`;
-        small_mountain.style.bottom = `${-450 + offset * 0.1}px`;
+        fucking_leaf.style.bottom = `${offset * 0.06}px`;
+        // small_mountain.style.bottom = `${offset * 0.1}px`;
     }
     if (a > 1700) {
         let offset = a - 1700;
