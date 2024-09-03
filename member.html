@@ -135,8 +135,8 @@
                 <input type="text" id="education" name="education" />
             </div>
             <small class="editdata">修改會員資料</small>
-            <a href="./index.html">
-                <button type="submit" class="submit-button" id="submit-button">儲存</button></a>
+
+                <button type="submit" class="submit-button" id="submit-button">儲存</button>
         </form>
     </div>
 
@@ -247,6 +247,7 @@
             <a href="#" class="tab active" onclick="changeToHist()">歷史紀錄</a>
         </div>
         <div class="container-wrap">
+            <!-- 預約歷史紀錄---狀態：已完成 -->
             <div class="container">
                 <div class="info-img-wrap">
                     <img src="./images/psychologist.png" alt="心理諮商師 林菌傑" />
@@ -263,7 +264,7 @@
                     </div>
                     <div class="info-details">
                         <p>2200 /小時</p>
-                        <div class="moreInfo-box" id="moreInfo-box">
+                        <div class="moreInfo-box" id="moreInfo-box-1">
                             <small>查看更多</small>
                             <a href="#">
                                 <img src="./images/logo_moreinfo.svg" alt="一個向右指的箭頭">
@@ -301,7 +302,6 @@
                 <div class="info-img-wrap">
                     <img src="./images/psychologist.png" alt="心理諮商師 林菌傑" />
                 </div>
-
                 <div class="info-details-wrap">
                     <div class="info-details">
                         <div class="info-text">
@@ -409,6 +409,119 @@
 <div class="bg-tree"><img src="./images/tree.png" alt="背景樹"></div>
 <div class="cloud"><img src="./images/wave-white.svg" alt="背景雲"></div>
 
+  <!-- 新增的彈出視窗容器---狀態：已完成 -->
+  <div id="service__modal" class="service__modal">
+    <div class="service__modal-content">
+        <div class="HistoryInfo-box">
+            <!-- 左欄位 -->
+            <div class="history-info-section">
+                <h3>預約詳細資訊</h3>
+                <!-- 詳細資訊 -->
+                <div class="history-info-photo-box">
+                    <img src="./images/psychologist.png" alt="心理諮商師 林菌傑" class="history-therapist-photo">
+                </div>
+                <div class="history-info-text">
+                    <div class="history-info-row">
+                        <small> 心理諮商師</small>
+                        <h2> 林菌傑</h2>
+                    </div>
+                    <div class="history-info-row">
+                        <small> 預約狀態</small>
+                        <h2 class="status-finished">已完成</h2>
+                    </div>
+                </div>
+                <div class="history-info-details">
+                    <small>預約時間</small>
+                    <p>2024/7/6 週二 18:00</p>
+                    <small>預約地點</small>
+                    <p>早安午安晚安心理諮商所</p>
+                    <small>地址</small>
+                    <p> 100 台北市中正區濟南路一段321號</p>
+                    <small>價格</small>
+                    <p>2200/小時</p>
+                </div>
+                <!-- 看更多 -->
+                <div class="history-more-info-box">
+                    <small>查看此心理師詳細頁面</small>
+                    <a href="./detail.html">
+                        <img src="./images/logo_moreinfo.svg" alt="一個向右指的箭頭">
+                    </a>
+                </div>
+            </div>
+            <!-- 右欄位 -->
+            <div class="rating-section">
+                <!--五星評分區 -->
+                <div class="rating-box">
+                    <h3>諮商風格評分</h3>
+                    <div class="rating-category">
+                        <span>溫柔</span>
+                        <div class="star-box">
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-unfilled-star.svg" class="star"></img>
+                        </div>
+                    </div>
+                    <div class="rating-category">
+                        <span>主動主導</span>
+                        <div class="star-box">
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-unfilled-star.svg" class="star"></img>
+                            <img src="./images/icon-unfilled-star.svg" class="star"></img>
+                            <img src="./images/icon-unfilled-star.svg" class="star"></img>
+                        </div>
+                    </div>
+                    <div class="rating-category">
+                        <span>被動引導</span>
+                        <div class="star-box">
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-unfilled-star.svg" class="star"></img>
+                        </div>
+                    </div>
+                    <div class="rating-category">
+                        <span>情緒同理</span>
+                        <div class="star-box">
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                        </div>
+                    </div>
+                    <div class="rating-category">
+                        <span>認知思考</span>
+                        <div class="star-box">
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-unfilled-star.svg" class="star"></img>
+                        </div>
+                    </div>
+                </div>
+                <!--心得分享區 -->
+                <div class="rating-experience">
+                    <h3>評價此經驗</h3>
+                    <textarea id="experience" name="experience" rows="4" placeholder="請輸入您的寶貴評論"></textarea>
+                    <div class="anonymous-share">
+                        <input type="checkbox" id="anonymous" name="anonymous" class="checkbox">
+                        <label for="anonymous">我願意匿名分享</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--按鈕區  -->
+        <div class="btn-box">
+            <button id="btn-turn-off" class="btn-turn-off"><span>關閉</span></button>
+            <button id="btn-save" class="btn-save"><span>儲存</span></button>
+        </div>
+    </div>
+</div>
 
 <script>
     const divs = ['memb', 'acco', 'pw', 'prog', 'hist', 'like', 'article', 'priv', 'faq'];
@@ -526,6 +639,45 @@
 
 
 </script>
+<!-- 懸浮表單---狀態：進行中 -->
+<script>
+    const modalViews = document.querySelectorAll('.service__modal');
+    const modalBtns = document.querySelectorAll('#moreInfo-box-1');
+    const modalCloses = document.querySelectorAll('.btn-turn-off');
+
+    let modal = function (modalClick) {
+        modalViews[modalClick].style.opacity = "1";
+        modalViews[modalClick].style.visibility = "visible";
+    }
+
+    modalBtns.forEach((modalBtn, i) => {
+        modalBtn.addEventListener('click', () => {
+            modal(0); // 假設只有一個模態窗口，直接打開第一個
+        });
+    });
+
+    modalCloses.forEach((modalClose) => {
+        modalClose.addEventListener('click', () => {
+            modalViews.forEach((modalView) => {
+                modalView.style.opacity = "0";
+                modalView.style.visibility = "hidden";
+            });
+        });
+    });
+
+    // 點擊模態窗口外部關閉
+    modalViews.forEach((modalView) => {
+        modalView.addEventListener('click', (e) => {
+            if (e.target === modalView) {
+                modalView.style.opacity = "0";
+                modalView.style.visibility = "hidden";
+            }
+        });
+    });
+
+</script>
+
+
 </body>
 
 </html>
