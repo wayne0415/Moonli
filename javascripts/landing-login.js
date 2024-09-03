@@ -56,33 +56,39 @@ overlay.addEventListener("click", (e) => {
     }
 });
 
-// 登入後狀態變成會員中心
+// 過場動畫跟跳轉頁面
 loginButton.addEventListener("click", (e) => {
     e.preventDefault();
-    if (loginButton.textContent === "點此註冊") {
-        e.preventDefault();
-        window.location.href = "https://www.google.com";
-    }
     span.textContent = "會員中心";
-
     const loaderContainer = document.querySelector(".loader-container");
+
+    // 顯示加載動畫
     loaderContainer.classList.add("show");
 
-    setTimeout(() => {
-        loaderContainer.classList.remove("show");
-    }, 2000);
-
+    // 隱藏登錄容器和遮罩
     login_container.style.display = "none";
     overlay.style.display = "none";
+
+    // 使用 Promise 來控制動畫和頁面跳轉
+    const animationPromise = new Promise((resolve) => {
+        setTimeout(resolve, 2000); // 動畫持續2秒
+    });
+
+    animationPromise.then(() => {
+        loaderContainer.classList.remove("show");
+        if (loginButton.textContent === "下一步") {
+            window.location.href = "./member.html";
+        }
+    });
 });
 
 // 用戶點擊 "點此註冊" 時跳轉頁面
-loginButton.addEventListener("click", (e) => {
-    if (loginButton.textContent === "點此註冊") {
-        e.preventDefault();
-        window.location.href = "https://www.google.com";
-    }
-});
+// loginButton.addEventListener("click", (e) => {
+//     if (loginButton.textContent === "點此註冊") {
+//         e.preventDefault();
+//         window.location.href = "https://www.google.com";
+//     }
+// });
 
 // Facebook 和 Google 登入
 facebook_login.addEventListener("click", (e) => {

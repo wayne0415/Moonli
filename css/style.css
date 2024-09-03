@@ -1381,11 +1381,11 @@ footer img {
     overflow: hidden;
     opacity: 0;
     visibility: hidden;
-    transition:opacity 0.5s ease, visibility 0.5s ease;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 .loader-container img {
-    width: 18rem;
+    width: 10vw;
     max-width: 100%;
 }
 
