@@ -135,7 +135,8 @@
                 <input type="text" id="education" name="education" />
             </div>
             <small class="editdata">修改會員資料</small>
-            <button type="submit" class="submit-button" id="submit-button">儲存</button>
+            <a href="./index.html">
+                <button type="submit" class="submit-button" id="submit-button">儲存</button></a>
         </form>
     </div>
 
@@ -519,6 +520,7 @@
                 localStorage.setItem('gender', radio.value);/* 存到localStorage中 */
             }
         })
+        window.location.href = './index.html';
     });
 
 
