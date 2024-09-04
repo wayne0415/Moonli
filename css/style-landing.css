@@ -1020,7 +1020,7 @@ html *::after {
 
 /* 用戶經驗分享區 */
 #experience_sharing {
-    background: linear-gradient(to bottom, #86c89e, #d3d7c4);
+    background: linear-gradient(to bottom, #86c89e, #bed8b9);
     display: flex;
     flex-direction: column;
     align-items: center;
