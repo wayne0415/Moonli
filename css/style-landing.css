@@ -1143,7 +1143,7 @@ html *::after {
     position: fixed;
     bottom: 90px;
     right: 24px;
-    background-color: #f2ce98;
+    background-color: transparent;
     display: none;
     color: transparent;
     border: none;
