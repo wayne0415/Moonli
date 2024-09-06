@@ -202,7 +202,7 @@ main {
 }
 
 .member-container h1 {
-    color: var(--black-800);
+    color: var(--black-700);
 }
 
 .title {
@@ -560,6 +560,28 @@ small {
     justify-content: end;
 }
 
+/* 隱私政策 */
+
+.policy {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+}
+
+.policy h4 {
+    font-size: 1.6em;
+    display: inline;
+    margin: 16px 0 8px;
+    font-weight: bold;
+    color: var(--black-700);
+}
+
+#priv p {
+    font-size: 1.6em;
+    color: var(--black-700);
+}
+
 /* 頁尾區 */
 footer {
 	display: flex;
@@ -598,7 +620,6 @@ footer small {
         font-size: 1.2em;
     }
 
-
     .title {
         margin-bottom: 0;
     }
@@ -622,6 +643,7 @@ footer small {
         width: 100%;
         margin-right: 0;
     }
+
 }
 
 @media(max-width:768px) {
