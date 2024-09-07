@@ -706,6 +706,7 @@
     const modalViews = document.querySelectorAll('.service__modal');
     const modalBtns = document.querySelectorAll('#moreInfo-box-1');
     const modalCloses = document.querySelectorAll('.btn-turn-off');
+    const modalCloses2 = document.querySelectorAll('.btn-save');
 
     let modal = function (modalClick) {
         modalViews[modalClick].style.opacity = "1";
@@ -719,6 +720,15 @@
     });
 
     modalCloses.forEach((modalClose) => {
+        modalClose.addEventListener('click', () => {
+            modalViews.forEach((modalView) => {
+                modalView.style.opacity = "0";
+                modalView.style.visibility = "hidden";
+            });
+        });
+    });
+
+    modalCloses2.forEach((modalClose) => {
         modalClose.addEventListener('click', () => {
             modalViews.forEach((modalView) => {
                 modalView.style.opacity = "0";
