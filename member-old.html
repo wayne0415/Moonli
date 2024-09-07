@@ -9,9 +9,6 @@
     <link rel="stylesheet" href="./css/nav-lightmode.css" />
     <link rel="stylesheet" href="./css/member.css" />
     <title>會員管理</title>
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 
 <body>
@@ -457,19 +454,18 @@
 <!-- 新增的彈出視窗容器---狀態：已完成 -->
 <div id="service__modal" class="service__modal">
     <div class="service__modal-content">
-
-            <div class="HistoryInfo-box">
-                <!-- 左欄位 -->
-                <div class="history-info-section">
-                    <h3>預約詳細資訊</h3>
-                    <!-- 詳細資訊 -->
-                    <div class="history-info-photo-box">
-                        <img src="./images/psychologist.png" alt="心理諮商師 林菌傑" class="history-therapist-photo">
-                    </div>
-                    <div class="history-info-text">
-                        <div class="history-info-row">
-                            <small> 心理諮商師</small>
-                            <h2> 林菌傑</h2>
+        <div class="HistoryInfo-box">
+            <!-- 左欄位 -->
+            <div class="history-info-section">
+                <h3>預約詳細資訊</h3>
+                <!-- 詳細資訊 -->
+                <div class="history-info-photo-box">
+                    <img src="./images/psychologist.png" alt="心理諮商師 林菌傑" class="history-therapist-photo">
+                </div>
+                <div class="history-info-text">
+                    <div class="history-info-row">
+                        <small> 心理諮商師</small>
+                        <h2> 林菌傑</h2>
                     </div>
                     <div class="history-info-row">
                         <small> 預約狀態</small>
@@ -482,7 +478,7 @@
                     <small>預約地點</small>
                     <p>早安午安晚安心理諮商所</p>
                     <small>地址</small>
-                    <p> 100 台北市中正區濟南路一段321號6樓</p>
+                    <p> 100 台北市中正區濟南路一段321號</p>
                     <small>價格</small>
                     <p>2200/小時</p>
                 </div>
@@ -499,70 +495,57 @@
                 <!--五星評分區 -->
                 <div class="rating-box">
                     <h3>諮商風格評分</h3>
-                        <div id="root"></div>
-                        <script type="text/babel">
-                            // 單列星級評分元件
-                            const StarRating = ({ label }) => {
-                                const [rating, setRating] = React.useState(0);
-                    
-                                const handleRatingChange = (value) => {
-                                    setRating(value);
-                                };
-                    
-                                return (
-                                    <div className="star-rating">
-                                        {label}  {/* 在這裡加入標籤名稱 */}
-                                        <div className="stars">
-                                            {/* 0 分的評分標籤 */}
-                                            <label className="number">
-                                                <input
-                                                    type="radio"
-                                                    name={`rating-${label}`}
-                                                    value={0}
-                                                    checked={rating === 0}
-                                                    onChange={() => handleRatingChange(0)}
-                                                />
-                                            </label>
-                    
-                                            {/* 1 到 5 分的評分標籤 */}
-                                            {[...Array(5)].map((_, index) => (
-                                                <label className="star" key={index}>
-                                                    <input
-                                                        type="radio"
-                                                        name={`rating-${label}`}
-                                                        value={index + 1}
-                                                        checked={rating === index + 1}
-                                                        onChange={() => handleRatingChange(index + 1)}
-                                                    />
-                                                </label>
-                                            ))}
-                    
-                                            {/* 動態顯示選中的評分數字 */}
-                                            <div className="number-rating">{rating}</div>
-                                        </div>
-                                    </div>
-                                );
-                            };
-                    
-                            // 父元件，包含五列星級評分
-                            const MultipleStarRatings = () => {
-                                const ratings = ['溫柔', '主動主導', '被動引導', '情緒同理', '認知思考'];
-                    
-                                return (
-                                    <div className="multiple-star-ratings">
-                                        {ratings.map((label, index) => (
-                                            <StarRating key={index} label={label} />
-                                        ))}
-                                    </div>
-                                );
-                            };
-
-                            
-                    
-                            // 渲染父元件
-                            ReactDOM.createRoot(document.getElementById('root')).render(<MultipleStarRatings />);
-                        </script>
+                    <div class="rating-category">
+                        <span>溫柔</span>
+                        <div class="star-box">
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-unfilled-star.svg" class="star"></img>
+                        </div>
                     </div>
+                    <div class="rating-category">
+                        <span>主動主導</span>
+                        <div class="star-box">
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-unfilled-star.svg" class="star"></img>
+                            <img src="./images/icon-unfilled-star.svg" class="star"></img>
+                            <img src="./images/icon-unfilled-star.svg" class="star"></img>
+                        </div>
+                    </div>
+                    <div class="rating-category">
+                        <span>被動引導</span>
+                        <div class="star-box">
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-unfilled-star.svg" class="star"></img>
+                        </div>
+                    </div>
+                    <div class="rating-category">
+                        <span>情緒同理</span>
+                        <div class="star-box">
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                        </div>
+                    </div>
+                    <div class="rating-category">
+                        <span>認知思考</span>
+                        <div class="star-box">
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-filled-star.svg" class="star"></img>
+                            <img src="./images/icon-unfilled-star.svg" class="star"></img>
+                        </div>
+                    </div>
+                </div>
                 <!--心得分享區 -->
                 <div class="rating-experience">
                     <h3>評價此經驗</h3>
@@ -574,7 +557,6 @@
                 </div>
             </div>
         </div>
-
         <!--按鈕區  -->
         <div class="btn-box">
             <button id="btn-turn-off" class="btn-turn-off"><span>關閉</span></button>
@@ -582,8 +564,6 @@
         </div>
     </div>
 </div>
-
-
 
 <script>
     const divs = ['memb', 'acco', 'pw', 'prog', 'hist', 'like', 'article', 'priv', 'faq'];
