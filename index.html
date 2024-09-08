@@ -93,6 +93,7 @@
                 <div class="icon-anny" id="i-am-so-upset">
                     <img src="./images/icon_annoy.jpg" />
                 </div>
+                <img class="item-4q" src="./images/q4.png" alt="q4" />
                 <div class="icon-annoymoon" id="little-cute">
                     <img src="./images/icon_annoymoon.png" />
                 </div>
@@ -146,18 +147,27 @@
             <div class="services-container">
                 <div class="service-item">
                     <img src="./images/icon_voice.png" />
-                    <h3><span>全台首創</span> 語音簡介</h3>
-                    <p>30秒心理師的自我介紹<br />快速拉近與心理師的距離</p>
+                    <div class="service-item-layout">
+                        <h3><span>全台首創</span> 語音簡介</h3>
+                        <p>30秒心理師的自我介紹</p>
+                        <p>快速拉近與心理師的距離</p>
+                    </div>
                 </div>
                 <div class="service-item">
                     <img src="./images/moonli-icon_reservation.svg" />
-                    <h3>預約系統</h3>
-                    <p>便利的預約系統<br />隨時隨地輕鬆預約</p>
+                    <div class="service-item-layout">
+                        <h3>預約系統</h3>
+                        <p>便利的預約系統</p>
+                        <p>隨時隨地輕鬆預約</p>
+                    </div>
                 </div>
                 <div class="service-item">
                     <img src="./images/moonli-icon_filter.png" />
-                    <h3>篩選系統</h3>
-                    <p>個性化篩選<br />幫助用戶找到最合適的心理師</p>
+                    <div class="service-item-layout">
+                        <h3>篩選系統</h3>
+                        <p>個性化篩選</p>
+                        <p>幫助用戶找到最合適的心理師</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -435,15 +445,19 @@
         <script src="./javascripts/animated-number.js"></script>
         <!-- <script src="./javascripts/landing.js"></script> -->
         <script>
+            // 判斷滾動視差腳本是否已加載
+            let parallaxScriptLoaded = false;
+
             // 函數用來判斷是否加載滾動視差效果
             function loadParallaxScript() {
-                if (window.innerWidth > 600) {
-                    // 動態載入滾動視差的 JS 檔案
+                if (window.innerWidth > 600 && !parallaxScriptLoaded) {
+                    // 動態載入滾動視差的 JS 檔案，避免重複加載
                     const script = document.createElement("script");
-                    script.src = "./javascripts/landing.js"; // 請替換成你的滾動視差腳本的實際路徑
+                    script.src = "./javascripts/landing.js"; // 替換成你的滾動視差腳本路徑
                     document.body.appendChild(script);
+                    parallaxScriptLoaded = true; // 設置為已加載
                     console.log("滾動視差腳本已加載");
-                } else {
+                } else if (window.innerWidth <= 600 && parallaxScriptLoaded) {
                     console.log("螢幕太小，不加載滾動視差腳本");
                 }
             }
@@ -451,7 +465,7 @@
             // 頁面載入後檢查螢幕大小並決定是否加載
             window.onload = loadParallaxScript;
 
-            // 監聽螢幕大小變化
+            // 監聽螢幕大小變化，但避免重複加載腳本
             window.addEventListener("resize", loadParallaxScript);
         </script>
 

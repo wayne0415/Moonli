@@ -357,15 +357,30 @@ header {
     align-items: center;
     overflow: hidden;
 }
+@media (max-width: 600px) {
+    #problems {
+        height: 50vh;
+    }
+}
 
 #problems-title-1 {
-    display: inline-block;
+    display: block;
     z-index: 5;
     font-size: 3.2rem;
     font-weight: 800;
     color: #fff;
     transition: all 1s ease-out;
     letter-spacing: 20%;
+
+    top: 0;
+}
+@media (max-width: 600px) {
+    #problems-title-1 {
+        font-size: 1.6rem;
+        position: absolute;
+        white-space: nowrap;
+        text-align: center;
+    }
 }
 
 /* .icon-anny {
@@ -406,6 +421,29 @@ header {
     opacity: 0;
     transform: scale(0);
     transition: all 1.2s ease-out;
+}
+@media (max-width: 1440px) {
+    .item-6q {
+        bottom: 30%;
+    }
+}
+@media (max-width: 900px) {
+    .item-6q {
+        bottom: 20%;
+    }
+}
+.item-4q {
+    right: 40%;
+    position: absolute;
+    width: 100%;
+    bottom: 38%;
+    z-index: 5;
+    display: none;
+}
+@media (max-width: 600px) {
+    .item-4q {
+        display: block;
+    }
 }
 
 /* .item-6q img {
@@ -461,6 +499,14 @@ header {
 .item-union {
     bottom: 5%;
 }
+@media (max-width: 600px) {
+    .item-union {
+        bottom: 0%;
+    }
+    .item-wave2 {
+        z-index: 0;
+    }
+}
 .item-wave3 {
     bottom: 0px;
     position: absolute;
@@ -474,6 +520,7 @@ header {
     /* transform: scaleY(130%); */
     transition: all 2s ease;
 }
+
 .item-wave1 {
     z-index: 0;
     /* width: 100%; 圖片的寬度 */
@@ -499,7 +546,7 @@ header {
     /* 確保它在所有其他內容之上 */
 }
 @media (max-width: 600px) {
-    #sticky-little-cute-father {
+    #sticky-little-cute {
     }
 }
 
@@ -522,11 +569,13 @@ header {
     align-items: center;
     flex-wrap: wrap;
     pointer-events: auto;
+    /* overflow: visible; */
     /* 確保內部內容可以正常交互 */
 }
 
 #little-cute {
     margin-left: 30px;
+    width: 50%;
 }
 
 .icon-anny {
@@ -548,7 +597,6 @@ header {
 }
 @media (max-width: 600px) {
     #services {
-        height: 50vh;
     }
 }
 
@@ -573,6 +621,11 @@ header {
     gap: 30px;
     max-width: 1200px;
 }
+@media (max-width: 600px) {
+    .services-container {
+        flex-direction: column;
+    }
+}
 
 .service-item {
     display: flex;
@@ -587,6 +640,21 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-color: rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease;
+}
+@media (max-width: 600px) {
+    .service-item {
+        flex-direction: row;
+        width: 90vw;
+        padding: 1rem 5.6rem;
+        justify-content: start;
+        gap: 10%;
+    }
+
+    .service-item-layout {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
 }
 
 .service-item:hover {
@@ -611,6 +679,15 @@ header {
     font-weight: 800;
     padding-top: 20px;
     padding-bottom: 15px;
+}
+.service-item h3 span {
+    color: #f2ce98;
+}
+@media (max-width: 600px) {
+    .service-item h3 {
+        padding: 0;
+        font-size: 2rem;
+    }
 }
 
 .service-item p {
