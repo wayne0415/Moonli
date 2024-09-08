@@ -24,7 +24,7 @@ window.addEventListener("scroll", () => {
     toggleVisibility(1, 0.9, 0, 0, stupid_6q, 1800, a);
     if (a > 2000) {
         let offset = a - 2000;
-        fucking_leaf.style.bottom = `${offset * 0.06}px`;
+        fucking_leaf.style.bottom = `${offset * 0.04}px`;
         small_mountain.style.transform = `scaleY(2.5)`;
     }
     if (a > 1750) {
