@@ -252,6 +252,11 @@ header {
     background: linear-gradient(to bottom, rgb(51, 42, 84), rgb(112, 105, 138));
     position: relative;
 }
+@media (max-width: 600px) {
+    #home {
+        height: 50vh;
+    }
+}
 
 .home-container {
     display: flex;
@@ -261,6 +266,11 @@ header {
     width: 100%;
     max-width: 1200px;
     margin-bottom: 20px;
+}
+@media (max-width: 600px) {
+    .home-container {
+        width: 60%;
+    }
 }
 
 .home-images-moon {
@@ -274,6 +284,11 @@ header {
     background: linear-gradient(to bottom, rgb(238, 233, 203), rgb(235, 216, 149));
     box-shadow: 0px 0px 100px rgba(255, 255, 255, 0.8);
 }
+@media (max-width: 600px) {
+    .home-images-moon {
+        width: 10%;
+    }
+}
 
 .home-images-logo {
     display: flex;
@@ -284,6 +299,11 @@ header {
     margin: 40px auto;
     padding-bottom: 24px;
     height: auto;
+}
+@media (max-width: 600px) {
+    .home-images-logo {
+        margin: 40px auto 0;
+    }
 }
 
 .home-images-logo img {
@@ -306,6 +326,12 @@ header {
     padding: 8px 72px;
     border-radius: 50px;
     box-shadow: 4px 0px 4px rgba(125, 125, 125, 0.25), 0px 4px 4px rgba(255, 255, 255, 0.33), inset 0px -4px 20px rgba(210, 210, 210, 0.7), inset 4px 0px 10px rgba(144, 144, 144, 0.8);
+}
+@media (max-width: 600px) {
+    .search-btn button {
+        font-size: 1.6rem;
+        padding: 0 64px;
+    }
 }
 
 .search-btn button:hover {
@@ -472,6 +498,10 @@ header {
     z-index: 1;
     /* 確保它在所有其他內容之上 */
 }
+@media (max-width: 600px) {
+    #sticky-little-cute-father {
+    }
+}
 
 #sticky-little-cute {
     margin-top: 20%;
@@ -515,6 +545,11 @@ header {
     background: linear-gradient(to bottom, #2c2c2d, #42514e);
     text-align: center;
     color: #fff;
+}
+@media (max-width: 600px) {
+    #services {
+        height: 50vh;
+    }
 }
 
 .title-container {
