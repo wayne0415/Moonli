@@ -429,10 +429,31 @@
                 window.scrollTo({ top: 0, behavior: "smooth" });
             });
         </script>
+
         <script src="./javascripts/landing-login.js"></script>
         <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>
         <script src="./javascripts/animated-number.js"></script>
-        <script src="./javascripts/landing.js"></script>
+        <!-- <script src="./javascripts/landing.js"></script> -->
+        <script>
+            // 函數用來判斷是否加載滾動視差效果
+            function loadParallaxScript() {
+                if (window.innerWidth > 600) {
+                    // 動態載入滾動視差的 JS 檔案
+                    const script = document.createElement("script");
+                    script.src = "./javascripts/landing.js"; // 請替換成你的滾動視差腳本的實際路徑
+                    document.body.appendChild(script);
+                    console.log("滾動視差腳本已加載");
+                } else {
+                    console.log("螢幕太小，不加載滾動視差腳本");
+                }
+            }
+
+            // 頁面載入後檢查螢幕大小並決定是否加載
+            window.onload = loadParallaxScript;
+
+            // 監聽螢幕大小變化
+            window.addEventListener("resize", loadParallaxScript);
+        </script>
 
         <!-- <script src="./script.js"></script> -->
     </body>
