@@ -444,6 +444,9 @@ header {
     .item-4q {
         display: block;
     }
+    .item-6q {
+        display: none;
+    }
 }
 
 /* .item-6q img {
@@ -545,10 +548,6 @@ header {
     z-index: 1;
     /* 確保它在所有其他內容之上 */
 }
-@media (max-width: 600px) {
-    #sticky-little-cute {
-    }
-}
 
 #sticky-little-cute {
     margin-top: 20%;
@@ -594,10 +593,6 @@ header {
     background: linear-gradient(to bottom, #2c2c2d, #42514e);
     text-align: center;
     color: #fff;
-}
-@media (max-width: 600px) {
-    #services {
-    }
 }
 
 .title-container {
@@ -770,6 +765,7 @@ html *::after {
     justify-content: center;
     align-items: center;
     gap: 0.8rem;
+    white-space: nowrap;
 }
 
 .counter {
@@ -782,11 +778,17 @@ html *::after {
     height: 3.125rem;
     margin: 0 1.25rem;
     font-size: 4rem;
+    /* width: 100%; */
 }
 
 .counters .number span {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     color: var(--white);
+}
+@media (max-width: 600px) {
+    .counters .number span {
+        font-size: 1.6rem;
+    }
 }
 
 .counter > span {
@@ -1050,6 +1052,11 @@ html *::after {
     padding: 50px 20px;
     text-align: center;
 }
+@media (max-width: 600px) {
+    #step-section {
+        padding: 0px 20px;
+    }
+}
 
 #step-section img {
     width: 24%;
@@ -1061,6 +1068,11 @@ html *::after {
     font-weight: 800;
     margin-top: 40px;
 }
+@media (max-width: 600px) {
+    #step-section h2 {
+        font-size: 2.4rem;
+    }
+}
 
 .step-container {
     display: flex;
@@ -1071,6 +1083,11 @@ html *::after {
     /* 最大寬度 */
     gap: 40px;
     margin: 80px;
+}
+@media (max-width: 800px) {
+    .step-container {
+        flex-direction: column;
+    }
 }
 
 .step {
@@ -1084,6 +1101,11 @@ html *::after {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
 }
+@media (max-width: 800px) {
+    .step {
+        width: 100%;
+    }
+}
 
 .step-image-box {
     display: flex;
@@ -1091,6 +1113,11 @@ html *::after {
     justify-content: center;
     transform: scale(4.5);
     /*控制icon大小*/
+}
+@media (max-width: 800px) {
+    .step-image-box {
+        transform: scale(2.5);
+    }
 }
 
 .context {
@@ -1236,6 +1263,13 @@ html *::after {
     left: 6%;
     width: 18%;
 }
+@media (max-width: 600px) {
+    .icon_annoymoon_Happy {
+        width: 38%;
+        top: 0%;
+        left: 0%;
+    }
+}
 
 .icon_annoymoon_Happy img {
     width: 100%;
@@ -1319,6 +1353,14 @@ footer small {
 
 footer img {
     height: 20px;
+}
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+    }
+    footer nav {
+        display: none;
+    }
 }
 
 /* 輪播卡片 */
