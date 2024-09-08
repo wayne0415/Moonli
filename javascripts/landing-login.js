@@ -41,11 +41,6 @@ document.getElementById("tab-btn-login").addEventListener("click", () => {
     }
 });
 
-// 點擊 bars 顯示登入框
-bars_btn.addEventListener("click", () => {
-    login_container.style.display = "block";
-    overlay.style.display = "block";
-});
 
 // 點擊背景區域隱藏登入框
 overlay.addEventListener("click", (e) => {
@@ -107,7 +102,6 @@ bars.addEventListener("click", () => {
         login_container.style.display = "block";
         overlay.style.display = "block";
     }
-
     cross.classList.toggle("fa-bars");
     cross.classList.toggle("fa-x");
     bars.classList.toggle("active");
