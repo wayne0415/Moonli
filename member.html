@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/nav-lightmode.css" />
@@ -444,6 +445,93 @@
     <!-- 常見問題卡片 -->
     <div id="faq" class="member-container" style="display: none;">
         <h1 class="title">常見問題</h1>
+        <div class="faq__container">
+            <div class="faq__content faq__open">
+                <div class="faq__header">
+                    <div>
+                        <h1 class="faq__title">為什麼心理諮商費用這麼高？</h1>
+                    </div>
+                    <i class="bx bx-chevron-down faq__arrow"></i>
+                </div>
+                <div class="faq__list">
+                    <p class="faq__caption">
+                        諮商費用主要涵蓋心理師的薪資、場地及行政管理等開銷。<br>
+                        成為心理諮商師需要研究所學歷和多年專業訓練，即便畢業後也需持續進修和專業成長。<br>
+                        許多心理師還會聘請督導檢視自己的工作，這些累積的費用往往遠高於學費，甚至達數百萬。心理師需要不斷學習和提升自己，這些成本都是必要的投入。
+                    </p>
+                </div>
+            </div>
+            <div class="faq__content faq__close">
+                <div class="faq__header">
+                    <div>
+                        <h1 class="faq__title">諮商可以給我什麼幫助？</h1>
+                    </div>
+                    <i class="bx bx-chevron-down faq__arrow"></i>
+                </div>
+                <div class="faq__list">
+                    <p class="faq__caption">
+                        只要您在生活上有困擾，諮商都能提供幫助。<br>
+                        無論是心情低落、失眠、家庭摩擦、人際關係困難、職場表現不佳、時間管理、生涯規劃或自我認識，心理諮商都能協助您面對與解決問題。
+                    </p>
+                </div>
+            </div>
+            <div class="faq__content faq__close">
+                <div class="faq__header">
+                    <div>
+                        <h1 class="faq__title">只有嚴重問題的人才需要諮商嗎？</h1>
+                    </div>
+                    <i class="bx bx-chevron-down faq__arrow"></i>
+                </div>
+                <div class="faq__list grid">
+                    <p class="faq__caption">
+                        不是。<br>
+                        只要想要讓自己變得更好，任何人都可以來諮商。諮商不是只有解決嚴重問題，而是幫助您更了解自己，提升生活品質。
+                    </p>
+                </div>
+            </div>
+            <div class="faq__content faq__close">
+                <div class="faq__header">
+                    <div>
+                        <h1 class="faq__title">諮商需要進行幾次？</h1>
+                    </div>
+                    <i class="bx bx-chevron-down faq__arrow"></i>
+                </div>
+                <div class="faq__list grid">
+                    <p class="faq__caption">
+                        次數不固定。<br>
+                        諮商次數因人而異，也取決於心理師的做法和諮商目標。建議先與心理師討論您的困擾、期待和需求，再決定是否繼續進行後續諮商。
+                    </p>
+                </div>
+            </div>
+            <div class="faq__content faq__close">
+                <div class="faq__header">
+                    <div>
+                        <h1 class="faq__title">諮商真的有效嗎？</h1>
+                    </div>
+                    <i class="bx bx-chevron-down faq__arrow"></i>
+                </div>
+                <div class="faq__list grid">
+                    <p class="faq__caption">
+                        諮商的成效取決於您的投入及與心理師的關係。<br>
+                        許多研究證實諮商對有困擾的人有顯著幫助，但前提是當事人願意投入並與心理師共同努力。建立互信關係、積極參與諮商過程都是成功的關鍵。
+                    </p>
+                </div>
+            </div>
+            <div class="faq__content faq__close">
+                <div class="faq__header">
+                    <div>
+                        <h1 class="faq__title">如果我不喜歡我的心理師怎麼辦？</h1>
+                    </div>
+                    <i class="bx bx-chevron-down faq__arrow"></i>
+                </div>
+                <div class="faq__list grid">
+                    <p class="faq__caption">
+                        建議與心理師直接討論您的感受。<br>
+                        對心理師的感覺可能來自諮商目標不同或個人期待落差。與心理師談論您的不滿和感受，有助於彼此理解，並找到更有效的諮商方式。
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 <!-- 頁尾區 -->
@@ -700,10 +788,31 @@
         })
         window.location.href = './index.html';
     });
-
-
-
 </script>
+
+<!-- FAQ 下拉js -->
+<script>
+    const faqContent = document.getElementsByClassName('faq__content'),
+        faqHeader = document.querySelectorAll('.faq__header')
+
+    function toggleFaqs() {
+        let itemClass = this.parentNode.className
+
+        // 設置所有技能內容為隱藏
+        for (i = 0; i < faqContent.length; i++) {
+            faqContent[i].className = 'faq__content faq__close'
+        }
+        // 如果點擊的元素之前是關閉狀態，則打開它，否則保持關閉狀態
+        if (itemClass === 'faq__content faq__close') {
+            this.parentNode.className = 'faq__content faq__open'
+        }
+    }
+
+    faqHeader.forEach((el) => {
+        el.addEventListener('click', toggleFaqs)
+    })
+</script>
+
 <!-- 懸浮表單---狀態：進行中 -->
 <script>
     const modalViews = document.querySelectorAll('.service__modal');

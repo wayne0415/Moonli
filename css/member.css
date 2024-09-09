@@ -560,6 +560,65 @@ small {
     justify-content: end;
 }
 
+/* ============== faq ============== */
+
+.faq__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+.faq__header {
+    display: flex;
+    align-items: center;
+    margin: 12px 0;
+    cursor: pointer;
+}
+
+.faq__icon,
+.faq__arrow {
+    font-size: 2rem;
+    color: var(--black-700);
+}
+
+
+.faq__title {
+    font-size: var(--body-title);
+    font-weight: 800;
+}
+
+
+.faq__arrow {
+    margin-left: auto;
+    transition: .4s;
+}
+
+.faq__list {
+    row-gap: 1.5rem;
+    transition: all .2s ease-in;
+}
+
+.faq__caption {
+    font-size: var(--body-text);
+    color: var(--black-700);
+}
+
+.faq__close .faq__list {
+    height: 0;
+    overflow: hidden;
+}
+
+.faq__open .faq__list {
+    height: max-content;
+    margin-bottom: 20px;
+}
+
+.faq__open .faq__arrow {
+    transform: rotate(-180deg);
+}
+
 /* 隱私政策 */
 .policy {
     display: flex;
@@ -618,6 +677,7 @@ footer small {
 .service__modal-content ::-webkit-scrollbar-thumb:hover {
     background: var(--black-700);
 }
+
 /* 滾輪ends */
 
 /* 懸浮視窗-詳細資訊卡片 */
@@ -660,8 +720,8 @@ footer small {
 }
 
 .infoBtnBox {
-        display: flex;
-        flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 /*-- 左邊欄位-詳細資訊  */
@@ -891,7 +951,7 @@ input[type="radio"] {
 }
 
 .star-rating .number-rating {
-    font-family: 'Days One', sans-serif;
+    font-family: 'K2D', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -952,6 +1012,7 @@ input[type="radio"] {
     display: flex;
     justify-content: center;
     gap: 4%;
+    margin-top: 20px;
 }
 
 .btn-CTA span {
@@ -1037,7 +1098,7 @@ button:hover {
         margin-right: 0;
     }
 
-    .service__modal-content  {
+    .service__modal-content {
         padding: 4%;
     }
 }
@@ -1060,7 +1121,7 @@ button:hover {
     }
 
     .member-container .container {
-        height: 20vh;
+        height: auto;
     }
 
     .member-left {
@@ -1101,5 +1162,6 @@ button:hover {
     .btn-box {
         flex-direction: column;
         gap: 20px;
+        margin-top: 100px;
     }
 }
