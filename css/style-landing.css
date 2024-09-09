@@ -254,7 +254,7 @@ header {
 }
 @media (max-width: 600px) {
     #home {
-        height: 35vh;
+        height: 50vh;
     }
 }
 
@@ -359,7 +359,7 @@ header {
 }
 @media (max-width: 600px) {
     #problems {
-        height: 40vh;
+        height: 50vh;
     }
 }
 
