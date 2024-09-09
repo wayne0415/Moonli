@@ -741,23 +741,43 @@
 
 <script src="https://kit.fontawesome.com/58a19f4902.js" crossorigin="anonymous"></script>
 <script>
-    // 選取所有帶有下拉選單的父項目
-    const dropdownParents = document.querySelectorAll(".member-left li");
+    document.addEventListener('DOMContentLoaded', () => {
+        const dropdownParents = document.querySelectorAll(".member-left li");
 
-    // 為每個父項目添加點擊事件
-    dropdownParents.forEach((parent) => {
-        const bigItem = parent.querySelector(".big-item");
+        // 为每个父项添加点击事件
+        dropdownParents.forEach((parent) => {
+            const bigItem = parent.querySelector(".big-item");
 
-        if (bigItem) {
-            bigItem.addEventListener("click", (e) => {
-                e.preventDefault(); // 防止鏈接跳轉
+            if (bigItem) {
+                bigItem.addEventListener("click", (e) => {
+                    e.preventDefault(); // 防止链接跳转
 
-                // 切換當前選項的活躍狀態
-                parent.classList.toggle("active");
-            });
-        }
+                    // 先移除其他选项的活跃状态
+                    dropdownParents.forEach((p) => {
+                        if (p !== parent) {
+                            p.classList.remove("active");
+                        }
+                    });
+
+                    // 切换当前选项的活跃状态
+                    parent.classList.toggle("active");
+
+                    // 防止事件冒泡，以免点击大项后立即触发文档点击事件
+                    e.stopPropagation();
+                });
+            }
+        });
+
+        // 为文档添加点击事件，以在点击空白区域时移除所有活跃状态
+        document.addEventListener('click', (e) => {
+            // 检查点击事件的目标是否在 `.member-left` 内部
+            if (!e.target.closest('.member-left li')) {
+                dropdownParents.forEach((parent) => {
+                    parent.classList.remove("active");
+                });
+            }
+        });
     });
-
 </script>
 
 <script>
@@ -793,7 +813,7 @@
 <!-- FAQ 下拉js -->
 <script>
     const faqContent = document.getElementsByClassName('faq__content'),
-        faqHeader = document.querySelectorAll('.faq__header')
+        faqHeader = document.querySelectorAll('.faq__header');
 
     function toggleFaqs() {
         let itemClass = this.parentNode.className
@@ -806,7 +826,7 @@
         if (itemClass === 'faq__content faq__close') {
             this.parentNode.className = 'faq__content faq__open'
         }
-    }
+    };
 
     faqHeader.forEach((el) => {
         el.addEventListener('click', toggleFaqs)
@@ -858,7 +878,6 @@
             }
         });
     });
-
 </script>
 
 
