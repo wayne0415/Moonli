@@ -254,7 +254,7 @@ header {
 }
 @media (max-width: 600px) {
     #home {
-        height: 50vh;
+        height: 35vh;
     }
 }
 
@@ -359,7 +359,7 @@ header {
 }
 @media (max-width: 600px) {
     #problems {
-        height: 50vh;
+        height: 40vh;
     }
 }
 
@@ -575,6 +575,14 @@ header {
 #little-cute {
     margin-left: 30px;
     width: 50%;
+}
+@media (max-width: 600px) {
+    #little-cute {
+        margin-left: 60%;
+    }
+    #i-am-so-upset {
+        margin-left: 60%;
+    }
 }
 
 .icon-anny {
