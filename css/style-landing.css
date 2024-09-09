@@ -576,6 +576,14 @@ header {
     margin-left: 30px;
     width: 50%;
 }
+@media (max-width: 600px) {
+    #little-cute {
+        margin-left: 60%;
+    }
+    #i-am-so-upset {
+        margin-left: 60%;
+    }
+}
 
 .icon-anny {
     object-fit: cover;
