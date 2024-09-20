@@ -1,19 +1,17 @@
-body{
-    background:url(../images/list-bottom-pic.jpg),linear-gradient(var(--gradient-sky-purple));
+body {
+    background: url(../images/list-bottom-pic.jpg), linear-gradient(var(--gradient-sky-purple));
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom center;
 }
 
-.container{
+.container {
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    padding:2rem 8% ;
-
+    padding: 2rem 8%;
 }
-
 
 .reset-filter {
     display: flex;
@@ -25,7 +23,7 @@ body{
     height: fit-content;
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
     cursor: pointer;
     background-color: rgb(249, 249, 249);
 }
@@ -49,7 +47,7 @@ ul {
     padding: 0 4px 8px;
 }
 
-input[type=checkbox]:checked~ul {
+input[type="checkbox"]:checked ~ ul {
     display: block;
 }
 
@@ -125,9 +123,9 @@ input[type=checkbox]:checked~ul {
     position: relative;
 }
 
-.checkbox-custom+.checkbox-custom-label:before,
-.radio-custom+.radio-custom-label:before {
-    content: '';
+.checkbox-custom + .checkbox-custom-label:before,
+.radio-custom + .radio-custom-label:before {
+    content: "";
     background-color: transparent;
     border: 1px solid rgb(167, 151, 231);
     border-radius: 4px;
@@ -140,8 +138,8 @@ input[type=checkbox]:checked~ul {
     text-align: start;
 }
 
-.checkbox-custom:checked+.checkbox-custom-label:before {
-    content: '✔';
+.checkbox-custom:checked + .checkbox-custom-label:before {
+    content: "✔";
     /* 使用打勾符号 */
     background-color: rgb(167, 151, 231);
     /* 勾选框的背景颜色 */
@@ -156,11 +154,11 @@ input[type=checkbox]:checked~ul {
     text-align: center;
     font-size: 10px;
     /* 根据需要调整大小 */
-    line-height: .8em;
+    line-height: 0.8em;
 }
 
-.checkbox-custom:focus+.checkbox-custom-label,
-.radio-custom:focus+.radio-custom-label {
+.checkbox-custom:focus + .checkbox-custom-label,
+.radio-custom:focus + .radio-custom-label {
     outline: 0px solid #ddd;
     /* focus style */
 }
@@ -177,7 +175,7 @@ input[type=checkbox]:checked~ul {
     width: 80%;
     font-size: 1.5em;
     font-weight: 600;
-    letter-spacing: .2em;
+    letter-spacing: 0.2em;
     cursor: pointer;
 }
 
@@ -186,7 +184,7 @@ input[type=checkbox]:checked~ul {
     color: white;
 }
 
-.list-container{
+.list-container {
     display: flex;
     flex-direction: column;
     gap: 6rem;
@@ -201,10 +199,9 @@ input[type=checkbox]:checked~ul {
     flex-wrap: wrap;
     justify-content: center;
     gap: 2.4rem;
-
 }
 
-.card{
+.card {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -213,18 +210,18 @@ input[type=checkbox]:checked~ul {
     padding: 1.6rem;
     border-radius: 1.6rem;
     gap: 1.2rem;
-    background-color: #F9F9F9;
+    background-color: #f9f9f9;
     box-shadow: 4px 4px 15px rgba(119, 119, 119, 0.2);
 }
 
-.card a img{
+.card a img {
     width: 257px;
     height: 216px;
-    border-radius: .4rem;
+    border-radius: 0.4rem;
     cursor: pointer;
 }
 
-.card .icon{
+.card .icon {
     display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
@@ -235,7 +232,7 @@ input[type=checkbox]:checked~ul {
     height: 192px;
 }
 
-.card .icon i{
+.card .icon i {
     display: inline-block;
     font-size: 2.4rem;
     color: var(--white);
@@ -244,89 +241,89 @@ input[type=checkbox]:checked~ul {
 
 .card .icon i.fa-solid {
     color: var(--yellow);
-    cursor: pointer; 
+    cursor: pointer;
 }
 
-.card .icon span{
+.card .icon span {
     font-size: var(--subtitle);
     color: var(--white);
     font-weight: 800;
 }
 
-.card .icon .more{
+.card .icon .more {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.card .icon .more i{
+.card .icon .more i {
     font-size: 1.2rem;
-    margin-left: .4rem;
+    margin-left: 0.4rem;
     color: var(--white);
 }
 
-.card .detail-info{
+.card .detail-info {
     display: flex;
     flex-direction: column;
-    gap: .8rem;
+    gap: 0.8rem;
     width: 100%;
 }
 
-.card .detail-info .title{
+.card .detail-info .title {
     display: flex;
     justify-content: space-between;
 }
 
-.card .detail-info .title div{
+.card .detail-info .title div {
     display: flex;
-    gap: .4rem;
+    gap: 0.4rem;
     align-items: center;
 }
 
-.title .title__np{
+.title .title__np {
     font-size: var(--body-text);
     color: var(--black-800-main-text);
     font-weight: 800;
     font-family: "K2D", sans-serif;
 }
 
-.title .status{
-    color: #E44941;
+.title .status {
+    color: #e44941;
     font-size: var(--small-cpation);
 }
 
-.desc{
+.desc {
     display: flex;
     align-items: center;
     font-size: var(--small-cpation);
     color: var(--black-600);
-    gap: .8rem;
+    gap: 0.8rem;
 }
 
-.circle{
+.circle {
     width: 3px;
     height: 3px;
     border-radius: 100px;
     background-color: var(--black-600);
 }
 
-.card .tag{
+.card .tag {
     display: flex;
-    padding: .2rem .8rem;
-    gap: .4rem;
+    padding: 0.2rem 0.8rem;
+    gap: 0.4rem;
     background-color: var(--secondary-400);
     border-radius: 100px;
     width: fit-content;
 }
 
-.card .tag span{
+.card .tag span {
     display: inline;
     padding: 0px;
     font-size: var(--small-cpation);
     color: var(--white);
 }
 
-#more{
+#more {
     color: var(--primary-400);
     font-size: var(--body-semibold);
     font-weight: 800;
@@ -334,15 +331,14 @@ input[type=checkbox]:checked~ul {
     border-radius: 100px;
 }
 
-
-.soundtrack{
+.soundtrack {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
 
-.soundtrack i{
+.soundtrack i {
     display: block;
     padding: 12px;
     padding-left: 4px;
@@ -352,7 +348,7 @@ input[type=checkbox]:checked~ul {
     cursor: pointer;
 }
 
-#progress{
+#progress {
     -webkit-appearance: none;
     width: 55%;
     height: 6px;
@@ -360,13 +356,13 @@ input[type=checkbox]:checked~ul {
     border-radius: 100px;
     cursor: pointer;
     margin: 0;
-     /* 確保進度條顯示不重複 */
-     background-repeat: no-repeat;
-     background-position: left center;
-     background-size: 0% 100%; /* 初始顯示為0% */
+    /* 確保進度條顯示不重複 */
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 0% 100%; /* 初始顯示為0% */
 }
 
-#progress::-webkit-slider-thumb{
+#progress::-webkit-slider-thumb {
     -webkit-appearance: none;
     background: var(--black-700);
     border-radius: 100px;
@@ -382,4 +378,8 @@ input[type=checkbox]:checked~ul {
     color: var(--black-700);
     display: block;
 }
-
+@media (max-width: 480px) {
+    .reset-filter {
+        display: none;
+    }
+}
