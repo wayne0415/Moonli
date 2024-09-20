@@ -654,7 +654,8 @@ header {
     }
     @media (max-width: 600px) {
         .service-item {
-            width: 400px;
+            width: 365px;
+            padding: 1rem 3rem;
         }
     }
 
