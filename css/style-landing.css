@@ -272,6 +272,11 @@ header {
         width: 60%;
     }
 }
+@media (max-width: 400px) {
+    .home-container {
+        width: 80%;
+    }
+}
 
 .home-images-moon {
     position: absolute;
@@ -314,6 +319,7 @@ header {
 .search-btn {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .search-btn button {
@@ -330,7 +336,7 @@ header {
 @media (max-width: 600px) {
     .search-btn button {
         font-size: 1.6rem;
-        padding: 0 64px;
+        padding: 0 48px;
     }
 }
 
