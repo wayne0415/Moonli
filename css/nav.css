@@ -19,6 +19,7 @@ header {
 header a.logo {
     display: inline-block;
     width: 15%;
+    min-width: 150px;
 }
 
 header img {
@@ -195,11 +196,11 @@ header img {
         font-size: 1.8rem;
     }
 }
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
     .logo {
         visibility: hidden;
     }
-}
+} */
 
 @media (hover: hover) {
     .login:hover {
