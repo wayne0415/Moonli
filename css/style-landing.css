@@ -965,6 +965,12 @@ html *::after {
     gap: 30px;
 }
 
+@media (max-width: 440px) {
+    .select-list {
+        padding: 0 5%;
+    }
+}
+
 .select-menu {
     display: flex;
     flex-direction: column;
@@ -981,7 +987,7 @@ html *::after {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 20px;
+    padding: 20px 8px;
     font-size: 1.8rem;
     font-weight: 400;
     text-align: start;
@@ -1001,6 +1007,14 @@ html *::after {
 
 .select-menu.active .select-btn i {
     transform: rotate(-180deg);
+}
+
+@media (max-width: 440px) {
+    .select-btn {
+        padding: 0 5%;
+        font-size: 12px;
+        letter-spacing: 0;
+    }
 }
 
 .select-menu .options {
