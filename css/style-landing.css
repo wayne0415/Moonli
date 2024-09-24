@@ -710,57 +710,7 @@ header {
     font-size: 1.5rem;
 }
 
-/* 數據證明區 */
-/* #statistics {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background: #42514E;
-    color: #fff;
-    padding: 40px 88px 93px 88px;
-    text-align: center;
-}
-
-.stas-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 1200px; 
-    width: 100%;
-} */
-/* .stas-item {
-    width: 100%;
-    max-width: 300px; 
-}
-
-.stas-item h3 {
-    font-size: 4.5rem;
-    margin-bottom: 8px;
-    font-weight:400;
-}
-
-.stas-item p {
-    font-size: 2rem;
-    font-weight: bold;
-    
-} */
-/* html {
-    display: flex;
-    min-height: 100%;
-    font-family: "K2D", sans-serif;
-    box-sizing: border-box;
-}
-
-html * {
-    font-family: inherit;
-} */
-
-/* html *,
-html *::before,
-html *::after {
-    box-sizing: inherit;
-} */
+/* 數字區 */
 
 #statistics {
     display: flex;
@@ -771,6 +721,11 @@ html *::after {
     padding: 4rem 5%;
     text-align: center;
 }
+@media (max-width: 430px) {
+    #statistics {
+        padding: 4rem 8px;
+    }
+}
 
 .counters {
     display: flex;
@@ -778,6 +733,12 @@ html *::after {
     justify-content: center;
     align-items: center;
     gap: 4rem;
+}
+@media (max-width: 480px) {
+    .counters {
+        padding: 20px 8px;
+        gap: 1.6rem;
+    }
 }
 
 .counters .number {
@@ -812,6 +773,11 @@ html *::after {
     }
 }
 
+@media (max-width: 480px) {
+    .counters .number span {
+        font-size: 1.4rem;
+    }
+}
 .counter > span {
     z-index: 1;
     display: flex;
@@ -1318,6 +1284,11 @@ html *::after {
     height: 2px;
     background-color: #fff;
     margin-top: 5px;
+}
+@media (max-width: 600px) {
+    .line {
+        display: none;
+    }
 }
 
 .go-top-btn {
