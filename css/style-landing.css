@@ -1398,6 +1398,7 @@ footer img {
     min-height: 280px;
     perspective: 500px;
     width: auto;
+    overflow-x: hidden;
 }
 
 .testimonials .item {
