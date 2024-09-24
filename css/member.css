@@ -1117,7 +1117,7 @@ button:hover {
     .member-container {
         width: 80%;
         height: fit-content;
-        padding: 8%;
+        padding: 4%;
     }
 
     .member-container .container {
@@ -1166,9 +1166,13 @@ button:hover {
     }
 }
 
-@media(max-width:440px) {
+@media(max-width:480px) {
+    .member-left{
+        width: 96%;
+    }
     .big-item {
         font-size: 1.2em;
+        letter-spacing: 0;
     }
     .small-item {
         font-size: 1em;
@@ -1176,5 +1180,29 @@ button:hover {
     }
     .dropdown{
         padding: 4px;
+    }
+    .member-left li a {
+        padding: 8px 4px;
+        line-height: 1.6em;
+    }
+    .member-container {
+        width: 90%;
+        height: fit-content;
+        padding: 4%;
+    }
+    .member-container .container {
+        padding: 8px;
+    }
+    .info-img-wrap {
+        margin-right: 8px;
+    }
+    .info-details p {
+        font-size: 9px;
+    }
+    .info-details h3 {
+        font-size: 1.5em;
+    }
+    .info-details small {
+        font-size: 9px;
     }
 } 
