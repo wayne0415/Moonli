@@ -1173,6 +1173,8 @@ button:hover {
     .small-item {
         font-size: 1em;
         letter-spacing: 0;
-        line-height: 2em;
+    }
+    .dropdown{
+        padding: 4px;
     }
 } 
