@@ -1279,7 +1279,7 @@ header {
 }
 
 .line {
-    display: none;
+    display: inline-block;
     width: 300px;
     height: 2px;
     background-color: #fff;
