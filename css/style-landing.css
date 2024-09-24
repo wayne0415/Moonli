@@ -1377,6 +1377,7 @@ footer img {
     display: flex;
     align-items: center;
     width: 50%;
+    overflow: hidden;
 }
 
 .slider {
