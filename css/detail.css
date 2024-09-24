@@ -369,6 +369,10 @@ header img {
         flex-shrink: 0;
         /* 防止内容被压缩 */
     }
+
+    .week::-webkit-scrollbar{
+        width: 0px;
+    };
 }
 
 @media(max-width:768px) {
@@ -387,7 +391,7 @@ header img {
 
 @media(max-width:768px) {
     .week {
-        display: flex;
+        display: inline-block;
         justify-content: space-between;
     }
 }
@@ -400,7 +404,8 @@ header img {
     width: 100%;
     margin: 0.8rem;
     padding: .8rem;
-    overflow: hidden;
+    overflow-x: auto;
+    min-width: 106px;
 }
 
 .weekday {
