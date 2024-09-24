@@ -737,7 +737,7 @@ header {
 @media (max-width: 480px) {
     .counters {
         padding: 20px 8px;
-        gap: 1.5rem;
+        gap: 2rem;
     }
 }
 
@@ -773,6 +773,11 @@ header {
     }
 }
 
+@media (max-width: 480px) {
+    .counters .number span {
+        font-size: 1.4rem;
+    }
+}
 .counter > span {
     z-index: 1;
     display: flex;
