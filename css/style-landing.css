@@ -1167,6 +1167,7 @@ header {
     justify-content: center;
     text-align: center;
     position: relative;
+    overflow-x: hidden;
 }
 
 #experience_sharing h2 {
@@ -1377,7 +1378,7 @@ footer img {
     display: flex;
     align-items: center;
     width: 50%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .slider {
