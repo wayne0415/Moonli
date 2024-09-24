@@ -737,7 +737,7 @@ header {
 @media (max-width: 480px) {
     .counters {
         padding: 20px 8px;
-        gap: 2rem;
+        gap: 1.6rem;
     }
 }
 
