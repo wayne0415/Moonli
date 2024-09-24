@@ -1285,7 +1285,7 @@ header {
     background-color: #fff;
     margin-top: 5px;
 }
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     .line {
         display: none;
     }
